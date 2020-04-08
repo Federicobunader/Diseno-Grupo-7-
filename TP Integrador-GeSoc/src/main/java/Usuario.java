@@ -109,6 +109,73 @@ public class Usuario {
         System.out.println("Usuario: " + usuario);
         System.out.println("Contraseña: " + password);
     }
+    
+    private static void seguridadClave(String clave){
+        int seguridad = 0;
+        if (clave.length()!=0){
+            if (tienenNumeros(clave) && tieneLetras(clave)){
+                seguridad += 30;
+            }
+            if (tieneMinusculas(clave) && tieneMayusculas(clave)){
+                seguridad += 30;
+            }
+            if (clave.length() >= 4 && clave.length() <= 5){
+                seguridad += 10;
+            }else{
+                if (clave.length() >= 6 && clave.length() <= 8){
+                    seguridad += 30;
+                }else{
+                    if (clave.length() > 8){
+                        seguridad += 40;
+                    }
+                }
+            }
+        }
+        //return seguridad;
+        System.out.println("La seguridad de la contraseña es de: "+seguridad);
+    }
+
+    private static boolean tienenNumeros(String texto){
+        String numeros ="0123456789";
+        for(int i=0; i<texto.length(); i++){
+            if (numeros.indexOf(texto.charAt(i),0)!=-1){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean tieneLetras(String texto){
+        String letras="abcdefghyjklmnñopqrstuvwxyz";
+        texto = texto.toLowerCase();
+        for(int i=0; i<texto.length(); i++){
+            if (letras.indexOf(texto.charAt(i),0)!=-1){
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    private static boolean tieneMinusculas(String texto){
+        String letras="abcdefghyjklmnñopqrstuvwxyz";
+        for(int i=0; i<texto.length(); i++){
+            if (letras.indexOf(texto.charAt(i),0)!=-1){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean tieneMayusculas(String texto){
+        String letrasMayusculas="ABCDEFGHYJKLMNÑOPQRSTUVWXYZ";
+        for(int i=0; i<texto.length(); i++){
+            if (letrasMayusculas.indexOf(texto.charAt(i),0)!=-1){
+                return true;
+            }
+        }
+        return false;
+    }
 }
 
 
