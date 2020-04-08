@@ -8,6 +8,7 @@ public class Usuario {
 
     private String usuario;
     private String password;
+    //public Entidad m_Entidad;
 
     public String getUsuario() {
         return usuario;
