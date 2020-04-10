@@ -1,8 +1,5 @@
-package Control;
 
-import Negocio.Main;
 
-import java.util.concurrent.TimeUnit;
 
 public class Registrarse {
 
@@ -126,7 +123,7 @@ public class Registrarse {
 
     private static String setRandomPassword(){
 
-        String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "0123456789" + "abcdefghijklmnopqrstuvxyz";
+        String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "0123456789" + "abcdefghijklmnopqrstuvxyz" + "°@#$%&/=";
         StringBuilder sb = new StringBuilder(16);
 
         for (int i = 0; i < 16; i++) {
