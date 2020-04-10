@@ -1,7 +1,6 @@
-import Control.Registrarse;
-import Negocio.Main;
 
 import java.util.concurrent.TimeUnit;
+
 
 
 public class Usuario {
@@ -46,17 +45,19 @@ public class Usuario {
     }
 
     private boolean laNuevaPasswordEstaOK(String nuevaPassword){
-        return  this.noTiene2LetrasSeguidasIguales(nuevaPassword)&&
+        return  this.noTiene3LetrasSeguidasIguales(nuevaPassword)&&
                 this.noTiene3CaracteresConsecutivos(nuevaPassword);
     }
 
-    private boolean noTiene2LetrasSeguidasIguales(String nuevaPassword){
+    private boolean noTiene3LetrasSeguidasIguales(String nuevaPassword){
         int i=0;
 
         while(i < nuevaPassword.length()-1){
             if(!this.las2LetrasSonDistintas(nuevaPassword.charAt(i),nuevaPassword.charAt(i+1))){
-                System.out.println("La Contraseña no puede tener 2 letras iguales seguidas");
-                return false;
+                if(!this.las2LetrasSonDistintas(nuevaPassword.charAt((i+1)),nuevaPassword.charAt(i+2))) {
+                    System.out.println("La Contraseña no puede tener 3 letras iguales seguidas");
+                    return false;
+                }
             }
             i++;
         }
@@ -73,19 +74,24 @@ public class Usuario {
 
         while(i<nuevaPassword.length()-2){
 
-            if(this.esUnCaracterSucesivo(nuevaPassword.codePointAt(i),nuevaPassword.codePointAt((i+1)))){
-                if(this.esUnCaracterSucesivo(nuevaPassword.codePointAt((i+1)),nuevaPassword.codePointAt((i+2)))){
+            if(this.esUnCaracterSucesivoParaAdelante(nuevaPassword.codePointAt(i),nuevaPassword.codePointAt(i+1),nuevaPassword.codePointAt(i+2)) ||
+            this.esUnCaracterSucesivoParaAtras(nuevaPassword.codePointAt(i),nuevaPassword.codePointAt(i+1),nuevaPassword.codePointAt(i+2))){
                     System.out.println("La Contraseña no puede tener mas de 2 caracteres consecutivos");
                     return false;
-                }
             }
+
             i++;
         }
         return true;
     }
 
-    private boolean esUnCaracterSucesivo(Integer unValor, Integer otroValor){
-        return (unValor == otroValor + 1) || (unValor == otroValor -1);
+    private boolean esUnCaracterSucesivoParaAdelante(int valor, int otroValor, int unValor){
+
+        return valor == otroValor -1 && valor == unValor -2;
+    }
+
+    private boolean esUnCaracterSucesivoParaAtras(int valor, int otroValor, int unValor){
+        return valor == otroValor + 1 && valor == unValor +2;
     }
 
     public void loguearse(String unaPassword) throws InterruptedException {
@@ -106,7 +112,6 @@ public class Usuario {
         }
     }
 }
-
 
 
 

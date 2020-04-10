@@ -1,7 +1,7 @@
 
 public class Compra {
 
-	private Date FechaDeOperacion;
+	//private Date FechaDeOperacion;
 	private MedioDePago MedioDePago;
 	private Documento DocumentoComercial;
 	private Entidad Entidad;

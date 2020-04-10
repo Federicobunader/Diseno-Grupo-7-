@@ -1,4 +1,5 @@
 
+
 public class Cliente {
 
 	private char Nombre;
@@ -13,4 +14,5 @@ public class Cliente {
 	public void finalize() throws Throwable {
 
 	}
+
 }//end Cliente
