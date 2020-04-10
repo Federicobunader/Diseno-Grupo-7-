@@ -1,12 +1,20 @@
-
-
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.*;
+import java.util.List;
+import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class Registrarse {
 
+    private static List<Usuario> usuarios = null;
     public static void registrarUsuario(){ // la hicimos static
         System.out.println("Ingrese un Usuario :");
         String usuario = Main.pedirPorPantallaString();
-        // verificarUsuario(usuario);
+        while(usuarioYaExiste(usuario)){
+            System.out.println("Ya existe un usuario con ese nombre, ingrese uno nuevo: ");
+            usuario = Main.pedirPorPantallaString();
+        }
 
         String password = setRandomPassword(); //la hicimos static
         System.out.println("Su contraseña sugerida es: " + password + ", desea cambiarla? si, no");
@@ -22,37 +30,52 @@ public class Registrarse {
 
         System.out.println("Usuario: " + usuario);
         System.out.println("Contraseña: " + password);
+
+        usuarios.add(new Usuario(usuario,password));
+    }
+
+    private static boolean usuarioYaExiste(String nombreUsuario){
+        return false;
     }
 
     public static String verificarPassword(String unaPassword) {
         unaPassword = chequearEspaciosSeguidos(unaPassword); //sacamos this pq es static y lo hicimos static
-        while(!(longitudDePasswordPretendida(unaPassword))){//sacamos this pq es static y lo hicimos static
-            System.out.println("Su contraseña no tiene entre 8 y 64 caracteres. Por favor ingrese otra: ");
+        while(laPasswordTieneMalTamanio(unaPassword) || laPasswordEsMala(unaPassword)){//sacamos this pq es static y lo hicimos static
+            System.out.println("Por favor ingrese otra: ");
             unaPassword = Main.pedirPorPantallaString();
             unaPassword = chequearEspaciosSeguidos(unaPassword);
         }
         return unaPassword;
     }
 
-    private static boolean longitudDePasswordPretendida(String unaPassword){
-        return unaPassword.length() >= 8 && unaPassword.length() <= 64;
+        private static boolean laPasswordTieneMalTamanio(String unaPassword){
+                    boolean malTamanio = false;
+                    if(unaPassword.length() < 8 || unaPassword.length() > 64){
+                        System.out.println("Su contraseña no tiene entre 8 y 64 caracteres.");
+                        malTamanio = true;
+                    }
+                    return malTamanio;
+                }
+
+        private static String chequearEspaciosSeguidos(String unaPassword){
+             int i;
+             int contador = 0;
+             String passwordFinal = "";
+             for (i = 0; i < unaPassword.length(); i++){
+                        if(!(unaPassword.charAt(i) == ' ' && unaPassword.charAt((i+1)) == ' ')){
+                            passwordFinal = passwordFinal +unaPassword.charAt(i);
+                    }
+                    else{
+                        contador += 1;
+                    }
+                }
+                if(contador>0) {
+                    System.out.println("Se encontraron espacios consecutivos y se los reemplazo por uno solo");
+                }
+                return passwordFinal;
     }
 
-    private static String chequearEspaciosSeguidos(String unaPassword){
-        int i;
-        int contador = 0;
-        String passwordFinal = "";
-        for (i = 0; i < unaPassword.length(); i++){
-            if(!(unaPassword.charAt(i) == ' ' && unaPassword.charAt((i+1)) == ' ')){
-                passwordFinal = passwordFinal +unaPassword.charAt(i);
-            }
-            else{
-                contador += 1;
-            }
-        }
-        System.out.println("Se encontraron "+contador+" espacios seguidos y se los reemplazo por uno solo");
-        return passwordFinal;
-    }
+
 
     public static void seguridadClave(String clave){
         int seguridad = 0;
@@ -100,6 +123,37 @@ public class Registrarse {
         return false;
     }
 
+    private static boolean laPasswordEsMala(String palabra) {
+        int lineasTotales = 0;
+        boolean esMala = false;
+        File archivo = new File("claves.txt");
+        try {
+            // SI EXISTE EL ARCHIVO
+            if(archivo.exists()) {
+                // ABRE LECTURA DEL ARCHIVO
+                BufferedReader leerArchivo = new BufferedReader(new FileReader(archivo));
+                // LINEA LEIDA
+                String lineaLeida;
+                // MIENTRAS LA LINEA LEIDA NO SEA NULL
+                while((lineaLeida = leerArchivo.readLine()) != null) {
+                    lineasTotales = lineasTotales + 1;
+
+                    String[] palabras = lineaLeida.split(" "); // si lee espacio en blanco detecta q es nueva palabra
+                    for(int i = 0 ; i < palabras.length ; i++) {
+                        if(palabras[i].equals(palabra)) {
+                            System.out.println("Su contraseña está en el puesto número " + lineasTotales +
+                                    " de contraseñas malas.");
+                            esMala = true;
+                        }
+                    }
+                }
+            }
+        }
+        catch(Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return esMala;
+    }
 
     private static boolean tieneMinusculas(String texto){
         String letras="abcdefghyjklmnñopqrstuvwxyz";
