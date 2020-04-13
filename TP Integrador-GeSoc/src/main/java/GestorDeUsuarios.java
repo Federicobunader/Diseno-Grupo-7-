@@ -14,7 +14,7 @@ public class GestorDeUsuarios {
 
 
 
-    private ArrayList<Usuario> usuarios = null;
+    private ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
 
     private static GestorDeUsuarios instance = null;
     private GestorDeUsuarios() {}
@@ -33,7 +33,7 @@ public class GestorDeUsuarios {
         this.menuUsuario();
         int opcion = Main.pedirPorPantallaInt();
 
-        while(opcion!=3)
+        while(opcion!=4)
         {
             if(opcion==1)
             {
@@ -42,7 +42,13 @@ public class GestorDeUsuarios {
             else if(opcion==2)
             {
                 Usuario unUsuario = this.elegirUsuario();
-                this.ingresarNuevaPassword(unUsuario);
+                if(this.elegirUsuario() != null) {
+                    this.ingresarNuevaPassword(unUsuario);
+                }
+            }
+            else if(opcion==3)
+            {
+                this.mostrarUsuarios();
             }
 
             this.menuUsuario();
@@ -57,14 +63,15 @@ public class GestorDeUsuarios {
         System.out.println(" ");
         System.out.println("1- REGISTRAR USUARIO");
         System.out.println("2- CAMBIAR CONTRASEÑA");
-        System.out.println("3- SALIR");
+        System.out.println("3- MOSTRAR USUARIOS");
+        System.out.println("4- SALIR");
         System.out.println(" ");
     }
 
     private void registrarUsuario(){
         System.out.println("Ingrese un Usuario :");
         String usuario = Main.pedirPorPantallaString();
-        while(usuarioYaExiste(usuario)) {
+        while(this.usuarioYaExiste(usuario)) {
             System.out.println("Ya existe un usuario con ese nombre, ingrese uno nuevo: ");
             usuario = Main.pedirPorPantallaString();
         }
@@ -92,16 +99,13 @@ public class GestorDeUsuarios {
     }
 
     private boolean usuarioYaExiste(String nombreDeUsuario){
-        System.out.println("1");
         if(!this.laListaDeUsuariosEstaVacia()) {
-            System.out.println("2");
             for (int i = 0; i < usuarios.size(); i++) {
                 if (usuarios.get(i).getUsuario().equals(nombreDeUsuario)) {
                     return true;
                 }
             }
         }
-        System.out.println("3");
         return false;
     }
 
@@ -143,6 +147,7 @@ public class GestorDeUsuarios {
             for (int i = 0; i < usuarios.size(); i++) {
                 System.out.println(" -----------------------------");
                 System.out.println("Nombre de Usuario: " + usuarios.get(i).getUsuario());
+                System.out.println("Contraseña de Usuario: " + usuarios.get(i).getPassword());
                 System.out.println(" -----------------------------");
             }
         }
@@ -332,7 +337,7 @@ public class GestorDeUsuarios {
     }
 
     private boolean las2LetrasSonDistintas(char unaLetra,char otraLetra){
-        return unaLetra != otraLetra;
+        return unaLetra != otraLetra && unaLetra != ' ' && otraLetra != ' ';
     }
 
 
