@@ -33,7 +33,7 @@ public class GestorDeUsuarios {
         this.menuUsuario();
         int opcion = Main.pedirPorPantallaInt();
 
-        while(opcion!=4)
+        while(opcion!=5)
         {
             if(opcion==1)
             {
@@ -42,18 +42,17 @@ public class GestorDeUsuarios {
 
             else if(opcion==2)
             {
-                Usuario unUsuario = this.elegirUsuario();
-                this.loguearse();
-            }
+            this.loguearse();
+        }
 
-            else if(opcion==2)
+            else if(opcion==3)
             {
                 Usuario unUsuario = this.elegirUsuario();
                 if(unUsuario != null) {
                     this.ingresarNuevaPassword(unUsuario);
                 }
             }
-            else if(opcion==3)
+            else if(opcion==4)
             {
                 this.mostrarUsuarios();
             }
@@ -69,10 +68,10 @@ public class GestorDeUsuarios {
         System.out.println("Ingrese una opcion:");
         System.out.println(" ");
         System.out.println("1- REGISTRAR USUARIO");
-        System.out.println("4- INICIAR SESION");
-        System.out.println("2- CAMBIAR CONTRASEÑA");
-        System.out.println("3- MOSTRAR USUARIOS");
-        System.out.println("4- SALIR");
+        System.out.println("2- INICIAR SESION");
+        System.out.println("3- CAMBIAR CONTRASEÑA");
+        System.out.println("4- MOSTRAR USUARIOS");
+        System.out.println("5- SALIR");
         System.out.println(" ");
     }
 
@@ -374,20 +373,27 @@ public class GestorDeUsuarios {
         return valor == otroValor + 1 && valor == unValor +2;
     }
 
-    private void loguearse() throws InterruptedException {
+    private void loguearse() {
         int contador = 0;
+        Usuario unUsuario = this.elegirUsuario();
+        System.out.println("Ingrese la contraseña:");
         String unaPassword = Main.pedirPorPantallaString();
         while(!(unUsuario.laPasswordCoincide(unaPassword)) && contador < 10){
             System.out.println("Contraseña invalida. Por favor espere.");
             System.out.println("Intentos Restantes: " + (10-contador));
             contador += 1;
-            TimeUnit.SECONDS.sleep(5);
+            try {
+                TimeUnit.SECONDS.sleep(5);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             System.out.println("Ingrese otra contraseña:");
             unaPassword = Main.pedirPorPantallaString();
         };
         if(contador == 10){
             System.out.println("Has gastado todos los intentos. Vuelve a intentarlo mas tarde.");
         } else {
+            System.out.println("SE HA LOGUEADO CORRECTAMENTE");
             System.out.println("Usuario: " + unUsuario.getUsuario());
             System.out.println("Contraseña: " + unUsuario.getPassword());
         }
