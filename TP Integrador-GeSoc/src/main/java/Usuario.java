@@ -31,6 +31,9 @@ public class Usuario {
         this.password = password;
     }
 
+    public boolean laPasswordCoincide(String unaPassword){
+        return password.equals(unaPassword);
+    }
 
 }
 

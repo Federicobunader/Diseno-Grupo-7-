@@ -39,10 +39,17 @@ public class GestorDeUsuarios {
             {
                 this.registrarUsuario();
             }
+
             else if(opcion==2)
             {
                 Usuario unUsuario = this.elegirUsuario();
-                if(this.elegirUsuario() != null) {
+                this.loguearse();
+            }
+
+            else if(opcion==2)
+            {
+                Usuario unUsuario = this.elegirUsuario();
+                if(unUsuario != null) {
                     this.ingresarNuevaPassword(unUsuario);
                 }
             }
@@ -62,6 +69,7 @@ public class GestorDeUsuarios {
         System.out.println("Ingrese una opcion:");
         System.out.println(" ");
         System.out.println("1- REGISTRAR USUARIO");
+        System.out.println("4- INICIAR SESION");
         System.out.println("2- CAMBIAR CONTRASEÑA");
         System.out.println("3- MOSTRAR USUARIOS");
         System.out.println("4- SALIR");
@@ -113,13 +121,13 @@ public class GestorDeUsuarios {
         this.mostrarUsuarios(); //Lo pongo para probar, no tiene sentido mostrarle los usuarios al mismo usuario.
         System.out.println("Ingrese su Usuario");
         String nombreDeUsuario = Main.pedirPorPantallaString();
-        if(this.buscarUsuario(nombreDeUsuario) == null){
-            return null;
-        }
-        else{
-            return this.buscarUsuario(nombreDeUsuario);
-        }
+       while(this.buscarUsuario(nombreDeUsuario) == null){
 
+           System.out.println("Ingrese devuelta su Usuario");
+           nombreDeUsuario = Main.pedirPorPantallaString();
+
+        }
+        return this.buscarUsuario(nombreDeUsuario);
     }
 
     private Usuario buscarUsuario(String nombreDeUsuario){
@@ -142,7 +150,6 @@ public class GestorDeUsuarios {
 
     private void mostrarUsuarios(){
         System.out.println("Usuarios Existentes :");
-        System.out.println(" -----------------------------");
         if(!this.laListaDeUsuariosEstaVacia()) {
             for (int i = 0; i < usuarios.size(); i++) {
                 System.out.println(" -----------------------------");
@@ -323,10 +330,11 @@ public class GestorDeUsuarios {
 
     private boolean noTiene3LetrasSeguidasIguales(String nuevaPassword){
         int i=0;
+        String nuevaPasswordSinEspacios = this.chequearEspaciosSeguidos(nuevaPassword);
 
-        while(i < nuevaPassword.length()-1){
-            if(!this.las2LetrasSonDistintas(nuevaPassword.charAt(i),nuevaPassword.charAt(i+1))){
-                if(!this.las2LetrasSonDistintas(nuevaPassword.charAt((i+1)),nuevaPassword.charAt(i+2))) {
+        while(i < nuevaPasswordSinEspacios.length()-1){
+            if(!this.las2LetrasSonDistintas(nuevaPasswordSinEspacios.charAt(i),nuevaPasswordSinEspacios.charAt(i+1))){
+                if(!this.las2LetrasSonDistintas(nuevaPasswordSinEspacios.charAt((i+1)),nuevaPasswordSinEspacios.charAt(i+2))) {
                     System.out.println("La Contraseña no puede tener 3 letras iguales seguidas");
                     return false;
                 }
@@ -337,7 +345,7 @@ public class GestorDeUsuarios {
     }
 
     private boolean las2LetrasSonDistintas(char unaLetra,char otraLetra){
-        return unaLetra != otraLetra && unaLetra != ' ' && otraLetra != ' ';
+        return unaLetra != otraLetra;
     }
 
 
@@ -366,23 +374,24 @@ public class GestorDeUsuarios {
         return valor == otroValor + 1 && valor == unValor +2;
     }
 
-    /*private void loguearse(String unaPassword) throws InterruptedException {
+    private void loguearse() throws InterruptedException {
         int contador = 0;
-        while(!(this.password.equals(unaPassword)) && contador < 10){
+        String unaPassword = Main.pedirPorPantallaString();
+        while(!(unUsuario.laPasswordCoincide(unaPassword)) && contador < 10){
             System.out.println("Contraseña invalida. Por favor espere.");
             System.out.println("Intentos Restantes: " + (10-contador));
             contador += 1;
             TimeUnit.SECONDS.sleep(5);
             System.out.println("Ingrese otra contraseña:");
-            password = Main.pedirPorPantallaString();
+            unaPassword = Main.pedirPorPantallaString();
         };
         if(contador == 10){
             System.out.println("Has gastado todos los intentos. Vuelve a intentarlo mas tarde.");
         } else {
-            System.out.println("Usuario: " + usuario);
-            System.out.println("Contraseña: " + password);
+            System.out.println("Usuario: " + unUsuario.getUsuario());
+            System.out.println("Contraseña: " + unUsuario.getPassword());
         }
     }
-*/
+
 
 }
