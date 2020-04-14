@@ -36,34 +36,27 @@ public class GestorDeUsuarios {
         this.menuUsuario();
         int opcion = Main.pedirPorPantallaInt();
 
-        while(opcion!=6)
+        while(opcion!= '5')
         {
-            if(opcion==1)
-            {
-                this.registrarUsuario();
+            switch(opcion){
+                case 1:
+                    this.registrarUsuario();
+                    break;
+                case 2:
+                    this.loguearse();
+                    break;
+                case 3:
+                    Usuario unUsuario = this.elegirUsuario();
+                    if(unUsuario != null) {
+                        this.ingresarNuevaPassword(unUsuario);
+                        }
+                    break;
+                case 4:
+                    this.mostrarUsuarios();
+                    break;
+                default:
+                    System.out.println("Sos un forro. Ingresa un numero posta ");
             }
-
-            else if(opcion==2)
-            {
-            this.loguearse();
-        }
-
-            else if(opcion==3)
-            {
-                Usuario unUsuario = this.elegirUsuario();
-                if(unUsuario != null) {
-                    this.ingresarNuevaPassword(unUsuario);
-                }
-            }
-            else if(opcion==4)
-            {
-                this.mostrarUsuarios();
-            }
-            else if(opcion==5)
-            {
-              //  this.
-            }
-
             this.menuUsuario();
 
             opcion = Main.pedirPorPantallaInt();
