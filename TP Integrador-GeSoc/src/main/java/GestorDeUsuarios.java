@@ -8,6 +8,9 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 import java.util.concurrent.TimeUnit;
 import java.util.Arrays;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 
 
 public class GestorDeUsuarios {
@@ -33,7 +36,7 @@ public class GestorDeUsuarios {
         this.menuUsuario();
         int opcion = Main.pedirPorPantallaInt();
 
-        while(opcion!=5)
+        while(opcion!=6)
         {
             if(opcion==1)
             {
@@ -56,6 +59,10 @@ public class GestorDeUsuarios {
             {
                 this.mostrarUsuarios();
             }
+            else if(opcion==5)
+            {
+              //  this.
+            }
 
             this.menuUsuario();
 
@@ -71,7 +78,8 @@ public class GestorDeUsuarios {
         System.out.println("2- INICIAR SESION");
         System.out.println("3- CAMBIAR CONTRASEÑA");
         System.out.println("4- MOSTRAR USUARIOS");
-        System.out.println("5- SALIR");
+        System.out.println("5- HASHEAR PASSWORD");
+        System.out.println("6- SALIR");
         System.out.println(" ");
     }
 
@@ -93,12 +101,17 @@ public class GestorDeUsuarios {
             password = verificarPassword(password);
         }
 
+        byte[] salt = new byte[0];
+        salt = getSalt();
+        String passwordHasheada = hashearPassword(password, salt);
+        System.out.println("La contraseña hasheada es " + passwordHasheada);
+
         seguridadClave(password);
 
         System.out.println("Usuario: " + usuario);
         System.out.println("Contraseña: " + password);
 
-        usuarios.add(new Usuario(usuario,password));
+        usuarios.add(new Usuario(usuario,passwordHasheada));
     }
 
     private boolean laListaDeUsuariosEstaVacia(){
@@ -369,9 +382,11 @@ public class GestorDeUsuarios {
 
     private void loguearse() {
         int contador = 0;
+        byte[] salt = new byte[0];
         Usuario unUsuario = this.elegirUsuario();
         System.out.println("Ingrese la contraseña:");
         String unaPassword = Main.pedirPorPantallaString();
+        unaPassword = hashearPassword(unaPassword,salt);
         while(!(unUsuario.laPasswordCoincide(unaPassword)) && contador < 10){
             System.out.println("Contraseña invalida. Por favor espere.");
             System.out.println("Intentos Restantes: " + (10-contador));
@@ -391,6 +406,39 @@ public class GestorDeUsuarios {
             System.out.println("Usuario: " + unUsuario.getUsuario());
             System.out.println("Contraseña: " + unUsuario.getPassword());
         }
+    }
+
+    private static String hashearPassword(String passwordToHash, byte[] salt)
+    {
+        String generatedPassword = null;
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-1");
+            md.update(salt);
+            byte[] bytes = md.digest(passwordToHash.getBytes());
+            StringBuilder sb = new StringBuilder();
+            for(int i=0; i< bytes.length ;i++)
+            {
+                sb.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
+            }
+            generatedPassword = sb.toString();
+        }
+        catch (NoSuchAlgorithmException e)
+        {
+            e.printStackTrace();
+        }
+        return generatedPassword;
+    }
+
+    private static byte[] getSalt() {
+        SecureRandom sr = null;
+        try {
+            sr = SecureRandom.getInstance("SHA1PRNG");
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        byte[] salt = new byte[16];
+        sr.nextBytes(salt);
+        return salt;
     }
 
 
