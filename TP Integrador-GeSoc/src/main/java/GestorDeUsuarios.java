@@ -1,13 +1,13 @@
-import javax.rmi.ssl.SslRMIClientSocketFactory;
+//import javax.rmi.ssl.SslRMIClientSocketFactory;
 import java.io.BufferedReader;
-import java.io.IOException;
+//import java.io.IOException;
 import java.io.*;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.StringTokenizer;
+//import java.util.List;
+//import java.util.Scanner;
+//import java.util.StringTokenizer;
 import java.util.concurrent.TimeUnit;
-import java.util.Arrays;
+//import java.util.Arrays;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
@@ -55,7 +55,7 @@ public class GestorDeUsuarios {
                     this.mostrarUsuarios();
                     break;
                 default:
-                    System.out.println("Sos un forro. Ingresa un numero posta ");
+                    System.out.println("La opcion ingresada no es valida.");
             }
             this.menuUsuario();
 
@@ -71,8 +71,7 @@ public class GestorDeUsuarios {
         System.out.println("2- INICIAR SESION");
         System.out.println("3- CAMBIAR CONTRASEÑA");
         System.out.println("4- MOSTRAR USUARIOS");
-        System.out.println("5- HASHEAR PASSWORD");
-        System.out.println("6- SALIR");
+        System.out.println("5- SALIR");
         System.out.println(" ");
     }
 
@@ -128,7 +127,7 @@ public class GestorDeUsuarios {
         String nombreDeUsuario = Main.pedirPorPantallaString();
        while(this.buscarUsuario(nombreDeUsuario) == null){
 
-           System.out.println("Ingrese devuelta su Usuario");
+           System.out.println("Ingrese su Usuario nuevamente");
            nombreDeUsuario = Main.pedirPorPantallaString();
 
         }
@@ -317,8 +316,13 @@ public class GestorDeUsuarios {
             nuevaPassword = Main.pedirPorPantallaString();
         }
 
+        byte[] salt = new byte[0];
+        salt = getSalt();
+        String passwordHasheada = hashearPassword(nuevaPassword, salt);
+        System.out.println("La contraseña hasheada es " + passwordHasheada);
+
         this.seguridadClave(nuevaPassword);
-        usuario.setPassword(nuevaPassword); //Creo que esto esta mal, porque rompe el encapsulamiento
+        usuario.setPassword(passwordHasheada); //Creo que esto esta mal, porque rompe el encapsulamiento
 
     }
 
