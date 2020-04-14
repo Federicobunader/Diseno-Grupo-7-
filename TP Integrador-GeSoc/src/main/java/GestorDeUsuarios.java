@@ -108,7 +108,7 @@ public class GestorDeUsuarios {
     private boolean usuarioYaExiste(String nombreDeUsuario){
         if(!this.laListaDeUsuariosEstaVacia()) {
             for (int i = 0; i < usuarios.size(); i++) {
-                if (usuarios.get(i).getUsuario().equals(nombreDeUsuario)) {
+                if (usuarios.get(i).elNombreCoincide(nombreDeUsuario)) {
                     return true;
                 }
             }
@@ -130,20 +130,14 @@ public class GestorDeUsuarios {
     }
 
     private Usuario buscarUsuario(String nombreDeUsuario){
-        int i=0;
-        boolean encontrado = false;
         if(!this.laListaDeUsuariosEstaVacia()) {
-            while (i < usuarios.size() && !encontrado) {
-                if (usuarios.get(i).getUsuario().equals(nombreDeUsuario)) {
+            for (int i = 0; i < usuarios.size() ; i++) {
+                if (usuarios.get(i).elNombreCoincide(nombreDeUsuario)) {
                     return usuarios.get(i);
-                } else {
-                    i++;
                 }
             }
         }
-            System.out.println("Usuario No Encontrado");
-
-
+        System.out.println("Usuario No Encontrado");
         return null;
     }
 

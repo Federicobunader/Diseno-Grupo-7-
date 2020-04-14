@@ -35,6 +35,9 @@ public class Usuario {
         return password.equals(unaPassword);
     }
 
+    public boolean elNombreCoincide(String nombreDeUsuario) { return usuario.equals(nombreDeUsuario);}
+
+
 }
 
 
