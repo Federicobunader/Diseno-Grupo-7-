@@ -126,7 +126,7 @@ public class Registrarse {
     private static boolean laPasswordEsMala(String palabra) {
         int lineasTotales = 0;
         boolean esMala = false;
-        File archivo = new File("claves.txt");
+        File archivo = new File("10000_PeoresContrasenias.txt");
         try {
             // SI EXISTE EL ARCHIVO
             if(archivo.exists()) {
