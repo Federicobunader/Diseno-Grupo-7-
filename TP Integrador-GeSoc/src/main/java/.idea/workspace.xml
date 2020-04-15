@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d1f9f89-42be-463f-bc6f-f26b97741f84" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/10000_PeoresContrasenias" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestorDeUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/GestorDeUsuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Registrarse.java" afterDir="false" />
-    </list>
+    <list default="true" id="5d1f9f89-42be-463f-bc6f-f26b97741f84" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +49,7 @@
       <workItem from="1586379248004" duration="2232000" />
       <workItem from="1586383422119" duration="38000" />
       <workItem from="1586555088752" duration="1030000" />
-      <workItem from="1586967538312" duration="1040000" />
+      <workItem from="1586967538312" duration="1457000" />
     </task>
     <servers />
   </component>
