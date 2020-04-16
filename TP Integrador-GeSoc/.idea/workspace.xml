@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2ea6f028-877d-4255-a206-a98ab1755417" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GestorDeUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GestorDeUsuarios.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +23,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
@@ -48,26 +51,30 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586555666877</updated>
+      <workItem from="1587071231959" duration="1632000" />
     </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1586903010320">
+    <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1587072793934">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586903010320" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1586903010320">
+    <state width="1322" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587072793934" />
+    <state width="1322" height="174" key="GridCell.Tab.0.center" timestamp="1587072793934">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586903010320" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1586903010319">
+    <state width="1322" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587072793934" />
+    <state width="1322" height="174" key="GridCell.Tab.0.left" timestamp="1587072793934">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586903010319" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1586903010320">
+    <state width="1322" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587072793934" />
+    <state width="1322" height="174" key="GridCell.Tab.0.right" timestamp="1587072793934">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586903010320" />
+    <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587072793934" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1586902508910">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

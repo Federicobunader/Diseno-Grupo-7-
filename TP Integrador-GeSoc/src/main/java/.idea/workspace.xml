@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d1f9f89-42be-463f-bc6f-f26b97741f84" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5d1f9f89-42be-463f-bc6f-f26b97741f84" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +36,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../.." />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -67,6 +65,7 @@
       <workItem from="1586555088752" duration="1030000" />
       <workItem from="1586967538312" duration="1457000" />
       <workItem from="1586972718665" duration="380000" />
+      <workItem from="1587071183107" duration="47000" />
     </task>
     <servers />
   </component>
@@ -92,18 +91,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="419" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1586968496693" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1586381403126">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1587071228008">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586381403126" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587071228008" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1586381404937">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586381404937" />
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1586972718301">
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1587071186220">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586972718301" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1587071186220" />
     <state x="332" y="42" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586967850623">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
