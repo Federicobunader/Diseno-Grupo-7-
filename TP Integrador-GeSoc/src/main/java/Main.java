@@ -9,8 +9,8 @@ import java.security.NoSuchAlgorithmException;
 public class Main {
     public static void main(String[] args) {
 
-        GestorDeUsuarios gestorDeUsuarios = GestorDeUsuarios.GetInstance();
-        gestorDeUsuarios.consolaUsuario();
+        Sistema sistema = Sistema.GetInstance();
+        sistema.arrancar();
 
     }
 
