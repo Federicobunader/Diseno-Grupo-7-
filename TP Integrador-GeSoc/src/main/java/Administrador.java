@@ -9,7 +9,5 @@ public class Administrador extends Usuario {
 	public void finalize() throws Throwable {
 
 	}
-	public void IniciarSesion(){
 
-	}
 }//end Administrador

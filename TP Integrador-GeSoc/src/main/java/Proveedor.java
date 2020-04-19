@@ -1,9 +1,8 @@
 
 public class Proveedor {
 
-	private char Nombre;
-	private int NumeroID;
-	private char Usuario;
+	private String nombre;
+	private int numeroID;
 
 	public Proveedor(){
 

@@ -1,10 +1,8 @@
 
 public class Item {
 
-	private Producto Detalle;
-	private char Descripcion;
-	private int Cantidad;
-	public Producto m_Producto;
+	private Producto producto;
+	private int cantidad;
 
 	public Item(){
 

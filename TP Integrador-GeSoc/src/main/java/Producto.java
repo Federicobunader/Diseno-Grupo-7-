@@ -1,9 +1,9 @@
 
 public class Producto {
 
-	private int Precio;
-	private Proveedor Proveedor;
-	public Proveedor m_Proveedor;
+	private int precio;
+	private Proveedor proveedor;
+	private String descripcion;
 
 	public Producto(){
 
@@ -11,8 +11,5 @@ public class Producto {
 
 	public void finalize() throws Throwable {
 
-	}
-	public char Descripcion(){
-		return 0;
 	}
 }//end Producto

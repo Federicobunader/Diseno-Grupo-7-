@@ -1,12 +1,14 @@
+import java.util.ArrayList;
 
 public class EntidadJuridica extends Entidad {
 
-	private char RazonSocial;
-	private char NombreFicticio;
+	private ArrayList<EntidadBase> entidadBases = new ArrayList<EntidadBase>();
+
+	private String RazonSocial;
+	private String NombreFicticio;
 	private int CUIT;
-	private char DireccionPostal;
+	private String DireccionPostal;
 	private int CodigoDeInscripcion;
-	private EntidadBase EntidadesBase;
 
 	public EntidadJuridica(){
 

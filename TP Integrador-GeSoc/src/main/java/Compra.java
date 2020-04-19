@@ -1,17 +1,15 @@
+import java.util.ArrayList;
+import java.util.Calendar;
 
 public class Compra {
 
-	//private Date FechaDeOperacion;
-	private MedioDePago MedioDePago;
-	private Documento DocumentoComercial;
-	private Entidad Entidad;
-	private Item Items;
-	private Proveedor Proveedor;
-	public MedioDePago m_MedioDePago;
-	public Item m_Item;
-	public Proveedor m_Proveedor;
-	public Documento m_Documento;
-	public Entidad m_Entidad;
+	private ArrayList<Item> items = new ArrayList<Item>();
+
+	private Calendar fechaDeOperacion;
+	private MedioDePago medioDePago;
+	private Documento documentoComercial;
+	private Cliente comprador;
+	private Proveedor proveedor;
 
 	public Compra(){
 

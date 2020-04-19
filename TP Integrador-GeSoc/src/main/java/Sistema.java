@@ -3,6 +3,7 @@
 public class Sistema {
 
     GestorDePasswords gestorDePasswords = GestorDePasswords.GetInstance();
+    GestorDeUsuarios gestorDeUsuarios = GestorDeUsuarios.GetInstance();
 
     private static Sistema instance = null;
 
@@ -19,7 +20,6 @@ public class Sistema {
 
 
     public void arrancar(){
-        GestorDeUsuarios gestorDeUsuarios = GestorDeUsuarios.GetInstance();
         gestorDeUsuarios.consolaUsuario();
     }
 

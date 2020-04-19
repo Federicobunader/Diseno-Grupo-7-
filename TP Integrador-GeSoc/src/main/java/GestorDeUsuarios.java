@@ -154,18 +154,19 @@ public class GestorDeUsuarios {
         unaPassword = gestorDePasswords.hashearPassword(unaPassword);
 
         while (!(unUsuario.laPasswordCoincide(unaPassword)) && contador < 10) {
-            System.out.println("Password invalida. Por favor espere.");
+            System.out.println("Password invalida.");
             System.out.println("Intentos Restantes: " + (10 - contador));
             contador += 1;
+            System.out.println("Por favor espere " + contador * 10 + " segundos.");
             try {
-                TimeUnit.SECONDS.sleep(5);
+                TimeUnit.SECONDS.sleep(contador * 10);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             System.out.println("Ingrese otra password:");
-            unaPassword = Main.pedirPorPantallaString();
+            unaPassword = gestorDePasswords.hashearPassword(Main.pedirPorPantallaString());
         }
-        ;
+
         if (contador == 10) {
             System.out.println("Has gastado todos los intentos. Vuelve a intentarlo mas tarde.");
         } else {
