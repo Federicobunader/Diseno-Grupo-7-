@@ -76,7 +76,7 @@ public class GestorDeUsuarios {
         String opcion = Main.pedirPorPantallaString();
 
         if (opcion.equals("si")) {
-            System.out.println("Ingrese una Password:");
+            System.out.println("Ingrese una Password que cuente con minúsuclas, al menos una mayúscula, un número y un símbolo:");
             password = Main.pedirPorPantallaString();
             password = gestorDePasswords.verificarPassword(password,usuario);
         }

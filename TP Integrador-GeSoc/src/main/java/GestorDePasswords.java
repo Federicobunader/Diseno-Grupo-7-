@@ -20,7 +20,8 @@ public class GestorDePasswords {
 
     public String verificarPassword(String unaPassword,String unNombreDeUsuario) {
         unaPassword = this.chequearEspaciosSeguidos(unaPassword);
-        while (this.laPasswordTieneMalTamanio(unaPassword) || this.laPasswordEsMala(unaPassword) || this.laPasswordEsElNombreDeUsuario(unaPassword,unNombreDeUsuario)) {
+        while (this.laPasswordTieneMalTamanio(unaPassword) || this.laPasswordEsMala(unaPassword) || this.laPasswordEsElNombreDeUsuario(unaPassword,unNombreDeUsuario)
+                 || this.seguridadClave(unaPassword) >= 80) {
             System.out.println("Por favor ingrese otra: ");
             unaPassword = Main.pedirPorPantallaString();
             unaPassword = this.chequearEspaciosSeguidos(unaPassword);
@@ -63,30 +64,28 @@ public class GestorDePasswords {
         return passwordFinal;
     }
 
-
-    public void seguridadClave(String clave) {
+    public int seguridadClave(String clave) {
         int seguridad = 0;
         if (clave.length() != 0) {
-            if (tienenNumeros(clave) && tieneLetras(clave)) {
-                seguridad += 30;
+            if (tieneMinusculas(clave)) {
+                seguridad += 20;
             }
-            if (tieneMinusculas(clave) && tieneMayusculas(clave)) {
-                seguridad += 30;
+            if (tieneMayusculas(clave)){
+                seguridad += 20;
             }
-            if (clave.length() >= 4 && clave.length() <= 5) {
-                seguridad += 10;
-            } else {
-                if (clave.length() >= 6 && clave.length() <= 8) {
-                    seguridad += 30;
-                } else {
-                    if (clave.length() > 8) {
-                        seguridad += 40;
-                    }
-                }
+            if (tienenNumeros(clave)){
+                seguridad += 20;
+            }
+            if(tieneSimbolos(clave)){
+                seguridad += 20;
+            }
+            if(clave.length() > 15){
+                seguridad += 20;
             }
         }
 
-        System.out.println("La seguridad de la contraseña es de: %" + seguridad);
+        System.out.println("La seguridad de la contraseña es de: " + seguridad + "%");
+        return seguridad;
     }
 
     private boolean tienenNumeros(String texto) {
@@ -99,11 +98,30 @@ public class GestorDePasswords {
         return false;
     }
 
-    private boolean tieneLetras(String texto) {
+    private boolean tieneMinusculas(String texto) {
         String letras = "abcdefghyjklmnñopqrstuvwxyz";
-        texto = texto.toLowerCase();
         for (int i = 0; i < texto.length(); i++) {
             if (letras.indexOf(texto.charAt(i), 0) != -1) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean tieneSimbolos(String texto) {
+        String letras = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
+        for (int i = 0; i < texto.length(); i++) {
+            if (letras.indexOf(texto.charAt(i), 0) != -1) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean tieneMayusculas(String texto) {
+        String letrasMayusculas = "ABCDEFGHYJKLMNÑOPQRSTUVWXYZ";
+        for (int i = 0; i < texto.length(); i++) {
+            if (letrasMayusculas.indexOf(texto.charAt(i), 0) != -1) {
                 return true;
             }
         }
@@ -139,26 +157,6 @@ public class GestorDePasswords {
             System.out.println(e.getMessage());
         }
         return esMala;
-    }
-
-    private boolean tieneMinusculas(String texto) {
-        String letras = "abcdefghyjklmnñopqrstuvwxyz";
-        for (int i = 0; i < texto.length(); i++) {
-            if (letras.indexOf(texto.charAt(i), 0) != -1) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private boolean tieneMayusculas(String texto) {
-        String letrasMayusculas = "ABCDEFGHYJKLMNÑOPQRSTUVWXYZ";
-        for (int i = 0; i < texto.length(); i++) {
-            if (letrasMayusculas.indexOf(texto.charAt(i), 0) != -1) {
-                return true;
-            }
-        }
-        return false;
     }
 
     public void ingresarNuevaPassword(Usuario usuario) {
@@ -203,7 +201,6 @@ public class GestorDePasswords {
         return unaLetra != otraLetra;
     }
 
-
     private boolean noTiene3CaracteresConsecutivos(String nuevaPassword) {
         int i = 0;
 
@@ -243,7 +240,6 @@ public class GestorDePasswords {
 
     public String hashearPassword(String input) {
 
-        // getInstance() method is called with algorithm SHA-384
         MessageDigest md = null;
         try {
             md = MessageDigest.getInstance("SHA-384");
@@ -251,26 +247,16 @@ public class GestorDePasswords {
             e.printStackTrace();
         }
 
-        // digest() method is called
-        // to calculate message digest of the input string
-        // returned as array of byte
         byte[] messageDigest = md.digest(input.getBytes());
 
-        // Convert byte array into signum representation
         BigInteger no = new BigInteger(1, messageDigest);
 
-        // Convert message digest into hex value
         String hashtext = no.toString(16);
 
-        // Add preceding 0s to make it 32 bit
         while (hashtext.length() < 32) {
             hashtext = "0" + hashtext;
         }
 
-        // return the HashText
         return hashtext;
-
-
-
     }
 }
