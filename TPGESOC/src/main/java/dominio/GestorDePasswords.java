@@ -23,7 +23,7 @@ public class GestorDePasswords {
     public String verificarPassword(String unaPassword,String unNombreDeUsuario) {
         unaPassword = this.chequearEspaciosSeguidos(unaPassword);
         while (this.laPasswordTieneMalTamanio(unaPassword) || this.laPasswordEsMala(unaPassword) || this.laPasswordEsElNombreDeUsuario(unaPassword,unNombreDeUsuario)
-                 || this.seguridadClave(unaPassword) >= 80) {
+                 || this.seguridadClave(unaPassword) < 80) {
             System.out.println("Por favor ingrese otra: ");
             unaPassword = Main.pedirPorPantallaString();
             unaPassword = this.chequearEspaciosSeguidos(unaPassword);
