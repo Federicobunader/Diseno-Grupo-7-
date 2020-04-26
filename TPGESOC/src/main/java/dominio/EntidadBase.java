@@ -1,3 +1,4 @@
+package dominio;
 
 public class EntidadBase extends Entidad {
 

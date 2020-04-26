@@ -1,4 +1,4 @@
-//package Negocio;
+package dominio;//package Negocio;
 
 
 import java.io.BufferedReader;

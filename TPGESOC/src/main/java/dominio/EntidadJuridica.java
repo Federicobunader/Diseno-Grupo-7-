@@ -1,3 +1,5 @@
+package dominio;
+
 import java.util.ArrayList;
 
 public class EntidadJuridica extends Entidad {
