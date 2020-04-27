@@ -35,19 +35,16 @@ public class GestorDePasswords {
         if(unaPassword.equals(unNombreDeUsuario)){
             System.out.println("La Contraseña no puede coincidir con el nombre de usuario");
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
     private boolean laPasswordTieneMalTamanio(String unaPassword) {
-        boolean malTamanio = false;
         if (unaPassword.length() < 8 || unaPassword.length() > 64) {
             System.out.println("Su contraseña no tiene entre 8 y 64 caracteres.");
-            malTamanio = true;
+            return true;
         }
-
-        return malTamanio;
+        return false;
     }
     private boolean passwordNoCumpleRequisitos(String password){
         boolean noCumpleRequisitos = false;
@@ -176,12 +173,11 @@ public class GestorDePasswords {
 
     public void ingresarNuevaPassword(Usuario usuario) {
         System.out.println("Ingrese una NUEVA Contraseña:");
-        String nuevaPassword = Main.pedirPorPantallaString();
-        this.verificarPassword(nuevaPassword,usuario.getUsuario());
+        String nuevaPassword = this.verificarPassword(Main.pedirPorPantallaString(),usuario.getUsuario());
 
-        while (!(this.laNuevaPasswordEstaOK(nuevaPassword))) {
-            System.out.println("La contraseña no es aceptada porque es debil, ingrese otra:");
-            nuevaPassword = Main.pedirPorPantallaString();
+        while (this.laNuevaPasswordNoEstaOK(nuevaPassword) || this.laNuevaPasswordEsIgualALaAnterior(nuevaPassword,usuario)) {
+            System.out.println("Por favor ingrese otra contraseña:");
+            nuevaPassword = this.verificarPassword(Main.pedirPorPantallaString(),usuario.getUsuario());
         }
         String passwordHasheada = this.hashearPassword(nuevaPassword);
         System.out.println("La contraseña hasheada es " + passwordHasheada);
@@ -191,12 +187,12 @@ public class GestorDePasswords {
 
     }
 
-    private boolean laNuevaPasswordEstaOK(String nuevaPassword) {
-        return this.noTiene3LetrasSeguidasIguales(nuevaPassword) &&
-                this.noTiene3CaracteresConsecutivos(nuevaPassword);
+    private boolean laNuevaPasswordNoEstaOK(String nuevaPassword) {
+        return this.tiene3LetrasSeguidasIguales(nuevaPassword) ||
+                this.tiene3CaracteresConsecutivos(nuevaPassword);
     }
 
-    private boolean noTiene3LetrasSeguidasIguales(String nuevaPassword) {
+    private boolean tiene3LetrasSeguidasIguales(String nuevaPassword) {
         int i = 0;
         String nuevaPasswordSinEspacios = this.chequearEspaciosSeguidos(nuevaPassword);
 
@@ -204,19 +200,26 @@ public class GestorDePasswords {
             if (!this.las2LetrasSonDistintas(nuevaPasswordSinEspacios.charAt(i), nuevaPasswordSinEspacios.charAt(i + 1))) {
                 if (!this.las2LetrasSonDistintas(nuevaPasswordSinEspacios.charAt((i + 1)), nuevaPasswordSinEspacios.charAt(i + 2))) {
                     System.out.println("La Contraseña no puede tener 3 letras iguales seguidas");
-                    return false;
+                    return true;
                 }
             }
             i++;
         }
-        return true;
+        return false;
     }
-
+    private boolean laNuevaPasswordEsIgualALaAnterior(String nuevaPassword,Usuario usuario){
+        String passwordHasheada = this.hashearPassword(nuevaPassword);
+        if( usuario.laPasswordCoincide(passwordHasheada)){
+            System.out.println("La contrasenia ingresada es igual a la actual.");
+            return true;
+        }
+        return false;
+    }
     private boolean las2LetrasSonDistintas(char unaLetra, char otraLetra) {
         return unaLetra != otraLetra;
     }
 
-    private boolean noTiene3CaracteresConsecutivos(String nuevaPassword) {
+    private boolean tiene3CaracteresConsecutivos(String nuevaPassword) {
         int i = 0;
 
         while (i < nuevaPassword.length() - 2) {
@@ -224,12 +227,12 @@ public class GestorDePasswords {
             if (this.esUnCaracterSucesivoParaAdelante(nuevaPassword.codePointAt(i), nuevaPassword.codePointAt(i + 1), nuevaPassword.codePointAt(i + 2)) ||
                     this.esUnCaracterSucesivoParaAtras(nuevaPassword.codePointAt(i), nuevaPassword.codePointAt(i + 1), nuevaPassword.codePointAt(i + 2))) {
                 System.out.println("La Contraseña no puede tener mas de 2 caracteres consecutivos");
-                return false;
+                return true;
             }
 
             i++;
         }
-        return true;
+        return false;
     }
 
     private boolean esUnCaracterSucesivoParaAdelante(int valor, int otroValor, int unValor) {
