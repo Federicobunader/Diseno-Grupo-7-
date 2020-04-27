@@ -68,8 +68,8 @@ public class GestorDeUsuarios {
     private void registrarUsuario() {
         System.out.println("Ingrese un Usuario :");
         String usuario = Main.pedirPorPantallaString();
-        while (this.usuarioYaExiste(usuario)) {
-            System.out.println("Ya existe un usuario con ese nombre, ingrese uno nuevo: ");
+        while (this.nombreDeUsuarioVacio(usuario) || this.usuarioYaExiste(usuario)) {
+            System.out.println("Ingrese uno nuevo: ");
             usuario = Main.pedirPorPantallaString();
         }
 
@@ -78,7 +78,7 @@ public class GestorDeUsuarios {
         String opcion = Main.pedirPorPantallaString();
 
         if (opcion.equals("si")) {
-            System.out.println("Ingrese una Password que cuente con minúsuclas, al menos una mayúscula, un número y un símbolo:");
+            System.out.println("Ingrese una Password que cuente con al menos una minuscula, una mayuscula, un numero y/o un simbolo:");
             password = Main.pedirPorPantallaString();
             password = gestorDePasswords.verificarPassword(password,usuario);
         }
@@ -94,6 +94,15 @@ public class GestorDeUsuarios {
         usuarios.add(new Usuario(usuario, passwordHasheada));
     }
 
+    private boolean nombreDeUsuarioVacio(String nombreDeUsuario){
+        boolean esVacio = false;
+         if(nombreDeUsuario.isEmpty()){
+             System.out.println("El nombre de usuario no puede estar vacio");
+             esVacio = true;
+         }
+        return esVacio;
+    }
+
     private boolean laListaDeUsuariosEstaVacia() {
         return usuarios.isEmpty();
     }
@@ -102,6 +111,7 @@ public class GestorDeUsuarios {
         if (!this.laListaDeUsuariosEstaVacia()) {
             for (int i = 0; i < usuarios.size(); i++) {
                 if (usuarios.get(i).elNombreCoincide(nombreDeUsuario)) {
+                    System.out.println("El usuario ya existe");
                     return true;
                 }
             }
@@ -113,6 +123,7 @@ public class GestorDeUsuarios {
         this.mostrarUsuarios(); //Lo pongo para probar, no tiene sentido mostrarle los usuarios al mismo usuario.
         System.out.println("Ingrese su Usuario");
         String nombreDeUsuario = Main.pedirPorPantallaString();
+
         while (this.buscarUsuario(nombreDeUsuario) == null) {
 
             System.out.println("Ingrese su Usuario nuevamente");

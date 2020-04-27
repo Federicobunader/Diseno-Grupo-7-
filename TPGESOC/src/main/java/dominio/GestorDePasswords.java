@@ -22,9 +22,9 @@ public class GestorDePasswords {
 
     public String verificarPassword(String unaPassword,String unNombreDeUsuario) {
         unaPassword = this.chequearEspaciosSeguidos(unaPassword);
-        while (this.laPasswordTieneMalTamanio(unaPassword) || this.laPasswordEsMala(unaPassword) || this.laPasswordEsElNombreDeUsuario(unaPassword,unNombreDeUsuario)
-                 || this.seguridadClave(unaPassword) < 80) {
-            System.out.println("Por favor ingrese otra: ");
+        while (this.laPasswordTieneMalTamanio(unaPassword)|| this.laPasswordEsMala(unaPassword) || this.laPasswordEsElNombreDeUsuario(unaPassword,unNombreDeUsuario)
+                 || this.passwordNoCumpleRequisitos(unaPassword) ) {
+            System.out.println("Por favor ingrese otra:");
             unaPassword = Main.pedirPorPantallaString();
             unaPassword = this.chequearEspaciosSeguidos(unaPassword);
         }
@@ -46,9 +46,25 @@ public class GestorDePasswords {
             System.out.println("Su contraseña no tiene entre 8 y 64 caracteres.");
             malTamanio = true;
         }
+
         return malTamanio;
     }
-
+    private boolean passwordNoCumpleRequisitos(String password){
+        boolean noCumpleRequisitos = false;
+        if(!this.tieneMayusculas(password)){
+            System.out.println("La contrasenia debe tener al menos una mayuscula.");
+            noCumpleRequisitos = true;
+        }
+        if(!this.tieneMinusculas(password)){
+            System.out.println("La contrasenia debe tener al menos una minuscula.");
+            noCumpleRequisitos = true;
+        }
+        if(!this.tienenNumeros(password) && !this.tieneSimbolos(password)){
+            System.out.println("La contrasenia debe tener al menos un numero y/o un simbolo.");
+            noCumpleRequisitos = true;
+        }
+        return noCumpleRequisitos;
+    }
     private String chequearEspaciosSeguidos(String unaPassword) {
         int i;
         int contador = 0;
@@ -70,16 +86,16 @@ public class GestorDePasswords {
         int seguridad = 0;
         if (clave.length() != 0) {
             if (tieneMinusculas(clave)) {
-                seguridad += 20;
+                seguridad += 25;
             }
             if (tieneMayusculas(clave)){
-                seguridad += 20;
+                seguridad += 25;
             }
             if (tienenNumeros(clave)){
-                seguridad += 20;
+                seguridad += 15;
             }
             if(tieneSimbolos(clave)){
-                seguridad += 20;
+                seguridad += 15;
             }
             if(clave.length() > 15){
                 seguridad += 20;
@@ -133,19 +149,16 @@ public class GestorDePasswords {
     private boolean laPasswordEsMala(String palabra) {
         int lineasTotales = 0;
         boolean esMala = false;
-        File archivo = new File("10000_PeoresContrasenias.txt");
+        File archivo = new File("src/main/java/10000_PeoresContrasenias.txt");
         try {
-            // SI EXISTE EL ARCHIVO
             if (archivo.exists()) {
-                // ABRE LECTURA DEL ARCHIVO
                 BufferedReader leerArchivo = new BufferedReader(new FileReader(archivo));
-                // LINEA LEIDA
                 String lineaLeida;
-                // MIENTRAS LA LINEA LEIDA NO SEA NULL
+
                 while ((lineaLeida = leerArchivo.readLine()) != null) {
                     lineasTotales = lineasTotales + 1;
 
-                    String[] palabras = lineaLeida.split(" "); // si lee espacio en blanco detecta q es nueva palabra
+                    String[] palabras = lineaLeida.split(" ");
                     for (int i = 0; i < palabras.length; i++) {
                         if (palabras[i].equals(palabra)) {
                             System.out.println("Su contraseña está en el puesto número " + lineasTotales +
