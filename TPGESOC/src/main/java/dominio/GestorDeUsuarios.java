@@ -154,6 +154,8 @@ public class GestorDeUsuarios {
                 System.out.println("Password de Usuario: " + usuarios.get(i).getPassword());
                 System.out.println(" -----------------------------");
             }
+        }else{
+            System.out.println("No hay usuarios para mostrar.");
         }
     }
 

@@ -66,8 +66,8 @@ public class GestorDePasswords {
         int i;
         int contador = 0;
         String passwordFinal = "";
-        for (i = 0; i < unaPassword.length()-1; i++) {
-            if (!(unaPassword.charAt(i) == ' ' && unaPassword.charAt((i + 1)) == ' ')) {
+        for (i = 0; i < unaPassword.length(); i++) {
+            if (i+1 == unaPassword.length()||!(unaPassword.charAt(i) == ' ' && unaPassword.charAt((i + 1)) == ' ')) {
                 passwordFinal = passwordFinal + unaPassword.charAt(i);
             } else {
                 contador += 1;
