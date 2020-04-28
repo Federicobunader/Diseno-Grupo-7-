@@ -66,7 +66,7 @@ public class GestorDePasswords {
         int i;
         int contador = 0;
         String passwordFinal = "";
-        for (i = 0; i < unaPassword.length(); i++) {
+        for (i = 0; i < unaPassword.length()-1; i++) {
             if (!(unaPassword.charAt(i) == ' ' && unaPassword.charAt((i + 1)) == ' ')) {
                 passwordFinal = passwordFinal + unaPassword.charAt(i);
             } else {
@@ -181,6 +181,7 @@ public class GestorDePasswords {
         }
         String passwordHasheada = this.hashearPassword(nuevaPassword);
         System.out.println("La contraseña hasheada es " + passwordHasheada);
+        System.out.println("La contraseña Final es " + nuevaPassword);
 
         this.seguridadClave(nuevaPassword);
         usuario.setPassword(passwordHasheada); //Creo que esto esta mal, porque rompe el encapsulamiento
