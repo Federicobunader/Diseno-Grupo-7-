@@ -3,6 +3,7 @@ package dominio.TiposDeEmpresas;
 public class MicroEmpresa extends TipoDeEmpresa {
 
     private static MicroEmpresa instance = null;
+    String nombreTipoEmpresa = "Micro";
 
     private MicroEmpresa() {
     }
@@ -13,4 +14,7 @@ public class MicroEmpresa extends TipoDeEmpresa {
         return instance;
     }
 
+    public String getNombreTipoEmpresa() {
+        return nombreTipoEmpresa;
+    }
 }

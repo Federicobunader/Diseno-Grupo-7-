@@ -3,24 +3,26 @@ package dominio.TipoDeSector;
 import dominio.Empresa;
 import dominio.TiposDeEmpresas.*;
 
-public class Construccion {
+public class Construccion extends TipoDeSector{
 
-    public TipoDeEmpresa calcularTipoDeEmpresa(Empresa unaEmpresa) {
+    private static Construccion instance = null;
+    String nombreSector = "Construccion";
 
-        float ventas = unaEmpresa.getPromedioDeVentasAnuales();
+    private Construccion() {
+    }
 
-        if (ventas <= 15.23) {
-            MicroEmpresa microEmpresa = MicroEmpresa.GetInstance();
-            return microEmpresa;
-        } else if (ventas <= 90.31) {
-            PequeniaEmpresa pequeniaEmpresa = PequeniaEmpresa.GetInstance();
-            return pequeniaEmpresa;
-        } else if (ventas <= 503.88) {
-            MedianaTramo1 medianaTramo1 = MedianaTramo1.GetInstance();
-            return medianaTramo1;
-        } else {
-            MedianaTramo2 medianaTramo2 = MedianaTramo2.GetInstance();
-            return medianaTramo2;
-        }
+    public static Construccion GetInstance() {
+        if (instance == null)
+            instance = new Construccion();
+        return instance;
+    }
+
+    public String getNombreSector() {
+        return nombreSector;
+    }
+
+    @Override
+    public TipoDeEmpresa calcularTipoDeEmpresa(Empresa unaEmpresa, double topeVentasMedianaTramo2, int topePersonalMedianaTramo2, double topeVentasMedianaTramo1, int topePersonalMedianaTramo1, double topeVentasPequenia, int topePersonalPequenia) {
+        return super.calcularTipoDeEmpresa(unaEmpresa, 503.88, 200, 90.31, 45, 15.23, 12);
     }
 }
