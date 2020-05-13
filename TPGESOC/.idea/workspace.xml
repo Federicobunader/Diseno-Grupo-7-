@@ -2,21 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c56b04db-f42a-40a7-8d18-c78ae2368dc3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/Empresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/Agropecuaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/Agropecuaria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/Comercio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/Comercio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/Construccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/Construccion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/IndustriaYMinera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/IndustriaYMinera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/Servicios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/Servicios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/TipoDeSector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/TipoDeSector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/MedianaTramo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/MedianaTramo1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/MedianaTramo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/MedianaTramo2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/MicroEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/MicroEmpresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/PequeniaEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/PequeniaEmpresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/TipoDeEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/TipoDeEmpresa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Class Model.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DER TP DDS 2020.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Class Model.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DER TP DDS 2020.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/Compra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Entidad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/Entidad.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -132,8 +124,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/dominio/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="170">
+              <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -190,7 +182,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="860" />
@@ -332,8 +324,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1358" height="814" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1358" height="814" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23651771" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -541,8 +532,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dominio/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="170">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
         </state>
       </provider>
     </entry>
