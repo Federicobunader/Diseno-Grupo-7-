@@ -10,7 +10,7 @@ public class Compra {
 	private Calendar fechaDeOperacion;
 	private MedioDePago medioDePago;
 	private Documento documentoComercial;
-	private Cliente comprador;
+	private Entidad entidad;
 	private Proveedor proveedor;
 
 	public Compra(){
