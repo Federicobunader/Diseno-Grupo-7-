@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c56b04db-f42a-40a7-8d18-c78ae2368dc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Class Model.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DER TP DDS 2020.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Class Model.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DER TP DDS 2020.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Cliente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/Compra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Entidad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/Entidad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dominio/Cliente.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dominio/Compra.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dominio/Compra.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dominio/Empresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dominio/Empresa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dominio/Entidad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dominio/Entidad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dominio/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dominio/Main.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/TipoDeSector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="28" />
+            <state relative-caret-position="170">
+              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1418#1419#0" expanded="true" />
@@ -40,82 +41,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dominio/Empresa.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
+            <state relative-caret-position="186">
+              <caret line="61" column="33" lean-forward="true" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#779#780#0" expanded="true" />
-                <element signature="e#820#821#0" expanded="true" />
-                <element signature="e#862#863#0" expanded="true" />
-                <element signature="e#896#897#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/MedianaTramo1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#491#492#0" expanded="true" />
-                <element signature="e#531#532#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/Agropecuaria.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="24" column="63" lean-forward="true" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#455#456#0" expanded="true" />
-                <element signature="e#490#491#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/PequeniaEmpresa.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#493#494#0" expanded="true" />
-                <element signature="e#533#534#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/TipoDeEmpresa.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="33" />
-              <folding>
-                <element signature="e#145#146#0" expanded="true" />
-                <element signature="e#185#186#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/MedianaTramo2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="33" />
-              <folding>
-                <element signature="e#423#424#0" expanded="true" />
-                <element signature="e#463#464#0" expanded="true" />
+                <element signature="e#1087#1088#0" expanded="true" />
+                <element signature="e#1124#1125#0" expanded="true" />
+                <element signature="e#1215#1216#0" expanded="true" />
+                <element signature="e#1254#1255#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,8 +57,31 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/dominio/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+            <state relative-caret-position="221">
+              <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dominio/Sistema.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="5" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="16" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/Agropecuaria.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="24" column="63" lean-forward="true" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#455#456#0" expanded="true" />
+                <element signature="e#490#491#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,13 +119,14 @@
         <option value="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/Construccion.java" />
         <option value="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/Comercio.java" />
         <option value="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/Agropecuaria.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/TipoDeSector.java" />
         <option value="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/Servicios.java" />
         <option value="$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/MedianaTramo1.java" />
         <option value="$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/MedianaTramo2.java" />
         <option value="$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/MicroEmpresa.java" />
         <option value="$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/PequeniaEmpresa.java" />
         <option value="$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/TipoDeEmpresa.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dominio/ObserverDeEmpresa.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/TipoDeSector.java" />
         <option value="$PROJECT_DIR$/src/main/java/dominio/Empresa.java" />
         <option value="$PROJECT_DIR$/src/main/java/dominio/Main.java" />
       </list>
@@ -182,9 +139,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
     <option name="width" value="860" />
     <option name="height" value="1010" />
   </component>
@@ -324,9 +281,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1358" height="814" extended-state="7" />
+    <frame x="-7" y="-7" width="1358" height="814" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23651771" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21725732" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -335,7 +292,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.39442816" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3328446" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -387,18 +344,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/TipoDeSector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1418#1419#0" expanded="true" />
-            <element signature="e#1453#1454#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/Servicios.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -447,17 +392,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/MedianaTramo2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="33" />
-          <folding>
-            <element signature="e#423#424#0" expanded="true" />
-            <element signature="e#463#464#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/MicroEmpresa.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -471,19 +405,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/PequeniaEmpresa.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="306">
           <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/TipoDeEmpresa.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="102">
           <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="33" />
           <folding>
             <element signature="e#145#146#0" expanded="true" />
@@ -492,17 +424,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/Empresa.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/MedianaTramo2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#779#780#0" expanded="true" />
-            <element signature="e#820#821#0" expanded="true" />
-            <element signature="e#862#863#0" expanded="true" />
-            <element signature="e#896#897#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -512,15 +437,27 @@
           <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#491#492#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/Sistema.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/ObserverDeEmpresa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="45" lean-forward="true" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/Agropecuaria.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="255">
           <caret line="24" column="63" lean-forward="true" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -530,10 +467,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/TipoDeSector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1418#1419#0" expanded="true" />
+            <element signature="e#1453#1454#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/Empresa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="61" column="33" lean-forward="true" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1087#1088#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#1254#1255#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dominio/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
         </state>
       </provider>
     </entry>

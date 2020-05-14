@@ -1,6 +1,7 @@
 package dominio;//package Negocio;
 
 
+import dominio.TipoDeSector.Agropecuaria;
 import dominio.TipoDeSector.TipoDeSector;
 import dominio.TiposDeEmpresas.TipoDeEmpresa;
 
@@ -12,8 +13,12 @@ import java.security.NoSuchAlgorithmException;
 public class Main {
     public static void main(String[] args) {
 
-        Empresa unaEmpresa = new Empresa('A',100,50);
+        Empresa unaEmpresa = new Empresa('A',100,50, Agropecuaria.GetInstance());
+        unaEmpresa.contratarPersonal(100);
+        unaEmpresa.despedirPersonal(500);
 
+        Sistema sistema = Sistema.GetInstance();
+        sistema.arrancar();
     }
 
 
