@@ -50,25 +50,28 @@ public class Empresa extends EntidadJuridica {
 		this.actualizarTipoDeEmpresa();
 	}
 	public void despedirPersonal(int unaCantidad){
-		if(this.quedaEnNegativo(cantidadDePersonal,unaCantidad)){
-			throw new Error("No puede despedir esa cantidad de Personas");
-		}else {
-			cantidadDePersonal -= unaCantidad;
-		}
 
-		this.actualizarTipoDeEmpresa();
+			if(this.quedaEnNegativo(cantidadDePersonal,unaCantidad)) {
+				System.out.print("No puede despedir esa cantidad de Personas");
+			}
+			else{
+				cantidadDePersonal -= unaCantidad;
+				this.actualizarTipoDeEmpresa();
+			}
 	}
 	public void aumentarVentas(int unaCantidad){
 		promedioDeVentasAnuales += unaCantidad;
 		this.actualizarTipoDeEmpresa();
 	}
 	public void disminuirVentas(int unaCantidad){
-		if(this.quedaEnNegativo(cantidadDePersonal,unaCantidad)){
-			throw new Error("No puede despedir esa cantidad de Personas");
-		}else {
-			cantidadDePersonal -= unaCantidad;
+
+		if(this.quedaEnNegativo(cantidadDePersonal,unaCantidad)) {
+			System.out.print("No puede despedir esa cantidad de Personas");
 		}
-		this.actualizarTipoDeEmpresa();
+		else{
+			promedioDeVentasAnuales -= unaCantidad;
+			this.actualizarTipoDeEmpresa();
+		}
 	}
 
 }//end Empresa
