@@ -6,20 +6,25 @@ import com.sun.org.apache.xalan.internal.xsltc.compiler.util.ErrorMsg;
 import dominio.TipoDeSector.*;
 import dominio.TiposDeEmpresas.TipoDeEmpresa;
 
+
+
 public class Empresa extends EntidadJuridica {
+
 
 	private char actividad;
 	private float promedioDeVentasAnuales;
 	private int cantidadDePersonal;
+	private String seleccionTipoDeSector;
 	private TipoDeSector sector;
 	private TipoDeEmpresa tipoDeEmpresa;
 
 
-	public Empresa(char actividad,float promedioDeVentasAnuales,int cantidadDePersonal, TipoDeSector sector) {
+	public Empresa(char actividad,float promedioDeVentasAnuales,int cantidadDePersonal, String seleccionTipoDeSector) {
 		this.actividad = actividad;
 		this.promedioDeVentasAnuales = promedioDeVentasAnuales;
 		this.cantidadDePersonal = cantidadDePersonal;
-		this.sector = sector;
+		this.seleccionTipoDeSector =seleccionTipoDeSector;
+		this.seleccionarSector();
 		this.actualizarTipoDeEmpresa();
 	}
 
@@ -28,6 +33,29 @@ public class Empresa extends EntidadJuridica {
 		System.out.println(sector.getNombreSector());
 		System.out.println(tipoDeEmpresa.getNombreTipoEmpresa());
 	}
+
+	private void seleccionarSector(){
+
+			if(seleccionTipoDeSector.equals("Agropecuaria")){
+				sector = Agropecuaria.GetInstance();
+			}
+			else if(seleccionTipoDeSector.equals("Comercio")){
+			sector = Comercio.GetInstance();
+			}
+			else if(seleccionTipoDeSector.equals("Construccion")){
+				sector = Construccion.GetInstance();
+			}
+			else if(seleccionTipoDeSector.equals("IndustriaYMinera"))
+				sector = IndustriaYMinera.GetInstance();
+			else if(seleccionTipoDeSector.equals("Servicios")) {
+				sector = Servicios.GetInstance();
+			}
+			else {
+				System.out.println("Sector Inexistente");
+			}
+
+	}
+
 
 	public void setTipoDeEmpresa(TipoDeEmpresa tipoDeEmpresa) {
 		this.tipoDeEmpresa = tipoDeEmpresa;
@@ -52,7 +80,7 @@ public class Empresa extends EntidadJuridica {
 	public void despedirPersonal(int unaCantidad){
 
 			if(this.quedaEnNegativo(cantidadDePersonal,unaCantidad)) {
-				System.out.print("No puede despedir esa cantidad de Personas");
+				System.out.println("No puede despedir esa cantidad de Personas");
 			}
 			else{
 				cantidadDePersonal -= unaCantidad;
@@ -66,7 +94,7 @@ public class Empresa extends EntidadJuridica {
 	public void disminuirVentas(int unaCantidad){
 
 		if(this.quedaEnNegativo(cantidadDePersonal,unaCantidad)) {
-			System.out.print("No puede despedir esa cantidad de Personas");
+			System.out.println("No puede despedir esa cantidad de Personas");
 		}
 		else{
 			promedioDeVentasAnuales -= unaCantidad;

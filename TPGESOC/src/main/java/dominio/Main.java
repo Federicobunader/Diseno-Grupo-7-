@@ -13,7 +13,7 @@ import java.security.NoSuchAlgorithmException;
 public class Main {
     public static void main(String[] args) {
 
-        Empresa unaEmpresa = new Empresa('A',100,50, Agropecuaria.GetInstance());
+        Empresa unaEmpresa = new Empresa('A',20,10,"Construccion");
         unaEmpresa.contratarPersonal(100);
         unaEmpresa.despedirPersonal(500);
 
