@@ -1,17 +1,16 @@
 package dominio;
 
 
-import com.sun.org.apache.bcel.internal.generic.SWITCH;
-import com.sun.org.apache.xalan.internal.xsltc.compiler.util.ErrorMsg;
+//import com.sun.org.apache.bcel.internal.generic.SWITCH;
+//import com.sun.org.apache.xalan.internal.xsltc.compiler.util.ErrorMsg;
 import dominio.TipoDeSector.*;
 import dominio.TiposDeEmpresas.TipoDeEmpresa;
 
 
 
+
 public class Empresa extends EntidadJuridica {
 
-
-	private char actividad;
 	private float promedioDeVentasAnuales;
 	private int cantidadDePersonal;
 	private String seleccionTipoDeSector;
@@ -19,8 +18,7 @@ public class Empresa extends EntidadJuridica {
 	private TipoDeEmpresa tipoDeEmpresa;
 
 
-	public Empresa(char actividad,float promedioDeVentasAnuales,int cantidadDePersonal, String seleccionTipoDeSector) {
-		this.actividad = actividad;
+	public Empresa(float promedioDeVentasAnuales,int cantidadDePersonal, String seleccionTipoDeSector) {
 		this.promedioDeVentasAnuales = promedioDeVentasAnuales;
 		this.cantidadDePersonal = cantidadDePersonal;
 		this.seleccionTipoDeSector =seleccionTipoDeSector;
@@ -34,39 +32,60 @@ public class Empresa extends EntidadJuridica {
 		System.out.println(tipoDeEmpresa.getNombreTipoEmpresa());
 	}
 
-	private void seleccionarSector(){
-
-			if(seleccionTipoDeSector.equals("Agropecuaria")){
-				sector = Agropecuaria.GetInstance();
-			}
-			else if(seleccionTipoDeSector.equals("Comercio")){
-			sector = Comercio.GetInstance();
-			}
-			else if(seleccionTipoDeSector.equals("Construccion")){
-				sector = Construccion.GetInstance();
-			}
-			else if(seleccionTipoDeSector.equals("IndustriaYMinera"))
-				sector = IndustriaYMinera.GetInstance();
-			else if(seleccionTipoDeSector.equals("Servicios")) {
-				sector = Servicios.GetInstance();
-			}
-			else {
-				System.out.println("Sector Inexistente");
-			}
-
-	}
-
-
-	public void setTipoDeEmpresa(TipoDeEmpresa tipoDeEmpresa) {
-		this.tipoDeEmpresa = tipoDeEmpresa;
-	}
-
 	public int getCantidadDePersonal() {
 		return cantidadDePersonal;
 	}
 
-	public float getPromedioDeVentasAnuales(){
+	public void setCantidadDePersonal(int cantidadDePersonal) {
+		this.cantidadDePersonal = cantidadDePersonal;
+	}
+
+	public float getPromedioDeVentasAnuales() {
 		return promedioDeVentasAnuales;
+	}
+
+	public void setPromedioDeVentasAnuales(float promedioDeVentasAnuales) {
+		this.promedioDeVentasAnuales = promedioDeVentasAnuales;
+	}
+
+	public String getSeleccionTipoDeSector() {
+		return seleccionTipoDeSector;
+	}
+
+	public TipoDeSector getSector() {
+		return sector;
+	}
+
+	public TipoDeEmpresa getTipoDeEmpresa() {
+		return tipoDeEmpresa;
+	}
+
+	public void setSeleccionTipoDeSector(String seleccionTipoDeSector) {
+		this.seleccionTipoDeSector = seleccionTipoDeSector;
+	}
+
+	private void seleccionarSector(){
+
+		switch (seleccionTipoDeSector) {
+			case "Agropecuaria":
+				sector = Agropecuaria.GetInstance();
+				break;
+			case "Comercio":
+				sector = Comercio.GetInstance();
+				break;
+			case "Construccion":
+				sector = Construccion.GetInstance();
+				break;
+			case "IndustriaYMinera":
+				sector = IndustriaYMinera.GetInstance();
+				break;
+			case "Servicios":
+				sector = Servicios.GetInstance();
+				break;
+			default:
+				throw new IllegalArgumentException("No se encuentra el sector ingresado");
+		}
+
 	}
 
 	private boolean quedaEnNegativo(float unaVariable,float unValor){
