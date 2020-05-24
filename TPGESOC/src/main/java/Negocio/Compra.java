@@ -1,5 +1,7 @@
 package Negocio;
 
+import Negocio.Entidad.Entidad;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 

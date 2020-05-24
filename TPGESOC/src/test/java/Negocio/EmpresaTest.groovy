@@ -1,5 +1,7 @@
 package Negocio
 
+import Negocio.Entidad.Empresa.Empresa
+
 class EmpresaTest{
     void setUp() {
         Empresa unaEmpresaAgropecuaria = new Empresa(10,10,"Agropecuaria");

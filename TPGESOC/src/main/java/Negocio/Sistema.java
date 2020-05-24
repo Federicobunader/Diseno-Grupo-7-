@@ -1,5 +1,8 @@
 package Negocio;
 
+import Negocio.Usuario.GestorDePasswords;
+import Negocio.Usuario.GestorDeUsuarios;
+
 public class Sistema {
 
     GestorDePasswords gestorDePasswords = GestorDePasswords.GetInstance();

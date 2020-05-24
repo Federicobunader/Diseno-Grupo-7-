@@ -2,67 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c56b04db-f42a-40a7-8d18-c78ae2368dc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Negocio/Categorizador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/TipoDeSector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Administrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Administrador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Documento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Documento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Empresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Entidad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/EntidadBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/EntidadBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/EntidadJuridica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/EntidadJuridica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/GestorDePasswords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/GestorDePasswords.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/GestorDeUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/GestorDeUsuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/MedioDePago.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/MedioDePago.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/OSC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/OSC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Producto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Proveedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Proveedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Sistema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Sistema.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/Agropecuaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/Agropecuaria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/Comercio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/Comercio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/Construccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/Construccion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/IndustriaYMinera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/IndustriaYMinera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/Servicios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/Servicios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/TipoDeSector.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/MedianaTramo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/TiposDeEmpresas/MedianaTramo1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/MedianaTramo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/TiposDeEmpresas/MedianaTramo2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/MicroEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/TiposDeEmpresas/MicroEmpresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/PequeniaEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/TiposDeEmpresas/PequeniaEmpresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/TiposDeEmpresas/TipoDeEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/TiposDeEmpresas/TipoDeEmpresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dominio/EmpresaTest.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Negocio/EmpresaTest.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/Administrador.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/Compra.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/Documento.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/Empresa.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/Entidad.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/EntidadBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/EntidadJuridica.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/GestorDePasswords.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/GestorDeUsuarios.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/MedioDePago$tipoDePago.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/MedioDePago.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/OSC.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/Producto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/Proveedor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/Sistema.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/TipoDeSector/Agropecuaria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/TipoDeSector/Comercio.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/TipoDeSector/Construccion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/TipoDeSector/IndustriaYMinera.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/TipoDeSector/Servicios.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/TipoDeSector/TipoDeSector.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/TiposDeEmpresas/MedianaTramo1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/TiposDeEmpresas/MedianaTramo2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/TiposDeEmpresas/MicroEmpresa.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/TiposDeEmpresas/PequeniaEmpresa.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/TiposDeEmpresas/TipoDeEmpresa.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dominio/Usuario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Administrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Administrador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Categorizador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Categorizador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Entidad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Entidad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/EntidadBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/EntidadBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/EntidadJuridica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/EntidadJuridica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/GestorDePasswords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/GestorDePasswords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/GestorDeUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/GestorDeUsuarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/OSC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/OSC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Sistema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Sistema.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/Agropecuaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Agropecuaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/Comercio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Comercio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/Construccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Construccion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/IndustriaYMinera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/IndustriaYMinera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/Servicios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Servicios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/TipoDeSector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/TipoDeSector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/TiposDeEmpresas/MedianaTramo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MedianaTramo1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/TiposDeEmpresas/MedianaTramo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MedianaTramo2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/TiposDeEmpresas/MicroEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MicroEmpresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/TiposDeEmpresas/PequeniaEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/PequeniaEmpresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/TiposDeEmpresas/TipoDeEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/TipoDeEmpresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Negocio/EmpresaTest.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Negocio/EmpresaTest.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Administrador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Categorizador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compra.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compra.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Empresa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/EntidadBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/EntidadJuridica.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/GestorDePasswords.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/GestorDeUsuarios.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/OSC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Sistema.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Sistema.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/TipoDeSector/Agropecuaria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/TipoDeSector/Comercio.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/TipoDeSector/Construccion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/TipoDeSector/IndustriaYMinera.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/TipoDeSector/Servicios.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/TipoDeSector/TipoDeSector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/TiposDeEmpresas/MedianaTramo1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/TiposDeEmpresas/MedianaTramo2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/TiposDeEmpresas/MicroEmpresa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/TiposDeEmpresas/PequeniaEmpresa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/TiposDeEmpresas/TipoDeEmpresa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Usuario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Negocio/EmpresaTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Negocio/EmpresaTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -78,156 +68,103 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/GestorDeUsuarios.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Categorizador.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="103" selection-start-line="30" selection-start-column="103" selection-end-line="30" selection-end-column="103" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Empresa.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-986">
-              <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1586#1587#0" expanded="true" />
-                <element signature="e#1613#1614#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/TipoDeSector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="3" column="17" lean-forward="true" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/Construccion.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/GestorDeUsuarios.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Categorizador.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#455#456#0" expanded="true" />
-                <element signature="e#490#491#0" expanded="true" />
-                <element signature="e#545#546#0" expanded="true" />
-                <element signature="e#574#575#0" expanded="true" />
-                <element signature="e#623#624#0" expanded="true" />
-                <element signature="e#648#649#0" expanded="true" />
-                <element signature="e#698#699#0" expanded="true" />
-                <element signature="e#726#727#0" expanded="true" />
-                <element signature="e#775#776#0" expanded="true" />
-                <element signature="e#800#801#0" expanded="true" />
-                <element signature="e#845#846#0" expanded="true" />
-                <element signature="e#873#874#0" expanded="true" />
-                <element signature="e#917#918#0" expanded="true" />
-                <element signature="e#941#942#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/Agropecuaria.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/Administrador.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="46" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/IndustriaYMinera.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#481#482#0" expanded="true" />
-                <element signature="e#516#517#0" expanded="true" />
-                <element signature="e#567#568#0" expanded="true" />
-                <element signature="e#596#597#0" expanded="true" />
-                <element signature="e#645#646#0" expanded="true" />
-                <element signature="e#670#671#0" expanded="true" />
-                <element signature="e#720#721#0" expanded="true" />
-                <element signature="e#748#749#0" expanded="true" />
-                <element signature="e#797#798#0" expanded="true" />
-                <element signature="e#822#823#0" expanded="true" />
-                <element signature="e#867#868#0" expanded="true" />
-                <element signature="e#895#896#0" expanded="true" />
-                <element signature="e#939#940#0" expanded="true" />
-                <element signature="e#963#964#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/Servicios.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/Comercio.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-131">
-              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="119">
+              <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#431#432#0" expanded="true" />
-                <element signature="e#466#467#0" expanded="true" />
-                <element signature="e#763#764#0" expanded="true" />
-                <element signature="e#809#810#0" expanded="true" />
-                <element signature="e#858#859#0" expanded="true" />
-                <element signature="e#906#907#0" expanded="true" />
-                <element signature="e#956#957#0" expanded="true" />
-                <element signature="e#1002#1003#0" expanded="true" />
-                <element signature="e#1051#1052#0" expanded="true" />
-                <element signature="e#1099#1100#0" expanded="true" />
-                <element signature="e#1144#1145#0" expanded="true" />
-                <element signature="e#1185#1186#0" expanded="true" />
-                <element signature="e#1229#1230#0" expanded="true" />
-                <element signature="e#1272#1273#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/GestorDePasswords.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Empresa.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="105" column="22" selection-start-line="105" selection-start-column="22" selection-end-line="105" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/EntidadBase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/EntidadJuridica.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/OSC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -281,7 +218,6 @@
         <option value="$PROJECT_DIR$/src/main/java/dominio/Empresa.java" />
         <option value="$PROJECT_DIR$/src/main/java/dominio/Main.java" />
         <option value="$PROJECT_DIR$/src/test/java/dominio/EmpresaTest.groovy" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Empresa.java" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/TipoDeSector.java" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/Agropecuaria.java" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/Construccion.java" />
@@ -289,6 +225,9 @@
         <option value="$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/Comercio.java" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/Servicios.java" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/Categorizador.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Empresa.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Categorizador.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Empresa.java" />
       </list>
     </option>
   </component>
@@ -312,7 +251,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -346,19 +284,11 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Negocio" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Negocio" type="462c0819:PsiDirectoryNode" />
-              <item name="TipoDeSector" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -401,7 +331,7 @@
       <module name="TPGESOC" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Negocio.TipoDeSector.*" />
+          <option name="PATTERN" value="Negocio.Entidad.Empresa.TipoDeSector.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -445,7 +375,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1358" height="814" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19183359" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19491525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -454,7 +384,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3196481" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32991204" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398827" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -517,14 +447,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/dominio/TipoDeActividades/TipoDeActividad.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/dominio/TipoDeActividades/IndustriaYMineria.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/dominio/TipoDeSector/ComisionistasOAgenciaDeViaje.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/GestorDePasswords.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="53" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/TiposDeEmpresas/MicroEmpresa.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MicroEmpresa.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="33" />
@@ -535,7 +458,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/TiposDeEmpresas/PequeniaEmpresa.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/PequeniaEmpresa.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="33" />
@@ -545,7 +468,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/TiposDeEmpresas/TipoDeEmpresa.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/TipoDeEmpresa.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="33" />
@@ -556,14 +479,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/TiposDeEmpresas/MedianaTramo2.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MedianaTramo2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/TiposDeEmpresas/MedianaTramo1.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MedianaTramo1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="33" />
@@ -578,13 +501,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="5" selection-start-line="7" selection-start-column="3" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/EntidadJuridica.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -613,106 +529,138 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Administrador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/GestorDeUsuarios.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/TipoDeSector.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/TipoDeSector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/Agropecuaria.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Construccion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="46" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/Construccion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
           <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#455#456#0" expanded="true" />
             <element signature="e#490#491#0" expanded="true" />
-            <element signature="e#545#546#0" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
-            <element signature="e#726#727#0" expanded="true" />
-            <element signature="e#775#776#0" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
-            <element signature="e#845#846#0" expanded="true" />
-            <element signature="e#873#874#0" expanded="true" />
-            <element signature="e#917#918#0" expanded="true" />
-            <element signature="e#941#942#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/IndustriaYMinera.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Agropecuaria.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+        <state relative-caret-position="34">
+          <caret line="2" column="46" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/IndustriaYMinera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#481#482#0" expanded="true" />
             <element signature="e#516#517#0" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
             <element signature="e#596#597#0" expanded="true" />
             <element signature="e#645#646#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#720#721#0" expanded="true" />
-            <element signature="e#748#749#0" expanded="true" />
-            <element signature="e#797#798#0" expanded="true" />
-            <element signature="e#822#823#0" expanded="true" />
-            <element signature="e#867#868#0" expanded="true" />
-            <element signature="e#895#896#0" expanded="true" />
-            <element signature="e#939#940#0" expanded="true" />
-            <element signature="e#963#964#0" expanded="true" />
+            <element signature="e#671#672#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/Servicios.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Servicios.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        <state relative-caret-position="136">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Comercio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding>
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Entidad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/EntidadBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/EntidadJuridica.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Categorizador.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/OSC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="103" selection-start-line="30" selection-start-column="103" selection-end-line="30" selection-end-column="103" />
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/Administrador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/GestorDePasswords.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/GestorDeUsuarios.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Categorizador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Empresa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="105" column="22" selection-start-line="105" selection-start-column="22" selection-end-line="105" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -721,43 +669,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="3" column="17" lean-forward="true" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Empresa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-986">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+        <state relative-caret-position="119">
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#1613#1614#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/TipoDeSector/Comercio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-131">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-            <element signature="e#763#764#0" expanded="true" />
-            <element signature="e#809#810#0" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#906#907#0" expanded="true" />
-            <element signature="e#956#957#0" expanded="true" />
-            <element signature="e#1002#1003#0" expanded="true" />
-            <element signature="e#1051#1052#0" expanded="true" />
-            <element signature="e#1099#1100#0" expanded="true" />
-            <element signature="e#1144#1145#0" expanded="true" />
-            <element signature="e#1185#1186#0" expanded="true" />
-            <element signature="e#1229#1230#0" expanded="true" />
-            <element signature="e#1272#1273#0" expanded="true" />
           </folding>
         </state>
       </provider>
