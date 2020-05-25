@@ -27,7 +27,7 @@ public class Empresa extends EntidadJuridica {
 		this.cantidadDePersonal = cantidadDePersonal;
 		this.seleccionTipoDeSector =seleccionTipoDeSector;
 		this.seleccionarSector();
-		categorizador.calcularTipoDeEmpresa(sector,promedioDeVentasAnuales,cantidadDePersonal);
+		this.actualizarTipoDeEmpresa();
 	}
 
 //	private void actualizarTipoDeEmpresa(){
@@ -67,6 +67,9 @@ public class Empresa extends EntidadJuridica {
 	public void setSeleccionTipoDeSector(String seleccionTipoDeSector) {
 		this.seleccionTipoDeSector = seleccionTipoDeSector;
 	}
+	private void actualizarTipoDeEmpresa(){
+		tipoDeEmpresa = categorizador.calcularTipoDeEmpresa(sector,promedioDeVentasAnuales,cantidadDePersonal);
+	}
 
 	private void seleccionarSector(){
 
@@ -98,7 +101,7 @@ public class Empresa extends EntidadJuridica {
 
 	public void contratarPersonal(int unaCantidad){
 		cantidadDePersonal += unaCantidad;
-		categorizador.calcularTipoDeEmpresa(sector,promedioDeVentasAnuales,cantidadDePersonal);
+		this.actualizarTipoDeEmpresa();
 	}
 	public void despedirPersonal(int unaCantidad){
 
@@ -107,12 +110,12 @@ public class Empresa extends EntidadJuridica {
 			}
 			else{
 				cantidadDePersonal -= unaCantidad;
-				categorizador.calcularTipoDeEmpresa(sector,promedioDeVentasAnuales,cantidadDePersonal);
+				this.actualizarTipoDeEmpresa();
 			}
 	}
 	public void aumentarVentas(int unaCantidad){
 		promedioDeVentasAnuales += unaCantidad;
-		categorizador.calcularTipoDeEmpresa(sector,promedioDeVentasAnuales,cantidadDePersonal);
+		this.actualizarTipoDeEmpresa();
 	}
 	public void disminuirVentas(int unaCantidad){
 
@@ -121,7 +124,7 @@ public class Empresa extends EntidadJuridica {
 		}
 		else{
 			promedioDeVentasAnuales -= unaCantidad;
-			categorizador.calcularTipoDeEmpresa(sector,promedioDeVentasAnuales,cantidadDePersonal);
+			this.actualizarTipoDeEmpresa();
 		}
 	}
 
