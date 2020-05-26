@@ -2,9 +2,27 @@ package Negocio;
 
 public class Producto {
 
-	private int precio;
-	private Proveedor proveedor;
-	private String descripcion;
+	int precio;
+	Proveedor proveedor;
+	String descripcion;
+
+	public int getPrecio() {
+		return precio;
+	}
+
+	public Proveedor getProveedor() {
+		return proveedor;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public Producto(int precio, Proveedor proveedor, String descripcion) {
+		this.precio = precio;
+		this.proveedor = proveedor;
+		this.descripcion = descripcion;
+	}
 
 	public Producto(){
 

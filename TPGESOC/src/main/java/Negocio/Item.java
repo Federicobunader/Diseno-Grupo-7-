@@ -9,10 +9,7 @@ public class Item {
 
 	}
 
-	public void finalize() throws Throwable {
-
-	}
 	public int valorTotal(){
-		return 0;
+		return producto.precio * cantidad;
 	}
 }//end Item

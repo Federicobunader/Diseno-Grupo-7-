@@ -30,11 +30,6 @@ public class Empresa extends EntidadJuridica {
 		this.actualizarTipoDeEmpresa();
 	}
 
-//	private void actualizarTipoDeEmpresa(){
-//		tipoDeEmpresa = categorizador.calcularTipoDeEmpresa(sector);
-//		System.out.println(sector.getNombreSector());
-//		System.out.println(tipoDeEmpresa.getNombreTipoEmpresa());
-//	}
 
 	public int getCantidadDePersonal() {
 		return cantidadDePersonal;
