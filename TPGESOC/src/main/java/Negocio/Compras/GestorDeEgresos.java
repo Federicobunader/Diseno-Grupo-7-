@@ -1,5 +1,4 @@
-package Negocio.Compra;
-import Negocio.Compra.Presupuesto;
+package Negocio.Compras;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package Negocio;
+package Negocio.Compras;
 
 public class Item {
 

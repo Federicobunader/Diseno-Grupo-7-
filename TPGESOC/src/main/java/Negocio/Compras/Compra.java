@@ -1,4 +1,4 @@
-package Negocio.Compra;
+package Negocio.Compras;
 
 import Negocio.*;
 import Negocio.Entidad.Entidad;
@@ -83,4 +83,4 @@ public class Compra {
 	private void efectuarCompra(){
 		new Egreso(this);
 	}
-}//end Compra
+}//end Compras

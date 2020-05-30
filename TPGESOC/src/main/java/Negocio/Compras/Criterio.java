@@ -1,4 +1,4 @@
-package Negocio.Compra;
+package Negocio.Compras;
 
 import java.util.ArrayList;
 

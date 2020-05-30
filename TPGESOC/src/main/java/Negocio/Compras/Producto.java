@@ -1,4 +1,6 @@
-package Negocio;
+package Negocio.Compras;
+
+import Negocio.Proveedor;
 
 public class Producto {
 

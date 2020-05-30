@@ -1,7 +1,7 @@
-package Negocio.Compra.Criterios;
+package Negocio.Compras.Criterios;
 
-import Negocio.Compra.Criterio;
-import Negocio.Compra.Presupuesto;
+import Negocio.Compras.Criterio;
+import Negocio.Compras.Presupuesto;
 
 import java.util.ArrayList;
 import java.util.Comparator;

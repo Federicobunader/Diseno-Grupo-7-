@@ -1,9 +1,8 @@
-package Negocio;
+package Negocio.Compras;
 
-import Negocio.Entidad.Entidad;
+import Negocio.Documento;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 
 public class Presupuesto {
 

@@ -1,8 +1,8 @@
 package Negocio.Usuario;
 
 
-import Negocio.Compra.Compra;
-import Negocio.Compra.GestorDeEgresos;
+import Negocio.Compras.Compra;
+import Negocio.Compras.GestorDeEgresos;
 
 import java.util.ArrayList;
 
