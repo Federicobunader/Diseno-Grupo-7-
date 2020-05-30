@@ -1,5 +1,6 @@
 package Negocio.Usuario;
 
+import InterfazDeUsuario.InterfazPassword;
 import Negocio.Main;
 
 import java.io.BufferedReader;
@@ -12,6 +13,7 @@ import java.security.NoSuchAlgorithmException;
 public class GestorDePasswords {
 
     private static GestorDePasswords instance = null;
+    private InterfazPassword interfazPassword = InterfazPassword.GetInstance();
 
     private GestorDePasswords() {
     }
@@ -26,7 +28,7 @@ public class GestorDePasswords {
         unaPassword = this.chequearEspaciosSeguidos(unaPassword);
         while (this.laPasswordTieneMalTamanio(unaPassword)|| this.laPasswordEsMala(unaPassword) || this.laPasswordEsElNombreDeUsuario(unaPassword,unNombreDeUsuario)
                  || this.passwordNoCumpleRequisitos(unaPassword) ) {
-            System.out.println("Por favor ingrese otra:");
+            interfazPassword.mostrarError("Por favor ingrese otra:");
             unaPassword = Main.pedirPorPantallaString();
             unaPassword = this.chequearEspaciosSeguidos(unaPassword);
         }
@@ -35,7 +37,7 @@ public class GestorDePasswords {
 
     private boolean laPasswordEsElNombreDeUsuario(String unaPassword,String unNombreDeUsuario){
         if(unaPassword.equals(unNombreDeUsuario)){
-            System.out.println("La Contraseña no puede coincidir con el nombre de usuario");
+            interfazPassword.mostrarError("La Contraseña no puede coincidir con el nombre de usuario");
             return true;
         }
         return false;
@@ -43,7 +45,7 @@ public class GestorDePasswords {
 
     private boolean laPasswordTieneMalTamanio(String unaPassword) {
         if (unaPassword.length() < 8 || unaPassword.length() > 64) {
-            System.out.println("Su contraseña no tiene entre 8 y 64 caracteres.");
+            interfazPassword.mostrarError("Su contraseña no tiene entre 8 y 64 caracteres.");
             return true;
         }
         return false;
@@ -51,15 +53,15 @@ public class GestorDePasswords {
     private boolean passwordNoCumpleRequisitos(String password){
         boolean noCumpleRequisitos = false;
         if(!this.tieneMayusculas(password)){
-            System.out.println("La contrasenia debe tener al menos una mayuscula.");
+            interfazPassword.mostrarError("La contrasenia debe tener al menos una mayuscula.");
             noCumpleRequisitos = true;
         }
         if(!this.tieneMinusculas(password)){
-            System.out.println("La contrasenia debe tener al menos una minuscula.");
+            interfazPassword.mostrarError("La contrasenia debe tener al menos una minuscula.");
             noCumpleRequisitos = true;
         }
         if(!this.tienenNumeros(password) && !this.tieneSimbolos(password)){
-            System.out.println("La contrasenia debe tener al menos un numero y/o un simbolo.");
+            interfazPassword.mostrarError("La contrasenia debe tener al menos un numero y/o un simbolo.");
             noCumpleRequisitos = true;
         }
         return noCumpleRequisitos;
@@ -76,7 +78,7 @@ public class GestorDePasswords {
             }
         }
         if (contador > 0) {
-            System.out.println("Se encontraron espacios consecutivos y se los reemplazo por uno solo");
+            interfazPassword.mostrarAdvertencia("Se encontraron espacios consecutivos y se los reemplazo por uno solo.");
         }
         return passwordFinal;
     }
@@ -100,8 +102,7 @@ public class GestorDePasswords {
                 seguridad += 20;
             }
         }
-
-        System.out.println("La seguridad de la contraseña es de: " + seguridad + "%");
+        interfazPassword.mostrarInformacion("La seguridad de la contraseña es de: " + seguridad + "%");
         return seguridad;
     }
 
@@ -160,34 +161,30 @@ public class GestorDePasswords {
                     String[] palabras = lineaLeida.split(" ");
                     for (int i = 0; i < palabras.length; i++) {
                         if (palabras[i].equals(palabra)) {
-                            System.out.println("Su contraseña está en el puesto número " + lineasTotales +
-                                    " de contraseñas malas.");
+                            interfazPassword.mostrarInformacion("Su contraseña está en el puesto número " + lineasTotales + " de contraseñas malas.");
                             esMala = true;
                         }
                     }
                 }
             }
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            interfazPassword.mostrarError(e.getMessage());
         }
         return esMala;
     }
 
     public void ingresarNuevaPassword(Usuario usuario) {
-        System.out.println("Ingrese una NUEVA Contraseña:");
-        String nuevaPassword = this.verificarPassword(Main.pedirPorPantallaString(),usuario.getUsuario());
+        String nuevaPassword = this.verificarPassword(interfazPassword.pedirString("Ingrese una NUEVA Contraseña:"),usuario.getUsuario());
 
         while (this.laNuevaPasswordNoEstaOK(nuevaPassword) || this.laNuevaPasswordEsIgualALaAnterior(nuevaPassword,usuario)) {
-            System.out.println("Por favor ingrese otra contraseña:");
-            nuevaPassword = this.verificarPassword(Main.pedirPorPantallaString(),usuario.getUsuario());
+            nuevaPassword = this.verificarPassword(interfazPassword.pedirString("Por favor ingrese otra contraseña:"),usuario.getUsuario());
         }
         String passwordHasheada = this.hashearPassword(nuevaPassword);
-        System.out.println("La contraseña hasheada es " + passwordHasheada);
-        System.out.println("La contraseña Final es " + nuevaPassword);
+        interfazPassword.mostrarInformacion("La contraseña hasheada es " + passwordHasheada);
+        interfazPassword.mostrarInformacion("La contraseña Final es " + nuevaPassword);
 
         this.seguridadClave(nuevaPassword);
-        usuario.setPassword(passwordHasheada); //Creo que esto esta mal, porque rompe el encapsulamiento
-
+        usuario.setPassword(passwordHasheada);
     }
 
     private boolean laNuevaPasswordNoEstaOK(String nuevaPassword) {
@@ -202,7 +199,7 @@ public class GestorDePasswords {
         while (i < nuevaPasswordSinEspacios.length() - 1) {
             if (!this.las2LetrasSonDistintas(nuevaPasswordSinEspacios.charAt(i), nuevaPasswordSinEspacios.charAt(i + 1))) {
                 if (!this.las2LetrasSonDistintas(nuevaPasswordSinEspacios.charAt((i + 1)), nuevaPasswordSinEspacios.charAt(i + 2))) {
-                    System.out.println("La Contraseña no puede tener 3 letras iguales seguidas");
+                    interfazPassword.mostrarError("La Contraseña no puede tener 3 letras iguales seguidas");
                     return true;
                 }
             }
@@ -213,7 +210,7 @@ public class GestorDePasswords {
     private boolean laNuevaPasswordEsIgualALaAnterior(String nuevaPassword,Usuario usuario){
         String passwordHasheada = this.hashearPassword(nuevaPassword);
         if( usuario.laPasswordCoincide(passwordHasheada)){
-            System.out.println("La contrasenia ingresada es igual a la actual.");
+            interfazPassword.mostrarAdvertencia("La contrasenia ingresada es igual a la actual.");
             return true;
         }
         return false;
@@ -229,17 +226,15 @@ public class GestorDePasswords {
 
             if (this.esUnCaracterSucesivoParaAdelante(nuevaPassword.codePointAt(i), nuevaPassword.codePointAt(i + 1), nuevaPassword.codePointAt(i + 2)) ||
                     this.esUnCaracterSucesivoParaAtras(nuevaPassword.codePointAt(i), nuevaPassword.codePointAt(i + 1), nuevaPassword.codePointAt(i + 2))) {
-                System.out.println("La Contraseña no puede tener mas de 2 caracteres consecutivos");
+                interfazPassword.mostrarError("La Contraseña no puede tener mas de 2 caracteres consecutivos");
                 return true;
             }
-
             i++;
         }
         return false;
     }
 
     private boolean esUnCaracterSucesivoParaAdelante(int valor, int otroValor, int unValor) {
-
         return valor == otroValor - 1 && valor == unValor - 2;
     }
 

@@ -11,14 +11,12 @@ public class Main {
     public static void main(String[] args) {
 
         Empresa unaEmpresa = new Empresa(10,10,"Construccion");
-        unaEmpresa.contratarPersonal(100);
-        unaEmpresa.despedirPersonal(500);
+       // unaEmpresa.contratarPersonal(100);
+       // unaEmpresa.despedirPersonal(500);
 
         Sistema sistema = Sistema.GetInstance();
         sistema.arrancar();
     }
-
-
 
     public static String pedirPorPantallaString() {
         String res = "";
