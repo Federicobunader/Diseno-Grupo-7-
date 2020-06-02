@@ -5,11 +5,9 @@ public class Documento {
 	private int Numero;
 	private char Tipo;
 
-	public Documento(){
-
+	public Documento(int numero, char tipo) {
+		Numero = numero;
+		Tipo = tipo;
 	}
 
-	public void finalize() throws Throwable {
-
-	}
 }//end Documento

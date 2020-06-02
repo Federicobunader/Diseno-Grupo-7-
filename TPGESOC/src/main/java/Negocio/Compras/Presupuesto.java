@@ -11,7 +11,16 @@ public class Presupuesto {
 
     private ArrayList<Item> items = new ArrayList<Item>();
     private ArrayList<Documento> documentosComerciales = new ArrayList<Documento>();
-    int IDCompraRealizada;
+
+
+    public Presupuesto( ArrayList<Item> items, ArrayList<Documento> documentosComerciales) {
+        this.items = items;
+        this.documentosComerciales = documentosComerciales;
+    }
+
+    public void setItems(ArrayList<Item> items) {
+        this.items = items;
+    }
 
     public double valorTotal(){
         return items.stream().mapToInt(item->item.valorTotal()).sum();

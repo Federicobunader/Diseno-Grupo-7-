@@ -1,6 +1,7 @@
 package Negocio.Usuario;
 
 
+import InterfazDeUsuario.InterfazUsuarios;
 import Negocio.Compras.Compra;
 import Negocio.Compras.GestorDeEgresos;
 
@@ -11,6 +12,7 @@ public class Usuario {
     private String usuario;
     private String password;
     private ArrayList<String> bandejaDeMensajes = new ArrayList<String>();
+    private InterfazUsuarios interfazUsuarios = InterfazUsuarios.GetInstance();
 
 
     public String getUsuario() {
@@ -29,6 +31,10 @@ public class Usuario {
         this.password = password;
     }
 
+    public ArrayList<String> getBandejaDeMensajes() {
+        return bandejaDeMensajes;
+    }
+
     public Usuario(String usuario, String password) {
         this.usuario = usuario;
         this.password = password;
@@ -43,6 +49,7 @@ public class Usuario {
 
     public void serNotificado(String mensaje) {
         bandejaDeMensajes.add(mensaje);
+        interfazUsuarios.mostrarInformacion(mensaje);
     }
 
     GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();

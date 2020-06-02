@@ -13,19 +13,31 @@ public class Compra {
 	private ArrayList<Presupuesto> presupuestos = new ArrayList<Presupuesto>();
 	private ArrayList<Usuario> usuariosRevisores = new ArrayList<Usuario>();
 	private Presupuesto presupuestoElegido;
-	private Calendar fechaDeOperacion;
-	private MedioDePago medioDePago;
+	//private Calendar fechaDeOperacion;
+	//private MedioDePago medioDePago;
 	private Documento documentoComercial;
 	private Entidad entidad;
 	private Proveedor proveedor;
 	public boolean requierePresupuesto;
 	public Criterio criterioEleccionPresupuesto;
-	int IDCompra;
+	private int IDCompra;
 
+	public Compra(ArrayList<Item> items, ArrayList<Presupuesto> presupuestos/*, Calendar fechaDeOperacion, MedioDePago medioDePago*/, Documento documentoComercial, Entidad entidad, Proveedor proveedor, boolean requierePresupuesto, Criterio criterioEleccionPresupuesto, int IDCompra) {
+		this.items = items;
+		this.presupuestos = presupuestos;
+		//this.fechaDeOperacion = fechaDeOperacion;
+		//this.medioDePago = medioDePago;
+		this.documentoComercial = documentoComercial;
+		this.entidad = entidad;
+		this.proveedor = proveedor;
+		this.requierePresupuesto = requierePresupuesto;
+		this.criterioEleccionPresupuesto = criterioEleccionPresupuesto;
+		this.IDCompra = IDCompra;
+	}
 
 	Validador validador = Validador.GetInstance();
 
-	private void validar(){
+	public void validar(){
 		if(requierePresupuesto) {
 			notificarUsuarios(validador.tieneSuficientesPresupuestos(this.cantidadPresupuestos(),IDCompra));
 			notificarUsuarios(validador.seUtilizoPresupuesto(this));
@@ -48,7 +60,7 @@ public class Compra {
 		return IDCompra;
 	}
 
-	private void seleccionarPresupuesto(){
+	public void seleccionarPresupuesto(){
 		presupuestoElegido = criterioEleccionPresupuesto.elegirPresupuesto(presupuestos);
 	}
 
@@ -76,8 +88,8 @@ public class Compra {
 		return presupuestos;
 	}
 
-	public int valorTotal(){
-		return 0;
+	public double valorTotal(){
+		return presupuestoElegido.valorTotal();
 	}
 
 	private void efectuarCompra(){

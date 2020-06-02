@@ -1,6 +1,9 @@
 package Negocio;//package Negocio;
 
 
+import Negocio.Compras.Compra;
+import Negocio.Compras.Item;
+import Negocio.Compras.Producto;
 import Negocio.Entidad.Empresa.Empresa;
 
 import java.io.BufferedReader;
@@ -11,6 +14,14 @@ public class Main {
     public static void main(String[] args) {
 
         Empresa unaEmpresa = new Empresa(10,10,"Construccion");
+
+       // Proveedor provedor
+
+        //Producto Producto1 = new Producto()
+
+        //Item item1 = new Item();
+
+       // Compra unaCompra = new Compra();
        // unaEmpresa.contratarPersonal(100);
        // unaEmpresa.despedirPersonal(500);
 

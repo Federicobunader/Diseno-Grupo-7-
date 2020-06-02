@@ -69,7 +69,7 @@ public class Empresa extends EntidadJuridica {
 	private void seleccionarSector(){
 
 		switch (seleccionTipoDeSector) {
-			case "Agropecuaria":
+			case "Agropecuario":
 				sector = Agropecuaria.GetInstance();
 				break;
 			case "Comercio":
@@ -93,6 +93,7 @@ public class Empresa extends EntidadJuridica {
 	private boolean quedaEnNegativo(float unaVariable,float unValor){
 		return unaVariable - unValor < 0;
 	}
+
 
 	public void contratarPersonal(int unaCantidad){
 		cantidadDePersonal += unaCantidad;

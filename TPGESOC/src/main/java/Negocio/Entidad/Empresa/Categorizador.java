@@ -17,6 +17,7 @@ public class Categorizador {
         return instance;
     }
 
+
     public TipoDeEmpresa calcularTipoDeEmpresa(TipoDeSector sector, double ventas, int cantidadDePersonal) {
 
         if(ventas > sector.getTopeVentasMedianaTramo2() || cantidadDePersonal > sector.getTopePersonalMedianaTramo2()){

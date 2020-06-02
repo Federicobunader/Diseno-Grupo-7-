@@ -3,11 +3,9 @@ package Negocio.Compras;
 
 public class Validador {
 
-    Validador validador = Validador.GetInstance();
     String mensaje;
 
-
-    int cantidadDePresupuestosRequeridos;
+    int cantidadDePresupuestosRequeridos = 3;
 
     private static Validador instance = null;
 
