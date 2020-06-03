@@ -3,8 +3,6 @@ package Negocio.Compras;
 
 public class Validador {
 
-    String mensaje;
-
     int cantidadDePresupuestosRequeridos = 3;
 
     private static Validador instance = null;

@@ -6,8 +6,6 @@ import java.util.ArrayList;
 
 public class Presupuesto {
 
-    Validador validador = Validador.GetInstance();
-
 
     private ArrayList<Item> items = new ArrayList<Item>();
     private ArrayList<Documento> documentosComerciales = new ArrayList<Documento>();

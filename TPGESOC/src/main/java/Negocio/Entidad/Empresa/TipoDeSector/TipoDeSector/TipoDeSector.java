@@ -2,8 +2,6 @@ package Negocio.Entidad.Empresa.TipoDeSector.TipoDeSector;
 
 public abstract class TipoDeSector {
 
-    public abstract String getNombreSector();
-
     public abstract double getTopeVentasMedianaTramo2();
 
     public abstract int getTopePersonalMedianaTramo2();

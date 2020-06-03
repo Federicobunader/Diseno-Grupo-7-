@@ -13,7 +13,7 @@ import Negocio.Entidad.Empresa.TipoDeEmpresas.TiposDeEmpresas.TipoDeEmpresa;
 
 public class Empresa extends EntidadJuridica {
 
-	private float promedioDeVentasAnuales;
+	private double promedioDeVentasAnuales;
 	private int cantidadDePersonal;
 	private String seleccionTipoDeSector;
 	private TipoDeSector sector;
@@ -22,7 +22,7 @@ public class Empresa extends EntidadJuridica {
 	Categorizador categorizador = Categorizador.GetInstance();
 
 
-	public Empresa(float promedioDeVentasAnuales,int cantidadDePersonal, String seleccionTipoDeSector) {
+	public Empresa(double promedioDeVentasAnuales,int cantidadDePersonal, String seleccionTipoDeSector) {
 		this.promedioDeVentasAnuales = promedioDeVentasAnuales;
 		this.cantidadDePersonal = cantidadDePersonal;
 		this.seleccionTipoDeSector =seleccionTipoDeSector;
@@ -39,11 +39,11 @@ public class Empresa extends EntidadJuridica {
 		this.cantidadDePersonal = cantidadDePersonal;
 	}
 
-	public float getPromedioDeVentasAnuales() {
+	public double getPromedioDeVentasAnuales() {
 		return promedioDeVentasAnuales;
 	}
 
-	public void setPromedioDeVentasAnuales(float promedioDeVentasAnuales) {
+	public void setPromedioDeVentasAnuales(double promedioDeVentasAnuales) {
 		this.promedioDeVentasAnuales = promedioDeVentasAnuales;
 	}
 
@@ -90,7 +90,7 @@ public class Empresa extends EntidadJuridica {
 
 	}
 
-	private boolean quedaEnNegativo(float unaVariable,float unValor){
+	private boolean quedaEnNegativo(double unaVariable,double unValor){
 		return unaVariable - unValor < 0;
 	}
 
@@ -109,11 +109,11 @@ public class Empresa extends EntidadJuridica {
 				this.actualizarTipoDeEmpresa();
 			}
 	}
-	public void aumentarVentas(int unaCantidad){
+	public void aumentarVentas(double unaCantidad){
 		promedioDeVentasAnuales += unaCantidad;
 		this.actualizarTipoDeEmpresa();
 	}
-	public void disminuirVentas(int unaCantidad){
+	public void disminuirVentas(double unaCantidad){
 
 		if(this.quedaEnNegativo(cantidadDePersonal,unaCantidad)) {
 			throw new IllegalArgumentException("No puede despedir esa cantidad de Personas");

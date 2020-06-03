@@ -35,9 +35,9 @@ public class Compra {
 		this.IDCompra = IDCompra;
 	}
 
-	Validador validador = Validador.GetInstance();
 
 	public void validar(){
+		Validador validador = Validador.GetInstance();
 		if(requierePresupuesto) {
 			if(validador.tieneSuficientesPresupuestos(this.cantidadPresupuestos())){
 				notificarUsuarios("La compra " + IDCompra + " tiene la cantidad de presupuestos requeridos.");
@@ -90,7 +90,7 @@ public class Compra {
 		return criterioEleccionPresupuesto;
 	}
 
-	public void elegirCriterio(Criterio unCriterio){
+	public void setCriterio(Criterio unCriterio){
 		criterioEleccionPresupuesto = unCriterio;
 	}
 
