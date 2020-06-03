@@ -39,10 +39,24 @@ public class Compra {
 
 	public void validar(){
 		if(requierePresupuesto) {
-			notificarUsuarios(validador.tieneSuficientesPresupuestos(this.cantidadPresupuestos(),IDCompra));
-			notificarUsuarios(validador.seUtilizoPresupuesto(this));
+			if(validador.tieneSuficientesPresupuestos(this.cantidadPresupuestos())){
+				notificarUsuarios("La compra " + IDCompra + " tiene la cantidad de presupuestos requeridos.");
+			} else {
+				notificarUsuarios("La compra " + IDCompra + " no tiene la cantidad de presupuestos requeridos");
+			}
+
+			if(validador.seUtilizoPresupuesto(this)){
+				notificarUsuarios("En la compra " + IDCompra + " se utilizo un presupuesto de los asignados.");
+			}else{
+				notificarUsuarios("En la compra " + IDCompra + " no se utilizo ningun presupuesto de los asignados.");
+			}
 		}
-		notificarUsuarios(validador.eleccionCorrecta(this));
+
+		if(validador.eleccionCorrecta(this)) {
+			notificarUsuarios("Para la compra " + IDCompra + " no se eligio el presupuesto a partir del criterio");
+		} else {
+			notificarUsuarios("Para la compra " + IDCompra + " se eligio el presupuesto a partir del criterio");
+		}
 	}
 
 	public ArrayList<Usuario> getUsuariosRevisores() {
@@ -62,6 +76,10 @@ public class Compra {
 
 	public void seleccionarPresupuesto(){
 		presupuestoElegido = criterioEleccionPresupuesto.elegirPresupuesto(presupuestos);
+	}
+
+	public boolean tienePresupuesto(){
+		return presupuestoElegido != null;
 	}
 
 	public Presupuesto getPresupuestoElegido() {

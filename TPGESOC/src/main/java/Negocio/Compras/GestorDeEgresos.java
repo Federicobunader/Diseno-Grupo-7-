@@ -17,10 +17,6 @@ public class GestorDeEgresos {
         return instance;
     }
 
-    public void registrarUnaCompra(Compra unaCompra){
-        compras.add(unaCompra);
-    }
-
     public void registrarUnPresupuesto(Presupuesto unPresupuesto){
         presupuestos.add(unPresupuesto);
     }
@@ -33,4 +29,12 @@ public class GestorDeEgresos {
         }
         return null;
     }
+
+    private void registrarCompra(Compra unaCompra){
+        compras.add(unaCompra);
+        if(unaCompra.tienePresupuesto()) {
+            this.registrarUnPresupuesto(unaCompra.getPresupuestoElegido());
+        }
+    }
+
 }

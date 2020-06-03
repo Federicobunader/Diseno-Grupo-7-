@@ -99,7 +99,7 @@ public class CompraTest {
 
         entidadbase1 = new EntidadBase("EntidadBase" ,"descripcion");
 
-        compra1 = new Compra(items1,presupuestos1, documento, entidadbase1,proveedor1, true, MenorValor.GetInstance(), 1000);
+        compra1 = new Compra(items1,presupuestos1, documento, entidadbase1,proveedor1, true, new MenorValor(), 1000);
 
     }
     @Test

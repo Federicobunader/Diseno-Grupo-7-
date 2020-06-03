@@ -10,17 +10,8 @@ import java.util.stream.Collectors;
 
 public class MenorValor extends Criterio {
 
-    private static MenorValor instance = null;
-    String nombreCriterio= "Menor valor";
 
-    public static MenorValor GetInstance() {
-        if (instance == null)
-            instance = new MenorValor();
-        return instance;
-    }
-
-    public String getNombreCriterio() {
-        return nombreCriterio;
+    public MenorValor() {
     }
 
     public Presupuesto elegirPresupuesto(ArrayList<Presupuesto> presupuestos) {

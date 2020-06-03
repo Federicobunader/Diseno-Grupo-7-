@@ -15,30 +15,19 @@ public class Validador {
         return instance;
     }
 
-    public String tieneSuficientesPresupuestos(int cantidadDePresupuestos, int compraID){
+    public boolean tieneSuficientesPresupuestos(int cantidadDePresupuestos){
 
-        if(cantidadDePresupuestos != cantidadDePresupuestosRequeridos) {
-           return "La compra " + compraID + " no tiene la cantidad de presupuestos requeridos.";
-        }else{
-           return "La compra " + compraID + " tiene la cantidad de presupuestos requeridos";
-        }
+        return cantidadDePresupuestos == cantidadDePresupuestosRequeridos;
     }
 
-    public String seUtilizoPresupuesto(Compra unaCompra){
-        if(unaCompra.getPresupuestos().stream().anyMatch(presupuesto -> presupuesto.valorTotal() == unaCompra.valorTotal())){
-           return "En la compra " + unaCompra.getIDCompra() + " se utilizo un presupuesto de los asignados.";
-        }
-        return "En la compra " + unaCompra.getIDCompra() + " no se utilizo ningun presupuesto de los asignados.";
+    public boolean seUtilizoPresupuesto(Compra unaCompra){
+         return unaCompra.getPresupuestos().stream().anyMatch(presupuesto -> presupuesto.valorTotal() == unaCompra.valorTotal());
     }
 
-    public String eleccionCorrecta(Compra unaCompra){
+    public boolean eleccionCorrecta(Compra unaCompra) {
 
         Criterio unCriterio = unaCompra.criterioEleccionPresupuesto;
 
-        if(unaCompra.valorTotal() != unCriterio.elegirPresupuesto(unaCompra.getPresupuestos()).valorTotal()){
-            return "Para la compra " + unaCompra.getIDCompra() + " no se eligio el presupuesto a partir del criterio " + unCriterio.getNombreCriterio();
-        }
-        return "Para la compra " + unaCompra.getIDCompra() + " se eligio el presupuesto a partir del criterio " + unCriterio.getNombreCriterio();
+        return unaCompra.valorTotal() != unCriterio.elegirPresupuesto(unaCompra.getPresupuestos()).valorTotal();
     }
-
 }
