@@ -12,19 +12,6 @@ import java.io.InputStreamReader;
 
 public class Main {
     public static void main(String[] args) {
-
-        Empresa unaEmpresa = new Empresa(10,10,"Construccion");
-
-       // Proveedor provedor
-
-        //Producto Producto1 = new Producto()
-
-        //Item item1 = new Item();
-
-       // Compra unaCompra = new Compra();
-       // unaEmpresa.contratarPersonal(100);
-       // unaEmpresa.despedirPersonal(500);
-
         Sistema sistema = Sistema.GetInstance();
         sistema.arrancar();
     }

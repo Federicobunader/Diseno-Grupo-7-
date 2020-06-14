@@ -4,8 +4,10 @@ import Negocio.*;
 import Negocio.Entidad.Entidad;
 import Negocio.Usuario.Usuario;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
+import java.util.Date;
 
 public class Compra {
 
@@ -13,7 +15,6 @@ public class Compra {
 	private ArrayList<Presupuesto> presupuestos = new ArrayList<Presupuesto>();
 	private ArrayList<Usuario> usuariosRevisores = new ArrayList<Usuario>();
 	private Presupuesto presupuestoElegido;
-	//private Calendar fechaDeOperacion;
 	//private MedioDePago medioDePago;
 	private Documento documentoComercial;
 	private Entidad entidad;
@@ -22,7 +23,7 @@ public class Compra {
 	public Criterio criterioEleccionPresupuesto;
 	private int IDCompra;
 
-	public Compra(ArrayList<Item> items, ArrayList<Presupuesto> presupuestos/*, Calendar fechaDeOperacion, MedioDePago medioDePago*/, Documento documentoComercial, Entidad entidad, Proveedor proveedor, boolean requierePresupuesto, Criterio criterioEleccionPresupuesto, int IDCompra) {
+	public Compra(ArrayList<Item> items, ArrayList<Presupuesto> presupuestos/*, MedioDePago medioDePago*/, Documento documentoComercial, Entidad entidad, Proveedor proveedor, boolean requierePresupuesto, Criterio criterioEleccionPresupuesto, int IDCompra) {
 		this.items = items;
 		this.presupuestos = presupuestos;
 		//this.fechaDeOperacion = fechaDeOperacion;
@@ -111,6 +112,8 @@ public class Compra {
 	}
 
 	private void efectuarCompra(){
-		new Egreso(this);
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		Date date = new Date();
+		new Egreso(this,date);
 	}
 }//end Compras
