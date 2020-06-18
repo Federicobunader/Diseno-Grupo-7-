@@ -24,7 +24,7 @@ public class Validador {
 
     public boolean eleccionCorrecta(Compra unaCompra) {
 
-        Criterio unCriterio = unaCompra.criterioEleccionPresupuesto;
+        Criterio unCriterio = unaCompra.getCriterioEleccionPresupuesto();
 
         return unaCompra.valorTotal() != unCriterio.elegirPresupuesto(unaCompra.getPresupuestos()).valorTotal();
     }

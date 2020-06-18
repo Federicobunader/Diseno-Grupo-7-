@@ -43,19 +43,28 @@ public class CompraTest {
         proveedor3 = new Proveedor("Justin Bieber",3);
         proveedor4 = new Proveedor("C.R.O.",4);
 
-        producto1 = new Producto(5,proveedor1,"asdadas");
-        producto2 = new Producto(10,proveedor2,"asdadas");
-        producto3 = new Producto(15,proveedor3,"asdadas");
+        producto1 = new Producto(5,proveedor1,"Silla");
+        producto2 = new Producto(10,proveedor2,"Mesa");
+        producto3 = new Producto(15,proveedor3,"Sillon");
 
+        ArrayList<CategoriaItem> categorias = new ArrayList<CategoriaItem>();
 
-        item1 = new Item(producto1,5);
-        item2 = new Item(producto2,15);
-        item3 = new Item(producto3,25);
-        item4 = new Item(producto1,150);
-        item5 = new Item(producto2,50);
-        item6 = new Item(producto3,100);
-        item7 = new Item(producto1,500);
-        item8 = new Item(producto2,200);
+        CategoriaItem categoria1 = new CategoriaItem("Roble","Muebles");
+        CategoriaItem categoria2 = new CategoriaItem("Pino","Muebles");
+
+        categorias.add(categoria1);
+        categorias.add(categoria2);
+
+        CriterioDeItem criterioDeItem = new CriterioDeItem("Muebles");
+
+        item1 = new Item(producto1,5, categorias);
+        item2 = new Item(producto2,15, categorias);
+        item3 = new Item(producto3,25, categorias);
+        item4 = new Item(producto1,150, categorias);
+        item5 = new Item(producto2,50, categorias);
+        item6 = new Item(producto3,100, categorias);
+        item7 = new Item(producto1,500, categorias);
+        item8 = new Item(producto2,200, categorias);
 
         documento = new Documento(1,'a');
 
@@ -132,12 +141,22 @@ public class CompraTest {
         compra1.seleccionarPresupuesto();
         compra1.validar();
 
-        Assert.assertEquals("Para la compra 1000 se eligio el presupuesto a partir del criterio Menor valor",usuario1.getBandejaDeMensajes().get(2));
+        Assert.assertEquals("Para la compra 1000 se eligio el presupuesto a partir del criterio",usuario1.getBandejaDeMensajes().get(2));
     }
 
     @Test
     public void verificarEleccionDePresupuestoConOtroPresupuesto() {
-        Item itemNuevo = new Item(producto3,5);
+        ArrayList<CategoriaItem> categorias = new ArrayList<CategoriaItem>();
+
+        CategoriaItem categoria1 = new CategoriaItem("Roble","Muebles");
+        CategoriaItem categoria2 = new CategoriaItem("Pino","Muebles");
+
+        categorias.add(categoria1);
+        categorias.add(categoria2);
+
+        CriterioDeItem criterioDeItem = new CriterioDeItem("Muebles");
+
+        Item itemNuevo = new Item(producto3,5,categorias);
         ArrayList<Item> itemsNuevos = new ArrayList<Item>();
         itemsNuevos.add(item1);
         itemsNuevos.add(item2);

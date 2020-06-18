@@ -1,6 +1,7 @@
 package Negocio.Usuario;
 
 import InterfazDeUsuario.InterfazUsuarios;
+import Negocio.Compras.GestorDeCriterios;
 import Negocio.Main;
 
 import java.util.ArrayList;
@@ -28,8 +29,9 @@ public class GestorDeUsuarios {
     public void consolaUsuario(){
         interfazUsuarios.menuUsuario();
         int opcion = Main.pedirPorPantallaInt();
+        GestorDeCriterios gestorDeCriterios = GestorDeCriterios.GetInstance();
 
-        while (opcion != 5) {
+        while (opcion != 8) {
             switch (opcion) {
                 case 1:
                     this.registrarUsuario();
@@ -45,6 +47,15 @@ public class GestorDeUsuarios {
                     break;
                 case 4:
                     this.mostrarUsuarios();
+                    break;
+                case 5:
+                    gestorDeCriterios.agregarCriterio("");
+                    break;
+                case 6:
+                    gestorDeCriterios.agregarCategoria();
+                    break;
+                case 7:
+                    gestorDeCriterios.mostrarCategorias();
                     break;
                 default:
                     interfazUsuarios.mostrarError("La opcion ingresada no es valida.");

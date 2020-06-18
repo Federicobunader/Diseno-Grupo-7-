@@ -19,8 +19,8 @@ public class Compra {
 	private Documento documentoComercial;
 	private Entidad entidad;
 	private Proveedor proveedor;
-	public boolean requierePresupuesto;
-	public Criterio criterioEleccionPresupuesto;
+	private boolean requierePresupuesto;
+	private Criterio criterioEleccionPresupuesto;
 	private int IDCompra;
 
 	public Compra(ArrayList<Item> items, ArrayList<Presupuesto> presupuestos/*, MedioDePago medioDePago*/, Documento documentoComercial, Entidad entidad, Proveedor proveedor, boolean requierePresupuesto, Criterio criterioEleccionPresupuesto, int IDCompra) {

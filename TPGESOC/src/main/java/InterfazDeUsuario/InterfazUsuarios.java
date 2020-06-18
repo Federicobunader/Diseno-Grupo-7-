@@ -16,6 +16,11 @@ public class InterfazUsuarios {
         System.out.println(mensaje);
         return Main.pedirPorPantallaString();
     }
+    public int pedirInt(String mensaje){
+        System.out.println(mensaje);
+        return Main.pedirPorPantallaInt();
+    }
+
     public void mostrarAdvertencia(String mensaje){
         System.out.println(mensaje);
     }
@@ -40,9 +45,17 @@ public class InterfazUsuarios {
         System.out.println("2- INICIAR SESION");
         System.out.println("3- CAMBIAR PASSWORD");
         System.out.println("4- MOSTRAR USUARIOS");
-        System.out.println("5- SALIR");
+        System.out.println("5- AGREGAR CRITERIO DE ITEM");
+        System.out.println("6- AGREGAR CATEGORIA A CRITERIO");
+        System.out.println("7- MOSTRAR CATEGORIAS");
+        System.out.println("8- SALIR");
         System.out.println(" ");
     }
 
+    public void menuDeIngresarCategoria(){
+        this.mostrarInformacion("¿Quiere ingresar otra categoría?");
+        this.mostrarInformacion("1- Si");
+        this.mostrarInformacion("2- No");
+    }
 
 }
