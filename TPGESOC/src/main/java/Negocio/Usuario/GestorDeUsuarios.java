@@ -2,6 +2,8 @@ package Negocio.Usuario;
 
 import InterfazDeUsuario.InterfazUsuarios;
 import Negocio.Compras.GestorDeCriterios;
+import Negocio.Compras.GestorDeEgresos;
+import Negocio.Compras.GestorDeIngresos;
 import Negocio.Main;
 
 import java.util.ArrayList;
@@ -14,6 +16,8 @@ public class GestorDeUsuarios {
 
     GestorDePasswords gestorDePasswords = GestorDePasswords.GetInstance();
     InterfazUsuarios interfazUsuarios = InterfazUsuarios.GetInstance();
+    GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();
+    GestorDeIngresos gestorDeIngresos = GestorDeIngresos.GetInstance();
 
     private static GestorDeUsuarios instance = null;
 
@@ -31,7 +35,7 @@ public class GestorDeUsuarios {
         int opcion = Main.pedirPorPantallaInt();
         GestorDeCriterios gestorDeCriterios = GestorDeCriterios.GetInstance();
 
-        while (opcion != 8) {
+        while (opcion != 9) {
             switch (opcion) {
                 case 1:
                     this.registrarUsuario();
@@ -56,6 +60,9 @@ public class GestorDeUsuarios {
                     break;
                 case 7:
                     gestorDeCriterios.mostrarCategorias();
+                    break;
+                case 8:
+                    gestorDeIngresos.agregarIngreso();
                     break;
                 default:
                     interfazUsuarios.mostrarError("La opcion ingresada no es valida.");

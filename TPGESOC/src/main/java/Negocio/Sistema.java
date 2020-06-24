@@ -1,6 +1,8 @@
 package Negocio;
 
 import InterfazDeUsuario.InterfazPassword;
+import Negocio.Compras.Scheduler.ImplementarScheduler;
+import Negocio.Compras.Scheduler.TriggerValidador;
 import Negocio.Usuario.GestorDePasswords;
 import Negocio.Usuario.GestorDeUsuarios;
 import InterfazDeUsuario.InterfazUsuarios;
@@ -8,8 +10,6 @@ import InterfazDeUsuario.InterfazUsuarios;
 public class Sistema {
 
     GestorDeUsuarios gestorDeUsuarios = GestorDeUsuarios.GetInstance();
-
-
 
     private static Sistema instance = null;
 
@@ -23,6 +23,8 @@ public class Sistema {
     }
 
     public void arrancar(){
+        TriggerValidador ejecutarScheduler = new TriggerValidador();
+        ejecutarScheduler.ejecutarScheduler();
         gestorDeUsuarios.consolaUsuario();
     }
 

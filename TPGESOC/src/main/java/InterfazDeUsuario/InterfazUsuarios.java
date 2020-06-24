@@ -16,6 +16,10 @@ public class InterfazUsuarios {
         System.out.println(mensaje);
         return Main.pedirPorPantallaString();
     }
+    public double pedirDouble(String mensaje){
+        System.out.println(mensaje);
+        return Main.pedirPorPantallaDouble();
+    }
     public int pedirInt(String mensaje){
         System.out.println(mensaje);
         return Main.pedirPorPantallaInt();
@@ -48,7 +52,8 @@ public class InterfazUsuarios {
         System.out.println("5- AGREGAR CRITERIO DE ITEM");
         System.out.println("6- AGREGAR CATEGORIA A CRITERIO");
         System.out.println("7- MOSTRAR CATEGORIAS");
-        System.out.println("8- SALIR");
+        System.out.println("8- AGREGAR INGRESO");
+        System.out.println("9- SALIR");
         System.out.println(" ");
     }
 

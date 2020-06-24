@@ -34,5 +34,12 @@ public class Main {
         int res = Integer.parseInt(dato);
         return res;
     }
+
+    public static double pedirPorPantallaDouble() {
+        String dato = pedirPorPantallaString();
+
+        double res = Double.parseDouble(dato);
+        return res;
+    }
 }
 

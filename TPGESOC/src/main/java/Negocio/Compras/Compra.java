@@ -3,6 +3,7 @@ package Negocio.Compras;
 import Negocio.*;
 import Negocio.Entidad.Entidad;
 import Negocio.Usuario.Usuario;
+import org.quartz.Job;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -35,7 +36,6 @@ public class Compra {
 		this.criterioEleccionPresupuesto = criterioEleccionPresupuesto;
 		this.IDCompra = IDCompra;
 	}
-
 
 	public void validar(){
 		Validador validador = Validador.GetInstance();
@@ -114,6 +114,10 @@ public class Compra {
 	private void efectuarCompra(){
 		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 		Date date = new Date();
-		new Egreso(this,date);
+		Egreso nuevoEgreso = new Egreso(this,date);
+
+		GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();
+		gestorDeEgresos.getEgresos().add(nuevoEgreso);
+
 	}
-}//end Compras
+}
