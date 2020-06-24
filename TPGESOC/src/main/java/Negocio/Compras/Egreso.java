@@ -20,4 +20,10 @@ public class Egreso {
     public Compra getCompra() {
         return compra;
     }
+
+    GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();
+
+    public void agregarCompraYPresupues(){
+        gestorDeEgresos.registrarCompra(compra);
+    }
 }

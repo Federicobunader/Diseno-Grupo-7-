@@ -118,6 +118,7 @@ public class Compra {
 
 		GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();
 		gestorDeEgresos.getEgresos().add(nuevoEgreso);
+		nuevoEgreso.agregarCompraYPresupues();
 
 	}
 }

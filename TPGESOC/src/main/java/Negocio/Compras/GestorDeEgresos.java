@@ -46,7 +46,7 @@ public class GestorDeEgresos {
         return null;
     }
 
-    private void registrarCompra(Compra unaCompra){
+    public void registrarCompra(Compra unaCompra){
         comprasNoValidadas.add(unaCompra);
         if(unaCompra.tienePresupuesto()) {
             this.registrarUnPresupuesto(unaCompra.getPresupuestoElegido());
