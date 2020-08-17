@@ -10,14 +10,12 @@ public class Item {
 	private Producto producto;
 	private int cantidad;
 	private ArrayList<CategoriaItem> categorias = new ArrayList<CategoriaItem>();
-	private ArrayList<CriterioDeItem> criterios = new ArrayList<CriterioDeItem>();
 	private GestorDeCriterios gestorDeCriterios = GestorDeCriterios.GetInstance();
 
 	public Item(Producto producto, int cantidad, ArrayList<CategoriaItem> categorias) {
 		this.producto = producto;
 		this.cantidad = cantidad;
 		this.categorias = categorias;
-		categorias.stream().forEach(categoriaItem -> criterios.add(gestorDeCriterios.devolverCriterioParaEsaCategoria(categoriaItem)));
 	}
 
 	InterfazUsuarios interfaz = InterfazUsuarios.GetInstance();
@@ -29,7 +27,6 @@ public class Item {
 	private void asociarCategoria(CategoriaItem unaCategoria){
 		if(!(this.estaAsociado(unaCategoria))) {
 			categorias.add(unaCategoria);
-			agregarCriterio(gestorDeCriterios.devolverCriterioParaEsaCategoria(unaCategoria));
 			interfaz.mostrarInformacion("Se agregó correctamente.");
 		}
 		else{
@@ -38,11 +35,12 @@ public class Item {
 	}
 
 	private boolean estaAsociado(CategoriaItem unaCategoria){
-		return criterios.contains(unaCategoria.getCriterioDeItem());
-	}
-
-	private void agregarCriterio(CriterioDeItem unCriterio){
-		criterios.add(unCriterio);
+		CriterioDeItem criterioDeItem = gestorDeCriterios.devolverCriterioParaEsaCategoria(unaCategoria);
+		if(criterioDeItem != null){
+			return true;
+		}else{
+			return false;
+		}
 	}
 
 }//end Item

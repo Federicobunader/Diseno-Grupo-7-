@@ -4,12 +4,14 @@ import java.util.ArrayList;
 
 public class CriterioDeItem {
 
+    private ArrayList<Componente> criteriosDeMenorJerarquia = new ArrayList<Componente>();
+
     private String nombreCriterio;
     private ArrayList<CategoriaItem> categorias = new ArrayList<CategoriaItem>();
 
     public CriterioDeItem(String nombreCriterio) {
         this.nombreCriterio = nombreCriterio;
-       // categorias.stream().forEach(categoriaItem -> categoriaItem.setCriterioDeItem(this));
+        // categorias.stream().forEach(categoriaItem -> categoriaItem.setCriterioDeItem(this));
     }
 
     public String getNombreCriterio() {
@@ -23,4 +25,5 @@ public class CriterioDeItem {
     public void agregarCategoriaAlCriterio(CategoriaItem unaCategoria){
         categorias.add(unaCategoria);
     }
+
 }

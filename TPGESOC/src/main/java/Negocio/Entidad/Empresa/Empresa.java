@@ -28,7 +28,7 @@ public class Empresa extends EntidadJuridica {
 		this.seleccionTipoDeSector =seleccionTipoDeSector;
 		this.seleccionarSector();
 		this.actualizarTipoDeEmpresa();
-	}
+}
 
 
 	public int getCantidadDePersonal() {

@@ -1,6 +1,9 @@
 package Negocio;//package Negocio;
 
 
+import API.APIGeografia.ListadoDePaises;
+import API.APIGeografia.Pais;
+import API.Servicios.ServicioGeoref;
 import Negocio.Compras.Compra;
 import Negocio.Compras.Item;
 import Negocio.Compras.Producto;
@@ -11,9 +14,22 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
-    public static void main(String[] args) {
-        Sistema sistema = Sistema.GetInstance();
-        sistema.arrancar();
+    public static void main(String[] args) throws IOException {
+
+        ServicioGeoref servicioGeoref = ServicioGeoref.instancia();
+
+        System.out.println("Seleccione una de las siguientes provincias, ingresando su id:");
+
+        ListadoDePaises listadoPaises = servicioGeoref.listadoDePaises();
+
+        System.out.println("PRUEBA 0");
+
+        for(Pais unPais:listadoPaises.paises){
+            System.out.println(unPais.id + ") " + unPais.name);
+        }
+
+        //Sistema sistema = Sistema.GetInstance();
+        //sistema.arrancar();
     }
 
     public static String pedirPorPantallaString() {
