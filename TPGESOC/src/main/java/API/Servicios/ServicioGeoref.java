@@ -1,12 +1,14 @@
 package API.Servicios;
 
-import API.APIGeografia.ListadoDePaises;
+import API.APIGeografia.ListadoDeProvincias;
+import API.APIGeografia.Pais;
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.io.IOException;
+import java.util.List;
 
 public class ServicioGeoref {
 
@@ -28,13 +30,23 @@ public class ServicioGeoref {
         return instancia;
     }
 
-    public ListadoDePaises listadoDePaises() throws IOException {
+    public List<Pais> listadoDePaises() throws IOException {
         GeorefService georefService = this.retrofit.create(GeorefService.class);
-        Call<ListadoDePaises> requestListadoDePaises = georefService.paises();
-        Response<ListadoDePaises> responseListadoDePaises = requestListadoDePaises.execute();
-        ListadoDePaises paises = responseListadoDePaises.body();
+        Call<List<Pais>> requestListadoDePaises = georefService.paises();
+        Response<List<Pais>> responseListadoDePaises = requestListadoDePaises.execute();
+        List<Pais> paises = responseListadoDePaises.body();
         return paises;
     }
+/*
+    public ListadoDeProvincias listadoDeProvincias() throws IOException {
+        GeorefService georefService = this.retrofit.create(GeorefService.class);
+        Call<ListadoDeProvincias> requestProvinciasArgentinas = georefService.provincias();
+        Response<ListadoDeProvincias> responseProvinciasArgentinas = requestProvinciasArgentinas.execute();
+        ListadoDeProvincias provinciasArgentinas = responseProvinciasArgentinas.body();
+        return provinciasArgentinas;
+    }
+
+ */
 /*
     public ListadoDeMunicipios listadoDeMunicipiosDeProvincia(Provincia provincia) throws IOException {
         GeorefService georefService = this.retrofit.create(GeorefService.class);
