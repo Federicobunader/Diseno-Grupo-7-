@@ -1,7 +1,6 @@
 package API.Servicios;
 
-import API.APIGeografia.ListadoDeProvincias;
-import API.APIGeografia.Pais;
+import API.APIGeografia.*;
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;
@@ -34,27 +33,34 @@ public class ServicioGeoref {
         GeorefService georefService = this.retrofit.create(GeorefService.class);
         Call<List<Pais>> requestListadoDePaises = georefService.paises();
         Response<List<Pais>> responseListadoDePaises = requestListadoDePaises.execute();
-        List<Pais> paises = responseListadoDePaises.body();
-        return paises;
-    }
-/*
-    public ListadoDeProvincias listadoDeProvincias() throws IOException {
-        GeorefService georefService = this.retrofit.create(GeorefService.class);
-        Call<ListadoDeProvincias> requestProvinciasArgentinas = georefService.provincias();
-        Response<ListadoDeProvincias> responseProvinciasArgentinas = requestProvinciasArgentinas.execute();
-        ListadoDeProvincias provinciasArgentinas = responseProvinciasArgentinas.body();
-        return provinciasArgentinas;
+        List<Pais> listaPaises = responseListadoDePaises.body();
+        ListadoDePaises listado = ListadoDePaises.GetInstance();
+
+       listado.setPaises(listaPaises);
+
+        return listaPaises;
     }
 
- */
-/*
-    public ListadoDeMunicipios listadoDeMunicipiosDeProvincia(Provincia provincia) throws IOException {
+    public ListadoDeProvincias listadoDeProvinciasDelPais(Pais unPais) throws IOException {
         GeorefService georefService = this.retrofit.create(GeorefService.class);
-        Call<ListadoDeMunicipios> requestListadoDeMunicipios = georefService.municipios(provincia.id, "id, nombre", maximaCantidadRegistrosDefault);
-        Response<ListadoDeMunicipios> responseListadoDeMunicipios = requestListadoDeMunicipios.execute();
-        ListadoDeMunicipios listadoDeMunicipios = responseListadoDeMunicipios.body();
-        return listadoDeMunicipios;
+        Call<ListadoDeProvincias> requestListadoDeProvincias = georefService.provincias(unPais.id);
+        Response<ListadoDeProvincias> responseListadoDeProvincias = requestListadoDeProvincias.execute();
+        ListadoDeProvincias listaDeProvincias = responseListadoDeProvincias.body();
+        //ListadoDeProvincias listado = ListadoDeProvincias.GetInstance();
+
+       //listado.setStates(listaDeProvincias);
+
+        return listaDeProvincias;
     }
 
- */
+    public ListadoDeCiudades listadoDeCiudadesDeLaProvincia(Provincia unaProvincia) throws IOException {
+        GeorefService georefService = this.retrofit.create(GeorefService.class);
+        Call<ListadoDeCiudades> requestListadoDeCiudades = georefService.ciudades(unaProvincia.id);
+        Response<ListadoDeCiudades> responseListadoDeCiudades = requestListadoDeCiudades.execute();
+        ListadoDeCiudades listadoDeCiudades = responseListadoDeCiudades.body();
+        return listadoDeCiudades;
+    }
+
+
+
 }
