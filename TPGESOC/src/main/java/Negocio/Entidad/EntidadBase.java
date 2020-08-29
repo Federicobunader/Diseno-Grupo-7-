@@ -4,9 +4,18 @@ import Negocio.Entidad.Entidad;
 import Negocio.Proveedor;
 import Negocio.Usuario.Usuario;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="entidadBase")
 public class EntidadBase extends Entidad {
 
+	@Id
+	@GeneratedValue
+	private int id;
+	@Column
 	private String Nombre;
+	@Column
 	private String Descripcion;
 
 

@@ -2,6 +2,8 @@ package Negocio;//package Negocio;
 
 
 import API.APIGeografia.*;
+import API.APIMoneda.Conversor;
+import API.APIMoneda.ListadoDeMonedas;
 import API.APIMoneda.Moneda;
 import API.Servicios.CurrenciesServices;
 import API.Servicios.ServicioGeoref;
@@ -25,13 +27,38 @@ public class Main {
 
         List <Moneda> listadoMoneda = servicioMonedas.listadoDeMonedas();
 
-        for(int i = 0 ; i < listadoPaises.size(); i++){
-            System.out.println(listadoPaises.get(i).id + ") " + listadoPaises.get(i).name);
-        }
 
         for(int i = 0 ; i < listadoMoneda.size(); i++){
             System.out.println(listadoMoneda.get(i).id + ") " + listadoMoneda.get(i).description);
         }
+
+        System.out.println("Ingrese la ID de una Moneda");
+        String idMonedaOrigen = pedirPorPantallaString();
+        System.out.println("Ingrese la ID de la Moneda Destino");
+        String idMonedaDestino = pedirPorPantallaString();
+
+        ListadoDeMonedas monedas = ListadoDeMonedas.GetInstance();
+        Optional<Moneda> posibleMonedaOrigen  = monedas.monedasPorId(idMonedaOrigen);
+
+        Optional<Moneda> posibleMonedaDestino  = monedas.monedasPorId(idMonedaDestino);
+
+        if(posibleMonedaOrigen.isPresent() && posibleMonedaDestino.isPresent()){
+            Moneda monedaOrigen = posibleMonedaOrigen.get();
+            Moneda monedaDestino = posibleMonedaDestino.get();
+
+            Conversor conversion = servicioMonedas.conversorMonedas(monedaOrigen,monedaDestino);
+
+            System.out.println(("El ratio de la conversion vale : "+ conversion.ratio + " Y el valor de Mercado Pago :"+ conversion.inv_rate));
+        }
+
+
+
+
+        for(int i = 0 ; i < listadoPaises.size(); i++){
+            System.out.println(listadoPaises.get(i).id + ") " + listadoPaises.get(i).name);
+        }
+
+
 
         System.out.println("Ingrese la ID de un Pais");
         String idPais = pedirPorPantallaString();
@@ -45,7 +72,7 @@ public class Main {
             System.out.println("Las Provincias del Pais "+ paisSeleccionado.name + " Con la ID : "+ paisSeleccionado.id + " son:");
 
             for(int i = 0 ; i < listadoDeProvincias.states.size(); i++){
-                System.out.println(listadoDeProvincias.states + ") " + listadoDeProvincias.states.get(i).name);
+                System.out.println(listadoDeProvincias.states.get(i).id + ") " + listadoDeProvincias.states.get(i).name);
             }
 
             System.out.println("Ingrese la ID de una Provincia");
@@ -60,8 +87,9 @@ public class Main {
                // for(Ciudad unaCiudad: listadoDeCiudades.ciudades){
                   //  System.out.println(unaCiudad.id + ") " + unaCiudad.name);
                // }
-                for(int i = 0 ; i < listadoDeCiudades.ciudades.size(); i++){
-                    System.out.println(listadoDeCiudades.ciudades.get(i).id + ") " + listadoDeCiudades.ciudades.get(i).name);
+                System.out.println("Tamaño Lista :" + listadoDeCiudades.cities.size());
+                for(int i = 0 ; i < listadoDeCiudades.cities.size(); i++){
+                    System.out.println(listadoDeCiudades.cities.get(i).id + ") " + listadoDeCiudades.cities.get(i).name);
                 }
            }
 

@@ -1,11 +1,20 @@
 package Negocio.Compras;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table(name="egreso")
 public class Egreso {
 
+    @Id
+    @GeneratedValue
+    private int id;
+    @Column
     private Compra compra;
+    @Column(columnDefinition = "DATE")
     private Date fechaDeOperacion;
+    @Column
     private Ingreso ingresoAsociado;
 
     public Egreso(Compra unaCompra, Date unaFechaDeOperacion) {

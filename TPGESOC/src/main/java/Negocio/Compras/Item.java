@@ -2,12 +2,19 @@ package Negocio.Compras;
 
 import InterfazDeUsuario.InterfazUsuarios;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
+@Entity
+@Table(name="item")
 public class Item {
 
+	@Id
+	@GeneratedValue
+	private int id;
 	private Producto producto;
+	@Column
 	private int cantidad;
 	private ArrayList<CategoriaItem> categorias = new ArrayList<CategoriaItem>();
 	private GestorDeCriterios gestorDeCriterios = GestorDeCriterios.GetInstance();
@@ -21,7 +28,7 @@ public class Item {
 	InterfazUsuarios interfaz = InterfazUsuarios.GetInstance();
 
 	public int valorTotal(){
-		return producto.precio * cantidad;
+		return producto.getPrecio() * cantidad;
 	}
 
 	private void asociarCategoria(CategoriaItem unaCategoria){

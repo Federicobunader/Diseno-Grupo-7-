@@ -5,24 +5,40 @@ import Negocio.Entidad.Entidad;
 import Negocio.Usuario.Usuario;
 import org.quartz.Job;
 
+import javax.persistence.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+@Entity
+@Table(name ="compra")
 public class Compra {
 
+	@Id
+	@GeneratedValue
+	private int id;
+	@OneToMany(mappedBy = "compra")
 	private ArrayList<Item> items = new ArrayList<Item>();
+	@OneToMany(mappedBy = "compra")
 	private ArrayList<Presupuesto> presupuestos = new ArrayList<Presupuesto>();
+	@Transient
 	private ArrayList<Usuario> usuariosRevisores = new ArrayList<Usuario>();
+	@ManyToOne
+	@JoinColumn(name="presupuesto_id", referencedColumnName = "id")
 	private Presupuesto presupuestoElegido;
 	//private MedioDePago medioDePago;
+	@ManyToOne
+	@JoinColumn(name="presupuesto_id", referencedColumnName = "id")
 	private Documento documentoComercial;
+	@Column
 	private Entidad entidad;
+	@Column
 	private Proveedor proveedor;
+	@Column
 	private boolean requierePresupuesto;
+	@Column
 	private Criterio criterioEleccionPresupuesto;
-	private int IDCompra;
 
 	public Compra(ArrayList<Item> items, ArrayList<Presupuesto> presupuestos/*, MedioDePago medioDePago*/, Documento documentoComercial, Entidad entidad, Proveedor proveedor, boolean requierePresupuesto, Criterio criterioEleccionPresupuesto, int IDCompra) {
 		this.items = items;
@@ -34,29 +50,29 @@ public class Compra {
 		this.proveedor = proveedor;
 		this.requierePresupuesto = requierePresupuesto;
 		this.criterioEleccionPresupuesto = criterioEleccionPresupuesto;
-		this.IDCompra = IDCompra;
+		this.id = IDCompra;
 	}
 
 	public void validar(){
 		Validador validador = Validador.GetInstance();
 		if(requierePresupuesto) {
 			if(validador.tieneSuficientesPresupuestos(this.cantidadPresupuestos())){
-				notificarUsuarios("La compra " + IDCompra + " tiene la cantidad de presupuestos requeridos.");
+				notificarUsuarios("La compra " + id + " tiene la cantidad de presupuestos requeridos.");
 			} else {
-				notificarUsuarios("La compra " + IDCompra + " no tiene la cantidad de presupuestos requeridos");
+				notificarUsuarios("La compra " + id + " no tiene la cantidad de presupuestos requeridos");
 			}
 
 			if(validador.seUtilizoPresupuesto(this)){
-				notificarUsuarios("En la compra " + IDCompra + " se utilizo un presupuesto de los asignados.");
+				notificarUsuarios("En la compra " + id + " se utilizo un presupuesto de los asignados.");
 			}else{
-				notificarUsuarios("En la compra " + IDCompra + " no se utilizo ningun presupuesto de los asignados.");
+				notificarUsuarios("En la compra " + id + " no se utilizo ningun presupuesto de los asignados.");
 			}
 		}
 
 		if(validador.eleccionCorrecta(this)) {
-			notificarUsuarios("Para la compra " + IDCompra + " no se eligio el presupuesto a partir del criterio");
+			notificarUsuarios("Para la compra " + id + " no se eligio el presupuesto a partir del criterio");
 		} else {
-			notificarUsuarios("Para la compra " + IDCompra + " se eligio el presupuesto a partir del criterio");
+			notificarUsuarios("Para la compra " + id + " se eligio el presupuesto a partir del criterio");
 		}
 	}
 
@@ -72,7 +88,7 @@ public class Compra {
 		usuariosRevisores.forEach(usuario -> usuario.serNotificado(mensaje));
 	}
 	public int getIDCompra() {
-		return IDCompra;
+		return id;
 	}
 
 	public void seleccionarPresupuesto(){

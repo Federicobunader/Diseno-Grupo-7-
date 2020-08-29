@@ -1,5 +1,6 @@
 package API.Servicios;
 
+import API.APIMoneda.Conversor;
 import API.APIMoneda.ListadoDeMonedas;
 import API.APIMoneda.Moneda;
 import retrofit2.Call;
@@ -40,6 +41,15 @@ public class ServicioMonedas {
         listado.setMonedas(listadoMonedas);
 
         return listadoMonedas;
+    }
+
+    public Conversor conversorMonedas(Moneda monedaOrigen,Moneda monedaDestino) throws IOException {
+        CurrenciesServices currenciesServices = this.retrofit.create(CurrenciesServices.class);
+        Call<Conversor> requestConversor = currenciesServices.conversorDeMonedas(monedaOrigen.id,monedaDestino.id);
+        Response<Conversor> responseConversor = requestConversor.execute();
+        Conversor conversion = responseConversor.body();
+
+        return conversion;
     }
 /*
     public List<Pais> listadoDePaises() throws IOException {

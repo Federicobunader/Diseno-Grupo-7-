@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="TPGESOC" />
+        <module name="TP-GESOC" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="12" />

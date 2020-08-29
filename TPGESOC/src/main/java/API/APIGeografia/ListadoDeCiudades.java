@@ -7,10 +7,10 @@ public class ListadoDeCiudades {
     public String id;
     public String name;
     public Parametro parametros;
-    public List<Ciudad> ciudades;
+    public List<Ciudad> cities;
 
     public Optional<Ciudad> ciudadPorId(String id){
-        return this.ciudades.stream()
+        return this.cities.stream()
                 .filter(unaCiudad -> unaCiudad.id.equals(id))
                 .findFirst();
     }

@@ -18,7 +18,7 @@ public interface GeorefService {
     @GET("countries/{name}")
     Call<ListadoDeProvincias> provincias(@Path("name") String name);
 
-    @GET("states/{name}")
-    Call<ListadoDeCiudades> ciudades(@Path("name") String name);
+    @GET("states/{nameCity}")
+    Call<ListadoDeCiudades> ciudades(@Path("nameCity") String nameCity);
 
 }

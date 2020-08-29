@@ -2,10 +2,16 @@ package Negocio.Compras;
 
 import Negocio.Documento;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 
+@Entity
+@Table(name="presupuesto")
 public class Presupuesto {
 
+    @Id
+    @GeneratedValue
+    private int id;
 
     private ArrayList<Item> items = new ArrayList<Item>();
     private ArrayList<Documento> documentosComerciales = new ArrayList<Documento>();

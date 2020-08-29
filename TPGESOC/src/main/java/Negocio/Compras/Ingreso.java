@@ -1,8 +1,16 @@
 package Negocio.Compras;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="ingreso")
 public class Ingreso {
 
+    @Column
     public String descripcion;
+    @Column
     public double montoTotal;
 
     public Ingreso(String descripcion, double montoTotal) {

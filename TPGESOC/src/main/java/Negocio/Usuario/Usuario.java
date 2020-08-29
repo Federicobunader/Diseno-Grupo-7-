@@ -5,13 +5,23 @@ import InterfazDeUsuario.InterfazUsuarios;
 import Negocio.Compras.Compra;
 import Negocio.Compras.GestorDeEgresos;
 
+import javax.persistence.*;
 import java.util.ArrayList;
-
+@Entity
+@Table(name="usuario")
 public class Usuario {
 
+    @Id
+    @GeneratedValue
+    private int id;
+    @Column
     private String usuario;
+    @Column
     private String password;
+    private DireccionPostal direccionPostal;
+    @Transient
     private ArrayList<String> bandejaDeMensajes = new ArrayList<String>();
+
     private InterfazUsuarios interfazUsuarios = InterfazUsuarios.GetInstance();
 
 

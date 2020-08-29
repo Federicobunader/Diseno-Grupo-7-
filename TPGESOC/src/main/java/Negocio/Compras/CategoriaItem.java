@@ -1,8 +1,16 @@
 package Negocio.Compras;
 
-public class CategoriaItem {
+import javax.persistence.*;
 
+@Entity
+@Table(name="categoriaItem")
+public class CategoriaItem {
+    @Id
+    @GeneratedValue
+    private int id;
+    @Column
     private String criterioDeItem;
+    @Column
     private String nombreCategoria;
 
     public CategoriaItem(String criterioDeItem, String nombreCategoria) {

@@ -2,11 +2,20 @@ package Negocio.Compras;
 
 import Negocio.Proveedor;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="producto")
 public class Producto {
 
-	int precio;
-	Proveedor proveedor;
-	String descripcion;
+	@Id
+	@GeneratedValue
+	private int id;
+	@Column
+	private int precio;
+	private Proveedor proveedor;
+	@Column
+	private String descripcion;
 
 	public int getPrecio() {
 		return precio;
