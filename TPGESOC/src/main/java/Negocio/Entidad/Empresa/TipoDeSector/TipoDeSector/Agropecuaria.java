@@ -1,9 +1,15 @@
 package Negocio.Entidad.Empresa.TipoDeSector.TipoDeSector;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "agropecuaria")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "tipoDeSector")
 public class Agropecuaria extends TipoDeSector{
 
     private static Agropecuaria instance = null;
-    String nombreSector = "Agropecuario";
+    //String nombreSector = "Agropecuario";
 
     private Agropecuaria() {
     }
@@ -14,9 +20,9 @@ public class Agropecuaria extends TipoDeSector{
         return instance;
     }
 
-    public String getNombreSector() {
+   /* public String getNombreSector() {
         return nombreSector;
-    }
+    }*/
 
     public double getTopeVentasMedianaTramo2() {
         return 345.43;

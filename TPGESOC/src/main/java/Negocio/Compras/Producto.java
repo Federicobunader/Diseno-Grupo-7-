@@ -1,18 +1,18 @@
 package Negocio.Compras;
 
+import BaseDeDatos.EntidadPersistente;
 import Negocio.Proveedor;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name="producto")
-public class Producto {
+public class Producto  extends EntidadPersistente {
 
-	@Id
-	@GeneratedValue
-	private int id;
 	@Column
 	private int precio;
+	@OneToOne(cascade = {CascadeType.ALL})
+	@JoinColumn(name = "proveedor_id", referencedColumnName = "id")
 	private Proveedor proveedor;
 	@Column
 	private String descripcion;

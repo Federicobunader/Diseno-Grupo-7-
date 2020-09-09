@@ -1,13 +1,13 @@
 package Negocio.Compras;
 
+import BaseDeDatos.EntidadPersistente;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name="categoriaItem")
-public class CategoriaItem {
-    @Id
-    @GeneratedValue
-    private int id;
+public class CategoriaItem extends EntidadPersistente {
+
     @Column
     private String criterioDeItem;
     @Column

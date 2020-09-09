@@ -1,22 +1,35 @@
 package Negocio.Compras;
 
+import BaseDeDatos.EntidadPersistente;
 import InterfazDeUsuario.InterfazUsuarios;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 
 @Entity
 @Table(name="item")
-public class Item {
+public class Item  extends EntidadPersistente {
 
-	@Id
-	@GeneratedValue
-	private int id;
+	@OneToOne(cascade = {CascadeType.ALL})
+	@JoinColumn(name = "producto_id", referencedColumnName = "id")
 	private Producto producto;
+
 	@Column
 	private int cantidad;
-	private ArrayList<CategoriaItem> categorias = new ArrayList<CategoriaItem>();
+
+	/*@JoinTable(
+			name = "categoriaxitem",
+			joinColumns = @JoinColumn(name = "FK_categoria", nullable = false),
+			inverseJoinColumns = @JoinColumn(name="FK_item", nullable = false)
+	)
+	@ManyToMany(cascade = CascadeType.ALL)*/
+	@ManyToMany
+	@JoinTable(name = "item_x_categoriaItem")
+	private List<CategoriaItem> categorias = new ArrayList<CategoriaItem>();
+
+	@Transient
 	private GestorDeCriterios gestorDeCriterios = GestorDeCriterios.GetInstance();
 
 	public Item(Producto producto, int cantidad, ArrayList<CategoriaItem> categorias) {
@@ -25,6 +38,10 @@ public class Item {
 		this.categorias = categorias;
 	}
 
+	public Item() {
+	}
+
+	@Transient
 	InterfazUsuarios interfaz = InterfazUsuarios.GetInstance();
 
 	public int valorTotal(){

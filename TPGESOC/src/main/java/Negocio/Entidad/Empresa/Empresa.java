@@ -8,17 +8,27 @@ import Negocio.Entidad.EntidadJuridica;
 import Negocio.Entidad.Empresa.TipoDeSector.TipoDeSector.TipoDeSector;
 import Negocio.Entidad.Empresa.TipoDeEmpresas.TiposDeEmpresas.TipoDeEmpresa;
 
-
+import javax.persistence.*;
 
 
 public class Empresa extends EntidadJuridica {
 
+	@Column
 	private double promedioDeVentasAnuales;
+	@Column
 	private int cantidadDePersonal;
+	@Column
 	private String seleccionTipoDeSector;
+
+	@ManyToOne
+	@JoinColumn(name="tipoDeSector_id", referencedColumnName = "id")
 	private TipoDeSector sector;
+
+	@ManyToOne
+	@JoinColumn(name="tipoDeEmpresa_id", referencedColumnName = "id")
 	private TipoDeEmpresa tipoDeEmpresa;
 
+	@Transient
 	Categorizador categorizador = Categorizador.GetInstance();
 
 

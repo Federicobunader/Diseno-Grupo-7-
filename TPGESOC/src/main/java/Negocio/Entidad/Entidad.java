@@ -1,19 +1,23 @@
 package Negocio.Entidad;
 
+import BaseDeDatos.EntidadPersistente;
 import Negocio.Proveedor;
 import Negocio.Usuario.Usuario;
 
-public abstract class Entidad {
+import javax.persistence.*;
 
-	private Negocio.Usuario.Usuario usuario;
-	private Proveedor proveedor;
+@Entity
+@Table(name="entidad")
+public abstract class Entidad extends EntidadPersistente {
+
+	@OneToOne
+	@JoinColumn(name="usuario_id", referencedColumnName = "id")
+	private Usuario usuario;
 
 	public Entidad(){
-
 	}
 
-	public Entidad(Negocio.Usuario.Usuario unUsuario, Proveedor unProveedor) {
+	public Entidad(Negocio.Usuario.Usuario unUsuario) {
 		usuario = unUsuario;
-		proveedor = unProveedor;
 	}
 }//end Entidad

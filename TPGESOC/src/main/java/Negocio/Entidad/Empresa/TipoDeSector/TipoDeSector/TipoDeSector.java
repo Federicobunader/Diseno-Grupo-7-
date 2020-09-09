@@ -1,6 +1,15 @@
 package Negocio.Entidad.Empresa.TipoDeSector.TipoDeSector;
 
-public abstract class TipoDeSector {
+import BaseDeDatos.EntidadPersistente;
+
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="tipoDeEmpresa")
+@DiscriminatorColumn(name="nombreTipoDeSector")
+public abstract class TipoDeSector extends EntidadPersistente {
 
     public abstract double getTopeVentasMedianaTramo2();
 

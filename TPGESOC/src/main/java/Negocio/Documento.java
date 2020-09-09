@@ -1,13 +1,13 @@
 package Negocio;
 
+import BaseDeDatos.EntidadPersistente;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name="documento")
-public class Documento {
-	@Id
-	@GeneratedValue
-	private int id;
+public class Documento extends EntidadPersistente {
+
 	@Column
 	private int Numero;
 	@Column

@@ -14,7 +14,7 @@ public class MenorValor extends Criterio {
     public MenorValor() {
     }
 
-    public Presupuesto elegirPresupuesto(ArrayList<Presupuesto> presupuestos) {
+    public Presupuesto elegirPresupuesto(List<Presupuesto> presupuestos) {
         double presupuestoMasBarato = this.menorValor(presupuestos);
 
         for (int i = 0; i < presupuestos.size(); i++) {
@@ -25,11 +25,11 @@ public class MenorValor extends Criterio {
         return null;
     }
 
-    private double menorValor(ArrayList<Presupuesto> presupuestos) {
+    private double menorValor(List<Presupuesto> presupuestos) {
         return this.valoresTotales(presupuestos).stream().min(Comparator.naturalOrder()).get();
     }
 
-    private List<Double> valoresTotales(ArrayList<Presupuesto> presupuestos){
+    private List<Double> valoresTotales(List<Presupuesto> presupuestos){
         return presupuestos.stream().map(presupuesto -> presupuesto.valorTotal()).collect(Collectors.toList());
     }
 }

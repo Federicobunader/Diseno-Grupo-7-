@@ -1,6 +1,10 @@
 package Negocio.Compras;
 
 
+import BaseDeDatos.EntidadPersistente;
+
+import javax.persistence.Column;
+
 public class Validador {
 
     int cantidadDePresupuestosRequeridos = 3;

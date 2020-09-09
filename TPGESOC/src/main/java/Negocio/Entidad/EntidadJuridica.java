@@ -9,10 +9,6 @@ import java.util.ArrayList;
 @Table(name="entidadJuridica")
 public class EntidadJuridica extends Entidad {
 
-	@Id
-	@GeneratedValue
-	private int id;
-
 	private ArrayList<EntidadBase> entidadBases = new ArrayList<EntidadBase>();
 
 	@Column
@@ -21,8 +17,6 @@ public class EntidadJuridica extends Entidad {
 	private String NombreFicticio;
 	@Column
 	private int CUIT;
-	@Column
-	private String DireccionPostal;
 	@Column
 	private int CodigoDeInscripcion;
 

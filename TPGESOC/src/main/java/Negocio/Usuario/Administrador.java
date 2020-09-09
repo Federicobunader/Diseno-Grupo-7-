@@ -4,13 +4,11 @@ import Negocio.Usuario.Usuario;
 
 public class Administrador extends Usuario {
 
-	public Administrador(String usuario, String password) {
-		super(usuario, password);
+	public Administrador() {
+		super();
 	}
 
-
 	public void finalize() throws Throwable {
-
 	}
 
 }//end Administrador

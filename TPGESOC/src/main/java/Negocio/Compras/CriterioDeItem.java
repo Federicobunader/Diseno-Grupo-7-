@@ -1,19 +1,24 @@
 package Negocio.Compras;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import BaseDeDatos.EntidadPersistente;
+
+import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="criterioDeItem")
-public class CriterioDeItem {
+public class CriterioDeItem extends EntidadPersistente {
 
+    @Transient
     private ArrayList<Componente> criteriosDeMenorJerarquia = new ArrayList<Componente>();
 
     @Column
     private String nombreCriterio;
-    private ArrayList<CategoriaItem> categorias = new ArrayList<CategoriaItem>();
+
+    @OneToMany(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "categoriaItem_id", referencedColumnName = "id")
+    private List<CategoriaItem> categorias = new ArrayList<CategoriaItem>();
 
     public CriterioDeItem(String nombreCriterio) {
         this.nombreCriterio = nombreCriterio;
@@ -24,7 +29,7 @@ public class CriterioDeItem {
         return nombreCriterio;
     }
 
-    public ArrayList<CategoriaItem> getCategorias() {
+    public List<CategoriaItem> getCategorias() {
         return categorias;
     }
 

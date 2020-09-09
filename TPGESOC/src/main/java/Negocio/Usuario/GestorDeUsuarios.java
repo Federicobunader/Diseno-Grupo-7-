@@ -45,10 +45,7 @@ public class GestorDeUsuarios {
                     break;
                 case 3:
                     Usuario unUsuario = this.elegirUsuario();
-                    if (unUsuario != null) {
-                        gestorDePasswords.ingresarNuevaPassword(unUsuario);
-                    }
-                    break;
+                    ;
                 case 4:
                     this.mostrarUsuarios();
                     break;
@@ -160,7 +157,10 @@ public class GestorDeUsuarios {
     }
 
     public void agregarUsuario(String usuario, String passwordHasheada) {
-        usuarios.add(new Usuario(usuario,passwordHasheada));
+        Usuario usuario1 = new Usuario();
+        usuario1.setUsuario(usuario);
+        usuario1.setPassword(passwordHasheada);
+        usuarios.add(usuario1);
     }
 
     public Usuario elegirUsuario() {

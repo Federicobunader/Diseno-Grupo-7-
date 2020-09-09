@@ -2,60 +2,99 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c56b04db-f42a-40a7-8d18-c78ae2368dc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/API/APIMoneda/Conversor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/API/APIMoneda/ListadoDeConversiones.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Mensaje.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/converters/LocalDateAttributeConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/BaseDeDatos/EntidadPersistente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/BaseDeDatos/EntityManagerHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/BaseDeDatos/Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/BaseDeDatos/UsuarioModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/EmTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/API/APIGeografia/Ciudad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/API/APIGeografia/Ciudad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/API/APIGeografia/ListadoDeCiudades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/API/APIGeografia/ListadoDeCiudades.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/API/APIGeografia/Pais.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/API/APIGeografia/Pais.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/API/APIGeografia/Provincia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/API/APIGeografia/Provincia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/API/Servicios/CurrenciesServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/API/Servicios/CurrenciesServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/API/Servicios/GeorefService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/API/Servicios/GeorefService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/API/Servicios/ServicioMonedas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/API/Servicios/ServicioMonedas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/CategoriaItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/CategoriaItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Compra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Criterio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Criterio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/CriterioDeItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/CriterioDeItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Criterios/MenorValor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Criterios/MenorValor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Egreso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Egreso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/GestorDeEgresos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/GestorDeEgresos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/GestorDeIngresos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/GestorDeIngresos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Ingreso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Ingreso.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Presupuesto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Presupuesto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Validador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Validador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Documento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Documento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Categorizador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Categorizador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MedianaTramo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MedianaTramo1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MedianaTramo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MedianaTramo2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MicroEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MicroEmpresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/PequeniaEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/PequeniaEmpresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/TipoDeEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/TipoDeEmpresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Agropecuaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Agropecuaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Comercio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Comercio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Construccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Construccion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/IndustriaYMinera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/IndustriaYMinera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Servicios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Servicios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/TipoDeSector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/TipoDeSector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Entidad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Entidad.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/EntidadBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/EntidadBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/EntidadJuridica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/EntidadJuridica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/MedioDePago.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/MedioDePago.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Proveedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Proveedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Administrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Administrador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/DireccionPostal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/DireccionPostal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/GestorDeUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/GestorDeUsuarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Mensaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Mensaje.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Negocio/Compras/CompraTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Negocio/Compras/CompraTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/API/APIGeografia/Ciudad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/APIGeografia/Ciudad.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/API/APIGeografia/ListadoDeCiudades.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/APIGeografia/ListadoDeCiudades.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/API/APIGeografia/Pais.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/APIGeografia/Pais.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/API/APIGeografia/Provincia.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/APIGeografia/Provincia.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/API/Servicios/CurrenciesServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/Servicios/CurrenciesServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/API/Servicios/GeorefService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/Servicios/GeorefService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/API/Servicios/ServicioMonedas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/Servicios/ServicioMonedas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/TPGESOC.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/CategoriaItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/CategoriaItem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Compra.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Compra.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Criterio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Criterio.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/CriterioDeItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/CriterioDeItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Criterios/MenorValor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Criterios/MenorValor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Egreso.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Egreso.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/GestorDeCriterios.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/GestorDeCriterios.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/GestorDeEgresos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/GestorDeEgresos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/GestorDeIngresos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/GestorDeIngresos.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Ingreso.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Ingreso.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Item.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Presupuesto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Presupuesto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Producto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Producto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Validador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Validador.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Documento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Documento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/Categorizador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/Categorizador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/Empresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/Empresa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MedianaTramo1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MedianaTramo1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MedianaTramo2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MedianaTramo2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MicroEmpresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MicroEmpresa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/PequeniaEmpresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/PequeniaEmpresa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/TipoDeEmpresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/TipoDeEmpresa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Agropecuaria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Agropecuaria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Comercio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Comercio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Construccion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Construccion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/IndustriaYMinera.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/IndustriaYMinera.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Servicios.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Servicios.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/TipoDeSector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/TipoDeSector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Entidad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Entidad.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/EntidadBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/EntidadBase.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/EntidadJuridica.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/EntidadJuridica.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/MedioDePago$tipoDePago.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/MedioDePago.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/MedioDePago.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Proveedor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Proveedor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Usuario/Administrador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Usuario/Administrador.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Usuario/DireccionPostal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Usuario/DireccionPostal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Usuario/GestorDeUsuarios.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Usuario/GestorDeUsuarios.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Usuario/Mensaje.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Usuario/Mensaje.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Usuario/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Usuario/Usuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/TPGESOC.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Negocio/Compras/CompraTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Negocio/Compras/CompraTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -73,34 +112,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TPGESOC.iml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/EmTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="55" column="53" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
+            <state relative-caret-position="556">
+              <caret line="54" column="1" lean-forward="true" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="558">
+              <caret line="40" column="75" selection-start-line="40" selection-start-column="75" selection-end-line="40" selection-end-column="75" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#904#905#0" expanded="true" />
+                <element signature="e#958#959#0" expanded="true" />
+                <element signature="e#1146#1147#0" expanded="true" />
+                <element signature="e#1190#1191#0" expanded="true" />
+                <element signature="e#1235#1236#0" expanded="true" />
+                <element signature="e#1275#1276#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Egreso.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Criterio.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/CriterioDeItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Item.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="27" column="15" lean-forward="true" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#790#805#0" expanded="true" />
+                <element signature="e#1203#1204#0" expanded="true" />
+                <element signature="e#1248#1249#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="255">
+              <caret line="18" column="78" selection-start-line="18" selection-start-column="78" selection-end-line="18" selection-end-column="78" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BaseDeDatos/EntidadPersistente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+            <state relative-caret-position="238">
+              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -111,26 +217,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/CategoriaItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/API/APIMoneda/Conversor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/API/APIGeografia/Pais.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+            <state relative-caret-position="104">
+              <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,32 +227,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/API/APIGeografia/Provincia.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Presupuesto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/API/APIGeografia/Ciudad.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Componente.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#122#123#0" expanded="true" />
-                <element signature="e#159#160#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="354">
+              <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -191,57 +257,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/InterfazDeUsuario/InterfazUsuarios.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/GestorDeIngresos.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Scheduler/JobImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Scheduler/SchedulerListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Scheduler/EjecutarValidador.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Scheduler/Trigger.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Validador.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Scheduler/CuentaRegresiva.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Scheduler/Scheduler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Scheduler/ImplementacionJob.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Scheduler/ImplementarScheduler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Sistema.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Scheduler/TriggerValidador.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Negocio/Compras/CompraTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/GestorDeEgresos.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Empresa.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Componente.java" />
-        <option value="$PROJECT_DIR$/src/main/java/API/Servicios/Serviciogeoref.java" />
-        <option value="$PROJECT_DIR$/src/main/java/API/APIGeografia/ListadoDeProvincias.java" />
-        <option value="$PROJECT_DIR$/src/main/java/API/APIGeografia/ListadoDePaises.java" />
-        <option value="$PROJECT_DIR$/src/main/java/API/APIMoneda/Moneda.java" />
-        <option value="$PROJECT_DIR$/src/main/java/API/APIMoneda/ListadoDeMonedas.java" />
-        <option value="$PROJECT_DIR$/src/main/java/API/APIMoneda/ListadoDeConversiones.java" />
-        <option value="$PROJECT_DIR$/src/main/java/API/Servicios/GeorefService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/API/Servicios/ServicioGeoref.java" />
-        <option value="$PROJECT_DIR$/src/main/java/API/APIGeografia/ListadoDeCiudades.java" />
-        <option value="$PROJECT_DIR$/src/main/java/API/Servicios/CurrenciesServices.java" />
-        <option value="$PROJECT_DIR$/src/main/java/API/Servicios/ServicioMonedas.java" />
         <option value="$PROJECT_DIR$/src/main/java/API/APIMoneda/Conversor.java" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/Main.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Mensaje.java" />
         <option value="$PROJECT_DIR$/src/main/java/converters/LocalDateAttributeConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BaseDeDatos/Model.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BaseDeDatos/EntityManagerHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BaseDeDatos/UsuarioModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/GestorDeEgresos.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/GestorDeIngresos.java" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/CategoriaItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Compra.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/CriterioDeItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Ingreso.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Presupuesto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Producto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Item.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Documento.java" />
+        <option value="$PROJECT_DIR$/src/main/java/API/APIGeografia/Provincia.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Usuario/DireccionPostal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Usuario/GestorDeUsuarios.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/Proveedor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/API/APIGeografia/Ciudad.java" />
+        <option value="$PROJECT_DIR$/src/main/java/API/APIGeografia/Pais.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Criterios/MenorValor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Criterio.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Compra.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Egreso.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Negocio/Compras/CompraTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Producto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Validador.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Documento.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Presupuesto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/MedioDePago.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/CriterioDeItem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/TipoDeEmpresa.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/PequeniaEmpresa.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MicroEmpresa.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MedianaTramo2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MedianaTramo1.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Categorizador.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Administrador.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Mensaje.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Entidad.java" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/EntidadBase.java" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/EntidadJuridica.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Egreso.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Usuario/DireccionPostal.java" />
-        <option value="$PROJECT_DIR$/src/main/java/API/APIGeografia/Pais.java" />
-        <option value="$PROJECT_DIR$/src/main/java/API/APIGeografia/Provincia.java" />
-        <option value="$PROJECT_DIR$/src/main/java/API/APIGeografia/Ciudad.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Empresa.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Agropecuaria.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Comercio.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Construccion.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/IndustriaYMinera.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Servicios.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/TipoDeSector.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario.java" />
+        <option value="$PROJECT_DIR$/src/test/java/EmTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BaseDeDatos/EntidadPersistente.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Item.java" />
       </list>
     </option>
   </component>
@@ -275,8 +341,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -308,7 +372,51 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="BaseDeDatos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Negocio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Negocio" type="462c0819:PsiDirectoryNode" />
+              <item name="Compras" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Negocio" type="462c0819:PsiDirectoryNode" />
+              <item name="Entidad" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Negocio" type="462c0819:PsiDirectoryNode" />
+              <item name="Usuario" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Negocio" type="462c0819:PsiDirectoryNode" />
+              <item name="MedioDePago.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
             <path>
               <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
@@ -325,10 +433,38 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Negocio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -372,7 +508,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.EmTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Negocio.Main" />
       <module name="TP-GESOC" />
@@ -401,49 +537,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompraTest.verificarEleccionDePresupuestoConOtroPresupuesto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TPGESOC" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Negocio.Compras.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Negocio.Compras" />
-      <option name="MAIN_CLASS_NAME" value="Negocio.Compras.CompraTest" />
-      <option name="METHOD_NAME" value="verificarEleccionDePresupuestoConOtroPresupuesto" />
+    <configuration name="EmTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP-GESOC" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="EmTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmTest.persistirUsuario" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP-GESOC" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="EmTest" />
+      <option name="METHOD_NAME" value="persistirUsuario" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompraTest.verificarEnUsuarioSuscriptoQueSeEligioElPresupuesto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TPGESOC" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Negocio.Compras.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Negocio.Compras" />
-      <option name="MAIN_CLASS_NAME" value="Negocio.Compras.CompraTest" />
-      <option name="METHOD_NAME" value="verificarEnUsuarioSuscriptoQueSeEligioElPresupuesto" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CompraTest.verificarValidacion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TPGESOC" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Negocio.Compras.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Negocio.Compras" />
-      <option name="MAIN_CLASS_NAME" value="Negocio.Compras.CompraTest" />
-      <option name="METHOD_NAME" value="verificarValidacion" />
+    <configuration name="EmTest.select" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP-GESOC" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="EmTest" />
+      <option name="METHOD_NAME" value="select" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -451,11 +568,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EmTest" />
+        <item itemvalue="JUnit.EmTest.select" />
+        <item itemvalue="JUnit.EmTest.persistirUsuario" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.CompraTest" />
-        <item itemvalue="JUnit.CompraTest.verificarEnUsuarioSuscriptoQueSeEligioElPresupuesto" />
-        <item itemvalue="JUnit.CompraTest.verificarEleccionDePresupuestoConOtroPresupuesto" />
-        <item itemvalue="JUnit.CompraTest.verificarValidacion" />
       </list>
     </recent_temporary>
   </component>
@@ -473,35 +590,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CompraTest_verificarValidacion - 2020.06.02 at 16h 44m 46s.xml">
-      <configuration name="CompraTest.verificarValidacion" configurationId="JUnit" />
+    <history-entry file="EmTest_select - 2020.09.06 at 18h 17m 47s.xml">
+      <configuration name="EmTest.select" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompraTest_verificarEnUsuarioSuscriptoQueSeEligioElPresupuesto - 2020.06.02 at 16h 46m 46s.xml">
-      <configuration name="CompraTest.verificarEnUsuarioSuscriptoQueSeEligioElPresupuesto" configurationId="JUnit" />
+    <history-entry file="EmTest_select - 2020.09.06 at 18h 18m 24s.xml">
+      <configuration name="EmTest.select" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompraTest - 2020.06.02 at 16h 47m 02s.xml">
-      <configuration name="CompraTest" configurationId="JUnit" />
+    <history-entry file="EmTest - 2020.09.06 at 18h 20m 12s.xml">
+      <configuration name="EmTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompraTest_verificarEleccionDePresupuestoConOtroPresupuesto - 2020.06.02 at 16h 54m 37s.xml">
-      <configuration name="CompraTest.verificarEleccionDePresupuestoConOtroPresupuesto" configurationId="JUnit" />
+    <history-entry file="EmTest - 2020.09.06 at 18h 21m 36s.xml">
+      <configuration name="EmTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompraTest_verificarEleccionDePresupuestoConOtroPresupuesto - 2020.06.02 at 16h 55m 14s.xml">
-      <configuration name="CompraTest.verificarEleccionDePresupuestoConOtroPresupuesto" configurationId="JUnit" />
+    <history-entry file="EmTest - 2020.09.09 at 11h 30m 41s.xml">
+      <configuration name="EmTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompraTest_verificarEnUsuarioSuscriptoQueSeEligioElPresupuesto - 2020.06.03 at 09h 43m 25s.xml">
-      <configuration name="CompraTest.verificarEnUsuarioSuscriptoQueSeEligioElPresupuesto" configurationId="JUnit" />
+    <history-entry file="EmTest - 2020.09.09 at 11h 43m 34s.xml">
+      <configuration name="EmTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompraTest_verificarEnUsuarioSuscriptoQueSeEligioElPresupuesto - 2020.06.14 at 16h 36m 19s.xml">
-      <configuration name="CompraTest.verificarEnUsuarioSuscriptoQueSeEligioElPresupuesto" configurationId="JUnit" />
+    <history-entry file="EmTest - 2020.09.09 at 11h 48m 47s.xml">
+      <configuration name="EmTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompraTest - 2020.06.17 at 18h 12m 48s.xml">
-      <configuration name="CompraTest" configurationId="JUnit" />
+    <history-entry file="EmTest - 2020.09.09 at 11h 50m 00s.xml">
+      <configuration name="EmTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompraTest - 2020.06.17 at 18h 13m 22s.xml">
-      <configuration name="CompraTest" configurationId="JUnit" />
+    <history-entry file="EmTest - 2020.09.09 at 11h 52m 53s.xml">
+      <configuration name="EmTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompraTest - 2020.06.24 at 18h 38m 22s.xml">
-      <configuration name="CompraTest" configurationId="JUnit" />
+    <history-entry file="EmTest - 2020.09.09 at 12h 03m 53s.xml">
+      <configuration name="EmTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -515,10 +632,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49150142" visible="true" weight="0.14496644" />
-      <window_info id="Structure" order="1" sideWeight="0.5084986" side_tool="true" visible="true" weight="0.14496644" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.85658914" visible="true" weight="0.17583893" />
+      <window_info id="Structure" order="1" sideWeight="0.14341085" side_tool="true" weight="0.16979866" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -526,7 +642,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.5028329" side_tool="true" weight="0.13892618" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32991204" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26912183" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41501418" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398017" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -545,6 +661,35 @@
       <window_info anchor="right" id="Maven" order="7" weight="0.3295302" />
       <window_info anchor="right" id="Coverage" order="8" sideWeight="0.5011765" side_tool="true" weight="0.24966443" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.85658914" visible="true" weight="0.1738255" />
+      <window_info id="Structure" order="1" sideWeight="0.14341085" side_tool="true" weight="0.16979866" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.5028329" side_tool="true" weight="0.13892618" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32991204" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41501418" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.398017" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.27859238" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3286119" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.49882352" weight="0.24966443" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24961479" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven" order="7" weight="0.3295302" />
+      <window_info anchor="right" id="Coverage" order="8" sideWeight="0.5011765" side_tool="true" weight="0.24966443" />
+    </layout-to-restore>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -568,151 +713,24 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/GestorDeUsuarios.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Sistema.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="64" column="54" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="374">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Negocio/Compras/CompraTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/GestorDeIngresos.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-771">
-          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+        <state relative-caret-position="357">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Scheduler/ImplementarScheduler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Scheduler/TriggerValidador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/GestorDeAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/InterfazDeUsuario/InterfazUsuarios.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="706">
-          <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/InterfazDeUsuario/InterfazPassword.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="46" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/Servicios/currenciesService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/APIGeografia/ListadoDePaises.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#455#456#0" expanded="true" />
-            <element signature="e#491#492#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/Servicios/ServicioGeoref.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="50" column="46" lean-forward="true" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/APIGeografia/ListadoDeProvincias.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/APIMoneda/ListadoDeMonedas.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/OSC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/Servicios/GeorefService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/APIGeografia/ListadoDeCiudades.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/Servicios/ServicioMonedas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/APIMoneda/ListadoDeConversiones.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/Servicios/CurrenciesServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -730,10 +748,287 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/GestorDePasswords.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="257" selection-start-line="257" selection-end-line="257" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/GestorDeUsuarios.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/API/APIGeografia/Provincia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/API/APIGeografia/Pais.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/API/APIGeografia/Ciudad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Criterios/MenorValor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Componente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding>
+            <element signature="e#122#123#0" expanded="true" />
+            <element signature="e#159#160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/GestorDeCriterios.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="131">
           <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/GestorDeEgresos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Negocio/Compras/CompraTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="121" column="36" selection-start-line="121" selection-start-column="36" selection-end-line="121" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MedianaTramo2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MicroEmpresa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/PequeniaEmpresa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Categorizador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Empresa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MedianaTramo1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="7" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Agropecuaria.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" selection-start-line="4" selection-end-line="7" selection-end-column="43" />
+          <folding>
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#545#546#0" expanded="true" />
+            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#619#620#0" expanded="true" />
+            <element signature="e#669#670#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#771#772#0" expanded="true" />
+            <element signature="e#816#817#0" expanded="true" />
+            <element signature="e#844#845#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+            <element signature="e#912#913#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Comercio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding>
+            <element signature="e#492#493#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#647#648#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#725#726#0" expanded="true" />
+            <element signature="e#750#751#0" expanded="true" />
+            <element signature="e#795#796#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
+            <element signature="e#867#868#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Construccion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding>
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#545#546#0" expanded="true" />
+            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#670#671#0" expanded="true" />
+            <element signature="e#698#699#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#845#846#0" expanded="true" />
+            <element signature="e#889#890#0" expanded="true" />
+            <element signature="e#914#915#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/IndustriaYMinera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
+            <element signature="e#641#642#0" expanded="true" />
+            <element signature="e#691#692#0" expanded="true" />
+            <element signature="e#720#721#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#794#795#0" expanded="true" />
+            <element signature="e#839#840#0" expanded="true" />
+            <element signature="e#867#868#0" expanded="true" />
+            <element signature="e#911#912#0" expanded="true" />
+            <element signature="e#936#937#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Servicios.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="e#498#499#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#602#603#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#729#730#0" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#825#826#0" expanded="true" />
+            <element signature="e#869#870#0" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/TipoDeEmpresa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/TipoDeSector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Documento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/MedioDePago.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -742,132 +1037,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Proveedor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Criterio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        <state relative-caret-position="102">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Validador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/OSC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/Administrador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/Mensaje.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Documento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/MedioDePago.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        <state relative-caret-position="153">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/DireccionPostal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/GestorDePasswords.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Entidad.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/EntidadBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+        <state relative-caret-position="170">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/EntidadJuridica.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        <state relative-caret-position="170">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Producto.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/Administrador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        <state relative-caret-position="136">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/DireccionPostal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+            <element signature="e#818#819#0" expanded="true" />
+            <element signature="e#872#873#0" expanded="true" />
+            <element signature="e#920#921#0" expanded="true" />
+            <element signature="e#960#961#0" expanded="true" />
+            <element signature="e#992#993#0" expanded="true" />
+            <element signature="e#1042#1043#0" expanded="true" />
+            <element signature="e#1084#1085#0" expanded="true" />
+            <element signature="e#1128#1129#0" expanded="true" />
+            <element signature="e#1164#1165#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Presupuesto.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/Mensaje.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -876,18 +1111,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Ingreso.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        <state relative-caret-position="136">
+          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Egreso.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Producto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Entidad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Compra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Criterio.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -896,104 +1158,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/CriterioDeItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        <state relative-caret-position="136">
+          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/APIMoneda/Moneda.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Egreso.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Compra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        <state relative-caret-position="245">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TPGESOC.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Presupuesto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="53" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
+        <state relative-caret-position="354">
+          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/CategoriaItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/APIMoneda/Conversor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/APIGeografia/Pais.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/APIGeografia/Provincia.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/BaseDeDatos/EntidadPersistente.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/APIGeografia/Ciudad.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Componente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding>
-            <element signature="e#122#123#0" expanded="true" />
-            <element signature="e#159#160#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="40" column="75" selection-start-line="40" selection-start-column="75" selection-end-line="40" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#904#905#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
+            <element signature="e#1146#1147#0" expanded="true" />
+            <element signature="e#1190#1191#0" expanded="true" />
+            <element signature="e#1235#1236#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="255">
+          <caret line="18" column="78" selection-start-line="18" selection-start-column="78" selection-end-line="18" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/CategoriaItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="27" column="15" lean-forward="true" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#790#805#0" expanded="true" />
+            <element signature="e#1203#1204#0" expanded="true" />
+            <element signature="e#1248#1249#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/EmTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="54" column="1" lean-forward="true" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

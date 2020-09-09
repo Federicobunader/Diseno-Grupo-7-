@@ -1,9 +1,17 @@
 package Negocio.Entidad.Empresa.TipoDeEmpresas.TiposDeEmpresas;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "pequeniaEmpresa")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "tipoDeEmpresa")
 public class PequeniaEmpresa extends TipoDeEmpresa {
 
+    @Transient
     private static PequeniaEmpresa instance = null;
-    String nombreTipoEmpresa = "Pequeña";
+   // @Transient
+   // String nombreTipoEmpresa = "Pequeña";
 
     private PequeniaEmpresa() {
     }
@@ -14,7 +22,7 @@ public class PequeniaEmpresa extends TipoDeEmpresa {
         return instance;
     }
 
-    public String getNombreTipoEmpresa() {
-        return nombreTipoEmpresa;
-    }
+   // public String getNombreTipoEmpresa() {
+      //  return nombreTipoEmpresa;
+    //}
 }

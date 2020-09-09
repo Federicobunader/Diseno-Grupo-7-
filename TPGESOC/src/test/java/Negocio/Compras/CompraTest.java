@@ -95,9 +95,16 @@ public class CompraTest {
         presupuestos1.add(presupuesto2);
         presupuestos1.add(presupuesto3);
 
-        usuario1 = new Usuario("Federico di Napoli", "AguanteRiver01");
-        usuario2 = new Usuario("Alejandro Hassan","Pablo Mendez02");
-        usuario3 = new Usuario("Juan Francisco Nadal", "AwanteLaUBA123");
+        usuario1 = new Usuario();
+        usuario1.setUsuario("Federico di Napoli");
+        usuario1.setPassword("AguanteRiver01");
+
+        usuario2 = new Usuario();
+        usuario2.setUsuario("Alejandro Hassan");
+        usuario2.setPassword("Pablo Mendez02");
+        usuario3 = new Usuario();
+        usuario3.setUsuario("Juan Francisco Nadal");
+        usuario3.setPassword("AwanteLaUBA123");
 
         usuarios = new ArrayList<Usuario>();
         usuarios.add(usuario1);
@@ -108,7 +115,7 @@ public class CompraTest {
 
         entidadbase1 = new EntidadBase("EntidadBase" ,"descripcion");
 
-        compra1 = new Compra(items1,presupuestos1, documento, entidadbase1,proveedor1, true, new MenorValor(), 1000);
+        compra1 = new Compra();
 
     }
     @Test

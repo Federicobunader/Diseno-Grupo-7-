@@ -1,28 +1,31 @@
 package Negocio.Compras;
 
+import BaseDeDatos.EntidadPersistente;
 import Negocio.Documento;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="presupuesto")
-public class Presupuesto {
+public class Presupuesto  extends EntidadPersistente {
 
-    @Id
-    @GeneratedValue
-    private int id;
+    @OneToMany
+    @JoinColumn(name = "item_id", referencedColumnName = "id")
+    private List<Item> items = new ArrayList<Item>();
 
-    private ArrayList<Item> items = new ArrayList<Item>();
-    private ArrayList<Documento> documentosComerciales = new ArrayList<Documento>();
+    @OneToMany
+    @JoinColumn(name = "documento_id", referencedColumnName = "id")
+    private List<Documento> documentosComerciales = new ArrayList<Documento>();
 
 
-    public Presupuesto( ArrayList<Item> items, ArrayList<Documento> documentosComerciales) {
+    public Presupuesto( List<Item> items, List<Documento> documentosComerciales) {
         this.items = items;
         this.documentosComerciales = documentosComerciales;
     }
 
-    public void setItems(ArrayList<Item> items) {
+    public void setItems(List<Item> items) {
         this.items = items;
     }
 

@@ -10,11 +10,9 @@ import javax.persistence.*;
 @Table(name="entidadBase")
 public class EntidadBase extends Entidad {
 
-	@Id
-	@GeneratedValue
-	private int id;
 	@Column
 	private String Nombre;
+
 	@Column
 	private String Descripcion;
 

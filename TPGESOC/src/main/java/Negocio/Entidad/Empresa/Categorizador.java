@@ -4,6 +4,8 @@ import Negocio.Entidad.Empresa.TipoDeEmpresas.TiposDeEmpresas.*;
 import Negocio.Entidad.Empresa.TipoDeSector.TipoDeSector.TipoDeSector;
 import Negocio.Entidad.Empresa.*;
 
+// no relacional
+
 public class Categorizador {
 
     private static Categorizador instance = null;

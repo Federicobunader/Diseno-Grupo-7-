@@ -1,6 +1,7 @@
 package Negocio.Usuario;
 
 
+import BaseDeDatos.EntidadPersistente;
 import InterfazDeUsuario.InterfazUsuarios;
 import Negocio.Compras.Compra;
 import Negocio.Compras.GestorDeEgresos;
@@ -9,21 +10,45 @@ import javax.persistence.*;
 import java.util.ArrayList;
 @Entity
 @Table(name="usuario")
-public class Usuario {
+public class Usuario extends EntidadPersistente {
 
-    @Id
-    @GeneratedValue
-    private int id;
     @Column
     private String usuario;
+
     @Column
     private String password;
+
+    @OneToOne(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "direccionPostal_id", referencedColumnName = "id")
     private DireccionPostal direccionPostal;
+
     @Transient
     private ArrayList<String> bandejaDeMensajes = new ArrayList<String>();
 
+    @Transient
     private InterfazUsuarios interfazUsuarios = InterfazUsuarios.GetInstance();
 
+    @Column
+    private boolean habilitado;
+
+    @Column
+    private int intentos;
+
+    public void setDireccionPostal(DireccionPostal direccionPostal) {
+        this.direccionPostal = direccionPostal;
+    }
+
+    public void setBandejaDeMensajes(ArrayList<String> bandejaDeMensajes) {
+        this.bandejaDeMensajes = bandejaDeMensajes;
+    }
+
+    public void setHabilitado(boolean habilitado) {
+        this.habilitado = habilitado;
+    }
+
+    public void setIntentos(int intentos) {
+        this.intentos = intentos;
+    }
 
     public String getUsuario() {
         return usuario;
@@ -45,9 +70,8 @@ public class Usuario {
         return bandejaDeMensajes;
     }
 
-    public Usuario(String usuario, String password) {
-        this.usuario = usuario;
-        this.password = password;
+    public Usuario() {
+
     }
 
     public boolean laPasswordCoincide(String unaPassword){
@@ -62,6 +86,7 @@ public class Usuario {
         interfazUsuarios.mostrarInformacion(mensaje);
     }
 
+    @Transient
     GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();
 
     public void darseDeAltaComoRevisor(int compraID){

@@ -1,9 +1,14 @@
 package Negocio.Compras;
 
+import BaseDeDatos.EntidadPersistente;
+
 import java.util.ArrayList;
+import java.util.List;
 
-public abstract class Criterio {
+// no relacional
 
-    public abstract Presupuesto elegirPresupuesto(ArrayList<Presupuesto> presupuestos);
+public abstract class Criterio{
+
+    public abstract Presupuesto elegirPresupuesto(List<Presupuesto> presupuestos);
 
 }

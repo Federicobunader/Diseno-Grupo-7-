@@ -1,9 +1,15 @@
 package Negocio.Entidad.Empresa.TipoDeSector.TipoDeSector;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "comercio")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "tipoDeSector")
 public class Comercio extends TipoDeSector{
 
     private static Comercio instance = null;
-    String nombreSector = "Comercio";
+    //String nombreSector = "Comercio";
 
     private Comercio() {
     }
@@ -13,11 +19,11 @@ public class Comercio extends TipoDeSector{
             instance = new Comercio();
         return instance;
     }
-
+/*
     public String getNombreSector() {
         return nombreSector;
     }
-
+*/
     public double getTopeVentasMedianaTramo2() {
         return 1502.75;
     }

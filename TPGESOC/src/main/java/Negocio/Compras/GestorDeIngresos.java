@@ -1,8 +1,11 @@
 package Negocio.Compras;
 
 import InterfazDeUsuario.InterfazUsuarios;
+import org.apache.commons.lang3.time.DateFormatUtils;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class GestorDeIngresos {
     private static GestorDeIngresos instance = null;
@@ -16,31 +19,28 @@ public class GestorDeIngresos {
         return instance;
     }
 
-    public void agregarIngreso(){
+    public void agregarIngreso() {
         String descripcionDelIngreso = interfaz.pedirString("Ingrese la descripción del ingreso: ");
         double montoTotal = interfaz.pedirDouble("Ingrese el monto total del ingreso: ");
 
-        Ingreso nuevoIngreso = new Ingreso(descripcionDelIngreso,montoTotal);
+        Ingreso nuevoIngreso = new Ingreso(descripcionDelIngreso, montoTotal);
 
-        interfaz.mostrarInformacion("¿Desea asociar el ingreso a un egreso?");
-        interfaz.mostrarInformacion("1- Si");
-        String opcion = interfaz.pedirString("2- No");
-
-        if(opcion.equals("1")){
-            int listaSize = gestorDeEgresos.getEgresos().size();
+            int listaSize = gestorDeEgresos.filtrarSegunMontoMenorOIgualA(montoTotal).size();
             interfaz.mostrarInformacion("Puede asociar el ingreso a los siguientes egresos: ");
-            for(int i = 0; i<listaSize; i++){
-                interfaz.mostrarInformacion((i+1) + "- " + gestorDeEgresos.getEgresos().get(i).getCompra().getIDCompra());
+            int contador = 1;
+            for (int i = 0; i < listaSize; i++) {
+                if(gestorDeEgresos.filtrarSegunMontoMenorOIgualA(montoTotal).get(i).estaEnElPeriodoAceptale()) {
+                    interfaz.mostrarInformacion(contador + "- " + gestorDeEgresos.filtrarSegunMontoMenorOIgualA(montoTotal).get(i).getCompra().getIDCompra());
+                    contador++;
+                }
             }
 
             int egresoElegido = interfaz.pedirInt("Ingrese el ID de egreso a asociar: ");
 
-            for(int i = 0; i<listaSize; i++) {
-                if(gestorDeEgresos.getEgresos().get(i).getCompra().getIDCompra()  == egresoElegido){
+            for (int i = 0; i < listaSize; i++) {
+                if (gestorDeEgresos.getEgresos().get(i).getCompra().getIDCompra() == egresoElegido) {
                     nuevoIngreso.asociarseAEgreso(gestorDeEgresos.getEgresos().get(i));
                 }
             }
-        }
     }
-
 }

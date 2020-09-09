@@ -1,12 +1,14 @@
 package Negocio.Compras;
 
+import BaseDeDatos.EntidadPersistente;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="ingreso")
-public class Ingreso {
+public class Ingreso  extends EntidadPersistente {
 
     @Column
     public String descripcion;

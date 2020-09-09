@@ -1,10 +1,21 @@
 package Negocio.Entidad.Empresa.TipoDeEmpresas.TiposDeEmpresas;
 
-public abstract class TipoDeEmpresa {
+import BaseDeDatos.EntidadPersistente;
 
-    String nombreTipoEmpresa;
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
-    public String getNombreTipoEmpresa() {
-        return nombreTipoEmpresa;
-    }
+@Entity
+@Table(name="tipoDeEmpresa")
+@DiscriminatorColumn(name="nombreTipoEmpresa")
+public abstract class TipoDeEmpresa extends EntidadPersistente {
+
+   // @Column
+   // String nombreTipoEmpresa;
+
+    //public String getNombreTipoEmpresa() {
+     //   return nombreTipoEmpresa;
+   // }
 }

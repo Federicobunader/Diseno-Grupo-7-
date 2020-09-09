@@ -1,6 +1,12 @@
 package Negocio.Usuario;
 
-public class Mensaje {
-    int id;
+import BaseDeDatos.EntidadPersistente;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+
+public class Mensaje{
     String contenido;
 }

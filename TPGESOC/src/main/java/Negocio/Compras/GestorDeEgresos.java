@@ -1,6 +1,9 @@
 package Negocio.Compras;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class GestorDeEgresos {
 
@@ -9,6 +12,17 @@ public class GestorDeEgresos {
     private ArrayList<Compra> comprasValidadas = new ArrayList<Compra>();
     private ArrayList<Presupuesto> presupuestos = new ArrayList<Presupuesto>();
     private ArrayList<Egreso> egresos = new ArrayList<Egreso>();
+
+    private Date fechaAcceptableDesde;
+    private Date fechaAcceptableHasta;
+
+    public Date getFechaAcceptableDesde() {
+        return fechaAcceptableDesde;
+    }
+
+    public Date getFechaAcceptableHasta() {
+        return fechaAcceptableHasta;
+    }
 
     private GestorDeEgresos() {
     }
@@ -55,6 +69,10 @@ public class GestorDeEgresos {
 
     public void agregarCompraValidada(Compra unaCompra){
         comprasValidadas.add(unaCompra);
+    }
+
+    public List<Egreso> filtrarSegunMontoMenorOIgualA(double monto){
+        return egresos.stream().filter(egreso -> egreso.getCompra().getMonto() <= monto).collect(Collectors.toList());
     }
 
 }

@@ -1,5 +1,7 @@
 package API.APIGeografia;
 
+import BaseDeDatos.EntidadPersistente;
+
 import javax.persistence.*;
 import java.util.List;
 @Entity
@@ -8,6 +10,9 @@ public class Pais {
 
     @Id
     @GeneratedValue
+    private int idPais;
+
+    @Column
     public String id;
     @Column
     public String name;
