@@ -16,10 +16,6 @@ public class Egreso  extends EntidadPersistente {
     @Column(columnDefinition = "DATE")
     private Date fechaDeOperacion;
 
-    @OneToOne(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "ingreso_id", referencedColumnName = "id")
-    private Ingreso ingresoAsociado;
-
     @Transient
     GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();
 
@@ -28,12 +24,12 @@ public class Egreso  extends EntidadPersistente {
         this.fechaDeOperacion = unaFechaDeOperacion;
     }
 
-    public void asociarIngreso(Ingreso unIngreso){
-        ingresoAsociado = unIngreso;
-    }
-
     public Compra getCompra() {
         return compra;
+    }
+
+    public Date getFechaDeOperacion() {
+        return fechaDeOperacion;
     }
 
     public void agregarCompraYPresupues(){

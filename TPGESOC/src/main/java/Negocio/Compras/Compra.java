@@ -37,9 +37,9 @@ public class Compra extends EntidadPersistente {
 	@JoinColumn(name="medioDePago_id", referencedColumnName = "id")
 	private MedioDePago medioDePago;
 
-	@ManyToOne
-	@JoinColumn(name="documento_id", referencedColumnName = "id")
-	private Documento documentoComercial;
+	@OneToMany
+	@JoinColumn(name = "documento_id", referencedColumnName = "id")
+	private List<Documento> documentosComerciales = new ArrayList<Documento>();
 
 	@OneToOne(cascade = {CascadeType.ALL})
 	@JoinColumn(name = "entidad_id", referencedColumnName = "id")
@@ -55,11 +55,11 @@ public class Compra extends EntidadPersistente {
 	@Transient
 	private Criterio criterioEleccionPresupuesto;
 
-	public Compra(ArrayList<Item> items, ArrayList<Presupuesto> presupuestos, MedioDePago medioDePago, Documento documentoComercial, Entidad entidad, Proveedor proveedor, boolean requierePresupuesto, Criterio criterioEleccionPresupuesto, int IDCompra) {
+	public Compra(ArrayList<Item> items, ArrayList<Presupuesto> presupuestos, MedioDePago medioDePago, List<Documento> documentosComerciales, Entidad entidad, Proveedor proveedor, boolean requierePresupuesto, Criterio criterioEleccionPresupuesto, int IDCompra) {
 		this.items = items;
 		this.presupuestos = presupuestos;
 		this.medioDePago = medioDePago;
-		this.documentoComercial = documentoComercial;
+		this.documentosComerciales = documentosComerciales;
 		this.entidad = entidad;
 		this.proveedor = proveedor;
 		this.requierePresupuesto = requierePresupuesto;

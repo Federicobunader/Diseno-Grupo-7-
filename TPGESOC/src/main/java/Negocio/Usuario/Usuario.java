@@ -8,6 +8,8 @@ import Negocio.Compras.GestorDeEgresos;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name="usuario")
 public class Usuario extends EntidadPersistente {
@@ -22,8 +24,9 @@ public class Usuario extends EntidadPersistente {
     @JoinColumn(name = "direccionPostal_id", referencedColumnName = "id")
     private DireccionPostal direccionPostal;
 
-    @Transient
-    private ArrayList<String> bandejaDeMensajes = new ArrayList<String>();
+    @ManyToMany
+    @JoinTable(name = "usuario_x_mensaje")
+    private List<Mensaje> bandejaDeMensajes = new ArrayList<Mensaje>();
 
     @Transient
     private InterfazUsuarios interfazUsuarios = InterfazUsuarios.GetInstance();
@@ -38,7 +41,7 @@ public class Usuario extends EntidadPersistente {
         this.direccionPostal = direccionPostal;
     }
 
-    public void setBandejaDeMensajes(ArrayList<String> bandejaDeMensajes) {
+    public void setBandejaDeMensajes(List<Mensaje> bandejaDeMensajes) {
         this.bandejaDeMensajes = bandejaDeMensajes;
     }
 
@@ -66,7 +69,7 @@ public class Usuario extends EntidadPersistente {
         this.password = password;
     }
 
-    public ArrayList<String> getBandejaDeMensajes() {
+    public List<Mensaje> getBandejaDeMensajes() {
         return bandejaDeMensajes;
     }
 
@@ -82,7 +85,9 @@ public class Usuario extends EntidadPersistente {
 
 
     public void serNotificado(String mensaje) {
-        bandejaDeMensajes.add(mensaje);
+        Mensaje nuevoMensaje = new Mensaje();
+        nuevoMensaje.setContenido(mensaje);
+        bandejaDeMensajes.add(nuevoMensaje);
         interfazUsuarios.mostrarInformacion(mensaje);
     }
 
