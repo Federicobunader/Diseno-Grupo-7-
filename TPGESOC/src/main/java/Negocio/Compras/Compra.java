@@ -2,9 +2,9 @@ package Negocio.Compras;
 
 import BaseDeDatos.EntidadPersistente;
 import Negocio.*;
+import Negocio.Compras.Criterios.Criterio;
 import Negocio.Entidad.Entidad;
 import Negocio.Usuario.Usuario;
-import org.quartz.Job;
 
 import javax.persistence.*;
 import java.text.DateFormat;
@@ -150,7 +150,7 @@ public class Compra extends EntidadPersistente {
 
 		GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();
 		gestorDeEgresos.getEgresos().add(nuevoEgreso);
-		nuevoEgreso.agregarCompraYPresupues();
+		nuevoEgreso.agregarCompraYPresupuesto();
 
 	}
 

@@ -1,6 +1,7 @@
-package Negocio.Compras;
+package Negocio.Compras.Criterios;
 
 import BaseDeDatos.EntidadPersistente;
+import Negocio.Compras.Presupuesto;
 
 import java.util.ArrayList;
 import java.util.List;

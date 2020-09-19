@@ -32,11 +32,11 @@ public class Egreso  extends EntidadPersistente {
         return fechaDeOperacion;
     }
 
-    public void agregarCompraYPresupues(){
+    public void agregarCompraYPresupuesto(){
         gestorDeEgresos.registrarCompra(compra);
     }
 
-    public boolean estaEnElPeriodoAceptale(){
+    public boolean estaEnElPeriodoAceptable(){
         return fechaDeOperacion.after(gestorDeEgresos.getFechaAcceptableDesde()) && fechaDeOperacion.before(gestorDeEgresos.getFechaAcceptableHasta());
     }
 }

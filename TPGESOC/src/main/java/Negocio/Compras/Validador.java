@@ -1,9 +1,7 @@
 package Negocio.Compras;
 
 
-import BaseDeDatos.EntidadPersistente;
-
-import javax.persistence.Column;
+import Negocio.Compras.Criterios.Criterio;
 
 public class Validador {
 

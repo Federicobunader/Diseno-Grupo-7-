@@ -16,7 +16,7 @@ public class Vinculador{
         return instance;
     }
 
-    public void vincularIngresoAEgreso(Ingreso unIngreso){
-        criterioDeVinculacion.vincular(unIngreso);
+    public void vincularIngresoAEgreso(){
+        criterioDeVinculacion.vincular();
     }
 }
