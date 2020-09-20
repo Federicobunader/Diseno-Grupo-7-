@@ -18,6 +18,17 @@ public class Proveedor extends EntidadPersistente {
 		this.numeroID = numeroID;
 	}
 
+	public Proveedor() {
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public void setNumeroID(int numeroID) {
+		this.numeroID = numeroID;
+	}
+
 	public void finalize() throws Throwable {
 
 	}

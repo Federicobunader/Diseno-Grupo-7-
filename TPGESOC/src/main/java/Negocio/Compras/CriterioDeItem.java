@@ -25,6 +25,21 @@ public class CriterioDeItem extends EntidadPersistente {
         // categorias.stream().forEach(categoriaItem -> categoriaItem.setCriterioDeItem(this));
     }
 
+    public CriterioDeItem() {
+    }
+
+    public void setCriteriosDeMenorJerarquia(ArrayList<Componente> criteriosDeMenorJerarquia) {
+        this.criteriosDeMenorJerarquia = criteriosDeMenorJerarquia;
+    }
+
+    public void setNombreCriterio(String nombreCriterio) {
+        this.nombreCriterio = nombreCriterio;
+    }
+
+    public void setCategorias(List<CategoriaItem> categorias) {
+        this.categorias = categorias;
+    }
+
     public String getNombreCriterio() {
         return nombreCriterio;
     }

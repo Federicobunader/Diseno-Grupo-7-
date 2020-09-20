@@ -24,6 +24,21 @@ public class Ingreso extends EntidadPersistente {
         this.montoTotal = montoTotal;
     }
 
+    public Ingreso() {
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public void setMontoTotal(double montoTotal) {
+        this.montoTotal = montoTotal;
+    }
+
+    public void setEgresosVinculados(List<Egreso> egresosVinculados) {
+        this.egresosVinculados = egresosVinculados;
+    }
+
     public String getDescripcion() {
         return descripcion;
     }

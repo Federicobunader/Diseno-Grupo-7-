@@ -18,6 +18,13 @@ public class CategoriaItem extends EntidadPersistente {
         this.nombreCategoria = nombreCategoria;
     }
 
+    public CategoriaItem() {
+    }
+
+    public void setNombreCategoria(String nombreCategoria) {
+        this.nombreCategoria = nombreCategoria;
+    }
+
     public String getCriterioDeItem() {
         return criterioDeItem;
     }

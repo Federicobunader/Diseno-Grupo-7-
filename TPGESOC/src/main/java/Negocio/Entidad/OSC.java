@@ -8,7 +8,4 @@ public class OSC extends EntidadJuridica {
 
 	}
 
-	public void finalize() throws Throwable {
-
-	}
 }//end OSC

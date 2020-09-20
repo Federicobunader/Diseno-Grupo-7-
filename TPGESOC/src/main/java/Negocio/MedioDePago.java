@@ -29,8 +29,15 @@ public class MedioDePago  extends EntidadPersistente {
 		Identificador = identificador;
 	}
 
-	public void finalize() throws Throwable {
+	public MedioDePago() {
+	}
 
+	public void setTipoDePago(Negocio.tipoDePago tipoDePago) {
+		this.tipoDePago = tipoDePago;
+	}
+
+	public void setIdentificador(int identificador) {
+		Identificador = identificador;
 	}
 }//end MedioDePago
 

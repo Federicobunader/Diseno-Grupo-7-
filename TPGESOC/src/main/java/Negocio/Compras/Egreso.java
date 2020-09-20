@@ -24,6 +24,21 @@ public class Egreso  extends EntidadPersistente {
         this.fechaDeOperacion = unaFechaDeOperacion;
     }
 
+    public Egreso() {
+    }
+
+    public void setCompra(Compra compra) {
+        this.compra = compra;
+    }
+
+    public void setFechaDeOperacion(Date fechaDeOperacion) {
+        this.fechaDeOperacion = fechaDeOperacion;
+    }
+
+    public void setGestorDeEgresos(GestorDeEgresos gestorDeEgresos) {
+        this.gestorDeEgresos = gestorDeEgresos;
+    }
+
     public Compra getCompra() {
         return compra;
     }

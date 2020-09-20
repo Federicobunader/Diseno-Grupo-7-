@@ -21,10 +21,26 @@ public class EntidadJuridica extends Entidad {
 	private int CodigoDeInscripcion;
 
 	public EntidadJuridica(){
-
 	}
 
-	public void finalize() throws Throwable {
-
+	public void setEntidadBases(ArrayList<EntidadBase> entidadBases) {
+		this.entidadBases = entidadBases;
 	}
+
+	public void setRazonSocial(String razonSocial) {
+		RazonSocial = razonSocial;
+	}
+
+	public void setNombreFicticio(String nombreFicticio) {
+		NombreFicticio = nombreFicticio;
+	}
+
+	public void setCUIT(int CUIT) {
+		this.CUIT = CUIT;
+	}
+
+	public void setCodigoDeInscripcion(int codigoDeInscripcion) {
+		CodigoDeInscripcion = codigoDeInscripcion;
+	}
+
 }//end EntidadJuridica

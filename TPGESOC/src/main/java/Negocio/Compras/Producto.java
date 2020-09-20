@@ -39,7 +39,15 @@ public class Producto  extends EntidadPersistente {
 
 	}
 
-	public void finalize() throws Throwable {
+	public void setPrecio(int precio) {
+		this.precio = precio;
+	}
 
+	public void setProveedor(Proveedor proveedor) {
+		this.proveedor = proveedor;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
 }//end Producto

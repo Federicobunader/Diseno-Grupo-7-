@@ -6,8 +6,6 @@ import java.util.ArrayList;
 
 public class Vinculador{
 
-    private CriterioDeVinculacion criterioDeVinculacion;
-
     private static Vinculador instance = null;
 
     public static Vinculador GetInstance() {
@@ -16,7 +14,4 @@ public class Vinculador{
         return instance;
     }
 
-    public void vincularIngresoAEgreso(){
-        criterioDeVinculacion.vincular();
-    }
 }

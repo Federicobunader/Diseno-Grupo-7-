@@ -53,7 +53,8 @@ public class InterfazUsuarios {
         System.out.println("6- AGREGAR CATEGORIA A CRITERIO");
         System.out.println("7- MOSTRAR CATEGORIAS");
         System.out.println("8- AGREGAR INGRESO");
-        System.out.println("9- SALIR");
+        System.out.println("9- VINCULAR INGRESO A EGRESO");
+        System.out.println("10- SALIR");
         System.out.println(" ");
     }
 

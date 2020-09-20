@@ -22,5 +22,14 @@ public class EntidadBase extends Entidad {
 		Descripcion = descripcion;
 	}
 
+	public EntidadBase() {
+	}
 
+	public void setNombre(String nombre) {
+		Nombre = nombre;
+	}
+
+	public void setDescripcion(String descripcion) {
+		Descripcion = descripcion;
+	}
 }//end EntidadBase

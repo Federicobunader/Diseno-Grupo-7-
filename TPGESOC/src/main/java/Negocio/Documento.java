@@ -18,4 +18,14 @@ public class Documento extends EntidadPersistente {
 		Tipo = tipo;
 	}
 
+	public Documento() {
+	}
+
+	public void setNumero(int numero) {
+		Numero = numero;
+	}
+
+	public void setTipo(char tipo) {
+		Tipo = tipo;
+	}
 }//end Documento

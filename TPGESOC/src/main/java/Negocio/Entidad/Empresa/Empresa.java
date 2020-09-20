@@ -40,6 +40,20 @@ public class Empresa extends EntidadJuridica {
 		this.actualizarTipoDeEmpresa();
 }
 
+	public Empresa() {
+	}
+
+	public void setSector(TipoDeSector sector) {
+		this.sector = sector;
+	}
+
+	public void setTipoDeEmpresa(TipoDeEmpresa tipoDeEmpresa) {
+		this.tipoDeEmpresa = tipoDeEmpresa;
+	}
+
+	public void setCategorizador(Categorizador categorizador) {
+		this.categorizador = categorizador;
+	}
 
 	public int getCantidadDePersonal() {
 		return cantidadDePersonal;

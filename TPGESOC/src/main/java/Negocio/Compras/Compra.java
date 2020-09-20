@@ -69,6 +69,46 @@ public class Compra extends EntidadPersistente {
 	public Compra() {
 	}
 
+	public void setItems(List<Item> items) {
+		this.items = items;
+	}
+
+	public void setPresupuestos(List<Presupuesto> presupuestos) {
+		this.presupuestos = presupuestos;
+	}
+
+	public void setUsuariosRevisores(List<Usuario> usuariosRevisores) {
+		this.usuariosRevisores = usuariosRevisores;
+	}
+
+	public void setPresupuestoElegido(Presupuesto presupuestoElegido) {
+		this.presupuestoElegido = presupuestoElegido;
+	}
+
+	public void setMedioDePago(MedioDePago medioDePago) {
+		this.medioDePago = medioDePago;
+	}
+
+	public void setDocumentosComerciales(List<Documento> documentosComerciales) {
+		this.documentosComerciales = documentosComerciales;
+	}
+
+	public void setEntidad(Entidad entidad) {
+		this.entidad = entidad;
+	}
+
+	public void setProveedor(Proveedor proveedor) {
+		this.proveedor = proveedor;
+	}
+
+	public void setRequierePresupuesto(boolean requierePresupuesto) {
+		this.requierePresupuesto = requierePresupuesto;
+	}
+
+	public void setCriterioEleccionPresupuesto(Criterio criterioEleccionPresupuesto) {
+		this.criterioEleccionPresupuesto = criterioEleccionPresupuesto;
+	}
+
 	public void validar(){
 		Validador validador = Validador.GetInstance();
 		if(requierePresupuesto) {

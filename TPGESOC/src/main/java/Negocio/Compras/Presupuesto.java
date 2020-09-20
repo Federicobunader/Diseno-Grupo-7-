@@ -25,6 +25,13 @@ public class Presupuesto  extends EntidadPersistente {
         this.documentosComerciales = documentosComerciales;
     }
 
+    public Presupuesto() {
+    }
+
+    public void setDocumentosComerciales(List<Documento> documentosComerciales) {
+        this.documentosComerciales = documentosComerciales;
+    }
+
     public void setItems(List<Item> items) {
         this.items = items;
     }

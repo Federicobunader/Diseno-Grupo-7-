@@ -19,12 +19,6 @@ public class Item  extends EntidadPersistente {
 	@Column
 	private int cantidad;
 
-	/*@JoinTable(
-			name = "categoriaxitem",
-			joinColumns = @JoinColumn(name = "FK_categoria", nullable = false),
-			inverseJoinColumns = @JoinColumn(name="FK_item", nullable = false)
-	)
-	@ManyToMany(cascade = CascadeType.ALL)*/
 	@ManyToMany
 	@JoinTable(name = "item_x_categoriaItem")
 	private List<CategoriaItem> categorias = new ArrayList<CategoriaItem>();
@@ -39,6 +33,26 @@ public class Item  extends EntidadPersistente {
 	}
 
 	public Item() {
+	}
+
+	public void setProducto(Producto producto) {
+		this.producto = producto;
+	}
+
+	public void setCantidad(int cantidad) {
+		this.cantidad = cantidad;
+	}
+
+	public void setCategorias(List<CategoriaItem> categorias) {
+		this.categorias = categorias;
+	}
+
+	public void setGestorDeCriterios(GestorDeCriterios gestorDeCriterios) {
+		this.gestorDeCriterios = gestorDeCriterios;
+	}
+
+	public void setInterfaz(InterfazUsuarios interfaz) {
+		this.interfaz = interfaz;
 	}
 
 	@Transient

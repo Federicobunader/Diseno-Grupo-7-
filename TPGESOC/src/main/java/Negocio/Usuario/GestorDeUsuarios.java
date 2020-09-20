@@ -4,6 +4,7 @@ import InterfazDeUsuario.InterfazUsuarios;
 import Negocio.Compras.GestorDeCriterios;
 import Negocio.Compras.GestorDeEgresos;
 import Negocio.Compras.GestorDeIngresos;
+import Negocio.Compras.Vinculacion.*;
 import Negocio.Main;
 
 import java.util.ArrayList;
@@ -35,7 +36,7 @@ public class GestorDeUsuarios {
         int opcion = Main.pedirPorPantallaInt();
         GestorDeCriterios gestorDeCriterios = GestorDeCriterios.GetInstance();
 
-        while (opcion != 9) {
+        while (opcion != 10) {
             switch (opcion) {
                 case 1:
                     this.registrarUsuario();
@@ -60,6 +61,42 @@ public class GestorDeUsuarios {
                     break;
                 case 8:
                     gestorDeIngresos.agregarIngreso();
+                    break;
+                case 9:
+                    String passwordAdmin = interfazUsuarios.pedirString("Ingrese la Contraseña de administrador");
+
+                    if(passwordAdmin.equals("GESOC")){
+
+                        String criterio = interfazUsuarios.pedirString("Ingrese el criterio que desea utilizar para la vinculación: \n 1- Orden valor primero egreso \n 2- Orden valor primero ingreso \n 3- Por fecha \n 4- Mix");
+
+                        CriterioDeVinculacion criterioElegido = new OrdenValorPrimeroIngreso();
+                        switch (criterio){
+                            case "1":
+                                criterioElegido = new OrdenValorPrimeroEgreso();
+                                break;
+                            case "2":
+                                criterioElegido = new OrdenValorPrimeroIngreso();
+                                break;
+                            case "3":
+                                criterioElegido = new PorFecha();
+                                break;
+                            case "4":
+                                criterioElegido = new Mix();
+                                break;
+                            default:
+                                interfazUsuarios.mostrarError("No existe esa opcion");
+                        }
+
+                        if(criterio.equals("4")){
+                            interfazUsuarios.mostrarInformacion("Coming soon");
+                        }else {
+                            criterioElegido.vincular();
+                            interfazUsuarios.mostrarInformacion("Vinculación efectuada con éxito");
+                        }
+
+                    }else{
+                        interfazUsuarios.mostrarError("Error: Contraseña incorrecta.");
+                    }
                     break;
                 default:
                     interfazUsuarios.mostrarError("La opcion ingresada no es valida.");
