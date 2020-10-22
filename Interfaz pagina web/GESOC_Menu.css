@@ -1,7 +1,7 @@
 
 body {
     overflow-x: hidden;
-    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .text-muted {
@@ -47,7 +47,7 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-weight: 700;
 }
 
@@ -66,7 +66,7 @@ h6 {
 .btn-primary {
     border-color: #1ee2e7;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-weight: 700;
     color: #fff;
     background-color: #1ee2e7;
@@ -114,19 +114,18 @@ fieldset[disabled] .btn-primary.active {
 
 
 .btn-xl {
-    padding: 20px 40px;
-    border-color: #e74c3c;
+    padding: 20% 40%;
+    border-color: #da8617;
     border-radius: 3px;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    text-align: center;
-    align-items: center;
-    font-size: 40px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 300px;
     font-weight: 700s;
     width: 200px;
     height: 80px;
     color: #fff;
-    background-color: #e74c3c;    
+   background-color: #da8617;   
+
 }
 
 .btn-xl:hover,
@@ -134,7 +133,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl:active,
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
-    border-color: #6e160c;
+    border-color: #da8617;
+    border-width: thick;
     color: rgb(255, 255, 255);
     background-color: #fff;
 }
@@ -175,7 +175,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-brand {
-    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+    font-family: 'Titillium Web', sans-serif;
     color: #1ee2e7;
 }
 
@@ -206,7 +206,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .nav li a {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
     color: #fff;
@@ -281,7 +281,7 @@ header .intro-text {
 
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 22px;
     font-style: italic;
     line-height: 22px;
@@ -291,35 +291,42 @@ header .intro-text .intro-heading {
     margin-bottom: 25px;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 50px;
     font-weight: 700;
     line-height: 50px;
-    background-color: #e74c3c;
+    background-color: #9c313f;
     
 }
 
 @media(min-width:768px) {
     header .intro-text {
-        padding-top: 300px;
+        padding-top: 150;
         padding-bottom: 200px;
   
     }
 
     header .intro-text .intro-lead-in {
-        margin-bottom: 25px;
-        font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 40px;
-        font-style: italic;
+        padding-top: 2%;
+        padding-right: 25%;
+        padding-left: 20%;
+        padding-bottom: 2%;
+        margin-bottom: 150px;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 50px;
+        font-style: normal;
+        text-align: justify;
         line-height: 40px;
-        
-        
+        background-color: #000000;
+        margin-right: 100%;
+        margin-left: -25%;       
+        color: #da8617; 
     }
 
     header .intro-text .intro-heading {
         margin-bottom: 50px;
         text-transform: none;
-        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: 'Titillium Web', sans-serif;
         font-size: 25px;
         font-weight: 700;
         line-height: 75px;
@@ -341,7 +348,7 @@ section h2.section-heading {
 section h3.section-subheading {
     margin-bottom: 75px;
     text-transform: none;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
@@ -691,28 +698,28 @@ section#contact .form-control:focus {
 
 section#contact::-webkit-input-placeholder {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-weight: 700;
     color: #bbb;
 }
 
 section#contact:-moz-placeholder {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-weight: 700;
     color: #bbb;
 }
 
 section#contact::-moz-placeholder {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-weight: 700;
     color: #bbb;
 }
 
 section#contact:-ms-input-placeholder {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-weight: 700;
     color: #bbb;
 }
@@ -729,7 +736,7 @@ footer {
 footer span.copyright {
     text-transform: uppercase;
     text-transform: none;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     line-height: 40px;
 }
 
@@ -737,7 +744,7 @@ footer ul.quicklinks {
     margin-bottom: 0;
     text-transform: uppercase;
     text-transform: none;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     line-height: 40px;
 }
 
@@ -795,7 +802,7 @@ ul.social-buttons li a:active {
 
 .portfolio-modal .modal-content p.item-intro {
     margin: 20px 0 30px;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 16px;
     font-style: italic;
 }
