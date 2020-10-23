@@ -8,11 +8,16 @@
 
 </head>
 <body>
+
+  
+
 <!-- partial:index.partial.html -->
 <div class="form">
       
-      <ul class="tab-group">
-        <li class="tab active"><a href="#signup">Registrate</a></li>
+  <button type="submit" class="button button-back" onclick="window.location.href='./GESOC_Menu.html'">Volver al menú principal</button>
+  
+  <ul class="tab-group">
+    <li class="tab active"><a href="#signup">Registrate</a></li>
         <li class="tab"><a href="#login">Inicia Sesión</a></li>
       </ul>
       
@@ -22,6 +27,20 @@
           
           <form action="/" method="post">
           
+          <h2>Datos de la entidad</h2>
+
+          
+            <div class="field-wrap">
+              <div class="custom-select" style="width:200px;">
+                <select>
+                  <option value="0">Seleccione el tipo de entidad:</option>
+                  <option value="1">Entidad Jurídica</option>
+                  <option value="2">Entidad Base</option>
+                </select>
+              </div>
+            </div>
+          
+
           <div class="top-row">
             <div class="field-wrap">
               <label>
@@ -37,8 +56,82 @@
               <input type="text"required autocomplete="off"/>
             </div>
           </div>
+          
+          <!-- Entidad base -->
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                Entidad Jurídica<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" />
+            </div>
+        
+            <div class="field-wrap">
+              <label>
+                Descripción<span class="req">*</span>
+              </label>
+              <input type="text"required autocomplete="off"/>
+            </div>
+          </div>
 
-          <h2>Direccion</h2>
+          <!-- Entidad Jurídica -->
+
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                Razón social<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" />
+            </div>
+        
+            <div class="field-wrap">
+              <label>
+                Código IGJ<span class="req">*</span>
+              </label>
+              <input type="text"required autocomplete="off"/>
+            </div>
+          </div>
+
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                Actividad<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" />
+            </div>
+        
+            <div class="field-wrap">
+              <label>
+                Cantidad de personal<span class="req">*</span>
+              </label>
+              <input type="text"required autocomplete="off"/>
+            </div>
+          </div>
+
+            <div class="field-wrap">
+              <label>
+                Cantidad de ventas anales<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" />
+            </div>
+        
+            <div class="field-wrap">
+              <label>
+                Ingreso de ventas anales<span class="req">*</span>
+              </label>
+              <input type="text"required autocomplete="off"/>
+            </div>
+
+          <!-- TODO: poner al lado del tipo de entidad -->
+          <div class="field-wrap">
+            <label>
+              Tipo de sector<span class="req">*</span>
+            </label>
+            <input type="text"required autocomplete="off"/>
+          </div>
+
+
+          <h2>Dirección</h2>
 
           <div class="top-row">
             <div class="field-wrap">
@@ -88,6 +181,8 @@
             </div>
           </div>
 
+          <h2>Datos de usuario</h2>
+
           <div class="field-wrap">
             <label>
               Email<span class="req">*</span>
@@ -99,14 +194,14 @@
             <label>
               Nombre de usuario<span class="req">*</span>
             </label>
-            <input type="password"required autocomplete="off"/>
+            <input type="text"required autocomplete="off"/>
           </div>
 
           <div class="field-wrap">
             <label>
               Ingrese una contraseña<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off"/>
+            <input type="password"required autocomplete="off"/>
           </div>
           
           <button type="submit" class="button button-block"/>Inicia tu experiencia en GESOC</button>

@@ -51,6 +51,10 @@ h6 {
     font-weight: 700;
 }
 
+.page-scroll{
+    color: #fff;
+}
+
 .img-centered {
     margin: 0 auto;
 }
@@ -114,15 +118,13 @@ fieldset[disabled] .btn-primary.active {
 
 
 .btn-xl {
-    padding: 20% 40%;
+    padding: 20px 40px;
     border-color: #da8617;
     border-radius: 3px;
     text-transform: uppercase;
     font-family: 'Titillium Web', sans-serif;
-    font-size: 300px;
-    font-weight: 700s;
-    width: 200px;
-    height: 80px;
+    font-size: 30px;
+    font-weight: 800;
     color: #fff;
    background-color: #da8617;   
 
@@ -133,10 +135,10 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl:active,
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
-    border-color: #da8617;
-    border-width: thick;
+    border-color: #9c313f;
+    /* border-width: thick; */
     color: rgb(255, 255, 255);
-    background-color: #fff;
+    background-color: #9c313f;
 }
 
 .btn-xl:active,
@@ -238,6 +240,7 @@ fieldset[disabled] .btn-xl.active {
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
+        
     }
 
     .navbar-default .navbar-brand {
@@ -258,6 +261,9 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default.navbar-shrink .navbar-brand {
         font-size: 1.5em;
+        color: rgb(206, 206, 206,63);
+        font-weight: 700;
+        font-size: 34px;
     }
 }
 
@@ -280,7 +286,7 @@ header .intro-text {
 }
 
 header .intro-text .intro-lead-in {
-    margin-bottom: 25px;
+    margin-bottom: 125px;
     font-family: 'Titillium Web', sans-serif;
     font-size: 22px;
     font-style: italic;
@@ -295,13 +301,13 @@ header .intro-text .intro-heading {
     font-size: 50px;
     font-weight: 700;
     line-height: 50px;
-    background-color: #9c313f;
-    
+    background-color: #9c313ff8;
+    padding-top: -50px;
 }
 
 @media(min-width:768px) {
     header .intro-text {
-        padding-top: 150;
+        /* padding-top: 150px; */
         padding-bottom: 200px;
   
     }
@@ -311,7 +317,7 @@ header .intro-text .intro-heading {
         padding-right: 25%;
         padding-left: 20%;
         padding-bottom: 2%;
-        margin-bottom: 150px;
+        margin-bottom: 100px;
         font-family: 'Titillium Web', sans-serif;
         font-size: 50px;
         font-style: normal;
@@ -324,6 +330,7 @@ header .intro-text .intro-heading {
     }
 
     header .intro-text .intro-heading {
+        padding-top: -50px;
         margin-bottom: 50px;
         text-transform: none;
         font-family: 'Titillium Web', sans-serif;
@@ -333,6 +340,7 @@ header .intro-text .intro-heading {
         margin-left: 9%;
         margin-right: 10%;
     }
+
 }
 
 section {
@@ -363,77 +371,6 @@ section h3.section-subheading {
 .service-heading {
     margin: 15px 0;
     text-transform: none;
-}
-
-#portfolio .portfolio-item {
-    right: 0;
-    margin: 0 0 15px;
-}
-
-#portfolio .portfolio-item .portfolio-link {
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    max-width: 400px;
-}
-
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background: #1ee2e7;
-    -webkit-transition: all ease .5s;
-    -moz-transition: all ease .5s;
-    transition: all ease .5s;
-}
-
-#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
-    opacity: 1;
-}
-
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    height: 20px;
-    margin-top: -12px;
-    text-align: center;
-    font-size: 20px;
-    color: #fff;
-}
-
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
-    margin-top: -12px;
-}
-
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
-    margin: 0;
-}
-
-#portfolio .portfolio-item .portfolio-caption {
-    margin: 0 auto;
-    padding: 25px;
-    max-width: 400px;
-    text-align: center;
-    background-color: #fff;
-}
-
-#portfolio .portfolio-item .portfolio-caption h4 {
-    margin: 0;
-    text-transform: none;
-}
-
-#portfolio .portfolio-item .portfolio-caption p {
-    margin: 0;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 16px;
-    font-style: italic;
-}
-
-#portfolio * {
-    z-index: 2;
 }
 
 @media(min-width:767px) {
