@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Filter Me</title>
+  <link rel="stylesheet" href="./GESOC_ListadoxCategoria.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- Note that the id of app is what our Vue JS instance hooks onto -->
+<main id="app">
+  <h1 class="app-heading">Vue Filter App</h1>
+
+  <section class="app-filters">
+    <!-- Look at binding for more info on form inputs -->
+    <!-- https://vuejs.org/v2/guide/forms.html -->
+    <input v-model="keywords" class="filter input--search" type="text" name="search" placeholder="Search titles">
+
+    <div class="filter select-wrapper">
+      <select v-model="category" v-model="category">
+        <option value="all">All Categories</option>
+        <option v-for="cat in categories" :value="cat.category_url_title" v-html="cat.category_name"></option>
+      </select>
+    </div>
+    <!-- We use event handling inline, and within our JS -->
+    <!-- https://vuejs.org/v2/guide/events.html -->
+    <button class="filter btn btn-reset" @click="reset()">
+      Reset Filters
+    </button>
+  </section>
+
+  <!-- Conditional Rendering is used commonly in our apps -->
+  <!-- https://vuejs.org/v2/guide/conditional.html -->
+  <section class="items-list" v-if="filteredList.length">
+    <!-- Iterating through arrays and objects is no problem for Vue -->
+    <!-- https://vuejs.org/v2/guide/list.html -->
+    <div class="item" v-for="(item, index) in filteredList">
+      <h3 class="item-title">
+        {{ item.title }}
+      </h3>
+      <ul class="item-cats">
+        <li v-for="(item, index) in item.categories">
+          {{ item.category_name }}
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="no-items-message" v-else>
+    No items available, please refine your filters.
+  </section>
+</main>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script><script  src="./GESOC_ListadoxCategoria.js"></script>
+
+</body>
+</html>

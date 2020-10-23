@@ -1,0 +1,139 @@
+body {
+  background-color: #622e26;
+  font-family: sans-serif;
+}
+
+#app {
+  background-color: #3d1d18;
+  padding: 60px 100px;
+  border-radius: 60px;
+  display: block;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app-heading {
+  color: white;
+  text-shadow: #333 1px 1px 5px;
+  padding-left: 8px;
+}
+
+.app-filters {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  align-content: flex-start;
+  -webkit-box-align: start;
+          align-items: flex-start;
+}
+.app-filters .filter {
+  margin: 10px 8px 30px;
+}
+.app-filters .input--search {
+  min-width: 320px;
+  min-height: 50px;
+  max-height: 50px;
+  border-radius: 10px;
+  border: 0;
+  padding-left: 15px;
+  font-size: 15px;
+}
+.app-filters .input--search::-webkit-input-placeholder {
+  color: #333;
+}
+.app-filters .input--search::-moz-placeholder {
+  color: #333;
+}
+.app-filters .input--search:-ms-input-placeholder {
+  color: #333;
+}
+.app-filters .input--search::-ms-input-placeholder {
+  color: #333;
+}
+.app-filters .input--search::placeholder {
+  color: #333;
+}
+.app-filters .input--search:focus {
+  outline: 0;
+  box-shadow: 3px 1px 5px 1px #873f34;
+}
+.app-filters .select-wrapper {
+  position: relative;
+  height: 50px;
+  min-height: 50px;
+  max-height: 50px;
+  min-width: 200px;
+  background-color: white;
+  border-bottom: 2px solid #deb0a9;
+}
+.app-filters .select-wrapper:after {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 50%;
+  right: 0.6rem;
+  bottom: auto;
+  left: auto;
+  content: '';
+  border: 4px solid #333;
+  border-color: #333 transparent transparent;
+  margin-top: -0.05rem;
+}
+.app-filters .select-wrapper select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 0;
+  background-image: none;
+}
+.app-filters .select-wrapper select option {
+  font-size: 15px;
+  color: #333;
+}
+.app-filters .btn {
+  min-width: 200px;
+  height: 50px;
+  text-align: center;
+  border: 0;
+  font-size: 15px;
+}
+.app-filters .btn.btn-reset:hover {
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  background-color: #deb0a9;
+}
+
+.items-list {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  align-content: flex-start;
+  -webkit-box-align: start;
+          align-items: flex-start;
+}
+.items-list .item {
+  background-color: white;
+  border-radius: 10px;
+  margin: 8px;
+  padding: 20px 30px;
+  min-width: 150px;
+  max-width: 320px;
+}
+.items-list .item .item-cats {
+  list-style: none;
+  padding-left: 0;
+}
