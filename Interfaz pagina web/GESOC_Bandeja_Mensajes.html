@@ -1,63 +1,52 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-  <meta charset="UTF-8">
-  <title>CodePen - Email UI - Dribbble Rebound</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./GESOC_Bandeja_Mensajes.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
+    <meta charset="UTF-8">
+    <title>CodePen - Email UI - Dribbble Rebound</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./GESOC_Bandeja_Mensajes.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 </head>
+
 <body>
+
+  <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <a class="navbar-brand page-scroll" href="./GESOC_Menu_Logueado.html">GESOC</a>
+        </div>
+  </nav>
+
+
 <!-- partial:index.partial.html -->
 <div class="container app">
   <aside class="sidebar">
-    <h1 class="logo">
-      <a href="#">Simpl<strong>est</strong></a>
-    </h1>
+    
     <nav class="main-nav">
       <ul>
-        <li><a href="#">Profile</a></li>
         <li class="active">
-          <a href="#">Email</a><br />
-          <a href="#" class="btn btn-primary">Compose new</a>
           <ul>
-            <li class="active"><a href="#">Inbox <span class="btn btn-primary">25</span></a></li>
-            <li><a href="#">Drafts</a></li>
-            <li><a href="#">Sent</a></li>
-            <li><a href="#">Trash</a></li>
-            <li><a href="#">Junk Mail</a></li>
-          </ul>
-          <ul class="labels">
-            <li><a href="#">Clients <span class="btn btn-primary label"></span></a></li>
-            <li><a href="#">Friends <span class="btn btn-primary label"></span></a></li>
-            <li><a href="#">Family <span class="btn btn-primary label"></span></a></li>
-            <li><a href="#">Dribbble <span class="btn btn-primary label"></span></a></li>
+            <button type="submit" class="button button-back" onclick="window.location.href='./GESOC_Menu_Logueado.html'">Volver al menú principal</button>
+            <br>
+            <li class="active"><a href="#">Mensajes Nuevos <span class="btn btn-primary">25</span></a></li>
+            <li><a href="#">Mensajes Eliminados</a></li>
           </ul>
         </li>
-        <li><a href="#">Docs</a></li>
-        <li><a href="#">Stats</a></li>
       </ul>
     </nav>
   </aside>
   <div class="main">
     <header class="header">
-      <form action="">
-        <input type="search" name="s" placeholder="Search on simplest" />
-      </form>
       <nav class="nav-settings">
-        <ul>
-          <li><a href="#">Gregoire Vella</a></li>
-          <li><a href="#" class="icon icon-gear"></a></li>
-        </ul>
       </nav>
       <div class="clr"></div>
     </header>
     <div class="container">
       <div class="messages">
-        <h1>Inbox <span class="icon icon-arrow-down"></span></h1>
+        <h1>Bandeja de mensajes <span class="icon icon-arrow-down"></span></h1>
         <form action="">
-          <input type="search" class="search" placeholder="Search Inbox" />
+          <input type="search" class="search" placeholder="Buscar en la bandeja de mensajes" />
         </form>
         <ul class="message-list">
           <li class="new">

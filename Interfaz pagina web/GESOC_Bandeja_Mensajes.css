@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 .clr {
@@ -43,13 +43,7 @@ a {
 .sidebar a {
   color: #fff;
 }
-.sidebar h1 {
-  font-weight: 400;
-  background: #19a0c5;
-  line-height: 80px;
-  margin: 0;
-  padding: 0 30px;
-}
+
 .sidebar .main-nav {
   margin: 30px 0;
 }
@@ -117,23 +111,12 @@ a {
   order: 2;
   background: #f5f5f5;
 }
-.main .header {
-  background: #44c4e7;
-  min-height: 80px;
-}
+
 .main .header form {
   padding: 20px;
   display: inline-block;
 }
-.main .header form input[type="search"] {
-  background: #19a0c5;
-  border: none;
-  border-radius: 3px;
-  line-height: 40px;
-  width: 500px;
-  padding: 0 10px;
-  outline: none;
-}
+
 .main .header form input[type="search"]::-webkit-input-placeholder {
   color: #fff;
 }
@@ -142,17 +125,11 @@ a {
   margin: 0;
   padding: 0;
 }
-.main .header .nav-settings {
-  float: right;
-  line-height: 80px;
-  border-left: 1px solid #1cb3dc;
-}
+
 .main .header .nav-settings li {
   display: inline-block;
 }
-.main .header .nav-settings li:hover {
-  background: #2dbde4;
-}
+
 .main .header .nav-settings li a {
   padding: 0 20px;
   color: #fff;
@@ -355,4 +332,162 @@ a {
   color: #fff;
   padding: 3px;
   font-size: .75rem;
+}
+
+.navbar-default {
+  border-color: transparent;
+  background-color: #222;
+}
+
+.navbar-default .navbar-brand {
+  font-family: 'Titillium Web', sans-serif;
+  color: #1ee2e7;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:active,
+.navbar-default .navbar-brand.active {
+  color: #fec503;
+}
+
+.navbar-default .navbar-collapse {
+  border-color: rgba(255,255,255,.02);
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #1ee2e7;
+  background-color: #1ee2e7;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #1ee2e7;
+}
+
+.navbar-default .nav li a {
+  text-transform: uppercase;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.navbar-default .nav li a:hover,
+.navbar-default .nav li a:focus {
+  outline: 0;
+  color: #1ee2e7;
+}
+
+.navbar-default .navbar-nav>.active>a {
+  border-radius: 0;
+  color: #fff;
+  background-color: #1ee2e7;
+}
+
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+  color: #fff;
+  background-color: #17d0d5;
+}
+
+@media(min-width:768px) {
+  .navbar-default {
+      padding: 25px 0;
+      border: 0;
+      width: 100%;
+      height: 70px;
+      background-color: transparent;
+      -webkit-transition: padding .3s;
+      -moz-transition: padding .3s;
+      transition: padding .3s;
+      
+  }
+
+  .navbar-default .navbar-brand {
+      font-size: 2em;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      transition: all .3s;
+  }
+
+  .navbar-default .navbar-nav>.active>a {
+      border-radius: 3px;
+  }
+
+  .navbar-default.navbar-shrink {
+      padding: 10px 0;
+      background-color: #222;
+  }
+
+  .navbar-default.navbar-shrink .navbar-brand {
+      font-size: 1.5em;
+      color: rgb(206, 206, 206,63);
+      font-weight: 700;
+      font-size: 34px;
+      margin-left: 94px;
+  }
+}
+
+.button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #da8617;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+  
+}
+.button:hover, .button:focus {
+  background: #da8617;
+}
+
+.button-block {
+  display: block;
+  font-size: larger;
+  width: 100%;
+}
+
+.button-block:hover,
+.button-block:focus,
+.button-block:active,
+.button-block.active,
+.open .dropdown-toggle.button-block {
+    border-color: #da8617;
+    border-width: thick;
+    color: rgb(255, 255, 255);
+    background-color: rgb(201, 119, 11);
+    cursor: pointer;
+}
+
+.button-back{
+  margin-bottom: 10px;
+  display: block;
+  font-size: large;
+  width: 100%;
+  top: 20px;
+
+}
+
+.button-back:hover,
+.button-back:focus,
+.button-back:active,
+.button-back.active,
+.open .dropdown-toggle.button-back {
+    border-color: #da8617;
+    border-width: thick;
+    color: rgb(255, 255, 255);
+    background-color: rgb(201, 119, 11);
+    cursor: pointer;
 }

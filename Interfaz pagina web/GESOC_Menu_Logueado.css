@@ -175,6 +175,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .navbar-brand {
     font-family: 'Titillium Web', sans-serif;
+    font-size: 50px;
     color: #1ee2e7;
 }
 
