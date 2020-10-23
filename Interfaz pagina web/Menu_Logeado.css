@@ -55,7 +55,7 @@ h6 {
 }
 
 .bg-light-gray {
-    background-color: #83c2e5;
+    background-color: #fff;
 }
 
 .bg-darkest-gray {
@@ -345,7 +345,7 @@ section h2.section-heading {
 }
 
 section h3.section-subheading {
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     text-transform: none;
     font-family: 'Titillium Web', sans-serif;
     font-size: 30px;
@@ -407,14 +407,14 @@ ul.social-buttons {
 
 ul.social-buttons li a {
     display: block;
-    width: 100px;
-    height: 40px;
-    border-radius: 1%;
+    width: 70px;
+    height: 70px;
+    border-radius: 90%;
     font-size: 20px;
     line-height: 40px;
     outline: 0;
     color: #fff;
-    background-color: #222;
+    background-color: #da8617;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     transition: all .3s;
@@ -423,7 +423,7 @@ ul.social-buttons li a {
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
-    background-color: #da8617;
+    background-color: #222;
 }
 
 .btn:focus,
