@@ -232,3 +232,29 @@ var app = new Vue({
       // Reset category filter
       this.category = 'all';
     } } });
+
+
+    $('.tab a').on('click', function (e) {
+  
+      e.preventDefault();
+      
+      $(this).parent().addClass('active');
+      $(this).parent().siblings().removeClass('active');
+      
+      target = $(this).attr('href');
+    
+      $('.tab-content > div').not(target).hide();
+      
+      $(target).fadeIn(600);
+      
+    });
+    
+    $(function() {
+      $('a.page-scroll').bind('click', function(event) {
+          var $anchor = $(this);
+          $('html, body').stop().animate({
+              scrollTop: $($anchor.attr('href')).offset().top
+          }, 1500, 'easeInOutExpo');
+          event.preventDefault();
+      });
+    });
