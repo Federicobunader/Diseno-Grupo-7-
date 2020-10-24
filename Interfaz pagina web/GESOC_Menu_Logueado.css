@@ -55,7 +55,7 @@ h6 {
 }
 
 .bg-light-gray {
-    background-color:#85c3e5 ;
+    background-color:rgb(230, 195, 195) ;
 }
 
 .bg-darkest-gray {
@@ -371,7 +371,13 @@ section h3.section-subheading {
 
 .team-member img {
     margin: 0 auto;
-    border: 10px solid #fff;
+    border: 2px solid #da8617;
+    border-radius: 100%;
+}
+
+.team-member img .icon {
+    margin: 0 auto;
+    border: 0px solid #fff;
 }
 
 .team-member h4 {
@@ -430,7 +436,7 @@ ul.social-buttons li a {
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
-    background-color: #222;
+    background-color: rgb(218, 218, 218);
 }
 
 .btn:focus,
