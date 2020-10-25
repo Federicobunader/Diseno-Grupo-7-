@@ -183,7 +183,6 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
     color: #fec503;
-    font-size: 100px;
 }
 
 .navbar-default .navbar-collapse {

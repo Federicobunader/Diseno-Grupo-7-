@@ -37,31 +37,31 @@
           
           <h2>Datos de la entidad</h2>
 
-          
             <div class="field-wrap">
               <div class="custom-select" style="width:200px;">
-                <select>
+                <select name="tipoentidad" id="tipoentidad" onChange=changetextbox()>
                   <option value="0">Seleccione el tipo de entidad:</option>
                   <option value="1">Entidad Jurídica</option>
                   <option value="2">Entidad Base</option>
                 </select>
-              </div>
-            </div>
-          
 
+                 </div>
+            </div>
+
+            
           <div class="top-row">
             <div class="field-wrap">
               <label>
                 Nombre Ficticio<span class="req">*</span>
               </label>
-              <input type="text" required autocomplete="off" />
+              <input type="text" required autocomplete="off" id="NombreFicticio"/>
             </div>
-        
+
             <div class="field-wrap">
               <label>
                 CUIT<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off"/>
+              <input type="text"required autocomplete="off" id="CUIT"/>
             </div>
           </div>
           
@@ -71,14 +71,14 @@
               <label>
                 Entidad Jurídica<span class="req">*</span>
               </label>
-              <input type="text" required autocomplete="off" />
+              <input type="text" required autocomplete="off" id="entidadjuridica"/>
             </div>
         
             <div class="field-wrap">
               <label>
                 Descripción<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off"/>
+              <input type="text"required autocomplete="off" id="descripcion"/>
             </div>
           </div>
 
@@ -89,14 +89,14 @@
               <label>
                 Razón social<span class="req">*</span>
               </label>
-              <input type="text" required autocomplete="off" />
+              <input type="text" required autocomplete="off" id="razonsocial"/>
             </div>
         
             <div class="field-wrap">
               <label>
                 Código IGJ<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off"/>
+              <input type="text"required autocomplete="off" id="igj"/>
             </div>
           </div>
 
@@ -105,14 +105,14 @@
               <label>
                 Actividad<span class="req">*</span>
               </label>
-              <input type="text" required autocomplete="off" />
+              <input type="text" required autocomplete="off" id="actividad"/>
             </div>
         
             <div class="field-wrap">
               <label>
                 Cantidad de personal<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off"/>
+              <input type="text"required autocomplete="off" id="cantpersonal"/>
             </div>
           </div>
 
@@ -120,14 +120,14 @@
               <label>
                 Cantidad de ventas anuales<span class="req">*</span>
               </label>
-              <input type="text" required autocomplete="off" />
+              <input type="text" required autocomplete="off" id="cantventas"/>
             </div>
         
             <div class="field-wrap">
               <label>
                 Ingreso de ventas anuales<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off"/>
+              <input type="text"required autocomplete="off" id="ingventas"/>
             </div>
 
           <!-- TODO: poner al lado del tipo de entidad -->
@@ -135,7 +135,7 @@
             <label>
               Tipo de sector<span class="req">*</span>
             </label>
-            <input type="text"required autocomplete="off"/>
+            <input type="text"required autocomplete="off"  id="tiposector"/>
           </div>
 
 
@@ -211,11 +211,40 @@
             </label>
             <input type="password"required autocomplete="off"/>
           </div>
+
+          <button type="submit" id="startbutton" class="button button-back" onclick="verify()" onclick="window.location.href='./GESOC_Menu_Logueado.html'">Inicia tu experiencia en GESOC</button>
           
-          <!--<button type="submit" class="button button-block"/><a href="./Menu_Logeado.html"></a> Inicia tu experiencia en GESOC</a></button>-->
-          <button type="submit" class="button button-back" onclick="window.location.href='./GESOC_Menu_Logueado.html'">Inicia tu experiencia en GESOC</button>
-          <!--<li class="tab"><a href="./Menu_Logeado.html">Inicia tu experiencia en GESOC</a></li>-->
-          
+          <!--Enable textbox according to previus select in combobox and enable button once textboxs filled-->
+
+          <script type="text/javascript">
+            function changetextbox()
+            {
+                if (document.getElementById("tipoentidad").value === "2") {
+                  document.getElementById("CUIT").disabled=true;
+                  document.getElementById("razonsocial").disabled=true;
+                  document.getElementById("igj").disabled=true;
+                  document.getElementById("actividad").disabled=true;
+                  document.getElementById("cantpersonal").disabled=true;
+                  document.getElementById("cantventas").disabled=true;
+                  document.getElementById("ingventas").disabled=true;
+                  document.getElementById("tiposector").disabled=true;
+                } 
+                if(document.getElementById("tipoentidad").value === "1") {
+                  document.getElementById("entidadjuridica").disabled=true;
+                }
+            }
+
+            function verify(){
+              if (document.getElementById("nombreFicticio").value===""){
+                  document.getElementById('startbutton').disabled = true; 
+                  alert("Llene todos los campos obligatorios");
+                }
+                else{
+                  document.getElementById('startbutton').disabled = false; 
+                }
+            }
+          </script>
+
           </form>
 
         </div>
