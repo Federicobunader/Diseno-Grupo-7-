@@ -15,8 +15,6 @@ public class ImplementarScheduler implements Job{
 
     public void execute(JobExecutionContext jExeCtx) throws JobExecutionException {
 
-        System.out.println("FUNCIONA EL SCHEDULER");
-
         int tamanio = gestorDeEgresos.getComprasNoValidadas().size();
 
         for(int i=0; i<tamanio; i++) {
