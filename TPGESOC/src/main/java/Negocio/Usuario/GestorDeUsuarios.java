@@ -39,7 +39,7 @@ public class GestorDeUsuarios {
         while (opcion != 10) {
             switch (opcion) {
                 case 1:
-                    this.registrarUsuario();
+                   // this.registrarUsuario();
                     break;
                 case 2:
                     this.loguearse();
@@ -208,8 +208,7 @@ public class GestorDeUsuarios {
         return this.buscarUsuario(nombreDeUsuario);
     }
 
-    public void registrarUsuario() {
-        String usuario = interfazUsuarios.pedirString("Ingrese un Usuario :");
+    public void registrarUsuario(String usuario) {
         while (this.nombreDeUsuarioVacio(usuario) || this.usuarioYaExiste(usuario)) {
             usuario = interfazUsuarios.pedirString("Ingrese nuevamente un Usuario:");
         }

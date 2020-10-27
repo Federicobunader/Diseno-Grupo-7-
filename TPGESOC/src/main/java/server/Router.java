@@ -1,8 +1,10 @@
 package server;
 
+import controllers.EmpresaController;
 import controllers.LoginController;
 import controllers.UsuarioController;
 import middleware.AuthMiddleware;
+import spark.ResponseTransformer;
 import spark.Spark;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 import spark.utils.BooleanHelper;
@@ -26,6 +28,12 @@ public class Router {
     }
 
     private static void configure(){
+
+        EmpresaController empresaController = new EmpresaController();
+       Spark.get("/GESOC_Login",empresaController::guardar,Router.engine);
+       // Spark.get("/saludo/:nombre/:apellido",((request, response) -> "HOLA " + request.params("nombre") + request.params("apellido") ));
+
+
         /*
         UsuarioRestControllerEjemplo usuarioRestControllerEjemplo = new UsuarioRestControllerEjemplo();
         UsuarioController usuarioController = new UsuarioController();

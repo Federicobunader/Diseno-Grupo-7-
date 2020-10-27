@@ -13,7 +13,7 @@ public class DireccionPostalController {
         this.repo = FactoryRepositorio.get(DireccionPostal.class);
     }
 
-    private void asignarAtributosA(DireccionPostal direccionPostal, Request request) {
+    public void asignarAtributosA(DireccionPostal direccionPostal, Request request) {
         if (request.queryParams("altura") != null) {
             int altura = new Integer(request.queryParams("altura"));
             direccionPostal.setAltura(altura);
@@ -28,12 +28,18 @@ public class DireccionPostalController {
             direccionPostal.setPiso(piso);
         }
 
-        if (request.queryParams("nombreDeUsuario") != null) {
-            direccionPostal.setNombreDeUsuario(request.queryParams("nombreDeUsuario"));
+        if (request.queryParams("departamento") != null) {
+            direccionPostal.setDepartamento(request.queryParams("departamento"));
         }
 
-        if (request.queryParams("apellido") != null) {
-            direccionPostal.setApellido(request.queryParams("apellido"));
+        if (request.queryParams("pais") != null) {
+            direccionPostal.setPais(request.queryParams("pais"));
+        }
+        if (request.queryParams("provincia") != null) {
+            direccionPostal.setProvincia(request.queryParams("provincia"));
+        }
+        if (request.queryParams("ciudad") != null) {
+            direccionPostal.setCiudad(request.queryParams("ciudad"));
         }
     }
 }

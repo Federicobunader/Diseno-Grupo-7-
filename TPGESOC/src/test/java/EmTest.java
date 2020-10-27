@@ -33,7 +33,7 @@ public class EmTest {
         direccion.setAltura(100);
         direccion.setCalle("Gonzalo Miele");
         direccion.setCiudad("CABA");
-        direccion.setDepartamento('A');
+        direccion.setDepartamento("A");
         direccion.setPais("Pais");
         direccion.setProvincia("Buenos Aires");
         direccion.setPiso(10);

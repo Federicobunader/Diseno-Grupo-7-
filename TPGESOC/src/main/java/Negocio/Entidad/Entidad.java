@@ -23,6 +23,10 @@ public abstract class Entidad extends EntidadPersistente {
 		this.usuario = usuario;
 	}
 
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
 	public Entidad(Negocio.Usuario.Usuario unUsuario) {
 		usuario = unUsuario;
 	}

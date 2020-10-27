@@ -71,6 +71,8 @@ public class Empresa extends EntidadJuridica {
 		this.promedioDeVentasAnuales = promedioDeVentasAnuales;
 	}
 
+
+
 	public String getSeleccionTipoDeSector() {
 		return seleccionTipoDeSector;
 	}

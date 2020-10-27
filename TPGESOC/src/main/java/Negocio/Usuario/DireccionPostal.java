@@ -18,7 +18,7 @@ public class DireccionPostal  extends EntidadPersistente {
     @Column
     private int piso;
     @Column
-    private char departamento;
+    private String departamento;
     @Column
     private String pais;
     @Column
@@ -41,7 +41,7 @@ public class DireccionPostal  extends EntidadPersistente {
         this.piso = piso;
     }
 
-    public void setDepartamento(char departamento) {
+    public void setDepartamento(String departamento) {
         this.departamento = departamento;
     }
 

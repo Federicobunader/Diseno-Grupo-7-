@@ -28,8 +28,8 @@ public class GestorDePasswords {
         unaPassword = this.chequearEspaciosSeguidos(unaPassword);
         while (this.laPasswordTieneMalTamanio(unaPassword)|| this.laPasswordEsMala(unaPassword) || this.laPasswordEsElNombreDeUsuario(unaPassword,unNombreDeUsuario)
                  || this.passwordNoCumpleRequisitos(unaPassword) ) {
-            interfazPassword.mostrarError("Por favor ingrese otra:");
-            unaPassword = Main.pedirPorPantallaString();
+            //interfazPassword.mostrarError("Por favor ingrese otra:");
+            //unaPassword = Main.pedirPorPantallaString();
             unaPassword = this.chequearEspaciosSeguidos(unaPassword);
         }
         return unaPassword;

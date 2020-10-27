@@ -43,4 +43,6 @@ public class EntidadJuridica extends Entidad {
 		CodigoDeInscripcion = codigoDeInscripcion;
 	}
 
+
+
 }//end EntidadJuridica

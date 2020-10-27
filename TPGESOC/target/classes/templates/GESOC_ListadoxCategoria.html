@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>GESOC - Visualizar Ingresos y Egresos por Categoria</title>
+  <link rel="stylesheet" href="./GESOC_ListadoxCategoria.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- Note that the id of app is what our Vue JS instance hooks onto -->
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+  <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+          <a class="navbar-brand page-scroll" href="./GESOC_Menu_Logueado.html">GESOC</a>
+      </div>
+</nav>
+
+<main id="app">
+  <h1 class="app-heading">Visualizar Ingresos y Egresos por Categoria</h1>
+
+  <section class="app-filters">
+    <!-- Look at binding for more info on form inputs -->
+    <!-- https://vuejs.org/v2/guide/forms.html -->
+    <input v-model="keywords" class="filter input--search" type="text" name="search" placeholder="Buscar Ingresos/Egresos">
+
+    <div class="filter select-wrapper">
+      <select v-model="category" v-model="category">
+        <option value="all">Todas las Categorias</option>
+        <option v-for="cat in categories" :value="cat.category_url_title" v-html="cat.category_name"></option>
+      </select>
+    </div>
+    <!-- We use event handling inline, and within our JS -->
+    <!-- https://vuejs.org/v2/guide/events.html -->
+    <button class="filter btn btn-reset" @click="reset()">
+      Reiniciar Filtro
+    </button>
+  </section>
+
+  <!-- Conditional Rendering is used commonly in our apps -->
+  <!-- https://vuejs.org/v2/guide/conditional.html -->
+  <section class="items-list" v-if="filteredList.length">
+    <!-- Iterating through arrays and objects is no problem for Vue -->
+    <!-- https://vuejs.org/v2/guide/list.html -->
+    <div class="item" v-for="(item, index) in filteredList">
+      <h3 class="item-title">
+        {{ item.title }}
+      </h3>
+      <ul class="item-cats">
+        <li v-for="(item, index) in item.categories">
+          {{ item.category_name }}
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="no-items-message" v-else>
+    No existen items para esa categoria
+  </section>
+</main>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script><script  src="./GESOC_ListadoxCategoria.js"></script>
+
+</body>
+</html>

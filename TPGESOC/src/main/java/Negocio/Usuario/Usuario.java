@@ -44,6 +44,10 @@ public class Usuario extends EntidadPersistente {
         this.direccionPostal = direccionPostal;
     }
 
+    public DireccionPostal getDireccionPostal() {
+        return direccionPostal;
+    }
+
     public void setBandejaDeMensajes(List<Mensaje> bandejaDeMensajes) {
         this.bandejaDeMensajes = bandejaDeMensajes;
     }
