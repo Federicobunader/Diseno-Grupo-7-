@@ -20,6 +20,9 @@ public class Usuario extends EntidadPersistente {
     @Column
     private String password;
 
+    @Column
+    private String mail;
+
     @OneToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "direccionPostal_id", referencedColumnName = "id")
     private DireccionPostal direccionPostal;
@@ -71,6 +74,14 @@ public class Usuario extends EntidadPersistente {
 
     public List<Mensaje> getBandejaDeMensajes() {
         return bandejaDeMensajes;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    public String getMail() {
+        return mail;
     }
 
     public Usuario() {

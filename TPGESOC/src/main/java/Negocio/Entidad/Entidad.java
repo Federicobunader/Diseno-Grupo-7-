@@ -14,6 +14,8 @@ public abstract class Entidad extends EntidadPersistente {
 	@JoinColumn(name="usuario_id", referencedColumnName = "id")
 	private Usuario usuario;
 
+
+
 	public Entidad(){
 	}
 

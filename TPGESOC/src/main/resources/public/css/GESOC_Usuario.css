@@ -1,0 +1,226 @@
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+html div, html h1, html input, body div, body h1, body input {
+  font-family: 'Roboto', sans-serif;
+}
+
+#main {
+  background-color: #282828;
+  height: 100%;
+  left: 0px;
+  overflow: auto;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+#main #app {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #323232;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 30px, rgba(0, 0, 0, 0.23) 0px 6px 10px;
+  height: 80%;
+  min-width: 600px;
+  overflow: hidden;
+  width: 80%;
+}
+#main #app .button {
+  cursor: pointer;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  width: 50px;
+  z-index: 1;
+}
+#main #app .button:hover i {
+  color: #03a9f4;
+}
+#main #app .button i {
+  color: #c8c8c8;
+  font-size: 1.25em;
+}
+#main #app.settings-toggled #app-logo i {
+  font-size: 10em;
+  opacity: 0;
+}
+#main #app.settings-toggled #settings-panel {
+  opacity: 1;
+  pointer-events: initial;
+  transform: scale(1);
+}
+#main #app #app-logo {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+#main #app #app-logo i {
+  color: #282828;
+  font-size: 15em;
+  transition: all 0.25s;
+}
+#main #app #settings-panel {
+  background-color: #323232;
+  font-size: 0px;
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0px;
+  transform: scale(1.25);
+  transition: all 0.25s;
+  width: 100%;
+  z-index: 10;
+}
+#main #app #settings-panel #close-button, #main #app #settings-panel #options, #main #app #settings-panel #details-view {
+  font-size: medium;
+}
+#main #app #settings-panel #options {
+  background-color: #1e1e1e;
+  cursor: pointer;
+  display: inline-block;
+  height: 100%;
+  padding: 0px 10px;
+  padding-left: 40px;
+  vertical-align: top;
+  width: 200px;
+}
+#main #app #settings-panel #options #options-label {
+  margin: 50px 0px 10px 0px;
+  padding: 0px 10px;
+}
+#main #app #settings-panel #options #options-label h1 {
+  color: #969696;
+  font-size: 0.7em;
+  font-weight: 700;
+  margin: 0px;
+}
+#main #app #settings-panel #options .option {
+  border-radius: 4px;
+  margin: 4px 0px;
+  padding: 10px;
+}
+#main #app #settings-panel #options .option:hover, #main #app #settings-panel #options .option.selected {
+  background-color: #03a9f4;
+}
+#main #app #settings-panel #options .option h1 {
+  color: gainsboro;
+  font-size: 0.9em;
+  font-weight: 700;
+  margin: 0px;
+  text-align: left;
+}
+#main #app #settings-panel #details-view-wrapper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+  width: calc(100% - 250px);
+}
+#main #app #settings-panel #details-view-wrapper #details-view {
+  padding: 50px 30px;
+}
+#main #app #settings-panel #details-view-wrapper #details-view #details-view-label h1 {
+  color: gainsboro;
+  font-size: 0.8em;
+  font-weight: 700;
+  margin: 0px;
+}
+#main #app #settings-panel #details-view-wrapper #details-view #my-account-info-wrapper {
+  background-color: #282828;
+  border: 1px solid #1e1e1e;
+  font-size: 0px;
+  margin-top: 10px;
+  overflow: auto;
+  width: 100%;
+}
+#main #app #settings-panel #details-view-wrapper #details-view #my-account-info-wrapper #my-account-info {
+  overflow: hidden;
+  padding: 10px;
+  white-space: nowrap;
+}
+#main #app #settings-panel #details-view-wrapper #details-view #my-account-info-wrapper #my-account-info #profile-pic {
+  background-color: #1e1e1e;
+  border-radius: 100px;
+  display: inline-block;
+  font-size: medium;
+  height: 80px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 80px;
+}
+#main #app #settings-panel #details-view-wrapper #details-view #my-account-info-wrapper #my-account-info #profile-pic i {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #4a148c;
+  font-size: 2.5em;
+}
+#main #app #settings-panel #details-view-wrapper #details-view #my-account-info-wrapper #my-account-info #account-fields {
+  display: inline-block;
+  font-size: medium;
+  margin-left: 10px;
+  vertical-align: top;
+  width: calc(100% - 90px);
+}
+#main #app #settings-panel #details-view-wrapper #details-view #my-account-info-wrapper #my-account-info #account-fields .account-field {
+  margin-top: 20px;
+}
+#main #app #settings-panel #details-view-wrapper #details-view #my-account-info-wrapper #my-account-info #account-fields .account-field:first-child {
+  margin-top: 0px;
+}
+#main #app #settings-panel #details-view-wrapper #details-view #my-account-info-wrapper #my-account-info #account-fields .account-field .label {
+  color: gainsboro;
+  font-size: 0.7em;
+  margin: 0px;
+}
+#main #app #settings-panel #details-view-wrapper #details-view #my-account-info-wrapper #my-account-info #account-fields .account-field input {
+  background-color: #1e1e1e;
+  border: 1px solid black;
+  border-radius: 2px;
+  color: gainsboro;
+  margin-top: 5px;
+  padding: 10px;
+  outline: none;
+  width: calc(100% - 24px);
+}
+#main #app #settings-panel #details-view-wrapper #details-view #save-options {
+  margin-top: 20px;
+  text-align: right;
+  white-space: nowrap;
+}
+#main #app #settings-panel #details-view-wrapper #details-view #save-options #save-button {
+  background-color: #4caf50;
+  margin-left: 10px;
+}
+#main #app #settings-panel #details-view-wrapper #details-view #save-options #save-button:hover {
+  color: white;
+  text-shadow: 0px 0px 1px white;
+}
+#main #app #settings-panel #details-view-wrapper #details-view #save-options #cancel-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#main #app #settings-panel #details-view-wrapper #details-view #save-options .save-option-button {
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+  width: 60px;
+}
+#main #app #settings-panel #details-view-wrapper #details-view #save-options .save-option-button h1 {
+  color: gainsboro;
+  font-size: 0.8em;
+  font-weight: 400;
+  margin: 0px;
+  text-align: center;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Discord Settings Toggle</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="./GESOC_Usuario.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="main">
+  <div id="app">
+    <div class="button" id="settings-button"><i class="fas fa-cog"></i></div>
+    <div id="app-logo"><i class="fas fa-rocket"></i></div>
+    <div id="settings-panel">
+      <div class="button" id="close-button"><i class="fas fa-times"></i></div>
+      <div id="options">
+        <div id="options-label">
+          <h1>USER SETTINGS</h1>
+        </div>
+        <div class="option" id="option-1">
+          <h1>Overview</h1>
+        </div>
+        <div class="option selected" id="option-2">
+          <h1>My Account</h1>
+        </div>
+        <div class="option" id="option-3">
+          <h1>Privacy</h1>
+        </div>
+        <div class="option" id="option-4">
+          <h1>Language</h1>
+        </div>
+        <div class="option" id="option-5">
+          <h1>Change Log</h1>
+        </div>
+      </div>
+      <div id="details-view-wrapper">
+        <div id="details-view">
+          <div id="details-view-label">
+            <h1>MY ACCOUNT</h1>
+          </div>
+          <div id="my-account-info-wrapper">
+            <div id="my-account-info">
+              <div id="profile-pic"><i class="fas fa-rocket"></i></div>
+              <div id="account-fields">
+                <div class="account-field">
+                  <h1 class="label">USERNAME</h1>
+                  <input class="input" type="text" value="Bloop"/>
+                </div>
+                <div class="account-field">
+                  <h1 class="label">EMAIL</h1>
+                  <input class="input" type="text" value="bloop@doop.com"/>
+                </div>
+                <div class="account-field">
+                  <h1 class="label">CURRENT PASSWORD</h1>
+                  <input class="input" type="password" value="bloopiedoopiedoo"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="save-options">
+            <div class="save-option-button" id="cancel-button">
+              <h1>Cancel</h1>
+            </div>
+            <div class="save-option-button" id="save-button">
+              <h1>Save</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://codepen.io/TheVVaFFle/pen/0299c8b36352c72cbfe8df48b47b54ca.js'></script><script  src="./GESOC_Usuario.js"></script>
+
+</body>
+</html>
