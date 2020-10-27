@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>REGISTRARSE/INICIAR SESIÓN</title>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./GESOC_Login.css">
+
+</head>
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <a class="navbar-brand page-scroll" href="./GESOC_Menu.html">GESOC</a>
+        </div>
+</nav>
+
+  
+
+<!-- partial:index.partial.html -->
+<div class="form">
+      
+  <button type="submit" class="button button-back" onclick="window.location.href='./GESOC_Menu.html'">Volver al menú principal</button>
+  
+  <ul class="tab-group">
+    <li class="tab active"><a href="#signup">Registrate</a></li>
+        <li class="tab"><a href="#login">Inicia Sesión</a></li>
+      </ul>
+      
+      <div class="tab-content">
+        <div id="signup">   
+          <h1>¡Registrate gratis!</h1>
+          
+          <form action="/" method="post">
+          
+          <h2>Datos de la entidad</h2>
+
+            <div class="field-wrap">
+              <div class="custom-select" style="width:200px;">
+                <select name="tipoentidad" id="tipoentidad" onChange=changetextbox()>
+                  <option value="0">Seleccione el tipo de entidad:</option>
+                  <option value="1">Entidad Jurídica</option>
+                  <option value="2">Entidad Base</option>
+                </select>
+
+                 </div>
+            </div>
+
+            
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                Nombre Ficticio<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" id="NombreFicticio"/>
+            </div>
+
+            <div class="field-wrap">
+              <label>
+                CUIT<span class="req">*</span>
+              </label>
+              <input type="text"required autocomplete="off" id="CUIT"/>
+            </div>
+          </div>
+          
+          <!-- Entidad base -->
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                Entidad Jurídica<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" id="entidadjuridica"/>
+            </div>
+
+            
+              <div class="field-wrap">
+                <label>
+                  Razón social<span class="req">*</span>
+                </label>
+                <input type="text" required autocomplete="off" id="razonsocial"/>
+              </div>
+            </div>
+          
+          <!-- Entidad Jurídica -->
+
+          
+        <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                Código IGJ<span class="req">*</span>
+              </label>
+              <input type="text"required autocomplete="off" id="igj"/>
+            </div>
+         
+        
+            <div class="field-wrap">
+              <label>
+                Cantidad de personal<span class="req">*</span>
+              </label>
+              <input type="text"required autocomplete="off" id="cantpersonal"/>
+            </div>
+          </div>
+
+          
+            <div class="field-wrap">
+              <label>
+                Cantidad de ventas anuales<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" id="cantventas"/>
+            </div>
+
+            <div class="field-wrap">
+              <label>
+                Descripción<span class="req">*</span>
+              </label>
+              <input type="text"required autocomplete="off" id="descripcion"/>
+            </div>
+        
+        
+            <div class="field-wrap">
+              <label>
+                Ingreso de ventas anuales<span class="req">*</span>
+              </label>
+              <input type="text"required autocomplete="off" id="ingventas"/>
+            </div>
+
+          <!-- TODO: poner al lado del tipo de entidad -->
+
+          <div class="field-wrap">
+            <div class="custom-select" style="width:200px;">
+              <select name="tiposector" id="tiposector" onChange=changetextbox()>
+                <option value="0">Seleccione el tipo de sector:</option>
+                <option value="1">Agropecuario</option>
+                <option value="2">Industria y Minería</option>
+                <option value="3">Comercio</option>
+                <option value="4">Construcción</option>
+                <option value="5">Servicios</option>
+              </select>
+
+               </div>
+          </div>
+
+
+          <h2>Dirección</h2>
+
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                Calle<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" />
+            </div>
+        
+            <div class="field-wrap">
+              <label>
+                Altura<span class="req">*</span>
+              </label>
+              <input type="text"required autocomplete="off"/>
+            </div>
+          </div>
+
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                Piso<!--<span class="req">*</span>-->
+              </label>
+              <input type="text" required autocomplete="off" />
+            </div>
+
+            <div class="field-wrap">
+              <label>
+                Departamento<!--<span class="req">*</span>-->
+               </label>
+               <input type="text" required autocomplete="off" />
+              </div>
+            </div>
+
+            <div class="top-row">
+              <div class="field-wrap">
+                <label>
+                  País<span class="req">*</span>
+                </label>
+                <input type="text"required autocomplete="off"/>
+              </div>
+          
+              <div class="field-wrap">
+                <label>
+                  Provincia<span class="req">*</span>
+                </label>
+                <input type="text" required autocomplete="off" />
+              </div>
+            </div>
+        
+            <div class="field-wrap">
+              <label>
+                Ciudad<span class="req">*</span>
+              </label>
+              <input type="text"required autocomplete="off"/>
+            </div>
+
+          <h2>Datos de usuario</h2>
+
+          <div class="field-wrap">
+            <label>
+              Email<span class="req">*</span>
+            </label>
+            <input type="email"required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Nombre de usuario<span class="req">*</span>
+            </label>
+            <input type="text"required autocomplete="off"/>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Ingrese una contraseña<span class="req">*</span>
+            </label>
+            <input type="password"required autocomplete="off"/>
+          </div>
+
+          <button type="submit" id="startbutton" class="button button-back" onclick="verify()" onclick="window.location.href='./GESOC_Menu_Logueado.html'">Inicia tu experiencia en GESOC</button>
+
+          <!--Enable textbox according to previus select in combobox and enable button once textboxs filled-->
+
+          <script type="text/javascript">
+            function changetextbox()
+            {
+                if (document.getElementById("tipoentidad").value === "2") {
+                  document.getElementById("CUIT").disabled=true;
+                  document.getElementById("razonsocial").disabled=true;
+                  document.getElementById("igj").disabled=true;
+                  document.getElementById("actividad").disabled=true;
+                  document.getElementById("cantpersonal").disabled=true;
+                  document.getElementById("cantventas").disabled=true;
+                  document.getElementById("ingventas").disabled=true;
+                  document.getElementById("tiposector").disabled=true;
+                } 
+                if(document.getElementById("tipoentidad").value === "1") {
+                  document.getElementById("entidadjuridica").disabled=true;
+                }
+            }
+
+            function verify(){
+              if (document.getElementById("nombreFicticio").value===""){
+                  document.getElementById('startbutton').disabled = true; 
+                  alert("Llene todos los campos obligatorios");
+                }
+                else{
+                  document.getElementById('startbutton').disabled = false; 
+                }
+            }
+          </script>
+
+          </form>
+
+        </div>
+        
+        <div id="login">   
+          <h1>¡Te echamos de menos!</h1>
+          
+          <form action="/" method="post">
+          
+            <div class="field-wrap">
+            <label>
+              Email <span class="req">*</span>
+            </label>
+            <input type="email"required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Contraseña<span class="req">*</span>
+            </label>
+            <input type="password"required autocomplete="off"/>
+          </div>
+          
+          <p class="forgot"><a href="#">¿Olvidaste tu constraseña?</a></p>
+          
+          <button type="submit" class="button button-back" onclick="window.location.href='./GESOC_Menu_Logueado.html'">Iniciar Sesión</button>
+          
+          </form>
+
+        </div>
+        
+      </div><!-- tab-content -->
+      
+</div> <!-- /form -->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./GESOC_Login.js"></script>
+
+</body>
+</html>
