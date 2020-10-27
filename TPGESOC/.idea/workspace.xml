@@ -3,19 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="c56b04db-f42a-40a7-8d18-c78ae2368dc3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Empresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Entidad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Entidad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/EntidadJuridica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Entidad/EntidadJuridica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/DireccionPostal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/DireccionPostal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/GestorDePasswords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/GestorDePasswords.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/GestorDeUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/GestorDeUsuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/DireccionPostalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/DireccionPostalController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/EmpresaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/EmpresaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/UsuarioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/server/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Router.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/EmTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EmTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Asociar_A_Categoria.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Bandeja_Mensajes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_ListadoxCategoria.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu_Logueado.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Usuario.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/Router.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/Router.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_Asociar_A_Categoria.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_Bandeja_Mensajes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_ListadoxCategoria.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_Login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_Menu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_Menu_Logueado.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_Usuario.html" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,15 +41,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Empresa.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/server/Server.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -55,10 +53,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/EmTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/server/Router.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+            <state relative-caret-position="125">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,10 +65,54 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="21" column="45" lean-forward="true" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Login.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="225" column="91" lean-forward="true" selection-start-line="225" selection-start-column="91" selection-end-line="225" selection-end-column="91" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu_Logueado.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="68" column="18" lean-forward="true" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EmpresaController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#336#337#0" expanded="true" />
+                <element signature="e#401#402#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Entidad.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            <state relative-caret-position="289">
+              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
               <folding>
                 <element signature="e#409#410#0" expanded="true" />
                 <element signature="e#438#439#0" expanded="true" />
@@ -82,50 +124,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/EntidadJuridica.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Empresa.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EmpresaController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#401#402#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/server/Router.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="40" column="67" lean-forward="true" selection-start-line="40" selection-start-column="67" selection-end-line="40" selection-end-column="67" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-              <folding>
-                <element signature="e#1112#1113#0" expanded="true" />
-                <element signature="e#1150#1151#0" expanded="true" />
-                <element signature="e#1870#1871#0" expanded="true" />
-                <element signature="e#1897#1898#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="357">
+              <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -133,26 +135,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/UsuarioController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+            <state relative-caret-position="392">
+              <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#196#197#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/DireccionPostalController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="42" column="9" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="42" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#183#184#0" expanded="true" />
-                <element signature="e#248#249#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="134">
+              <caret line="63" column="105" selection-start-line="63" selection-start-column="99" selection-end-line="63" selection-end-column="105" />
             </state>
           </provider>
         </entry>
@@ -169,8 +165,17 @@
     </option>
   </component>
   <component name="FindInProjectRecents">
+    <findStrings>
+      <find>.html</find>
+      <find>sesi</find>
+      <find>regis</find>
+      <find>gesoc</find>
+      <find>GESOC</find>
+      <find>inicia</find>
+    </findStrings>
     <replaceStrings>
       <replace />
+      <replace>.hbs</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -179,12 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Egreso.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Ingreso.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Item.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Presupuesto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Producto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/EntidadBase.java" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/OSC.java" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/Documento.java" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/MedioDePago.java" />
@@ -208,7 +207,6 @@
         <option value="$PROJECT_DIR$/src/main/java/repositories/Repositorio.java" />
         <option value="$PROJECT_DIR$/src/main/java/repositories/RepositorioDeUsuarios.java" />
         <option value="$PROJECT_DIR$/src/main/java/middleware/AuthMiddleware.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/config/Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/repositories/factories/FactoryRepositorioUsuarios.java" />
         <option value="$PROJECT_DIR$/src/main/java/repositories/factories/FactoryRepositorio.java" />
@@ -225,11 +223,18 @@
         <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Empresa.java" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/EntidadJuridica.java" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/Entidad.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/UsuarioController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/EmpresaController.java" />
         <option value="$PROJECT_DIR$/src/test/java/EmTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/GESOC_ListadoxCategoria.hbs" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/GESOC_Bandeja_Mensajes.hbs" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu_Logueado.hbs" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/GESOC_Usuario.hbs" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu.hbs" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/UsuarioController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/GESOC_Login.hbs" />
         <option value="$PROJECT_DIR$/src/main/java/server/Router.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/EmpresaController.java" />
       </list>
     </option>
   </component>
@@ -295,7 +300,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Negocio" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
@@ -304,16 +309,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Negocio" type="462c0819:PsiDirectoryNode" />
-              <item name="Compras" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Negocio" type="462c0819:PsiDirectoryNode" />
-              <item name="Entidad" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
@@ -323,7 +318,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Negocio" type="462c0819:PsiDirectoryNode" />
               <item name="Entidad" type="462c0819:PsiDirectoryNode" />
-              <item name="Empresa" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
@@ -334,7 +328,6 @@
               <item name="Negocio" type="462c0819:PsiDirectoryNode" />
               <item name="Entidad" type="462c0819:PsiDirectoryNode" />
               <item name="Empresa" type="462c0819:PsiDirectoryNode" />
-              <item name="TiposDeEmpresas" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
@@ -342,19 +335,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Negocio" type="462c0819:PsiDirectoryNode" />
-              <item name="Entidad" type="462c0819:PsiDirectoryNode" />
-              <item name="Empresa" type="462c0819:PsiDirectoryNode" />
-              <item name="TipoDeSector" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Negocio" type="462c0819:PsiDirectoryNode" />
-              <item name="Usuario" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
@@ -385,6 +366,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -405,6 +395,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
@@ -560,8 +551,8 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.82608694" visible="true" weight="0.24832214" />
-      <window_info id="Structure" order="1" sideWeight="0.17391305" side_tool="true" visible="true" weight="0.24832214" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8268041" visible="true" weight="0.24832214" />
+      <window_info id="Structure" order="1" sideWeight="0.17319588" side_tool="true" visible="true" weight="0.24832214" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -569,7 +560,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.5028329" side_tool="true" weight="0.13892618" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32991204" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31586403" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31303117" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398017" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -640,62 +631,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/GestorDeAPI.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/APIGeografia/Pais.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/Servicios/CurrenciesServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/Servicios/GeorefService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/Servicios/ServicioGeoref.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BaseDeDatos/EntityManagerHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BaseDeDatos/EntidadPersistente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/CriterioDeVinculacion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Sistema.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -797,32 +732,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/RepositorioDeUsuarios.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#396#397#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/middleware/AuthMiddleware.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -985,13 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/GestorDeUsuarios.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
@@ -1012,21 +918,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/UsuarioController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#196#197#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/DireccionPostalController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="505">
-          <caret line="42" column="9" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="42" selection-end-column="9" />
+          <caret line="42" column="9" selection-start-line="16" selection-start-column="8" selection-end-line="42" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#183#184#0" expanded="true" />
@@ -1038,7 +933,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
           <folding>
             <element signature="e#1112#1113#0" expanded="true" />
             <element signature="e#1150#1151#0" expanded="true" />
@@ -1058,34 +953,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Empresa.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/RepositorioDeUsuarios.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EmpresaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+        <state relative-caret-position="401">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Entidad.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Bandeja_Mensajes.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="-756">
+          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Asociar_A_Categoria.hbs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_ListadoxCategoria.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="61" column="7" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Usuario.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="77" column="88" lean-forward="true" selection-start-line="77" selection-start-column="88" selection-end-line="77" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/GESOC_Login.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MenuController.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="63" column="105" selection-start-line="63" selection-start-column="99" selection-end-line="63" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/UsuarioController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
           <folding>
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
-            <element signature="e#491#492#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu_Logueado.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="68" column="18" lean-forward="true" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Login.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="225" column="91" lean-forward="true" selection-start-line="225" selection-start-column="91" selection-end-line="225" selection-end-column="91" />
         </state>
       </provider>
     </entry>
@@ -1101,10 +1036,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/server/Router.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="40" column="67" lean-forward="true" selection-start-line="40" selection-start-column="67" selection-end-line="40" selection-end-column="67" />
+        <state relative-caret-position="125">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="21" column="45" lean-forward="true" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Empresa/Empresa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Entidad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#470#471#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EmpresaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#336#337#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -21,7 +21,7 @@ public class EmpresaController {
         }
 
         if (request.queryParams("NombreFicticio") != null) {
-            unaEmpresa.setRazonSocial(request.queryParams("NombreFicticio"));
+            unaEmpresa.setNombreFicticio(request.queryParams("NombreFicticio"));
         }
 
         if (request.queryParams("CUIT") != null) {
@@ -31,7 +31,7 @@ public class EmpresaController {
 
         if (request.queryParams("CodigoDeInscripcion") != null) {
             int codigoIGJ = new Integer(request.queryParams("CodigoDeInscripcion"));
-            unaEmpresa.setCUIT(codigoIGJ);
+            unaEmpresa.setCodigoDeInscripcion(codigoIGJ);
         }
 
         if (request.queryParams("seleccionTipoDeSector") != null) { //SECTOR
@@ -40,12 +40,12 @@ public class EmpresaController {
 
         if (request.queryParams("cantidadDePersonal") != null) {
             int cantidad = new Integer(request.queryParams("cantidadDePersonal"));
-            unaEmpresa.setCUIT(cantidad);
+            unaEmpresa.setCantidadDePersonal(cantidad);
         }
 
         if (request.queryParams("promedioDeVentasAnuales") != null) {
-            int cantidad = new Integer(request.queryParams("promedioDeVentasAnuales"));
-            unaEmpresa.setCUIT(cantidad);
+            double cantidad = new Double (request.queryParams("promedioDeVentasAnuales"));
+            unaEmpresa.setPromedioDeVentasAnuales(cantidad);
         }
 
         if (request.queryParams("Email") != null) {
@@ -57,8 +57,6 @@ public class EmpresaController {
         }
 
         if (request.queryParams("Password") != null) {
-            //String passwordIngresada = request.queryParams("Password");
-
             unaEmpresa.getUsuario().setPassword(request.queryParams("Password"));
         }
 
@@ -98,7 +96,7 @@ public class EmpresaController {
         asignarAtributosA(unaEmpresa,request);
         this.repo.agregar(unaEmpresa);
 
-       // response.redirect("/usuarios");
+        response.redirect("/menu_logueado");
         return response;
     }
 }

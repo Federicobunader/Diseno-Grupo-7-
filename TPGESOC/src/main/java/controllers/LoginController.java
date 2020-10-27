@@ -14,7 +14,12 @@ public class LoginController {
 
     public ModelAndView inicio(Request request, Response response){
         Map<String, Object> parametros = new HashMap<>();
-        return new ModelAndView(parametros,"login.hbs");
+        return new ModelAndView(parametros,"GESOC_Menu.hbs");
+    }
+
+    public ModelAndView menu_login(Request request, Response response){
+        Map<String, Object> parametros = new HashMap<>();
+        return new ModelAndView(parametros,"GESOC_Login.hbs");
     }
 
     public Response login(Request request, Response response){
@@ -30,7 +35,7 @@ public class LoginController {
                 request.session(true);
                 request.session().attribute("id", usuario.getId());
 
-                response.redirect("/usuarios");
+                response.redirect("/GESOC_Login");
             }
             else{
                 response.redirect("/");

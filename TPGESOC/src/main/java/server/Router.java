@@ -30,7 +30,19 @@ public class Router {
     private static void configure(){
 
         EmpresaController empresaController = new EmpresaController();
-       Spark.get("/GESOC_Login",empresaController::guardar,Router.engine);
+        LoginController loginController = new LoginController();
+        UsuarioController usuarioController = new UsuarioController();
+
+        Spark.get("/", loginController::inicio, Router.engine);
+
+        Spark.get("/menu_login", loginController::menu_login, Router.engine);
+
+        Spark.get("/menu_logueado", usuarioController::menu_logueado, Router.engine);
+
+        Spark.post("/guardar",empresaController ::guardar);
+
+
+        //Spark.get("/GESOC_Menu",empresaController::guardar,Router.engine);
        // Spark.get("/saludo/:nombre/:apellido",((request, response) -> "HOLA " + request.params("nombre") + request.params("apellido") ));
 
 
