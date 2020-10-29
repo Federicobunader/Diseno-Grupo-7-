@@ -1,6 +1,7 @@
 package server;
 
 import controllers.EmpresaController;
+import controllers.EntidadBaseController;
 import controllers.LoginController;
 import controllers.UsuarioController;
 import middleware.AuthMiddleware;
@@ -32,6 +33,7 @@ public class Router {
         EmpresaController empresaController = new EmpresaController();
         LoginController loginController = new LoginController();
         UsuarioController usuarioController = new UsuarioController();
+        EntidadBaseController entidadBaseController = new EntidadBaseController();
 
         Spark.get("/", loginController::inicio, Router.engine);
 
@@ -39,7 +41,9 @@ public class Router {
 
         Spark.get("/menu_logueado", usuarioController::menu_logueado, Router.engine);
 
-        Spark.post("/menu_logueado",empresaController ::guardar);
+        Spark.post("/registrar_empresa",empresaController ::guardar);
+
+        Spark.post("/registrar_base",entidadBaseController ::guardar);
 
         Spark.get("/cambiar_usuario",usuarioController :: editar_usuario,Router.engine);
 

@@ -35,7 +35,7 @@
         <div id="signupEJ">   
           <h1>¡Registrate gratis!</h1>
 
-          <form class="" {{#if empresa}} action="//{{empresa.id}}" method="post" {{else}} action="/menu_logueado" method="post" {{/if}} style="">
+          <form class="" action="/registrar_empresa" method="post" style="">
           
           <h2>Datos de la entidad</h2>
             
@@ -44,14 +44,14 @@
               <label>
                 Nombre Ficticio<span class="req">*</span>
               </label>
-              <input type="text" required autocomplete="off" id="NombreFicticio"/>
+              <input type="text" required autocomplete="off" id="NombreFicticio" name="NombreFicticio"  class="input-datos" {{#if empresa}}value="{{empresa.NombreFicticio}}" {{/if}}>
             </div>
 
             <div class="field-wrap">
               <label>
                 Razón social<span class="req">*</span>
               </label>
-                <input type="text" name="razonSocial" {{#if empresa}} value="{{empresa.RazonSocial}}" {{/if}} class="input-datos" >
+                <input type="text" required autocomplete="off" id="RazonSocial" name="RazonSocial"  class="input-datos" {{#if empresa}}value="{{empresa.RazonSocial}}" {{/if}}>
             </div>
           </div>
           
@@ -62,14 +62,14 @@
               <label>
                 Código IGJ<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off" id="igj"/>
+                <input type="text" required autocomplete="off" id="Código IGJ" name="CodigoDeInscripcion"  class="input-datos" {{#if empresa}}value="{{empresa.CodigoDeInscripcion}}" {{/if}}>
             </div>
             
             <div class="field-wrap">
               <label>
                 CUIT<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off" id="CUIT"/>
+              <input type="text"required autocomplete="off" id="CUIT" name="CUIT" class="input-datos"/>
             </div>
           </div>
            
@@ -78,7 +78,7 @@
               <label>
                 Cantidad de personal<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off" id="cantpersonal"/>
+                <input type="text"required autocomplete="off" id="CUIT" name="cantidadDePersonal" class="input-datos"/>
             </div>
 
               <!-- <div class="field-wrap">
@@ -101,7 +101,7 @@
                 <label>
                   Prom. ventas anuales<span class="req">*</span>
                 </label>
-                <input type="text" required autocomplete="off" id="promedio"/>
+                  <input type="text"required autocomplete="off" id="CUIT" name="promedioDeVentasAnuales" class="input-datos"/>
               </div>
             </div>
 
@@ -109,7 +109,7 @@
 
           <div class="field-wrap">
             <div class="custom-select" style="width:200px;">
-              <select name="tiposector" id="tiposector" onChange=changetextbox()>
+              <select name="seleccionTipoDeSector" id="tiposector" onChange=changetextbox()>
                 <option value="0">Seleccione el tipo de sector:</option>
                 <option value="1">Agropecuario</option>
                 <option value="2">Industria y Minería</option>
@@ -128,14 +128,14 @@
               <label>
                 Calle<span class="req">*</span>
               </label>
-              <input type="text" required autocomplete="off" />
+                <input type="text"required autocomplete="off" id="calle" name="calle" class="input-datos"/>
             </div>
         
             <div class="field-wrap">
               <label>
                 Altura<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off"/>
+                <input type="text"required autocomplete="off" id="Altura" name="altura" class="input-datos"/>
             </div>
           </div>
 
@@ -144,14 +144,14 @@
               <label>
                 Piso<!--<span class="req">*</span>-->
               </label>
-              <input type="text" required autocomplete="off" />
+                <input type="text"required autocomplete="off" id="Piso" name="piso" class="input-datos"/>
             </div>
 
             <div class="field-wrap">
               <label>
                 Departamento<!--<span class="req">*</span>-->
                </label>
-               <input type="text" required autocomplete="off" />
+                <input type="text"required autocomplete="off" id="Departamento" name="departamento" class="input-datos"/>
               </div>
             </div>
 
@@ -160,14 +160,14 @@
                 <label>
                   País<span class="req">*</span>
                 </label>
-                <input type="text"required autocomplete="off"/>
+                  <input type="text"required autocomplete="off" id="Pais" name="pais" class="input-datos"/>
               </div>
           
               <div class="field-wrap">
                 <label>
                   Provincia<span class="req">*</span>
                 </label>
-                <input type="text" required autocomplete="off" />
+                  <input type="text"required autocomplete="off" id="Provincia" name="provincia" class="input-datos"/>
               </div>
             </div>
         
@@ -175,7 +175,7 @@
               <label>
                 Ciudad<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off"/>
+                <input type="text"required autocomplete="off" id="Ciudad" name="ciudad" class="input-datos"/>
             </div>
 
           <h2>Datos de usuario</h2>
@@ -184,21 +184,21 @@
             <label>
               Email<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off"/>
+              <input type="email"required autocomplete="off" id="Email" name="mail" class="input-datos"/>
           </div>
           
           <div class="field-wrap">
             <label>
               Nombre de usuario<span class="req">*</span>
             </label>
-            <input type="text"required autocomplete="off"/>
+              <input type="text"required autocomplete="off" id="NombreUsuario" name="usuario" class="input-datos"/>
           </div>
 
           <div class="field-wrap">
             <label>
               Ingrese una contraseña<span class="req">*</span>
             </label>
-            <input type="password"required autocomplete="off"/>
+              <input type="password"required autocomplete="off" id="Password" name="password" class="input-datos"/>
           </div>
 
           <button type="submit" class="button button-back" onclick="window.location.href='./menu_logueado'">Inicia tu experiencia en GESOC</button>
@@ -227,7 +227,7 @@
           <div id="signupEB">   
             <h1>¡Registrate gratis!</h1>
 
-              <form class="" {{#if empresa}} action="//{{empresa.id}}" method="post" {{else}} action="/menu_logueado" method="post" {{/if}} style="">
+              <form class="" action="/registrar_base" method="post" style="">
             
             <h2>Datos de la entidad</h2>
               
@@ -236,104 +236,102 @@
                 <label>
                   Nombre Ficticio<span class="req">*</span>
                 </label>
-                <input type="text" required autocomplete="off" id="NombreFicticio"/>
+                  <input type="text"required autocomplete="off" id="NombreFicticio" name="NombreFicticio" class="input-datos"/>
               </div>
-  
-              <div class="field-wrap">
-                <label>
-                  Entidad Juridica<span class="req">*</span>
-                </label>
-                <input type="text" required autocomplete="off" id="entidadjuridica"/>
-              </div>
+                <div class="field-wrap">
+                    <label>
+                        Entidad Juridica<span class="req">*</span>
+                    </label>
+                    <input type="text"required autocomplete="off" id="Entidad Juridica" name="EntidadJuridica" class="input-datos"/>
+                </div>
             </div>
 
-              <div class="field-wrap">
-                <label>
-                  Descripcion<span class="req">*</span>
-                </label>
-                <input type="text"required autocomplete="off" id="Descripcion"/>
-              </div>  
-  
-            <h2>Dirección</h2>
-  
-            <div class="top-row">
-              <div class="field-wrap">
-                <label>
-                  Calle<span class="req">*</span>
-                </label>
-                <input type="text" required autocomplete="off" />
-              </div>
-          
-              <div class="field-wrap">
-                <label>
-                  Altura<span class="req">*</span>
-                </label>
-                <input type="text"required autocomplete="off"/>
-              </div>
-            </div>
-  
-            <div class="top-row">
-              <div class="field-wrap">
-                <label>
-                  Piso<!--<span class="req">*</span>-->
-                </label>
-                <input type="text" required autocomplete="off" />
-              </div>
-  
-              <div class="field-wrap">
-                <label>
-                  Departamento<!--<span class="req">*</span>-->
-                 </label>
-                 <input type="text" required autocomplete="off" />
-                </div>
-              </div>
-  
-              <div class="top-row">
-                <div class="field-wrap">
-                  <label>
-                    País<span class="req">*</span>
-                  </label>
-                  <input type="text"required autocomplete="off"/>
-                </div>
-            
-                <div class="field-wrap">
-                  <label>
-                    Provincia<span class="req">*</span>
-                  </label>
-                  <input type="text" required autocomplete="off" />
-                </div>
-              </div>
-          
-              <div class="field-wrap">
-                <label>
-                  Ciudad<span class="req">*</span>
-                </label>
-                <input type="text"required autocomplete="off"/>
-              </div>
-  
-            <h2>Datos de usuario</h2>
-  
-            <div class="field-wrap">
-              <label>
-                Email<span class="req">*</span>
-              </label>
-              <input type="email"required autocomplete="off"/>
-            </div>
-            
-            <div class="field-wrap">
-              <label>
-                Nombre de usuario<span class="req">*</span>
-              </label>
-              <input type="text"required autocomplete="off"/>
-            </div>
-  
-            <div class="field-wrap">
-              <label>
-                Ingrese una contraseña<span class="req">*</span>
-              </label>
-              <input type="password"required autocomplete="off"/>
-            </div>
+                          <div class="field-wrap">
+                            <label>
+                              Descripcion<span class="req">*</span>
+                            </label>
+                              <input type="text"required autocomplete="off" id="Descripcion" name="Descripcion" class="input-datos"/>
+                          </div>
 
+                              <h2>Dirección</h2>
+
+                              <div class="top-row">
+                                  <div class="field-wrap">
+                                      <label>
+                                          Calle<span class="req">*</span>
+                                      </label>
+                                      <input type="text"required autocomplete="off" id="calle" name="calle" class="input-datos"/>
+                                  </div>
+
+                                  <div class="field-wrap">
+                                      <label>
+                                          Altura<span class="req">*</span>
+                                      </label>
+                                      <input type="text"required autocomplete="off" id="Altura" name="altura" class="input-datos"/>
+                                  </div>
+                              </div>
+
+                              <div class="top-row">
+                                  <div class="field-wrap">
+                                      <label>
+                                          Piso<!--<span class="req">*</span>-->
+                          </label>
+                          <input type="text"required autocomplete="off" id="Piso" name="piso" class="input-datos"/>
+                      </div>
+
+                      <div class="field-wrap">
+                          <label>
+                              Departamento<!--<span class="req">*</span>-->
+                          </label>
+                          <input type="text"required autocomplete="off" id="Departamento" name="departamento" class="input-datos"/>
+                      </div>
+                  </div>
+
+                  <div class="top-row">
+                      <div class="field-wrap">
+                          <label>
+                              País<span class="req">*</span>
+                          </label>
+                          <input type="text"required autocomplete="off" id="Pais" name="pais" class="input-datos"/>
+                      </div>
+
+                      <div class="field-wrap">
+                          <label>
+                              Provincia<span class="req">*</span>
+                          </label>
+                          <input type="text"required autocomplete="off" id="Provincia" name="provincia" class="input-datos"/>
+                      </div>
+                  </div>
+
+                  <div class="field-wrap">
+                      <label>
+                          Ciudad<span class="req">*</span>
+                      </label>
+                      <input type="text"required autocomplete="off" id="Ciudad" name="ciudad" class="input-datos"/>
+                  </div>
+
+                  <h2>Datos de usuario</h2>
+
+                  <div class="field-wrap">
+                      <label>
+                          Email<span class="req">*</span>
+                      </label>
+                      <input type="email"required autocomplete="off" id="Email" name="mail" class="input-datos"/>
+                  </div>
+
+                  <div class="field-wrap">
+                      <label>
+                          Nombre de usuario<span class="req">*</span>
+                      </label>
+                      <input type="text"required autocomplete="off" id="NombreUsuario" name="usuario" class="input-datos"/>
+                  </div>
+
+                  <div class="field-wrap">
+                      <label>
+                          Ingrese una contraseña<span class="req">*</span>
+                      </label>
+                      <input type="password"required autocomplete="off" id="Password" name="password" class="input-datos"/>
+                  </div>
             <button type="submit" class="button button-back" onclick="window.location.href='./menu_logueado'">Inicia tu experiencia en GESOC</button>
   
             <!--Enable textbox according to previus select in combobox and enable button once textboxs filled-->

@@ -14,6 +14,9 @@ public class EntidadBase extends Entidad {
 	private String NombreFicticio;
 
 	@Column
+	private String EntidadJuridica;
+
+	@Column
 	private String Descripcion;
 
 
@@ -31,5 +34,9 @@ public class EntidadBase extends Entidad {
 
 	public void setDescripcion(String descripcion) {
 		Descripcion = descripcion;
+	}
+
+	public void setEntidadJuridica(String entidadJuridica) {
+		EntidadJuridica = entidadJuridica;
 	}
 }//end EntidadBase

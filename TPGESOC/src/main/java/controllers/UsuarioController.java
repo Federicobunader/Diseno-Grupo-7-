@@ -44,18 +44,18 @@ public class UsuarioController {
     }
 
     public void asignarAtributosA(Usuario unUsuario, Request request) {
-        if (request.queryParams("Email") != null) {
-            unUsuario.setMail(request.queryParams("Email"));
+        if (request.queryParams("mail") != null) {
+            unUsuario.setMail(request.queryParams("mail"));
         }
 
-        if (request.queryParams("Usuario") != null) {
-            unUsuario.setUsuario(request.queryParams("Usuario"));
+        if (request.queryParams("usuario") != null) {
+            unUsuario.setUsuario(request.queryParams("usuario"));
         }
 
-        if (request.queryParams("Password") != null) {
+        if (request.queryParams("password") != null) {
             //String passwordIngresada = request.queryParams("Password");
 
-            unUsuario.setPassword(request.queryParams("Password"));
+            unUsuario.setPassword(request.queryParams("password"));
         }
     }
 

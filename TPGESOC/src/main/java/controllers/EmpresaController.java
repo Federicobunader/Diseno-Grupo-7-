@@ -48,47 +48,6 @@ public class EmpresaController {
             double cantidad = new Double (request.queryParams("promedioDeVentasAnuales"));
             unaEmpresa.setPromedioDeVentasAnuales(cantidad);
         }
-
-        if (request.queryParams("Email") != null) {
-            unaEmpresa.getUsuario().setMail(request.queryParams("Email"));
-        }
-
-        if (request.queryParams("Usuario") != null) {
-            unaEmpresa.getUsuario().setUsuario(request.queryParams("Usuario"));
-        }
-
-        if (request.queryParams("Password") != null) {
-            unaEmpresa.getUsuario().setPassword(request.queryParams("Password"));
-        }
-
-        if (request.queryParams("altura") != null) {
-            int altura = Integer.valueOf(request.queryParams("altura"));
-            unaEmpresa.getUsuario().getDireccionPostal().setAltura(altura);
-        }
-
-        if (request.queryParams("calle") != null) {
-            unaEmpresa.getUsuario().getDireccionPostal().setCalle(request.queryParams("calle"));
-        }
-
-        if (request.queryParams("piso") != null) {
-            int piso = Integer.valueOf(request.queryParams("piso"));
-            unaEmpresa.getUsuario().getDireccionPostal().setPiso(piso);
-        }
-
-        if (request.queryParams("departamento") != null) {
-            unaEmpresa.getUsuario().getDireccionPostal().setDepartamento(request.queryParams("departamento"));
-        }
-
-        if (request.queryParams("pais") != null) {
-            unaEmpresa.getUsuario().getDireccionPostal().setPais(request.queryParams("pais"));
-        }
-        if (request.queryParams("provincia") != null) {
-            unaEmpresa.getUsuario().getDireccionPostal().setProvincia(request.queryParams("provincia"));
-        }
-        if (request.queryParams("ciudad") != null) {
-            unaEmpresa.getUsuario().getDireccionPostal().setCiudad(request.queryParams("ciudad"));
-        }
-
     }
 
     public Response guardar(Request request, Response response){
@@ -113,7 +72,6 @@ public class EmpresaController {
         unaEmpresa.setUsuario(unUsuario);
 
         asignarAtributosA(unaEmpresa,request);
-        System.out.println("RAZON SOCIAL : "+ unaEmpresa.getRazonSocial());
         this.repo.agregar(unaEmpresa);
 
 
