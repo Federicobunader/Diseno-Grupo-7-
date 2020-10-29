@@ -30,21 +30,37 @@
 
             <form class="" {{#if usuario}} action="//{{usuario.id}}" method="post" {{else}} action="/menu_logueado" method="post" {{/if}} style="">
           
+          <h2>Datos de la empresa</h2>
+          
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>Nombre Ficticio</label>
+                <input type="text" required autocomplete="off" id="NombreFicticio" name= "NombreFicticio" placeholder="Nombre Ficticio" {{#if empresa}}value="{{empresa.NombreFicticio}}" {{/if}}>
+            </div>
+
+            <div class="field-wrap">
+              <label>Razón social</label>
+               <input type="email" required autocomplete="off" id="RazonSocial" name="RazonSocial" placeholder="Razon social" {{#if empresa}}value="{{empresa.RazonSocial}}" {{/if}}>
+            </div>
+          </div>
+
+          
+          
           <h2>Datos del usuario</h2>
           
             <div class="field-wrap">
               <label>Nombre de usuario</label>
-                <input type="text" required autocomplete="off" id="NombreDeUsuario" placeholder="Nombre de usuario">
+                <input type="text" required autocomplete="off" id="NombreDeUsuario" name="usuario" placeholder="Nombre de usuario">
             </div>
 
             <div class="field-wrap">
               <label>Email</label>
-               <input type="email" required autocomplete="off" id="Email" placeholder="Email">
+               <input type="email" required autocomplete="off" id="Email" name= "mail" placeholder="Email">
             </div>
 
             <div class="field-wrap">
               <label>Contraseña</label>
-                <input type="password" required autocomplete="off" id="NombreFicticio" placeholder="Contraseña">
+                <input type="password" required autocomplete="off" id="password" name= "password" placeholder="Contraseña">
             </div>
 
             <h2>Dirección</h2>
@@ -52,42 +68,42 @@
           <div class="top-row">
             <div class="field-wrap">
               <label>Calle</label>
-                <input type="text" required autocomplete="off" placeholder="Calle">
+                <input type="text" required autocomplete="off" id="calle" name= "calle" placeholder="Calle">
             </div>
         
             <div class="field-wrap">
               <label>Altura</label>
-                <input type="text" required autocomplete="off" placeholder="Altura">
+                <input type="text" required autocomplete="off" id="altura" name= "altura" placeholder="Altura">
             </div>
           </div>
 
           <div class="top-row">
             <div class="field-wrap">
               <label>Piso</label>
-               <input type="text" required autocomplete="off" placeholder="Piso">
+               <input type="text" required autocomplete="off" id="piso" name= "piso" placeholder="Piso">
             </div>
 
             <div class="field-wrap">
               <label>Departamento</label>
-                <input type="text" required autocomplete="off" placeholder="Departamento">
+                <input type="text" required autocomplete="off" id="departamento" name= "departamento" placeholder="Departamento">
               </div>
             </div>
 
             <div class="top-row">
               <div class="field-wrap">
                 <label>País</label>
-                  <input type="text" required autocomplete="off" placeholder="País">
+                  <input type="text" required autocomplete="off" id="pais" name="pais" placeholder="País">
               </div>
           
               <div class="field-wrap">
                 <label>Provincia</label>
-                  <input type="text" required autocomplete="off" placeholder="Provincia">
+                  <input type="text" required autocomplete="off" id="provincia" name= "provincia" placeholder="Provincia">
               </div>
             </div>
         
             <div class="field-wrap">
               <label>Ciudad</label>
-                <input type="text" required autocomplete="off" placeholder="Ciudad">
+                <input type="text" required autocomplete="off" id="ciudad" name= "ciudad" placeholder="Ciudad">
               </div>
 
           <button type="submit" id="startbutton" class="button button-back" onclick="verify()" onclick="window.location.href='./menu_logueado'">Guardar cambios</button>
