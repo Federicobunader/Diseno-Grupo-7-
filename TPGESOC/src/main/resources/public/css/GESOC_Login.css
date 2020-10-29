@@ -51,11 +51,13 @@ a:hover {
   color: #a0b3b0;
   font-size: 20px;
   float: left;
-  width: 50%;
+  width: 33%;
+  height: 33%;
   text-align: center;
   cursor: pointer;
   -webkit-transition: .5s ease;
   transition: .5s ease;
+  
 }
 .tab-group li a:hover {
   background: rgba(199, 124, 26, 0.808);

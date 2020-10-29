@@ -15,7 +15,7 @@ public class DireccionPostalController {
 
     public void asignarAtributosA(DireccionPostal direccionPostal, Request request) {
         if (request.queryParams("altura") != null) {
-            int altura = new Integer(request.queryParams("altura"));
+            int altura = Integer.valueOf(request.queryParams("altura"));
             direccionPostal.setAltura(altura);
         }
 
@@ -24,7 +24,7 @@ public class DireccionPostalController {
         }
 
         if (request.queryParams("piso") != null) {
-            int piso = new Integer(request.queryParams("piso"));
+            int piso = Integer.valueOf(request.queryParams("piso"));
             direccionPostal.setPiso(piso);
         }
 

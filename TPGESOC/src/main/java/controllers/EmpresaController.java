@@ -2,6 +2,7 @@ package controllers;
 
 import Negocio.Entidad.Empresa.Empresa;
 import Negocio.Usuario.DireccionPostal;
+import Negocio.Usuario.Usuario;
 import repositories.Repositorio;
 import repositories.factories.FactoryRepositorio;
 import spark.Request;
@@ -25,12 +26,12 @@ public class EmpresaController {
         }
 
         if (request.queryParams("CUIT") != null) {
-            int cuit = new Integer(request.queryParams("CUIT"));
+            int cuit = Integer.valueOf(request.queryParams("CUIT"));
             unaEmpresa.setCUIT(cuit);
         }
 
         if (request.queryParams("CodigoDeInscripcion") != null) {
-            int codigoIGJ = new Integer(request.queryParams("CodigoDeInscripcion"));
+            int codigoIGJ = Integer.valueOf(request.queryParams("CodigoDeInscripcion"));
             unaEmpresa.setCodigoDeInscripcion(codigoIGJ);
         }
 
@@ -39,7 +40,7 @@ public class EmpresaController {
         }
 
         if (request.queryParams("cantidadDePersonal") != null) {
-            int cantidad = new Integer(request.queryParams("cantidadDePersonal"));
+            int cantidad = Integer.valueOf(request.queryParams("cantidadDePersonal"));
             unaEmpresa.setCantidadDePersonal(cantidad);
         }
 
@@ -61,7 +62,7 @@ public class EmpresaController {
         }
 
         if (request.queryParams("altura") != null) {
-            int altura = new Integer(request.queryParams("altura"));
+            int altura = Integer.valueOf(request.queryParams("altura"));
             unaEmpresa.getUsuario().getDireccionPostal().setAltura(altura);
         }
 
@@ -70,7 +71,7 @@ public class EmpresaController {
         }
 
         if (request.queryParams("piso") != null) {
-            int piso = new Integer(request.queryParams("piso"));
+            int piso = Integer.valueOf(request.queryParams("piso"));
             unaEmpresa.getUsuario().getDireccionPostal().setPiso(piso);
         }
 
@@ -93,8 +94,28 @@ public class EmpresaController {
     public Response guardar(Request request, Response response){
 
         Empresa unaEmpresa = new Empresa();
+        Usuario unUsuario = new Usuario();
+        DireccionPostal direccionPostal = new DireccionPostal();
+
+        DireccionPostalController direccionPostalController = new DireccionPostalController();
+        direccionPostalController.asignarAtributosA(direccionPostal,request);
+
+        Repositorio<DireccionPostal> repoDireccion = FactoryRepositorio.get(DireccionPostal.class);
+        repoDireccion.agregar(direccionPostal);
+
+        UsuarioController usuarioController = new UsuarioController();
+        usuarioController.asignarAtributosA(unUsuario,request);
+
+        Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
+        repoUsuario.agregar(unUsuario);
+
+        unUsuario.setDireccionPostal(direccionPostal);
+        unaEmpresa.setUsuario(unUsuario);
+
         asignarAtributosA(unaEmpresa,request);
+        System.out.println("RAZON SOCIAL : "+ unaEmpresa.getRazonSocial());
         this.repo.agregar(unaEmpresa);
+
 
         response.redirect("/menu_logueado");
         return response;

@@ -12,13 +12,13 @@ public class EntidadJuridica extends Entidad {
 	private ArrayList<EntidadBase> entidadBases = new ArrayList<EntidadBase>();
 
 	@Column
-	private String RazonSocial;
+	protected String RazonSocial;
 	@Column
-	private String NombreFicticio;
+	protected String NombreFicticio;
 	@Column
-	private int CUIT;
+	protected int CUIT;
 	@Column
-	private int CodigoDeInscripcion;
+	protected int CodigoDeInscripcion;
 
 	public EntidadJuridica(){
 	}
@@ -43,6 +43,23 @@ public class EntidadJuridica extends Entidad {
 		CodigoDeInscripcion = codigoDeInscripcion;
 	}
 
+	public ArrayList<EntidadBase> getEntidadBases() {
+		return entidadBases;
+	}
 
+	public String getRazonSocial() {
+		return RazonSocial;
+	}
 
+	public String getNombreFicticio() {
+		return NombreFicticio;
+	}
+
+	public int getCUIT() {
+		return CUIT;
+	}
+
+	public int getCodigoDeInscripcion() {
+		return CodigoDeInscripcion;
+	}
 }//end EntidadJuridica

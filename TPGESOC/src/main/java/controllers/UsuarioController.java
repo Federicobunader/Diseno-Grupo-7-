@@ -15,6 +15,10 @@ public class UsuarioController {
 
     private Repositorio<Usuario> repo;
 
+    public Repositorio<Usuario> getRepo() {
+        return repo;
+    }
+
     public UsuarioController() {
         this.repo = FactoryRepositorio.get(Usuario.class);
     }
@@ -26,12 +30,22 @@ public class UsuarioController {
 
     public ModelAndView editar_usuario(Request request, Response response){
         Map<String, Object> parametros = new HashMap<>();
-        return new ModelAndView(parametros,"GESOC_Menu_Logueado.hbs");
+        return new ModelAndView(parametros,"GESOC_Cambiar_Usuario.hbs");
     }
 
-    private void asignarAtributosA(Usuario unUsuario, Request request, Empresa unaEmpresa) {
+    public ModelAndView asociar_egreso_o_presepuesto_a_categoria(Request request, Response response){
+        Map<String, Object> parametros = new HashMap<>();
+        return new ModelAndView(parametros,"GESOC_Asociar_A_Categoria.hbs");
+    }
+
+    public ModelAndView listado_por_categoria(Request request, Response response){
+        Map<String, Object> parametros = new HashMap<>();
+        return new ModelAndView(parametros,"GESOC_ListadoXCategoria.hbs");
+    }
+
+    public void asignarAtributosA(Usuario unUsuario, Request request) {
         if (request.queryParams("Email") != null) {
-            unaEmpresa.getUsuario().setMail(request.queryParams("Email"));
+            unUsuario.setMail(request.queryParams("Email"));
         }
 
         if (request.queryParams("Usuario") != null) {

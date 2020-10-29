@@ -11,14 +11,14 @@ import javax.persistence.*;
 public class EntidadBase extends Entidad {
 
 	@Column
-	private String Nombre;
+	private String NombreFicticio;
 
 	@Column
 	private String Descripcion;
 
 
-	public EntidadBase(String nombre, String descripcion) {
-		Nombre = nombre;
+	public EntidadBase(String nombreFicticio, String descripcion) {
+		NombreFicticio = nombreFicticio;
 		Descripcion = descripcion;
 	}
 
@@ -26,7 +26,7 @@ public class EntidadBase extends Entidad {
 	}
 
 	public void setNombre(String nombre) {
-		Nombre = nombre;
+		NombreFicticio = nombre;
 	}
 
 	public void setDescripcion(String descripcion) {

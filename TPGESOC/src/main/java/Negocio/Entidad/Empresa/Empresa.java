@@ -10,7 +10,8 @@ import Negocio.Entidad.Empresa.TipoDeEmpresas.TiposDeEmpresas.TipoDeEmpresa;
 
 import javax.persistence.*;
 
-
+@Entity
+@Table(name="empresa")
 public class Empresa extends EntidadJuridica {
 
 	@Column
@@ -39,6 +40,7 @@ public class Empresa extends EntidadJuridica {
 		this.seleccionarSector();
 		this.actualizarTipoDeEmpresa();
 }
+
 
 	public Empresa() {
 	}

@@ -39,7 +39,13 @@ public class Router {
 
         Spark.get("/menu_logueado", usuarioController::menu_logueado, Router.engine);
 
-        Spark.post("/guardar",empresaController ::guardar);
+        Spark.post("/menu_logueado",empresaController ::guardar);
+
+        Spark.get("/cambiar_usuario",usuarioController :: editar_usuario,Router.engine);
+
+        Spark.get("/asociar_egreso_o_presepuesto_a_categoria",usuarioController :: asociar_egreso_o_presepuesto_a_categoria,Router.engine);
+
+        Spark.get("/listado_por_categoria",usuarioController :: listado_por_categoria,Router.engine);
 
 
         //Spark.get("/GESOC_Menu",empresaController::guardar,Router.engine);

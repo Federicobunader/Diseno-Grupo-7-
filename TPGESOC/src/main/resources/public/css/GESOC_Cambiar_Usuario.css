@@ -24,7 +24,7 @@ a:hover {
 }
 
 .form {
-  background: #9c313f;
+  background: #cccccc;
   padding: 50px;
   padding-top: 30px;
   max-width: 600px;
@@ -51,13 +51,11 @@ a:hover {
   color: #a0b3b0;
   font-size: 20px;
   float: left;
-  width: 33%;
-  height: 33%;
+  width: 50%;
   text-align: center;
   cursor: pointer;
   -webkit-transition: .5s ease;
   transition: .5s ease;
-  
 }
 .tab-group li a:hover {
   background: rgba(199, 124, 26, 0.808);
@@ -72,49 +70,28 @@ a:hover {
   display: none;
 }
 
+
 h1 {
   text-align: center;
-  color: #ffffff;
-  font-weight: 300;
+  color: #000;
+  font-weight: 500;
   margin: 0 0 25px;
 }
 
 h2 {
+  font-size: 30px;
   text-align: left;
-  color: #ffffff;
-  font-weight: 300;
-  margin: 0 0 25px;
+  color: #000;
+  font-weight: 900;
+  /* margin: 0 0 25px; */
 }
 
 label {
-  position: absolute;
-  -webkit-transform: translateY(6px);
-          transform: translateY(6px);
-  left: 13px;
-  color: rgba(255, 255, 255, 0.5);
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-  -webkit-backface-visibility: hidden;
-  pointer-events: none;
-  font-size: 22px;
-}
-label .req {
-  margin: 2px;
-  color: #da8617;
-}
-
-label.active {
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-16px);
-  left: 2px;
-  font-size: 14px;
-}
-label.active .req {
-  opacity: 0;
-}
-
-label.highlight {
-  color: #ffffff;
+  position: relative;
+  color: #000(255, 255, 255, 0.5);
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 input, textarea {
@@ -125,25 +102,28 @@ input, textarea {
   padding: 5px 10px;
   background: none;
   background-image: none;
-  border: 1px solid #a0b3b0;
-  color: #ffffff;
-  border-radius: 0;
-  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
-  transition: border-color .25s ease, box-shadow .25s ease;
+  border: 1px solid #434b4a;
+  border-bottom: 2px solid #434b4a;
+  color: #000;
+  margin-top: 5px;
 }
+
 input:focus, textarea:focus {
   outline: 0;
   border-color: #da8617;
 }
 
 textarea {
-  border: 2px solid #a0b3b0;
+  border: 5px solid #000;
   resize: vertical;
+  color: #000;
 }
 
 .field-wrap {
+  font-size: 15px;
   position: relative;
   margin-bottom: 25px;
+  color: #000;
 }
 
 .top-row:after {
@@ -152,12 +132,28 @@ textarea {
   clear: both;
 }
 .top-row > div {
+  color: #000;
   float: left;
   width: 48%;
   margin-right: 4%;
 }
 .top-row > div:last-child {
+  color: #000;
   margin: 0;
+}
+
+.input-datos{
+  font-size:16px;
+  height: 25px;
+  border:0px;
+  width:100%;
+  padding: 5px;
+  background-color: rgb(72, 73, 74);
+  background-color: white;
+  border-bottom:4px solid rgb(72, 73, 74);
+  position: relative;
+  margin-bottom: 25px;
+  color: #000;
 }
 
 .button {
@@ -198,7 +194,7 @@ textarea {
 }
 
 .button-back{
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   display: block;
   font-size: large;
   width: 100%;
