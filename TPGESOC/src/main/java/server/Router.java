@@ -51,6 +51,8 @@ public class Router {
 
         Spark.get("/listado_por_categoria",usuarioController :: listado_por_categoria,Router.engine);
 
+        Spark.post("/loguearse", loginController::login);
+
 
         //Spark.get("/GESOC_Menu",empresaController::guardar,Router.engine);
        // Spark.get("/saludo/:nombre/:apellido",((request, response) -> "HOLA " + request.params("nombre") + request.params("apellido") ));

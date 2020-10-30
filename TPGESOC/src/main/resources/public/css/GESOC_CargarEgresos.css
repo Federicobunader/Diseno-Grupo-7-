@@ -8,7 +8,7 @@ html {
 
 body {
   background: #85c3e5;
-  background-image: url(https://www.esan.edu.pe/conexion/actualidad/2019/02/26/765x430_organizar_entregables.jpg);
+  background-image: url(https://www.efekto.tv/wp-content/uploads/2019/11/0c9cfd65d5c7b10c68fe5a91f5c8fd1b-768x423.jpg);
   /*background-repeat: no-repeat;*/
   font-family: 'Titillium Web', sans-serif;
 }
@@ -24,7 +24,7 @@ a:hover {
 }
 
 .form {
-  background: #cccccc;
+  background: #ebb609;
   padding: 50px;
   padding-top: 30px;
   max-width: 600px;
@@ -48,21 +48,23 @@ a:hover {
   text-decoration: none;
   padding: 15px;
   background: rgba(160, 179, 176, 0.25);
-  color: #a0b3b0;
+  color: #222;
   font-size: 20px;
   float: left;
-  width: 50%;
+  width: 100%;
+  height: 33%;
   text-align: center;
   cursor: pointer;
   -webkit-transition: .5s ease;
   transition: .5s ease;
+  
 }
 .tab-group li a:hover {
-  background: rgba(199, 124, 26, 0.808);
+  background: #3cb4b5;
   color: #ffffff;
 }
 .tab-group .active a {
-  background: #da8617;
+  background: #048c94;
   color: #ffffff;
 }
 
@@ -70,28 +72,49 @@ a:hover {
   display: none;
 }
 
-
 h1 {
   text-align: center;
-  color: #000;
-  font-weight: 500;
+  color: #000000;
+  font-weight: 300;
   margin: 0 0 25px;
 }
 
 h2 {
-  font-size: 30px;
   text-align: left;
-  color: #000;
-  font-weight: 900;
-  /* margin: 0 0 25px; */
+  color: #000000;
+  font-weight: 300;
+  margin: 0 0 25px;
 }
 
 label {
-  position: relative;
-  color: #000(255, 255, 255, 0.5);
-  font-size: 25px;
-  font-weight: 600;
-  margin-bottom: 10px;
+  position: absolute;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+  left: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  font-size: 22px;
+}
+label .req {
+  margin: 2px;
+  color: #da8617;
+}
+
+label.active {
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-16px);
+  left: 2px;
+  font-size: 14px;
+}
+label.active .req {
+  opacity: 0;
+}
+
+label.highlight {
+  color: #ffffff;
 }
 
 input, textarea {
@@ -102,28 +125,27 @@ input, textarea {
   padding: 5px 10px;
   background: none;
   background-image: none;
-  border: 1px solid #434b4a;
-  border-bottom: 2px solid #434b4a;
-  color: #000;
-  margin-top: 5px;
+  border: 1px solid #a0b3b0;
+  color: #ffffff;
+  border-radius: 0;
+  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
+  transition: border-color .25s ease, box-shadow .25s ease;
 }
-
 input:focus, textarea:focus {
   outline: 0;
   border-color: #da8617;
 }
 
 textarea {
-  border: 5px solid #000;
+  border: 2px solid #000000;
   resize: vertical;
-  color: #000;
 }
 
 .field-wrap {
-  font-size: 15px;
   position: relative;
   margin-bottom: 25px;
-  color: #000;
+  color: #222;
+  border-color: #000000;
 }
 
 .top-row:after {
@@ -132,28 +154,13 @@ textarea {
   clear: both;
 }
 .top-row > div {
-  color: #000;
   float: left;
   width: 48%;
   margin-right: 4%;
 }
 .top-row > div:last-child {
-  color: #000;
   margin: 0;
-}
-
-.input-datos{
-  font-size:16px;
-  height: 25px;
-  border:0px;
-  width:100%;
-  padding: 5px;
-  background-color: rgb(72, 73, 74);
-  background-color: white;
-  border-bottom:4px solid rgb(72, 73, 74);
-  position: relative;
-  margin-bottom: 25px;
-  color: #000;
+  color: #000000;
 }
 
 .button {
@@ -165,7 +172,7 @@ textarea {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .1em;
-  background: #da8617;
+  background: #5a4663;
   color: #ffffff;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -188,13 +195,13 @@ textarea {
 .open .dropdown-toggle.button-block {
     border-color: #da8617;
     border-width: thick;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     background-color: rgb(201, 119, 11);
     cursor: pointer;
 }
 
 .button-back{
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: block;
   font-size: large;
   width: 100%;
@@ -208,7 +215,7 @@ textarea {
 .open .dropdown-toggle.button-back {
     border-color: #da8617;
     border-width: thick;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     background-color: rgb(201, 119, 11);
     cursor: pointer;
 }
@@ -238,18 +245,18 @@ textarea {
   width: 0;
   height: 0;
   border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
+  border-color: rgb(0, 0, 0) transparent transparent transparent;
 }
 
 /* Point the arrow upwards when the select box is open (active): */
 .select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
+  border-color: transparent transparent rgb(0, 0, 0) transparent;
   top: 7px;
 }
 
 /* style the items (options), including the selected item: */
 .select-items div,.select-selected {
-  color: #ffffff;
+  color: #000000;
   padding: 8px 16px;
   border: 1px solid transparent;
   border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
@@ -302,7 +309,7 @@ textarea {
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #fff;
+  background-color: rgb(8, 8, 8);
 }
 
 .navbar-default .navbar-toggle:hover,
@@ -315,7 +322,7 @@ textarea {
   font-family: 'Titillium Web', sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 
 .navbar-default .nav li a:hover,
@@ -326,13 +333,13 @@ textarea {
 
 .navbar-default .navbar-nav>.active>a {
   border-radius: 0;
-  color: #fff;
+  color: rgb(0, 0, 0);
   background-color: #1ee2e7;
 }
 
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
-  color: #fff;
+  color: rgb(3, 3, 3);
   background-color: #17d0d5;
 }
 

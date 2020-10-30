@@ -35,27 +35,31 @@ public class EntidadBaseController {
 
         public Response guardar(Request request, Response response){
 
-            EntidadBase entidadBase = new EntidadBase();
-            Usuario unUsuario = new Usuario();
-            DireccionPostal direccionPostal = new DireccionPostal();
-
-            DireccionPostalController direccionPostalController = new DireccionPostalController();
-            direccionPostalController.asignarAtributosA(direccionPostal,request);
-
-            Repositorio<DireccionPostal> repoDireccion = FactoryRepositorio.get(DireccionPostal.class);
-            repoDireccion.agregar(direccionPostal);
-
             UsuarioController usuarioController = new UsuarioController();
-            usuarioController.asignarAtributosA(unUsuario,request);
+            Usuario unUsuario = new Usuario();
 
-            Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
-            repoUsuario.agregar(unUsuario);
+            if(usuarioController.elUsuarioSePuedeRegistrarCorrectamente(unUsuario,request)){
+                EntidadBase entidadBase = new EntidadBase();
+                DireccionPostal direccionPostal = new DireccionPostal();
 
-            unUsuario.setDireccionPostal(direccionPostal);
-            entidadBase.setUsuario(unUsuario);
+                DireccionPostalController direccionPostalController = new DireccionPostalController();
+                direccionPostalController.asignarAtributosA(direccionPostal,request);
 
-            asignarAtributosA(entidadBase,request);
-            this.repo.agregar(entidadBase);
+                Repositorio<DireccionPostal> repoDireccion = FactoryRepositorio.get(DireccionPostal.class);
+                repoDireccion.agregar(direccionPostal);
+
+
+                usuarioController.asignarAtributosA(unUsuario,request);
+
+                Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
+                repoUsuario.agregar(unUsuario);
+
+                unUsuario.setDireccionPostal(direccionPostal);
+                entidadBase.setUsuario(unUsuario);
+
+                asignarAtributosA(entidadBase,request);
+                this.repo.agregar(entidadBase);
+            }
 
 
             response.redirect("/menu_logueado");

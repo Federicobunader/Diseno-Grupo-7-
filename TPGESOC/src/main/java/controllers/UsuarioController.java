@@ -1,9 +1,12 @@
 package controllers;
 
 import Negocio.Entidad.Empresa.Empresa;
+import Negocio.Usuario.GestorDePasswords;
 import Negocio.Usuario.Usuario;
 import repositories.Repositorio;
+import repositories.RepositorioDeUsuarios;
 import repositories.factories.FactoryRepositorio;
+import repositories.factories.FactoryRepositorioUsuarios;
 import spark.ModelAndView;
 import spark.Request;
 import spark.Response;
@@ -44,19 +47,50 @@ public class UsuarioController {
     }
 
     public void asignarAtributosA(Usuario unUsuario, Request request) {
-        if (request.queryParams("mail") != null) {
+        String passwordFinal = "";
+        GestorDePasswords gestorDePasswords = GestorDePasswords.GetInstance();
+        if(this.elUsuarioSePuedeRegistrarCorrectamente(unUsuario,request)) {
+            String passwordIngresada = request.queryParams("password");
+            passwordFinal = gestorDePasswords.verificarPassword(passwordIngresada, request.queryParams("usuario"));
+
+            unUsuario.setUsuario(request.queryParams("usuario"));
+            unUsuario.setPassword(gestorDePasswords.hashearPassword(passwordFinal));
             unUsuario.setMail(request.queryParams("mail"));
         }
+        else{
 
-        if (request.queryParams("usuario") != null) {
-            unUsuario.setUsuario(request.queryParams("usuario"));
         }
 
-        if (request.queryParams("password") != null) {
-            //String passwordIngresada = request.queryParams("Password");
-
-            unUsuario.setPassword(request.queryParams("password"));
-        }
     }
 
+    public boolean elUsuarioSePuedeRegistrarCorrectamente (Usuario unUsuario, Request request) {
+        GestorDePasswords gestorDePasswords = GestorDePasswords.GetInstance();
+        RepositorioDeUsuarios repoUsuarios = FactoryRepositorioUsuarios.get();
+        String passwordFinal = "";
+
+        if (request.queryParams("usuario") != null) {
+            String nombreUsuario = request.queryParams("usuario");
+
+            if (request.queryParams("password") != null) {
+                String passwordIngresada = request.queryParams("password");
+
+                passwordFinal = gestorDePasswords.verificarPassword(passwordIngresada, nombreUsuario);
+
+                if (repoUsuarios.existe(nombreUsuario, passwordFinal)) {
+                    return false;
+                }
+
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+
+        if (request.queryParams("mail") == null) {
+            return false;
+        }
+
+        return true;
+    }
 }

@@ -355,21 +355,21 @@
         <div class="tab-content">
         <div id="login">   
           <h1>¡Te echamos de menos!</h1>
-          
-          <form action="/" method="post">
-          
+
+            <form class="" action="/loguearse" method="post" style="">
+
             <div class="field-wrap">
             <label>
-              Email <span class="req">*</span>
+              Nombre de Usuario <span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off"/>
+                <input type="text"required autocomplete="off" id="NombreUsuario" name="usuario" class="input-datos"/>
           </div>
           
           <div class="field-wrap">
             <label>
               Contraseña<span class="req">*</span>
             </label>
-            <input type="password"required autocomplete="off"/>
+              <input type="password"required autocomplete="off" id="Password" name="password" class="input-datos"/>
           </div>
           
           <p class="forgot"><a href="#">¿Olvidaste tu constraseña?</a></p>

@@ -26,12 +26,12 @@ public class EmpresaController {
         }
 
         if (request.queryParams("CUIT") != null) {
-            int cuit = Integer.valueOf(request.queryParams("CUIT"));
+            long cuit = Long.valueOf(request.queryParams("CUIT"));
             unaEmpresa.setCUIT(cuit);
         }
 
         if (request.queryParams("CodigoDeInscripcion") != null) {
-            int codigoIGJ = Integer.valueOf(request.queryParams("CodigoDeInscripcion"));
+            long codigoIGJ = Long.valueOf(request.queryParams("CodigoDeInscripcion"));
             unaEmpresa.setCodigoDeInscripcion(codigoIGJ);
         }
 
@@ -52,27 +52,32 @@ public class EmpresaController {
 
     public Response guardar(Request request, Response response){
 
-        Empresa unaEmpresa = new Empresa();
-        Usuario unUsuario = new Usuario();
-        DireccionPostal direccionPostal = new DireccionPostal();
-
-        DireccionPostalController direccionPostalController = new DireccionPostalController();
-        direccionPostalController.asignarAtributosA(direccionPostal,request);
-
-        Repositorio<DireccionPostal> repoDireccion = FactoryRepositorio.get(DireccionPostal.class);
-        repoDireccion.agregar(direccionPostal);
-
         UsuarioController usuarioController = new UsuarioController();
-        usuarioController.asignarAtributosA(unUsuario,request);
+        Usuario unUsuario = new Usuario();
 
-        Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
-        repoUsuario.agregar(unUsuario);
+        if(usuarioController.elUsuarioSePuedeRegistrarCorrectamente(unUsuario,request)){
+            Empresa unaEmpresa = new Empresa();
+            DireccionPostal direccionPostal = new DireccionPostal();
 
-        unUsuario.setDireccionPostal(direccionPostal);
-        unaEmpresa.setUsuario(unUsuario);
+            DireccionPostalController direccionPostalController = new DireccionPostalController();
+            direccionPostalController.asignarAtributosA(direccionPostal,request);
 
-        asignarAtributosA(unaEmpresa,request);
-        this.repo.agregar(unaEmpresa);
+            Repositorio<DireccionPostal> repoDireccion = FactoryRepositorio.get(DireccionPostal.class);
+            repoDireccion.agregar(direccionPostal);
+
+
+            usuarioController.asignarAtributosA(unUsuario,request);
+
+            Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
+            repoUsuario.agregar(unUsuario);
+
+            unUsuario.setDireccionPostal(direccionPostal);
+            unaEmpresa.setUsuario(unUsuario);
+
+            asignarAtributosA(unaEmpresa,request);
+            this.repo.agregar(unaEmpresa);
+        }
+
 
 
         response.redirect("/menu_logueado");

@@ -40,6 +40,10 @@ public class Usuario extends EntidadPersistente {
     @Column
     private int intentos;
 
+    public int getIntentos() {
+        return intentos;
+    }
+
     public void setDireccionPostal(DireccionPostal direccionPostal) {
         this.direccionPostal = direccionPostal;
     }

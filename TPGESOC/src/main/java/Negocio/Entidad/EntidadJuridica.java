@@ -16,9 +16,9 @@ public class EntidadJuridica extends Entidad {
 	@Column
 	protected String NombreFicticio;
 	@Column
-	protected int CUIT;
+	protected long CUIT;
 	@Column
-	protected int CodigoDeInscripcion;
+	protected long CodigoDeInscripcion;
 
 	public EntidadJuridica(){
 	}
@@ -35,11 +35,11 @@ public class EntidadJuridica extends Entidad {
 		NombreFicticio = nombreFicticio;
 	}
 
-	public void setCUIT(int CUIT) {
+	public void setCUIT(long CUIT) {
 		this.CUIT = CUIT;
 	}
 
-	public void setCodigoDeInscripcion(int codigoDeInscripcion) {
+	public void setCodigoDeInscripcion(long codigoDeInscripcion) {
 		CodigoDeInscripcion = codigoDeInscripcion;
 	}
 
@@ -55,11 +55,11 @@ public class EntidadJuridica extends Entidad {
 		return NombreFicticio;
 	}
 
-	public int getCUIT() {
+	public long getCUIT() {
 		return CUIT;
 	}
 
-	public int getCodigoDeInscripcion() {
+	public long getCodigoDeInscripcion() {
 		return CodigoDeInscripcion;
 	}
 }//end EntidadJuridica

@@ -1,5 +1,7 @@
 package controllers;
 
+import Negocio.Usuario.GestorDePasswords;
+import Negocio.Usuario.GestorDeUsuarios;
 import Negocio.Usuario.Usuario;
 import repositories.RepositorioDeUsuarios;
 import repositories.factories.FactoryRepositorioUsuarios;
@@ -25,29 +27,34 @@ public class LoginController {
     public Response login(Request request, Response response){
         try{
             RepositorioDeUsuarios repoUsuarios = FactoryRepositorioUsuarios.get();
+            GestorDePasswords gestorDePasswords = GestorDePasswords.GetInstance();
+            GestorDeUsuarios gestorDeUsuarios = GestorDeUsuarios.GetInstance();
 
-            String nombreDeUsuario = request.queryParams("nombreDeUsuario");
-            String contrasenia     = request.queryParams("contrasenia");
+            String nombreDeUsuario = request.queryParams("usuario");
+            String passwordHasheada = gestorDePasswords.hashearPassword(request.queryParams("password"));
 
-            if(repoUsuarios.existe(nombreDeUsuario, contrasenia)){
-                Usuario usuario = repoUsuarios.buscarUsuario(nombreDeUsuario, contrasenia);
+            if(repoUsuarios.existe(nombreDeUsuario, passwordHasheada)){
+                gestorDeUsuarios.loguearse(nombreDeUsuario, passwordHasheada, repoUsuarios);
+
+                Usuario usuario = repoUsuarios.buscarUsuario(nombreDeUsuario, passwordHasheada);
 
                 request.session(true);
                 request.session().attribute("id", usuario.getId());
 
-                response.redirect("/GESOC_Login");
+                response.redirect("/menu_logueado");
             }
             else{
-                response.redirect("/");
+                response.redirect("/menu_login");
             }
         }
         catch (Exception e){
             //Funcionalidad disponible solo con persistencia en Base de Datos
-            response.redirect("/usuarios");
+            response.redirect("/menu_login");
         }
         finally {
             return response;
         }
+
     }
 
     public Response logout(Request request, Response response){

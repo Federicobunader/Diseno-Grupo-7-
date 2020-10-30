@@ -6,6 +6,7 @@ import Negocio.Compras.GestorDeEgresos;
 import Negocio.Compras.GestorDeIngresos;
 import Negocio.Compras.Vinculacion.*;
 import Negocio.Main;
+import repositories.RepositorioDeUsuarios;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
@@ -42,7 +43,7 @@ public class GestorDeUsuarios {
                    // this.registrarUsuario();
                     break;
                 case 2:
-                    this.loguearse();
+                  //  this.loguearse();
                     break;
                 case 3:
                     Usuario unUsuario = this.elegirUsuario();
@@ -162,34 +163,29 @@ public class GestorDeUsuarios {
         return null;
     }
 
-    public void loguearse() {
+    public void loguearse(String nombreUsuario, String password_hasheada, RepositorioDeUsuarios repoUsuarios) {
         int contador = 0;
 
-        Usuario unUsuario = this.elegirUsuario();
+        if( ! repoUsuarios.existe(nombreUsuario,password_hasheada) && contador < 10) {
 
-        String unaPassword = interfazUsuarios.pedirString("Ingrese la password:");
-
-        unaPassword = gestorDePasswords.hashearPassword(unaPassword);
-
-        while (!(unUsuario.laPasswordCoincide(unaPassword)) && contador < 10) {
+            Usuario usuario = repoUsuarios.buscarUsuario(nombreUsuario,password_hasheada);
             interfazUsuarios.mostrarError("Password invalida.");
             interfazUsuarios.mostrarAdvertencia("Intentos Restantes: " + (10 - contador));
             contador += 1;
             interfazUsuarios.mostrarAdvertencia("Por favor espere " + contador * 10 + " segundos.");
+            repoUsuarios.buscar(usuario.getId());
+            usuario.setIntentos(contador);
+            repoUsuarios.modificar(usuario);
+
             try {
                 TimeUnit.SECONDS.sleep(contador * 10);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            unaPassword = interfazUsuarios.pedirString("Ingrese otra password:");
         }
 
         if (contador == 10) {
             interfazUsuarios.mostrarAdvertencia("Has gastado todos los intentos. Vuelve a intentarlo mas tarde.");
-        } else {
-            interfazUsuarios.mostrarInformacion("SE HA LOGUEADO CORRECTAMENTE");
-            interfazUsuarios.mostrarInformacion("Usuario: " + unUsuario.getUsuario());
-            interfazUsuarios.mostrarInformacion("Password: " + unUsuario.getPassword());
         }
     }
 

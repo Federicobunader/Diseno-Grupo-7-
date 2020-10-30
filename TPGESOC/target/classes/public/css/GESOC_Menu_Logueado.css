@@ -134,7 +134,7 @@ fieldset[disabled] .btn-primary.active {
 .open .dropdown-toggle.btn-xl {
     border-color: #da8617;
     border-width: thick;
-    color: rgb(255, 255, 255);
+    color: #000;
     background-color: #fff;
 }
 
@@ -161,7 +161,10 @@ fieldset[disabled] .btn-xl:active,
 fieldset[disabled] .btn-xl.active {
     border-color: #1ee2e7;
     background-color: #1ee2e7;
+    color: #000;
 }
+
+a.page-scroll:hover {color:#fff !important}
 
 .btn-xl .badge {
     color: #fed136;
