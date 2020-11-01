@@ -29,20 +29,13 @@
           <br><br><h1>Llene los datos correspondientes al egreso que desea cargar</h1><br><br>
 
           <form class="" action="/cargar_egreso" method="post" style="">
-          
-            <div class="field-wrap">
-              <label>
-                Valor total<span class="req">*</span>
-              </label>
-                <input type="text" required autocomplete="off" id="RazonSocial" name="RazonSocial">
-            </div>
- 
+
             <div class="top-row">
                 <div class="field-wrap">
                 <label>
                     Producto<span class="req">*</span>
                 </label>
-                    <input type="text" required autocomplete="off" id="Código IGJ" name="producto"  class="input-datos" {{#if empresa}}value="{{empresa.CodigoDeInscripcion}}" {{/if}}>
+                    <input type="text" required autocomplete="off" id="Código IGJ" name="producto" class="input-datos" {{#if empresa}}value="{{empresa.CodigoDeInscripcion}}" {{/if}}>
                 </div>
                 
                 <div class="field-wrap">
@@ -53,12 +46,20 @@
                 </div>
             </div>
 
+              <div class="field-wrap">
+                  <label>
+                      Precio<span class="req">*</span>
+                  </label>
+                  <input type="text"required autocomplete="off" id="CUIT" name="precio" class="input-datos"/>
+              </div>
+
+
             <div class="field-wrap">
-                <label>
-                    Nombre Proveedor<span class="req">*</span>
-                </label>
-                <input type="text"required autocomplete="off" id="CUIT" name="nombre" class="input-datos"/>
-            </div>
+              <label>
+                  Nombre Proveedor<span class="req">*</span>
+              </label>
+              <input type="text"required autocomplete="off" id="CUIT" name="nombre" class="input-datos"/>
+          </div>
 
               <div class="field-wrap">
                   <label>
@@ -83,7 +84,7 @@
            
             <div class="field-wrap">
               <label>
-                Fecha <span class="req">*</span>
+                <span class="req"></span>
               </label>
                 <input type="date"required autocomplete="off" id="CUIT" name="fechaDeOperacion" class="input-datos"/>
             </div>

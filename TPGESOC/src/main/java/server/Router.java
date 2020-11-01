@@ -39,9 +39,9 @@ public class Router {
 
         Spark.get("/menu_logueado", usuarioController::menu_logueado, Router.engine);
 
-        Spark.post("/registrar_empresa",empresaController ::guardar);
+        Spark.post("/registrar_empresa",empresaController ::guardar,Router.engine);
 
-        Spark.post("/registrar_base",entidadBaseController ::guardar);
+        Spark.post("/registrar_base",entidadBaseController ::guardar,Router.engine);
 
         Spark.get("/cambiar_usuario",usuarioController :: editar_usuario,Router.engine);
 

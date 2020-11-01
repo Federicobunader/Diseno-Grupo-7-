@@ -5,6 +5,7 @@ import Negocio.Usuario.DireccionPostal;
 import Negocio.Usuario.Usuario;
 import repositories.Repositorio;
 import repositories.factories.FactoryRepositorio;
+import spark.ModelAndView;
 import spark.Request;
 import spark.Response;
 import sun.rmi.transport.ObjectTable;
@@ -56,7 +57,7 @@ public class EmpresaController {
         }
     }
 
-    public Response guardar(Request request, Response response){
+    public ModelAndView guardar(Request request, Response response){
 
         Map<String, Object> parametros = new HashMap<>();
         UsuarioController usuarioController = new UsuarioController();
@@ -87,9 +88,9 @@ public class EmpresaController {
         }
         else{
             parametros.put("falloAlRegistrarse",true);
-            response.redirect("/menu_login");
+            return new ModelAndView (parametros,"GESOC_Login.hbs");
         }
 
-        return response;
+        return null;
     }
 }

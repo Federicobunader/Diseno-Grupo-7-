@@ -10,6 +10,8 @@ import javax.persistence.*;
 public class Producto  extends EntidadPersistente {
 
 	@Column
+	private String nombre;
+	@Column
 	private int precio;
 	@OneToOne(cascade = {CascadeType.ALL})
 	@JoinColumn(name = "proveedor_id", referencedColumnName = "id")
@@ -49,5 +51,9 @@ public class Producto  extends EntidadPersistente {
 
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 }//end Producto

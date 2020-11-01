@@ -7,6 +7,7 @@ import Negocio.Usuario.DireccionPostal;
 import Negocio.Usuario.Usuario;
 import repositories.Repositorio;
 import repositories.factories.FactoryRepositorio;
+import spark.ModelAndView;
 import spark.Request;
 import spark.Response;
 
@@ -36,7 +37,7 @@ public class EntidadBaseController {
 
         }
 
-        public Response guardar(Request request, Response response){
+        public ModelAndView guardar(Request request, Response response){
 
             UsuarioController usuarioController = new UsuarioController();
             Usuario unUsuario = new Usuario();
@@ -63,17 +64,18 @@ public class EntidadBaseController {
 
                 asignarAtributosA(entidadBase,request);
                 this.repo.agregar(entidadBase);
-                parametros.put("falloAlRegistrarse",false);
                 response.redirect("/menu_logueado");
+
             }
             else {
                 parametros.put("falloAlRegistrarse",true);
-                response.redirect("/menu_login");
+                return new ModelAndView (parametros,"GESOC_Login.hbs");
 
             }
-            return response;
+            return null;
 
         }
+
 
 
 }

@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>REGISTRARSE/INICIAR SESIÓN</title>
-  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="./css/GESOC_Login.css">
 
 </head>
@@ -15,6 +19,7 @@
         <div class="navbar-header page-scroll">
             <a class="navbar-brand page-scroll" href="/">GESOC</a>
         </div>
+    </div>
 </nav>
 
   
@@ -231,31 +236,6 @@
             
             <h2>Datos de la entidad</h2>
 
-                 {{#if falloAlRegistrarse}}
-                     <p class="texto_error"><a href="#">¿Olvidaste tu constraseña?</a></p>
-                  <!--
-                  <div class="modal" tabindex="-1" role="dialog">
-                          <div class="modal-dialog" role="document">
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h5 class="modal-title">Modal title</h5>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body">
-                                      <p>Modal body text goes here.</p>
-                                  </div>
-                                  <div class="modal-footer">
-                                      <button type="button" class="btn btn-primary">Save changes</button>
-                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      -->
-                  {{/if}}
-
               
             <div class="top-row">
               <div class="field-wrap">
@@ -352,6 +332,12 @@
                       <input type="text"required autocomplete="off" id="NombreUsuario" name="usuario" class="input-datos"/>
                   </div>
 
+                  {{#if falloAlRegistrarse}}
+                      <div class="alert alert-danger" role="alert">
+                          La contraseña no cumple con los requisitos
+                      </div>
+                  {{/if}}
+
                   <div class="field-wrap">
                       <label>
                           Ingrese una contraseña<span class="req">*</span>
@@ -361,7 +347,9 @@
                   <p>Su contraseña debe tener entre 8 y 64 caracteres, y al menos una mayúsucla, una minúscula, un número y un caracter.
                   Ademas, el nombre de usuario no puede coincidir con la contraseña</p>
             <button type="submit" class="button button-back" onclick="window.location.href='./menu_logueado'">Inicia tu experiencia en GESOC</button>
-  
+
+
+
             <!--Enable textbox according to previus select in combobox and enable button once textboxs filled-->
   
             <script type="text/javascript">
