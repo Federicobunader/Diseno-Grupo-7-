@@ -10,6 +10,9 @@ import repositories.factories.FactoryRepositorio;
 import spark.Request;
 import spark.Response;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class EntidadBaseController {
 
         private Repositorio<EntidadBase> repo;
@@ -37,6 +40,7 @@ public class EntidadBaseController {
 
             UsuarioController usuarioController = new UsuarioController();
             Usuario unUsuario = new Usuario();
+            Map<String, Object> parametros = new HashMap<>();
 
             if(usuarioController.elUsuarioSePuedeRegistrarCorrectamente(unUsuario,request)){
                 EntidadBase entidadBase = new EntidadBase();
@@ -59,11 +63,16 @@ public class EntidadBaseController {
 
                 asignarAtributosA(entidadBase,request);
                 this.repo.agregar(entidadBase);
+                parametros.put("falloAlRegistrarse",false);
+                response.redirect("/menu_logueado");
             }
+            else {
+                parametros.put("falloAlRegistrarse",true);
+                response.redirect("/menu_login");
 
-
-            response.redirect("/menu_logueado");
+            }
             return response;
+
         }
 
 

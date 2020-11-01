@@ -213,7 +213,7 @@ public class GestorDeUsuarios {
 
         if (opcion.equals("si")) {
             password = interfazUsuarios.pedirString("Ingrese una Password que cuente con al menos una minuscula, una mayuscula, un numero y/o un simbolo:");
-            password = gestorDePasswords.verificarPassword(password,usuario);
+            //password = gestorDePasswords.verificarPassword(password,usuario);
         }
 
         String passwordHasheada = gestorDePasswords.hashearPassword(password);

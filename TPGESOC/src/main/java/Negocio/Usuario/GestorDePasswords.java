@@ -24,15 +24,12 @@ public class GestorDePasswords {
         return instance;
     }
 
-    public String verificarPassword(String unaPassword,String unNombreDeUsuario) {
-        unaPassword = this.chequearEspaciosSeguidos(unaPassword);
-        while (this.laPasswordTieneMalTamanio(unaPassword)|| this.laPasswordEsMala(unaPassword) || this.laPasswordEsElNombreDeUsuario(unaPassword,unNombreDeUsuario)
-                 || this.passwordNoCumpleRequisitos(unaPassword) ) {
+    public boolean laPasswordNoCumpleLosRequisitos(String unaPassword,String unNombreDeUsuario) {
+        return (this.laPasswordTieneMalTamanio(unaPassword)|| this.laPasswordEsMala(unaPassword) || this.laPasswordEsElNombreDeUsuario(unaPassword,unNombreDeUsuario)
+                 || this.passwordNoCumpleRequisitos(unaPassword));
             //interfazPassword.mostrarError("Por favor ingrese otra:");
             //unaPassword = Main.pedirPorPantallaString();
-            unaPassword = this.chequearEspaciosSeguidos(unaPassword);
-        }
-        return unaPassword;
+            //unaPassword = this.chequearEspaciosSeguidos(unaPassword);
     }
 
     private boolean laPasswordEsElNombreDeUsuario(String unaPassword,String unNombreDeUsuario){
@@ -66,7 +63,7 @@ public class GestorDePasswords {
         }
         return noCumpleRequisitos;
     }
-    private String chequearEspaciosSeguidos(String unaPassword) {
+    public String chequearEspaciosSeguidos(String unaPassword) {
         int i;
         int contador = 0;
         String passwordFinal = "";
@@ -173,8 +170,9 @@ public class GestorDePasswords {
         return esMala;
     }
 
+/*
     public void ingresarNuevaPassword(Usuario usuario) {
-        String nuevaPassword = this.verificarPassword(interfazPassword.pedirString("Ingrese una NUEVA Contraseña:"),usuario.getUsuario());
+
 
         while (this.laNuevaPasswordNoEstaOK(nuevaPassword) || this.laNuevaPasswordEsIgualALaAnterior(nuevaPassword,usuario)) {
             nuevaPassword = this.verificarPassword(interfazPassword.pedirString("Por favor ingrese otra contraseña:"),usuario.getUsuario());
@@ -186,7 +184,7 @@ public class GestorDePasswords {
         this.seguridadClave(nuevaPassword);
         usuario.setPassword(passwordHasheada);
     }
-
+*/
     private boolean laNuevaPasswordNoEstaOK(String nuevaPassword) {
         return this.tiene3LetrasSeguidasIguales(nuevaPassword) ||
                 this.tiene3CaracteresConsecutivos(nuevaPassword);

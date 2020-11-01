@@ -25,11 +25,12 @@
   <button type="submit" class="button button-back" onclick="window.location.href='./menu_logueado'">Volver al menú principal</button>
       
       <div>
-        <div id="signup">   
+        <div id="signup">
+
           <h1>Edite los campos deseados</h1>
 
-            <form class="" {{#if usuario}} action="//{{usuario.id}}" method="post" {{else}} action="/menu_logueado" method="post" {{/if}} style="">
-          
+            <form class="" {{#if usuario}} action="/cambiar_usuario/{{usuario.id}}" method="post" {{else}} action="/cambiar_usuario" method="post" {{/if}} style="">
+                <!--
           <h2>Datos de la empresa</h2>
           
           <div class="top-row">
@@ -44,18 +45,18 @@
             </div>
           </div>
 
-          
+          -->
           
           <h2>Datos del usuario</h2>
           
             <div class="field-wrap">
               <label>Nombre de usuario</label>
-                <input type="text" required autocomplete="off" id="NombreDeUsuario" name="usuario" placeholder="Nombre de usuario">
+                <input type="text" required autocomplete="off" id="NombreDeUsuario" name="usuario" placeholder="Nombre de usuario"{{#if usuario}}value="{{usuario.usuario}}" {{/if}}>
             </div>
 
             <div class="field-wrap">
               <label>Email</label>
-               <input type="email" required autocomplete="off" id="Email" name= "mail" placeholder="Email">
+               <input type="email" required autocomplete="off" id="Email" name= "mail" placeholder="Email" {{#if usuario}}value="{{usuario.mail}}" {{/if}}>
             </div>
 
             <div class="field-wrap">

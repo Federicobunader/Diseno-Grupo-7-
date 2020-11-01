@@ -1,27 +1,21 @@
 package controllers;
 
-import Negocio.Entidad.Empresa.Empresa;
-import Negocio.Usuario.DireccionPostal;
-import Negocio.Usuario.Usuario;
 import repositories.Repositorio;
 import repositories.factories.FactoryRepositorio;
+import spark.ModelAndView;
 import spark.Request;
 import spark.Response;
-import sun.rmi.transport.ObjectTable;
 
-import javax.servlet.RequestDispatcher;
-import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
-public class EmpresaController {
+public class EgresoController {
 
-    private Repositorio<Empresa> repo;
-
-    public EmpresaController() {
-        this.repo = FactoryRepositorio.get(Empresa.class);
+    public ModelAndView cargarEgreso(Request request, Response response){
+        Map<String, Object> parametros = new HashMap<>();
+        return new ModelAndView(parametros,"GESOC_CargaEgresos.hbs");
     }
-
+/*
     private void asignarAtributosA(Empresa unaEmpresa, Request request) {
         if (request.queryParams("RazonSocial") != null) {
             unaEmpresa.setRazonSocial(request.queryParams("RazonSocial"));
@@ -55,10 +49,10 @@ public class EmpresaController {
             unaEmpresa.setPromedioDeVentasAnuales(cantidad);
         }
     }
+/*
 
     public Response guardar(Request request, Response response){
 
-        Map<String, Object> parametros = new HashMap<>();
         UsuarioController usuarioController = new UsuarioController();
         Usuario unUsuario = new Usuario();
 
@@ -86,10 +80,11 @@ public class EmpresaController {
             response.redirect("/menu_logueado");
         }
         else{
-            parametros.put("falloAlRegistrarse",true);
             response.redirect("/menu_login");
         }
 
         return response;
     }
+    */
+
 }

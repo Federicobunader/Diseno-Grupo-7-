@@ -469,3 +469,24 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #1ee2e7;
 }
+
+
+a.navbar-brand{
+    font-size: 30px !important;
+}
+
+a.page-scroll{
+    border: 21px #fe0303 !important;
+    font-size: 16px;
+    background: #da171770;
+    border-radius: 5%;
+}
+
+a.navbar-brand:hover{
+    color: #ffffff !important
+}
+
+a.page-scroll:hover, a.page-scroll:focus {
+    color:rgb(226, 226, 226) !important;
+    background-color: #da1717af !important;
+}

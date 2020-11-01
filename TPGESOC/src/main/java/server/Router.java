@@ -1,9 +1,6 @@
 package server;
 
-import controllers.EmpresaController;
-import controllers.EntidadBaseController;
-import controllers.LoginController;
-import controllers.UsuarioController;
+import controllers.*;
 import middleware.AuthMiddleware;
 import spark.ResponseTransformer;
 import spark.Spark;
@@ -34,6 +31,7 @@ public class Router {
         LoginController loginController = new LoginController();
         UsuarioController usuarioController = new UsuarioController();
         EntidadBaseController entidadBaseController = new EntidadBaseController();
+        EgresoController egresoController = new EgresoController();
 
         Spark.get("/", loginController::inicio, Router.engine);
 
@@ -52,6 +50,10 @@ public class Router {
         Spark.get("/listado_por_categoria",usuarioController :: listado_por_categoria,Router.engine);
 
         Spark.post("/loguearse", loginController::login);
+
+        Spark.get("/cargar_egreso", egresoController :: cargarEgreso,  Router.engine);
+
+        Spark.post("/cargar_egreso", egresoController :: cargarEgreso);
 
 
         //Spark.get("/GESOC_Menu",empresaController::guardar,Router.engine);

@@ -19,7 +19,7 @@ public class Compra extends EntidadPersistente {
 
 	@OneToMany
 	@JoinColumn(name="item_id", referencedColumnName = "id")
-	private List<Item> items = new ArrayList<>();;
+	private List<Item> items = new ArrayList<>();
 
 	@OneToMany
 	@JoinColumn(name="presupuesto", referencedColumnName = "id")

@@ -51,7 +51,7 @@ public class UsuarioController {
         GestorDePasswords gestorDePasswords = GestorDePasswords.GetInstance();
         if(this.elUsuarioSePuedeRegistrarCorrectamente(unUsuario,request)) {
             String passwordIngresada = request.queryParams("password");
-            passwordFinal = gestorDePasswords.verificarPassword(passwordIngresada, request.queryParams("usuario"));
+            passwordFinal = gestorDePasswords.chequearEspaciosSeguidos(passwordIngresada);
 
             unUsuario.setUsuario(request.queryParams("usuario"));
             unUsuario.setPassword(gestorDePasswords.hashearPassword(passwordFinal));
@@ -63,7 +63,16 @@ public class UsuarioController {
 
     }
 
+    public Response modificar(Request request, Response response){
+        Usuario usuario = this.repo.buscar(Integer.valueOf(request.params("id")));
+        asignarAtributosA(usuario, request);
+        this.repo.modificar(usuario);
+        response.redirect("/menu_logueado");
+        return response;
+    }
+
     public boolean elUsuarioSePuedeRegistrarCorrectamente (Usuario unUsuario, Request request) {
+        String error;
         GestorDePasswords gestorDePasswords = GestorDePasswords.GetInstance();
         RepositorioDeUsuarios repoUsuarios = FactoryRepositorioUsuarios.get();
         String passwordFinal = "";
@@ -73,8 +82,12 @@ public class UsuarioController {
 
             if (request.queryParams("password") != null) {
                 String passwordIngresada = request.queryParams("password");
+                String passwordSinEspacios = gestorDePasswords.chequearEspaciosSeguidos(passwordIngresada);
 
-                passwordFinal = gestorDePasswords.verificarPassword(passwordIngresada, nombreUsuario);
+                if(gestorDePasswords.laPasswordNoCumpleLosRequisitos(passwordSinEspacios, nombreUsuario)){
+
+                    return false;
+                }
 
                 if (repoUsuarios.existe(nombreUsuario, passwordFinal)) {
                     return false;
