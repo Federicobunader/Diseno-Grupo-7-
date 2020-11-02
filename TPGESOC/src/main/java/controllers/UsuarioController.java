@@ -89,7 +89,7 @@ public class UsuarioController {
                     return false;
                 }
 
-                if (repoUsuarios.existe(nombreUsuario, passwordFinal)) {
+                if (repoUsuarios.existe(nombreUsuario, gestorDePasswords.hashearPassword(passwordSinEspacios))) {
                     return false;
                 }
 

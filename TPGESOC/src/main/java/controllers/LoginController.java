@@ -1,9 +1,12 @@
 package controllers;
 
+import Negocio.Entidad.Entidad;
 import Negocio.Usuario.GestorDePasswords;
 import Negocio.Usuario.GestorDeUsuarios;
 import Negocio.Usuario.Usuario;
+import repositories.RepositorioDeEntidades;
 import repositories.RepositorioDeUsuarios;
+import repositories.factories.FactoryRepositorioEntidad;
 import repositories.factories.FactoryRepositorioUsuarios;
 import spark.ModelAndView;
 import spark.Request;
@@ -26,6 +29,7 @@ public class LoginController {
 
     public Response login(Request request, Response response){
         try{
+            RepositorioDeEntidades repositorioDeEntidades = FactoryRepositorioEntidad.get();
             RepositorioDeUsuarios repoUsuarios = FactoryRepositorioUsuarios.get();
             GestorDePasswords gestorDePasswords = GestorDePasswords.GetInstance();
             GestorDeUsuarios gestorDeUsuarios = GestorDeUsuarios.GetInstance();

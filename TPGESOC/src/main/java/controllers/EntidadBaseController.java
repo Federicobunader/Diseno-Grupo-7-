@@ -1,13 +1,10 @@
 package controllers;
 
-import Negocio.Entidad.Empresa.Empresa;
-import Negocio.Entidad.Entidad;
 import Negocio.Entidad.EntidadBase;
 import Negocio.Usuario.DireccionPostal;
 import Negocio.Usuario.Usuario;
 import repositories.Repositorio;
 import repositories.factories.FactoryRepositorio;
-import spark.ModelAndView;
 import spark.Request;
 import spark.Response;
 
@@ -37,7 +34,7 @@ public class EntidadBaseController {
 
         }
 
-        public ModelAndView guardar(Request request, Response response){
+        public Response guardar(Request request, Response response){
 
             UsuarioController usuarioController = new UsuarioController();
             Usuario unUsuario = new Usuario();
@@ -69,10 +66,10 @@ public class EntidadBaseController {
             }
             else {
                 parametros.put("falloAlRegistrarse",true);
-                return new ModelAndView (parametros,"GESOC_Login.hbs");
+               // return new ModelAndView (parametros,"GESOC_Login.hbs");
 
             }
-            return null;
+            return response;
 
         }
 

@@ -1,27 +1,13 @@
 import API.APIGeografia.*;
-import API.APIMoneda.Conversor;
-import API.APIMoneda.ListadoDeMonedas;
-import API.APIMoneda.Moneda;
 import API.Servicios.ServicioGeoref;
-import API.Servicios.ServicioMonedas;
-import BaseDeDatos.UsuarioModel;
 import Negocio.Usuario.DireccionPostal;
 import Negocio.Usuario.GestorDePasswords;
 import Negocio.Usuario.Usuario;
-import converters.LocalDateAttributeConverter;
 import BaseDeDatos.EntityManagerHelper;
 import org.junit.*;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.swing.undo.AbstractUndoableEdit;
 import java.io.IOException;
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class EmTest {
 

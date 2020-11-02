@@ -3,6 +3,7 @@ package repositories.daos;
 import BaseDeDatos.EntityManagerHelper;
 import repositories.BusquedaCondicional;
 
+import javax.persistence.NoResultException;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
@@ -30,9 +31,14 @@ public class DAOHibernate<T> implements DAO<T> {
 
     @Override
     public T buscar(BusquedaCondicional condicional) {
-        return (T) EntityManagerHelper.getEntityManager()
-                .createQuery(condicional.getCondicionCritero())
-                .getSingleResult();
+        try {
+            return (T) EntityManagerHelper.getEntityManager()
+                    .createQuery(condicional.getCondicionCritero())
+                    .getSingleResult();
+        }
+        catch (NoResultException ex){
+            return null;
+        }
     }
 
     @Override
