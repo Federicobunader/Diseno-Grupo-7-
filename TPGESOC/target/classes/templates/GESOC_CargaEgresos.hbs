@@ -30,6 +30,7 @@
 
           <form class="" action="/cargar_egreso" method="post" style="">
 
+              <!--
             <div class="top-row">
                 <div class="field-wrap">
                 <label>
@@ -37,7 +38,37 @@
                 </label>
                     <input type="text" required autocomplete="off" id="Código IGJ" name="producto" class="input-datos" {{#if empresa}}value="{{empresa.CodigoDeInscripcion}}" {{/if}}>
                 </div>
-                
+                -->
+                <table>
+                    <tr>
+                        <th>Id Producto</th>
+                        <th>Id Proveedor</th>
+                        <th>Nombre Proveedor</th>
+                        <th>Descripción del Producto</th>
+                        <th>Precio</th>
+                    </tr>
+                    <?php
+	$conn = mysqli_connect("localhost", "root", "gonzalomiele", "gesoc");
+	                if($conn->connect_error){
+                        die("connect failed". $conn-> connect_error);
+                    }
+                    $sql = "SELECT * FROM producto p JOIN proveedor q ON p.proveedor_id = q_id"
+                    $result = $conn-> query($sql);
+
+                    if($result-> num_rows > 0){
+                    while($row = $result-> fetch_assco()){
+                    echo "<tr><td>". $row["id"] ."</td><td>". $row["nombre"] ."</td><td>". $row["detalle"] ."</td><td>". $row["precio"] ."</td><td>". $row["proveedor_id"] ."</td></tr>";
+                    }
+                    echo "</table>";
+                }
+                else{
+                echo "0 result";
+                }
+                $conn-> close();
+                ?>
+                </table>
+
+
                 <div class="field-wrap">
                 <label>
                     Cantidad<span class="req">*</span>

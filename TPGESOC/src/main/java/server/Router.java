@@ -32,8 +32,11 @@ public class Router {
         UsuarioController usuarioController = new UsuarioController();
         EntidadBaseController entidadBaseController = new EntidadBaseController();
         EgresoController egresoController = new EgresoController();
+        AuthMiddleware authMiddleware       = new AuthMiddleware();
 
         Spark.get("/", loginController::inicio, Router.engine);
+
+        Spark.before("/", authMiddleware::verificarSesion);
 
         Spark.get("/menu_login", loginController::menu_login, Router.engine);
 
@@ -43,7 +46,9 @@ public class Router {
 
         Spark.post("/registrar_base",entidadBaseController ::guardar);
 
-        Spark.get("/cambiar_usuario",usuarioController :: editar_usuario,Router.engine);
+        Spark.get("/cambiar_usuario/:id",usuarioController :: mostrar,Router.engine);
+
+        Spark.post("/cambiar_usuario/:id",usuarioController :: modificar);
 
         Spark.get("/asociar_egreso_o_presepuesto_a_categoria",usuarioController :: asociar_egreso_o_presepuesto_a_categoria,Router.engine);
 

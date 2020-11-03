@@ -7,7 +7,7 @@ public class AuthMiddleware {
 
     public Response verificarSesion(Request request, Response response){
         if(!request.session().isNew()){
-            response.redirect("/usuarios");
+            response.redirect("/menu_logueado");
         }
         return response;
     }

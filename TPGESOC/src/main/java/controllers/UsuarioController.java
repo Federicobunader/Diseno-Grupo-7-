@@ -1,6 +1,7 @@
 package controllers;
 
 import Negocio.Entidad.Empresa.Empresa;
+import Negocio.Usuario.DireccionPostal;
 import Negocio.Usuario.GestorDePasswords;
 import Negocio.Usuario.Usuario;
 import repositories.Repositorio;
@@ -28,12 +29,38 @@ public class UsuarioController {
 
     public ModelAndView menu_logueado(Request request, Response response){
         Map<String, Object> parametros = new HashMap<>();
+        asignarUsuarioSiEstaLogueado(request,parametros);
+        System.out.println("ID EN EL MENU LOGUEADO : " + (request.params("id")));
         return new ModelAndView(parametros,"GESOC_Menu_Logueado.hbs");
+    }
+
+    private void asignarUsuarioSiEstaLogueado(Request request, Map<String, Object> parametros){
+        if(!request.session().isNew() && request.session().attribute("id") != null){
+            Usuario usuario = repo.buscar(request.session().attribute("id"));
+            parametros.put("usuario", usuario);
+        }
     }
 
     public ModelAndView editar_usuario(Request request, Response response){
         Map<String, Object> parametros = new HashMap<>();
         return new ModelAndView(parametros,"GESOC_Cambiar_Usuario.hbs");
+    }
+
+    public Response modificar(Request request, Response response){
+        Usuario usuario = this.repo.buscar(Integer.valueOf(request.params("id")));
+        asignarAtributosA(usuario, request);
+        this.repo.modificar(usuario);
+        response.redirect("/menu_logueado");
+        return response;
+    }
+
+    public ModelAndView mostrar(Request request, Response response){
+        Usuario usuario = this.repo.buscar(Integer.valueOf(request.params("id")));
+        Repositorio<DireccionPostal> repoDireccion = FactoryRepositorio.get(DireccionPostal.class);
+        Map<String, Object> parametros = new HashMap<>();
+        parametros.put("usuario", usuario);
+        parametros.put("direccionpostal", repoDireccion.buscarTodos());
+        return new ModelAndView(parametros, "GESOC_Cambiar_Usuario.hbs");
     }
 
     public ModelAndView asociar_egreso_o_presepuesto_a_categoria(Request request, Response response){
@@ -61,14 +88,6 @@ public class UsuarioController {
 
         }
 
-    }
-
-    public Response modificar(Request request, Response response){
-        Usuario usuario = this.repo.buscar(Integer.valueOf(request.params("id")));
-        asignarAtributosA(usuario, request);
-        this.repo.modificar(usuario);
-        response.redirect("/menu_logueado");
-        return response;
     }
 
     public boolean elUsuarioSePuedeRegistrarCorrectamente (Usuario unUsuario, Request request) {

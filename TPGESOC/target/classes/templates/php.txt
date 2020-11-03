@@ -1,0 +1,45 @@
+<table>
+	<tr>
+		<th>Id Producto</th>
+		<th>Id Proveedor</th>
+		<th>Nombre Proveedor</th>
+		<th>Descripción del Producto</th>
+		<th>Precio</th>
+	</tr>
+	<?php
+	$conn = mysqli_connect("servername", "my sql username", "contraseña", "nombre base de datos");
+	if($conn->connect_error){
+		die("Connection failed:". $)
+	}
+	$sql = "SELECT (poner acá las columnas en el mismo orden q arriba) FROM producto p JOIN proveedor q ON p.proveedor_id = q.proveedor_id"
+	$result = $conn-> query($sql);
+
+	if($result-> num_rows > 0){
+		while($row = $result-> fetch_assco()){
+			echo "<tr><td>". $row["columna1"] ."</td><td>". $row["columna2"] ."</td><td>" ...etc con todas las columnas ."</td></tr>";
+		}
+		echo "</table>";
+	}
+	else{
+		echo "0 result";
+	}
+	$conn-> close();
+	?>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

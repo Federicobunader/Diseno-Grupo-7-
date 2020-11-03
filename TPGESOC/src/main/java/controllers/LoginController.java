@@ -27,6 +27,7 @@ public class LoginController {
         return new ModelAndView(parametros,"GESOC_Login.hbs");
     }
 
+
     public Response login(Request request, Response response){
         try{
             RepositorioDeEntidades repositorioDeEntidades = FactoryRepositorioEntidad.get();
@@ -44,6 +45,7 @@ public class LoginController {
 
                 request.session(true);
                 request.session().attribute("id", usuario.getId());
+                System.out.println("ID DEL LOGUEO :" + usuario.getId());
 
                 response.redirect("/menu_logueado");
             }
