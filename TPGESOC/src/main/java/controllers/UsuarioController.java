@@ -56,10 +56,10 @@ public class UsuarioController {
 
     public ModelAndView mostrar(Request request, Response response){
         Usuario usuario = this.repo.buscar(Integer.valueOf(request.params("id")));
-        Repositorio<DireccionPostal> repoDireccion = FactoryRepositorio.get(DireccionPostal.class);
+        //Repositorio<DireccionPostal> repoDireccion = FactoryRepositorio.get(DireccionPostal.class);
         Map<String, Object> parametros = new HashMap<>();
         parametros.put("usuario", usuario);
-        parametros.put("direccionpostal", repoDireccion.buscarTodos());
+        //parametros.put("direccionpostal",repoDireccion.buscar(usuario.getDireccionPostal().getId()));
         return new ModelAndView(parametros, "GESOC_Cambiar_Usuario.hbs");
     }
 

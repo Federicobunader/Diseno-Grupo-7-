@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>REGISTRARSE/INICIAR SESIÓN</title>
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./css/GESOC_Cambiar_Usuario.css">
+<link rel="stylesheet" href="/css/GESOC_Cambiar_Usuario.css">
 
 </head>
 <body>
@@ -15,6 +15,7 @@
         <div class="navbar-header page-scroll">
             <a class="navbar-brand page-scroll" href="./menu_logueado">GESOC</a>
         </div>
+    </div>
 </nav>
 
   
@@ -22,7 +23,7 @@
 <!-- partial:index.partial.html -->
 <div class="form">
       
-  <button type="submit" class="button button-back" onclick="window.location.href='./menu_logueado'">Volver al menú principal</button>
+  <button type="submit" class="button button-back" onclick="window.location.href='/menu_logueado'">Volver al menú principal</button>
       
       <div>
         <div id="signup">
@@ -66,46 +67,50 @@
 
             <h2>Dirección</h2>
 
+                {{#if usuario}}
+
           <div class="top-row">
             <div class="field-wrap">
               <label>Calle</label>
-                <input type="text" required autocomplete="off" id="calle" name= "calle" placeholder="Calle" {{#if usuario}}value="{{usuario.direccionpostal.calle}}" {{/if}}>
+                <input type="text" required autocomplete="off" id="calle" name= "calle" placeholder="Calle" {{#if usuario}} value="{{usuario.direccionPostal.calle}}" {{/if}}>
             </div>
         
             <div class="field-wrap">
               <label>Altura</label>
-                <input type="text" required autocomplete="off" id="altura" name= "altura" placeholder="Altura"{{#if usuario}}value="{{usuario.direccionpostal.altura}}" {{/if}}>
+                <input type="text" required autocomplete="off" id="altura" name= "altura" placeholder="Altura" {{#if usuario}} value="{{usuario.direccionPostal.altura}}" {{/if}}>
             </div>
           </div>
 
           <div class="top-row">
             <div class="field-wrap">
               <label>Piso</label>
-               <input type="text" required autocomplete="off" id="piso" name= "piso" placeholder="Piso"{{#if usuario}}value="{{usuario.direccionpostal.piso}}" {{/if}}>
+               <input type="text" required autocomplete="off" id="piso" name= "piso" placeholder="Piso" {{#if usuario}} value="{{usuario.direccionPostal.piso}}" {{/if}}>
             </div>
 
             <div class="field-wrap">
               <label>Departamento</label>
-                <input type="text" required autocomplete="off" id="departamento" name= "departamento" placeholder="Departamento"{{#if usuario}}value="{{usuario.direccionpostal.departamento}}" {{/if}}>
+                <input type="text" required autocomplete="off" id="departamento" name= "departamento" placeholder="Departamento"{{#if usuario}}value="{{usuario.direccionPostal.departamento}}" {{/if}}>
               </div>
             </div>
 
             <div class="top-row">
               <div class="field-wrap">
                 <label>País</label>
-                  <input type="text" required autocomplete="off" id="pais" name="pais" placeholder="País"{{#if usuario}}value="{{usuario.direccionpostal.pais}}" {{/if}}>
+                  <input type="text" required autocomplete="off" id="pais" name="pais" placeholder="País"{{#if usuario}}value="{{usuario.direccionPostal.pais}}" {{/if}}>
               </div>
           
               <div class="field-wrap">
                 <label>Provincia</label>
-                  <input type="text" required autocomplete="off" id="provincia" name= "provincia" placeholder="Provincia"{{#if usuario}}value="{{usuario.direccionpostal.provincia}}" {{/if}}>
+                  <input type="text" required autocomplete="off" id="provincia" name= "provincia" placeholder="Provincia"{{#if usuario}}value="{{usuario.direccionPostal.provincia}}" {{/if}}>
               </div>
             </div>
         
             <div class="field-wrap">
               <label>Ciudad</label>
-                <input type="text" required autocomplete="off" id="ciudad" name= "ciudad" placeholder="Ciudad"{{#if usuario}}value="{{usuario.direccionpostal.ciudad}}" {{/if}}>
+                <input type="text" required autocomplete="off" id="ciudad" name= "ciudad" placeholder="Ciudad"{{#if usuario}}value="{{usuario.direccionPostal.ciudad}}" {{/if}}>
               </div>
+
+                {{/if}}
 
           <button type="submit" id="startbutton" class="button button-back" onclick="verify()" onclick="window.location.href='./menu_logueado'">Guardar cambios</button>
 
