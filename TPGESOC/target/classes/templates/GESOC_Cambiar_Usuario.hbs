@@ -60,14 +60,18 @@
                <input type="email" required autocomplete="off" id="Email" name= "mail" placeholder="Email" {{#if usuario}}value="{{usuario.mail}}" {{/if}}>
             </div>
 
+                {{#if falloAlRegistrarse}}
+                    <div class="alert alert-danger" role="alert">
+                        La contraseña no cumple con los requisitos
+                    </div>
+                {{/if}}
+
             <div class="field-wrap">
               <label>Contraseña</label>
                 <input type="password" required autocomplete="off" id="password" name= "password" placeholder="Contraseña">
             </div>
 
             <h2>Dirección</h2>
-
-                {{#if usuario}}
 
           <div class="top-row">
             <div class="field-wrap">
@@ -109,8 +113,6 @@
               <label>Ciudad</label>
                 <input type="text" required autocomplete="off" id="ciudad" name= "ciudad" placeholder="Ciudad"{{#if usuario}}value="{{usuario.direccionPostal.ciudad}}" {{/if}}>
               </div>
-
-                {{/if}}
 
           <button type="submit" id="startbutton" class="button button-back" onclick="verify()" onclick="window.location.href='/menu_logueado'">Guardar cambios</button>
 
