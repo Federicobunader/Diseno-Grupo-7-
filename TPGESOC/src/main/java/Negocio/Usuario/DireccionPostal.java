@@ -56,4 +56,32 @@ public class DireccionPostal  extends EntidadPersistente {
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
     }
+
+    public String getCalle() {
+        return calle;
+    }
+
+    public int getAltura() {
+        return altura;
+    }
+
+    public int getPiso() {
+        return piso;
+    }
+
+    public String getDepartamento() {
+        return departamento;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public String getProvincia() {
+        return provincia;
+    }
+
+    public String getCiudad() {
+        return ciudad;
+    }
 }

@@ -48,6 +48,10 @@ public class UsuarioController {
 
     public Response modificar(Request request, Response response){
         Usuario usuario = this.repo.buscar(Integer.valueOf(request.params("id")));
+        DireccionPostalController direccionPostalController = new DireccionPostalController();
+
+        direccionPostalController.modificar(request,response,usuario.getDireccionPostal().getId());
+
         asignarAtributosA(usuario, request);
         this.repo.modificar(usuario);
         response.redirect("/menu_logueado");

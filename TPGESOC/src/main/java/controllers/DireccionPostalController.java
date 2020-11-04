@@ -4,6 +4,7 @@ import Negocio.Usuario.DireccionPostal;
 import repositories.Repositorio;
 import repositories.factories.FactoryRepositorio;
 import spark.Request;
+import spark.Response;
 
 public class DireccionPostalController {
 
@@ -11,6 +12,16 @@ public class DireccionPostalController {
 
     public DireccionPostalController(){
         this.repo = FactoryRepositorio.get(DireccionPostal.class);
+    }
+
+    public Response modificar(Request request, Response response,int idDireccion){
+
+        Repositorio<DireccionPostal> repoDireccion = FactoryRepositorio.get(DireccionPostal.class);
+        DireccionPostal direccionPostal = repoDireccion.buscar(idDireccion);
+        this.asignarAtributosA(direccionPostal,request);
+        repoDireccion.modificar(direccionPostal);
+
+        return response;
     }
 
     public void asignarAtributosA(DireccionPostal direccionPostal, Request request) {
