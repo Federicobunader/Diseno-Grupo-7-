@@ -32,7 +32,8 @@ public class Router {
         UsuarioController usuarioController = new UsuarioController();
         EntidadBaseController entidadBaseController = new EntidadBaseController();
         EgresoController egresoController = new EgresoController();
-        AuthMiddleware authMiddleware       = new AuthMiddleware();
+        AuthMiddleware authMiddleware = new AuthMiddleware();
+        ProductoController productoController = new ProductoController();
 
         Spark.get("/", loginController::inicio, Router.engine);
 
@@ -59,6 +60,8 @@ public class Router {
         Spark.get("/cargar_egreso", egresoController :: cargarEgreso,  Router.engine);
 
         Spark.post("/cargar_egreso", egresoController :: cargarEgreso);
+
+        Spark.get("/agregar_productos", productoController:: mostrarTodos, Router.engine);
 
 
         //Spark.get("/GESOC_Menu",empresaController::guardar,Router.engine);

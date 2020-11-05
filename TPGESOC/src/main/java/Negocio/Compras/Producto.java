@@ -56,4 +56,8 @@ public class Producto  extends EntidadPersistente {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+
+	public String getNombre() {
+		return nombre;
+	}
 }//end Producto
