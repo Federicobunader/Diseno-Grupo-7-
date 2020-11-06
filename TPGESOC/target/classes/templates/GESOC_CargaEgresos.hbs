@@ -22,100 +22,22 @@
 <!-- partial:index.partial.html -->
 <div class="form">
       
-  <button type="submit" class="button button-back" onclick="window.location.href='./'">Volver al menú principal</button>
-  
+  <button type="submit" class="button button-back" onclick="window.location.href='/agregar_productos'">Volver atrás</button>
+
       <div class="tab-content">
-        <div id="compra">   
-          <br><br><h1>Llene los datos correspondientes al egreso que desea cargar</h1><br><br>
+        <div id="compra">
+          <br><h3>Llene los datos correspondientes al egreso que desea cargar</h3><br>
 
           <form class="" action="/cargar_egreso" method="post" style="">
 
-
-            <div class="top-row">
-                <div class="field-wrap">
-                <label>
-                    Producto<span class="req">*</span>
-                </label>
-                    <button type="submit" class="button button-back" onclick="window.location.href='/agregar_productos'">Agregar Producto</button>
-                </div>
-
-
-
-                <!--
-                                <table>
-                                    <tr>
-                                        <th>Id Producto</th>
-                                        <th>Id Proveedor</th>
-                                        <th>Nombre Proveedor</th>
-                                        <th>Descripción del Producto</th>
-                                        <th>Precio</th>
-                                    </tr>
-                                    <?php
-                    $conn = mysqli_connect("localhost", "root", "gonzalomiele", "gesoc");
-                                    if($conn->connect_error){
-                                        die("connect failed". $conn-> connect_error);
-                                    }
-                                    $sql = "SELECT * FROM producto p JOIN proveedor q ON p.proveedor_id = q_id"
-                                    $result = $conn-> query($sql);
-
-                                    if($result-> num_rows > 0){
-                                    while($row = $result-> fetch_assco()){
-                                    echo "<tr><td>". $row["id"] ."</td><td>". $row["nombre"] ."</td><td>". $row["detalle"] ."</td><td>". $row["precio"] ."</td><td>". $row["proveedor_id"] ."</td></tr>";
-                                    }
-                                    echo "</table>";
-                                }
-                                else{
-                                echo "0 result";
-                                }
-                                $conn-> close();
-                                ?>
-                                </table>
-                -->
-
-                <div class="field-wrap">
-                <label>
-                    Cantidad<span class="req">*</span>
-                </label>
-                <input type="text"required autocomplete="off" id="CUIT" name="cantidad" class="input-datos"/>
-                </div>
-            </div>
-
-              <div class="field-wrap">
-                  <label>
-                      Precio<span class="req">*</span>
-                  </label>
-                  <input type="text"required autocomplete="off" id="CUIT" name="precio" class="input-datos"/>
-              </div>
-
-
-            <div class="field-wrap">
-              <label>
-                  Nombre Proveedor<span class="req">*</span>
-              </label>
-              <input type="text"required autocomplete="off" id="CUIT" name="nombre" class="input-datos"/>
-          </div>
-
-              <div class="field-wrap">
-                  <label>
-                     Numero Proveedor<span class="req">*</span>
-                  </label>
-                  <input type="text"required autocomplete="off" id="CUIT" name="numeroID" class="input-datos"/>
-              </div>
-
             <div class="field-wrap">
                 <label>
-                    Usuarios revisores<span class="req">*</span>
-                </label>
-                <input type="text"required autocomplete="off" id="CUIT" name="usuariosRevisores" class="input-datos"/>
-            </div>
-
-            <div class="field-wrap">
-                <label>
-                  Documentos comerciales<span class="req">*</span>
+                  Id Documento Comercial<span class="req">*</span>
                 </label>
                   <input type="text"required autocomplete="off" id="CUIT" name="documentosComerciales" class="input-datos"/>
-              </div>          
-           
+              </div>
+
+              <h4>Fecha del egreso:</h4>
             <div class="field-wrap">
               <label>
                 <span class="req"></span>
@@ -136,35 +58,8 @@
 
             </div>
           </div>
-          
-          <div class="field-wrap">
-            <div class="custom-select" style="width:200px;">
-              <select name="fechaDeOperacion" id="tiposector" onChange=changetextbox()>
-                <option value="0">¿Su compra requiere presupuesto?</option>
-                <option value="1">Si</option>
-                <option value="2">No</option>
-              </select>
 
-            </div>
-          </div>
-
-         
-            <div class="field-wrap">
-            <label>
-                Lista de presupuestos<span class="req">*</span>
-            </label>
-                <input type="text" required autocomplete="off" id="Código IGJ" name="presupuestos"  class="input-datos" {{#if empresa}}value="{{empresa.CodigoDeInscripcion}}" {{/if}}>
-            </div>
-            
-            <div class="field-wrap">
-            <label>
-                Presupuesto elegido<span class="req">*</span>
-            </label>
-            <input type="text"required autocomplete="off" id="CUIT" name="presupuestoElegido" class="input-datos"/>
-            </div>
-    
-          
-            <button type="submit" class="button button-back" onclick="window.location.href='/menu_logueado'">Listo</button>
+            <button type="submit" class="button button-back" onclick="window.location.href='/presupuestos'">Seguir con presupuestos</button>
 
           </form>
 

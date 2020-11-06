@@ -13,6 +13,7 @@ import spark.Request;
 import spark.Response;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class UsuarioController {
@@ -65,6 +66,14 @@ public class UsuarioController {
         parametros.put("usuario", usuario);
         //parametros.put("direccionpostal",repoDireccion.buscar(usuario.getDireccionPostal().getId()));
         return new ModelAndView(parametros, "GESOC_Cambiar_Usuario.hbs");
+    }
+
+    public ModelAndView mostrarTodos(Request request, Response response) {
+        Map<String, Object> parametros = new HashMap<>();
+        List<Usuario> usuarios = this.repo.buscarTodos();
+        parametros.put("usuarios", usuarios);
+
+        return new ModelAndView(parametros, "GESOC_UsuariosRevisores.hbs");
     }
 
     public ModelAndView asociar_egreso_o_presepuesto_a_categoria(Request request, Response response){

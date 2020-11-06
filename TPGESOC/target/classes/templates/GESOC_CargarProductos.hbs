@@ -29,65 +29,54 @@
 
         <div class="tab-content">
             <div id="compra">
-                <br><br>
-                <h3>Seleccione el producto correspondiente al egreso</h3>
+
+                <h3>Visualice los productos</h3>
 
                 <form class="" action="/agregar_productos" method="post" style="">
-
-                    <table class="tabla" id="tabla">
+                <div id="div1">
+                    <table class="scroll" id="tabla" style="overflow-y:auto;">
 
                         <thead>
                         <th><i class="fas fa-user"></i> Id Producto</th>
-                        <th><i class="fas fa-envelope"></i> Id Proveedor</th>
-                        <th><i class="fas fa-phone"></i> Nombre Proveedor</th>
+                        <th><i class="fas fa-phone"></i> Nombre Producto</th>
                         <th><i class="fas fa-id-card-alt"></i> Descripción del Producto</th>
                         <th><i class="fas fa-user-cog"></i> Precio</th>
+                        <th><i class="fas fa-envelope"></i> Id Proveedor</th>
+                        <th><i class="fas fa-envelope"></i> Nombre Proveedor</th>
                         </thead>
 
                         <tbody>
                         {{#each productos}}
                             <tr>
-                                <label>¡Producto {{nombre}} !</label>
                                 <td><i class="fas fa-user"></i> {{id}}</td>
-                                <td>{{proveedor.id}}</td>
                                 <td>{{nombre}}</td>
                                 <td>{{descripcion}}</td>
                                 <td>{{precio}}</td>
+                                <td>{{proveedor.id}}</td>
+                                <td>{{proveedor.nombre}}</td>
 
-                                <td>
-                                    <!--<a href="/usuario/{{id}}" name="button" style="margin:0px;" class="btn btn-border btn-border-blue" ><i class="far fa-eye"></i></a>-->
-                                    <a href="/usuario/{{id}}" name="button" class=" btn btn-edit"><i class="fas fa-user-edit"></i></a>
-                                    <button type="button" name="button" class="btn" onclick="confirmarEliminacion('{{id}}')"><i class="fas fa-trash"></i></button>
-                                </td>
                             </tr>
                         {{/each}}
                         </tbody>
-
-<!--
-                        <tr>
-                            <td>19434</td>
-                            <td>10001212</td>
-                            <td>Sony</td>
-                            <td>Nueva Play Station</td>
-                            <td>$10.000.000</td>
-                        </tr>
-                        <tr>
-                            <td>32345</td>
-                            <td>12345678</td>
-                            <td>Sarkany</td>
-                            <td>Zapatos de cuero</td>
-                            <td>$10.000</td>
-                        </tr>
--->
                     </table>
+                </div>
 
-                    <h3>Indique la cantidad comprada de dicho producto</h3>
+                    <h3>Indique los datos correspondientes al Producto</h3>
+
                     <div class="field-wrap">
                         <label>
-                            Cantidad<span class="req">*</span>
+                            Id Producto<span class="req">*</span>
+                        </label>
+                        <input type="text" required autocomplete="off" id="cantidad" name="id"
+                            class="input-datos" />
+                    </div>
+
+                    <div class="field-wrap">
+                        <label>
+                            Cantidad Comprada<span class="req">*</span>
                         </label>
                         <input type="text" required autocomplete="off" id="cantidad" name="cantidad"
-                            class="input-datos" />
+                               class="input-datos" />
                     </div>
 
                     <h3>¿Desea cargar otro producto?</h3>
@@ -95,7 +84,7 @@
                     <button type="submit" class="button button-back"
                         onclick="window.location.href='/agregar_productos'">Sí</button>
                     <button type="submit" class="button button-back"
-                        onclick="window.location.href='/cargar_egreso'">Seguir con los datos del
+                        onclick="window.location.href='/usuarios_revisores'">Seguir con los datos del
                         egreso</button>
 
 

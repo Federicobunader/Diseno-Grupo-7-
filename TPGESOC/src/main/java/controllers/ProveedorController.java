@@ -1,6 +1,6 @@
 package controllers;
 
-import Negocio.Compras.Producto;
+import Negocio.Proveedor;
 import repositories.Repositorio;
 import repositories.factories.FactoryRepositorio;
 import spark.ModelAndView;
@@ -11,25 +11,23 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ProductoController {
+public class ProveedorController {
 
-    private Repositorio<Producto> repo;
+    private Repositorio<Proveedor> repo;
 
-    public Repositorio<Producto> getRepo() {
+    public Repositorio<Proveedor> getRepo() {
         return repo;
     }
 
-    public ProductoController() {
-        this.repo = FactoryRepositorio.get(Producto.class);
+    public ProveedorController() {
+        this.repo = FactoryRepositorio.get(Proveedor.class);
     }
 
     public ModelAndView mostrarTodos(Request request, Response response) {
         Map<String, Object> parametros = new HashMap<>();
-        List<Producto> productos = this.repo.buscarTodos();
+        List<Proveedor> productos = this.repo.buscarTodos();
         parametros.put("productos", productos);
 
         return new ModelAndView(parametros, "GESOC_CargarProductos.hbs");
     }
-
-
 }

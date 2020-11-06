@@ -29,7 +29,7 @@ public class Proveedor extends EntidadPersistente {
 		this.numeroID = numeroID;
 	}
 
-	public void finalize() throws Throwable {
-
+	public String getNombre() {
+		return nombre;
 	}
 }//end Proveedor

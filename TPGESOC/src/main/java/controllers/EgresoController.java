@@ -49,7 +49,7 @@ public class EgresoController {
             unaEmpresa.setPromedioDeVentasAnuales(cantidad);
         }
     }
-/*
+
 
     public Response guardar(Request request, Response response){
 
