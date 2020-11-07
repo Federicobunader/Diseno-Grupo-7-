@@ -61,3 +61,4 @@ $('.form').find('input, textarea').on('keyup blur focus', function (e) {
   $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
   });
+

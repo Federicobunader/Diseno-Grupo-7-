@@ -32,8 +32,11 @@
 
                 <h3>Visualice los productos</h3>
 
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Busca por nombre" title="Type in a name">
+
                 <form class="" action="/agregar_productos" method="post" style="">
                 <div id="div1">
+
                     <table class="scroll" id="tabla" style="overflow-y:auto;">
 
                         <thead>
@@ -58,8 +61,50 @@
                             </tr>
                         {{/each}}
                         </tbody>
+
+
                     </table>
                 </div>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+</style>
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("tabla");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+
+
 
                     <h3>Indique los datos correspondientes al Producto</h3>
 
@@ -93,12 +138,15 @@
 
             </div>
 
+
+
             <!--<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="/js/GESOC_CargarProductos.js"></script>-->
             <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
             <script src="/js/GESOC_CargarProductos.js"></script>
 
 
         </div>
+
     </div>
     <style>
         tr:hover {background-color: #ebb7b7;}

@@ -9,6 +9,8 @@ import repositories.Repositorio;
 import repositories.factories.FactoryRepositorio;
 import spark.Request;
 
+import java.util.List;
+
 public class CompraController {
 
     private Repositorio<Compra> repo;
@@ -24,6 +26,9 @@ public class CompraController {
     public void asignarAtributosA(Compra compra, Request request) {
 
         if (request.queryParams("items") != null) {
+
+          //  List <Item> itemsCompra = new List<>();
+          //  Item[] itemsCompra = Item.values();
             //ItemController itemController = new ItemController();
             //Item item = itemController.getRepo().buscar(Integer.valueOf(request.params("id")));
 
