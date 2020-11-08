@@ -58,15 +58,16 @@ public class Router {
 
         Spark.post("/loguearse", loginController::login);
 
-        Spark.get("/cargar_egreso", egresoController :: cargarEgreso,  Router.engine);
+        //Spark.get("/cargar_egreso", egresoController :: cargarEgreso,  Router.engine);
+        Spark.get("/cargar_egreso", egresoController:: cargarEgreso, Router.engine);
 
         Spark.post("/cargar_egreso", egresoController :: cargarEgreso);
 
-        Spark.get("/agregar_productos", productoController:: mostrarTodos, Router.engine);
 
-        Spark.post("/agregar_productos", productoController:: mostrarTodos);
 
-        Spark.get("/usuarios_revisores", usuarioController::mostrarTodos,Router.engine); //CAMBIAR CONTROLLER NO SE COMO SE HACE
+       // Spark.post("/cargar_egreso", productoController:: mostrarTodos);
+
+        //Spark.get("/cargar_egreso", usuarioController::mostrarTodos,Router.engine); //CAMBIAR CONTROLLER NO SE COMO SE HACE
 
         Spark.get("/presupuestos", presupuestoController::mostrarTodos,Router.engine); //CAMBIAR CONTROLLER NO SE COMO SE HACE
 

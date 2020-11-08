@@ -72,8 +72,9 @@ public class UsuarioController {
         Map<String, Object> parametros = new HashMap<>();
         List<Usuario> usuarios = this.repo.buscarTodos();
         parametros.put("usuarios", usuarios);
+        System.out.println("USUARIO : "+ usuarios.get(0).getUsuario());
 
-        return new ModelAndView(parametros, "GESOC_UsuariosRevisores.hbs");
+        return new ModelAndView(parametros, "GESOC_CargaEgresos.hbs");
     }
 
     public ModelAndView asociar_egreso_o_presepuesto_a_categoria(Request request, Response response){

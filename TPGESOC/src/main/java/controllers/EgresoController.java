@@ -1,5 +1,8 @@
 package controllers;
 
+import Negocio.Compras.Presupuesto;
+import Negocio.Compras.Producto;
+import Negocio.Usuario.Usuario;
 import repositories.Repositorio;
 import repositories.factories.FactoryRepositorio;
 import spark.ModelAndView;
@@ -7,12 +10,30 @@ import spark.Request;
 import spark.Response;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class EgresoController {
 
     public ModelAndView cargarEgreso(Request request, Response response){
         Map<String, Object> parametros = new HashMap<>();
+
+        ProductoController productoController = new ProductoController();
+        Repositorio<Producto> repoProducto = FactoryRepositorio.get(Producto.class);
+        List<Producto> productos = repoProducto.buscarTodos();
+        parametros.put("productos", productos);
+
+
+        UsuarioController usuarioController = new UsuarioController();
+        Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
+        List<Usuario> usuarios = repoUsuario.buscarTodos();
+        parametros.put("usuarios", usuarios);
+
+        PresupuestoController presupuestoController = new PresupuestoController();
+        Repositorio<Presupuesto> repoPresupuesto = FactoryRepositorio.get(Presupuesto.class);
+        List<Presupuesto> presupuestos = repoPresupuesto.buscarTodos();
+        parametros.put("presupuestos", presupuestos);
+
         return new ModelAndView(parametros,"GESOC_CargaEgresos.hbs");
     }
 /*

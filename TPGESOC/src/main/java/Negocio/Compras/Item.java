@@ -19,6 +19,10 @@ public class Item  extends EntidadPersistente {
 	@Column
 	private int cantidad;
 
+	@ManyToOne
+	@JoinColumn(name = "presupuesto_id", referencedColumnName = "id")
+	private Presupuesto presupuesto;
+
 	@ManyToMany
 	@JoinTable(name = "item_x_categoriaItem")
 	private List<CategoriaItem> categorias = new ArrayList<CategoriaItem>();
@@ -53,6 +57,14 @@ public class Item  extends EntidadPersistente {
 
 	public void setInterfaz(InterfazUsuarios interfaz) {
 		this.interfaz = interfaz;
+	}
+
+	public Presupuesto getPresupuesto() {
+		return presupuesto;
+	}
+
+	public void setPresupuesto(Presupuesto presupuesto) {
+		this.presupuesto = presupuesto;
 	}
 
 	@Transient

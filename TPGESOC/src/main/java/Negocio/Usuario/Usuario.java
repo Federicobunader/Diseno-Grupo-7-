@@ -60,6 +60,10 @@ public class Usuario extends EntidadPersistente {
         this.habilitado = habilitado;
     }
 
+    public boolean isHabilitado() {
+        return habilitado;
+    }
+
     public void setIntentos(int intentos) {
         this.intentos = intentos;
     }

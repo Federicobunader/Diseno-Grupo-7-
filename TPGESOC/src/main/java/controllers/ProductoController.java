@@ -28,7 +28,7 @@ public class ProductoController {
         List<Producto> productos = this.repo.buscarTodos();
         parametros.put("productos", productos);
 
-        return new ModelAndView(parametros, "GESOC_CargarProductos.hbs");
+        return new ModelAndView(parametros, "GESOC_CargaEgresos.hbs");
     }
 
 
