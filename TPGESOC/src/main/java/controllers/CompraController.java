@@ -97,10 +97,11 @@ public class CompraController {
             compra.setProveedor(proveedor);
         }
 
-        if (request.queryParams("requierePresupuesto") != null) {
+       /* if (request.queryParams("requierePresupuesto") != null) {
             if(request.params("proveedor").equals("Si")) compra.setRequierePresupuesto(true);
             else compra.setRequierePresupuesto(false);
 
         }
+        */
     }
 }

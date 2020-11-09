@@ -5,7 +5,8 @@ import Negocio.Compras.Criterios.Criterio;
 
 public class Validador {
 
-    int cantidadDePresupuestosRequeridos = 3;
+    int cantidadDePresupuestosRequeridos;
+    double montoDefinido;
 
     private static Validador instance = null;
 
@@ -13,6 +14,18 @@ public class Validador {
         if (instance == null)
             instance = new Validador();
         return instance;
+    }
+
+    public void setCantidadDePresupuestosRequeridos(int cantidadDePresupuestosRequeridos) {
+        this.cantidadDePresupuestosRequeridos = cantidadDePresupuestosRequeridos;
+    }
+
+    public void setMontoDefinido(double montoDefinido) {
+        this.montoDefinido = montoDefinido;
+    }
+
+    public double getMontoDefinido() {
+        return montoDefinido;
     }
 
     public boolean tieneSuficientesPresupuestos(int cantidadDePresupuestos){
@@ -30,4 +43,9 @@ public class Validador {
 
         return unaCompra.valorTotal() != unCriterio.elegirPresupuesto(unaCompra.getPresupuestos()).valorTotal();
     }
+
+    public boolean requierePresupuesto(double monto){
+        return monto > montoDefinido;
+    }
+
 }

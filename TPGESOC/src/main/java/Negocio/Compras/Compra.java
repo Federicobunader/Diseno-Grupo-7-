@@ -101,8 +101,8 @@ public class Compra extends EntidadPersistente {
 		this.proveedor = proveedor;
 	}
 
-	public void setRequierePresupuesto(boolean requierePresupuesto) {
-		this.requierePresupuesto = requierePresupuesto;
+	public void setRequierePresupuesto(boolean requiere) {
+		this.requierePresupuesto = requiere;
 	}
 
 	public void setCriterioEleccionPresupuesto(Criterio criterioEleccionPresupuesto) {
@@ -111,6 +111,7 @@ public class Compra extends EntidadPersistente {
 
 	public void validar(){
 		Validador validador = Validador.GetInstance();
+		this.setRequierePresupuesto(validador.requierePresupuesto(this.getMonto()));
 		if(requierePresupuesto) {
 			if(validador.tieneSuficientesPresupuestos(this.cantidadPresupuestos())){
 				notificarUsuarios("La compra " + getId() + " tiene la cantidad de presupuestos requeridos.");
