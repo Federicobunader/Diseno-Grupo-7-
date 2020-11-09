@@ -16,7 +16,7 @@ public class Ingreso extends EntidadPersistente {
     public double montoTotal;
 
     @OneToMany(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "egreso_id", referencedColumnName = "id")
+    @JoinColumn(name = "id", referencedColumnName = "id")
     private List<Egreso> egresosVinculados;
 
     public Ingreso(String descripcion, double montoTotal) {

@@ -7,7 +7,9 @@ import Negocio.Compras.Compra;
 import Negocio.Compras.GestorDeEgresos;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 @Entity
@@ -109,7 +111,9 @@ public class Usuario extends EntidadPersistente {
 
     public void serNotificado(String mensaje) {
         Mensaje nuevoMensaje = new Mensaje();
+
         nuevoMensaje.setContenido(mensaje);
+        nuevoMensaje.setFechaDelMensaje(LocalDate.now());
         bandejaDeMensajes.add(nuevoMensaje);
         interfazUsuarios.mostrarInformacion(mensaje);
     }

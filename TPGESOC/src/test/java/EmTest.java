@@ -44,6 +44,7 @@ public class EmTest {
         //Assert.assertEquals("Eze", eze.getNombre());
     }
 
+    /*
     @Test
     public void persistirGeoRef() throws IOException {
         ServicioGeoref servicioGeoref = ServicioGeoref.instancia();

@@ -12,11 +12,11 @@ import java.util.List;
 public class Presupuesto  extends EntidadPersistente {
 
     @OneToMany
-    @JoinColumn(name = "item_id", referencedColumnName = "id")
+    @JoinColumn(name = "id", referencedColumnName = "id")
     private List<Item> items = new ArrayList<Item>();
 
     @OneToMany
-    @JoinColumn(name = "documento_id", referencedColumnName = "id")
+    @JoinColumn(name = "id", referencedColumnName = "id")
     private List<Documento> documentosComerciales = new ArrayList<Documento>();
 
 
