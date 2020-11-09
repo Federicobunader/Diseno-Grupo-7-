@@ -433,3 +433,16 @@ textarea {
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
 }
+
+.lupa {
+  float: left;
+  width: 1%;
+  position: relative;
+  left: 8px;
+  top: 4px;
+}
+
+.buscar{
+  float:left;
+  width: 98%;
+}
