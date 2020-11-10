@@ -17,7 +17,7 @@ public class CriterioDeItem extends EntidadPersistente {
     private String nombreCriterio;
 
     @OneToMany(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "categoriaItem_id", referencedColumnName = "id")
+    @JoinColumn(name = "criterioItem_id", referencedColumnName = "id")
     private List<CategoriaItem> categorias = new ArrayList<CategoriaItem>();
 
     public CriterioDeItem(String nombreCriterio) {

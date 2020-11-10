@@ -414,6 +414,7 @@ textarea {
 
   .tablinks{
     width: 232px;
+    background: #5a4663;
   }
 
   .tab-group {
@@ -499,7 +500,7 @@ textarea {
   #div1{
   overflow-y:scroll;
        height:200px;
-       width:500px;
+       width:575px;
        margin-top: 40px;
        margin-bottom: 30px;
   }

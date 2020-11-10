@@ -61,3 +61,41 @@ $('.form').find('input, textarea').on('keyup blur focus', function (e) {
   $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
   });
+
+  function buscarIngreso() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("unIngreso");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("tablaIngreso");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[1];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+  function buscarEgreso() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("unEgreso");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("tablaEgreso");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[1];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }

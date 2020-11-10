@@ -32,6 +32,7 @@ public class Router {
         UsuarioController usuarioController = new UsuarioController();
         EntidadBaseController entidadBaseController = new EntidadBaseController();
         EgresoController egresoController = new EgresoController();
+        IngresoController ingresoController = new IngresoController();
         AuthMiddleware authMiddleware = new AuthMiddleware();
         ProductoController productoController = new ProductoController();
         PresupuestoController presupuestoController = new PresupuestoController();
@@ -63,7 +64,9 @@ public class Router {
 
         Spark.post("/cargar_egreso", egresoController :: cargarEgreso);
 
+        Spark.get("/asociar_egreso_a_ingreso", egresoController :: mostrarTodos, Router.engine);
 
+        Spark.get("/asociar_egreso_a_ingreso", ingresoController :: mostrarTodos, Router.engine);
 
        // Spark.post("/cargar_egreso", productoController:: mostrarTodos);
 

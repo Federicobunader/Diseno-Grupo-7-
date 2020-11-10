@@ -16,7 +16,7 @@ public class Presupuesto  extends EntidadPersistente {
     private List<Item> items = new ArrayList<Item>();
 
     @OneToMany
-    @JoinColumn(name = "id", referencedColumnName = "id")
+    @JoinColumn(name = "presupuesto_id", referencedColumnName = "id")
     private List<Documento> documentosComerciales = new ArrayList<Documento>();
 
 
@@ -39,5 +39,7 @@ public class Presupuesto  extends EntidadPersistente {
     public double valorTotal(){
         return items.stream().mapToInt(item->item.valorTotal()).sum();
     }
+
+
 
 }

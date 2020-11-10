@@ -18,27 +18,27 @@ import java.util.List;
 public class Compra extends EntidadPersistente {
 
 	@OneToMany
-	@JoinColumn(name="id", referencedColumnName = "id")
+	@JoinColumn(name="compra_id", referencedColumnName = "id")
 	private List<Item> items = new ArrayList<>();
 
 	@OneToMany
-	@JoinColumn(name="id", referencedColumnName = "id")
+	@JoinColumn(name="compra_id", referencedColumnName = "id")
 	private List<Presupuesto> presupuestos = new ArrayList<Presupuesto>();
 
 	@OneToMany
-	@JoinColumn(name="usuario", referencedColumnName = "id")
+	@JoinColumn(name="id", referencedColumnName = "id")
 	private List<Usuario> usuariosRevisores = new ArrayList<Usuario>();
 
 	@OneToOne
-	@JoinColumn(name="presupuesto_id", referencedColumnName = "id")
+	@JoinColumn(name="id", referencedColumnName = "id")
 	private Presupuesto presupuestoElegido;
 
 	@ManyToOne
-	@JoinColumn(name="medioDePago_id", referencedColumnName = "id")
+	@JoinColumn(name="mediodepago_id", referencedColumnName = "id")
 	private MedioDePago medioDePago;
 
 	@OneToMany
-	@JoinColumn(name = "id", referencedColumnName = "id")
+	@JoinColumn(name = "compra_id", referencedColumnName = "id")
 	private List<Documento> documentosComerciales = new ArrayList<Documento>();
 
 	@OneToOne(cascade = {CascadeType.ALL})

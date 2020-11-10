@@ -3,6 +3,7 @@ package Negocio.Compras;
 import BaseDeDatos.EntidadPersistente;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="categoriaItem")

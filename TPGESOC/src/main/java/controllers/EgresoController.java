@@ -1,5 +1,7 @@
 package controllers;
 
+import Negocio.Compras.Ingreso;
+import Negocio.Compras.Egreso;
 import Negocio.Compras.Presupuesto;
 import Negocio.Compras.Producto;
 import Negocio.Usuario.Usuario;
@@ -14,6 +16,16 @@ import java.util.List;
 import java.util.Map;
 
 public class EgresoController {
+
+    private Repositorio<Egreso> repo;
+
+    public Repositorio<Egreso> getRepo() {
+        return repo;
+    }
+
+    public EgresoController() {
+        this.repo = FactoryRepositorio.get(Egreso.class);
+    }
 
     public ModelAndView cargarEgreso(Request request, Response response){
         Map<String, Object> parametros = new HashMap<>();
@@ -36,6 +48,24 @@ public class EgresoController {
 
         return new ModelAndView(parametros,"GESOC_CargaEgresos.hbs");
     }
+
+    public ModelAndView mostrarTodos(Request request, Response response){
+        Map<String, Object> parametros = new HashMap<>();
+        List<Egreso> egresos = this.repo.buscarTodos();
+        parametros.put("egresos", egresos);
+
+        IngresoController ingresoController = new IngresoController();
+        Repositorio<Ingreso> repoIngreso = FactoryRepositorio.get(Ingreso.class);
+        List<Ingreso> ingresos = repoIngreso.buscarTodos();
+        parametros.put("ingresos",ingresos);
+
+        return new ModelAndView(parametros, "GESOC_AsociarIngresoAEgreso.hbs");
+    }
+
+
+
+
+
 /*
     private void asignarAtributosA(Empresa unaEmpresa, Request request) {
         if (request.queryParams("RazonSocial") != null) {

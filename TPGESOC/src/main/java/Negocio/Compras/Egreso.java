@@ -10,7 +10,7 @@ import java.util.Date;
 public class Egreso  extends EntidadPersistente {
 
     @OneToOne(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "compra_id", referencedColumnName = "id")
+    @JoinColumn(name = "id", referencedColumnName = "id")
     private Compra compra;
 
     @Column(columnDefinition = "DATE")
