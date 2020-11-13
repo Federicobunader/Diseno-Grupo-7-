@@ -25,9 +25,7 @@ public class DAOMensaje<Mensaje> extends DAOHibernate {
         CriteriaBuilder builder = EntityManagerHelper.getEntityManager().getCriteriaBuilder();
         CriteriaQuery<Mensaje> critera = builder.createQuery(this.type);
         critera.from(type);
-        critera.where(type.getClass().g)
         List<Mensaje> mensajes = EntityManagerHelper.getEntityManager().createQuery(critera).getResultList();
-        mensajes.stream().filter(mensaje -> mensaje. )
         return mensajes;
     }
 

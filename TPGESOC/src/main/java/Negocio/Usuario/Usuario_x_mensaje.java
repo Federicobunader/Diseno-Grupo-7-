@@ -1,13 +1,15 @@
 
 package Negocio.Usuario;
 
+import BaseDeDatos.EntidadPersistente;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="usuario_x_mensaje")
-public class Usuario_x_mensaje {
+public class Usuario_x_mensaje  extends EntidadPersistente {
 
     @Column
     private int usuario_id;

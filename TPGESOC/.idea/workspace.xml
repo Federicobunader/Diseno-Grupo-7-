@@ -52,34 +52,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c56b04db-f42a-40a7-8d18-c78ae2368dc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario_x_mensaje.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repositories/RepositorioMensajesPorUsuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repositories/daos/DAOMensaje.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repositories/factories/FactoryRepositorioMensajesPorUsuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario_x_mensaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario_x_mensaje.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/MensajeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/MensajeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/Repositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/Repositorio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/daos/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/daos/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/daos/DAOHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/daos/DAOHibernate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/daos/DAOMemoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/daos/DAOMemoria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Router.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Bandeja_Mensajes.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Bandeja_Mensajes.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Cambiar_Usuario.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Cambiar_Usuario.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu_Logueado.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu_Logueado.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/RepositorioMensajesPorUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/RepositorioMensajesPorUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/daos/DAOMensaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/daos/DAOMensaje.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Usuario/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Usuario/Usuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controllers/MensajeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/MensajeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/UsuarioController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repositories/Repositorio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/Repositorio.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repositories/daos/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/daos/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repositories/daos/DAOHibernate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/daos/DAOHibernate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repositories/daos/DAOMemoria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/daos/DAOMemoria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server/Router.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/Router.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_Bandeja_Mensajes.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_Bandeja_Mensajes.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_Cambiar_Usuario.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_Cambiar_Usuario.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_Menu_Logueado.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_Menu_Logueado.hbs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -100,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MensajeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="268">
+              <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#418#419#0" expanded="true" />
@@ -111,11 +90,23 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario_x_mensaje.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/repositories/RepositorioDeUsuarios.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#390#391#0" expanded="true" />
@@ -128,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/repositories/RepositorioMensajesPorUsuario.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="221">
+              <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#441#442#0" expanded="true" />
@@ -156,16 +147,16 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/repositories/daos/DAOHibernate.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="15" column="5" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
+              <caret line="15" column="5" selection-start-line="11" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/repositories/daos/DAOMensaje.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+            <state relative-caret-position="319">
+              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#361#362#0" expanded="true" />
@@ -178,33 +169,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repositories/factories/FactoryRepositorioMensajesPorUsuario.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/UsuarioController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="38">
+              <caret line="33" column="57" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario_x_mensaje.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EntidadBaseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#314#315#0" expanded="true" />
-                <element signature="e#347#348#0" expanded="true" />
-                <element signature="e#396#397#0" expanded="true" />
-                <element signature="e#440#441#0" expanded="true" />
-                <element signature="e#474#475#0" expanded="true" />
-                <element signature="e#507#508#0" expanded="true" />
-                <element signature="e#556#557#0" expanded="true" />
-                <element signature="e#600#601#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="38" column="74" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -286,12 +263,12 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu_Logueado.hbs" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/UsuarioController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario_x_mensaje.java" />
         <option value="$PROJECT_DIR$/src/main/java/repositories/factories/FactoryRepositorioMensajesPorUsuario.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/MensajeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/repositories/RepositorioMensajesPorUsuario.java" />
         <option value="$PROJECT_DIR$/src/main/java/repositories/daos/DAOHibernate.java" />
         <option value="$PROJECT_DIR$/src/main/java/repositories/daos/DAOMensaje.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repositories/RepositorioMensajesPorUsuario.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/MensajeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario_x_mensaje.java" />
       </list>
     </option>
   </component>
@@ -658,7 +635,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24966443" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Maven" order="4" />
@@ -919,13 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EntidadBaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="36" column="66" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarIngresoAEgreso.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1094,13 +1064,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/UsuarioController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="33" column="57" lean-forward="true" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Login.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-916">
@@ -1129,66 +1092,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario_x_mensaje.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#314#315#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#396#397#0" expanded="true" />
-            <element signature="e#440#441#0" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/repositories/factories/FactoryRepositorioMensajesPorUsuario.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/RepositorioDeUsuarios.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MensajeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
-            <element signature="e#483#484#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/RepositorioMensajesPorUsuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
-            <element signature="e#467#468#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1196,7 +1105,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/repositories/daos/DAOHibernate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
+          <caret line="15" column="5" selection-start-line="11" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1225,16 +1134,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/RepositorioDeUsuarios.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/UsuarioController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="33" column="57" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/RepositorioMensajesPorUsuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#441#442#0" expanded="true" />
+            <element signature="e#467#468#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/repositories/daos/DAOMensaje.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+        <state relative-caret-position="319">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#361#362#0" expanded="true" />
             <element signature="e#388#389#0" expanded="true" />
             <element signature="e#176#177#0" expanded="true" />
             <element signature="e#203#204#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EntidadBaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="38" column="74" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MensajeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+            <element signature="e#483#484#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario_x_mensaje.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

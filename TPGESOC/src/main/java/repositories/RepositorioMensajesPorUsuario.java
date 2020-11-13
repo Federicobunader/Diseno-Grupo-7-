@@ -16,10 +16,11 @@ public class RepositorioMensajesPorUsuario extends  Repositorio <Usuario_x_mensa
         super(dao);
     }
 
+    /*
     public List<Usuario_x_mensaje> buscarMensajes(int idUsuario){
         return this.dao.buscarTodos(condicionIdUsuario(idUsuario));
     }
-
+*/
     private BusquedaCondicional condicionIdUsuario(int idUsuario){
         CriteriaBuilder criteriaBuilder = criteriaBuilder();
         CriteriaQuery<Usuario_x_mensaje> mensajesPorUsuarioQuery = criteriaBuilder.createQuery(Usuario_x_mensaje.class);
