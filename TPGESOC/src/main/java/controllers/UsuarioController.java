@@ -30,12 +30,12 @@ public class UsuarioController {
 
     public ModelAndView menu_logueado(Request request, Response response){
         Map<String, Object> parametros = new HashMap<>();
+        System.out.println("ID EN EL MENU LOGUEADO : " + request.session().attribute("id"));
         asignarUsuarioSiEstaLogueado(request,parametros);
-        System.out.println("ID EN EL MENU LOGUEADO : " + (request.params("id")));
         return new ModelAndView(parametros,"GESOC_Menu_Logueado.hbs");
     }
 
-    private void asignarUsuarioSiEstaLogueado(Request request, Map<String, Object> parametros){
+    public void asignarUsuarioSiEstaLogueado(Request request, Map<String, Object> parametros){
         if(!request.session().isNew() && request.session().attribute("id") != null){
             Usuario usuario = repo.buscar(request.session().attribute("id"));
             parametros.put("usuario", usuario);
@@ -48,7 +48,7 @@ public class UsuarioController {
     }
 
     public Response modificar(Request request, Response response){
-        Usuario usuario = this.repo.buscar(Integer.valueOf(request.params("id")));
+        Usuario usuario = this.repo.buscar(request.session().attribute("id"));
         DireccionPostalController direccionPostalController = new DireccionPostalController();
 
         direccionPostalController.modificar(request,response,usuario.getDireccionPostal().getId());
@@ -60,7 +60,7 @@ public class UsuarioController {
     }
 
     public ModelAndView mostrar(Request request, Response response){
-        Usuario usuario = this.repo.buscar(Integer.valueOf(request.params("id")));
+        Usuario usuario = this.repo.buscar(request.session().attribute("id"));
         //Repositorio<DireccionPostal> repoDireccion = FactoryRepositorio.get(DireccionPostal.class);
         Map<String, Object> parametros = new HashMap<>();
         parametros.put("usuario", usuario);

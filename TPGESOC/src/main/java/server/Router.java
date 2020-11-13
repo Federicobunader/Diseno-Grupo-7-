@@ -50,9 +50,9 @@ public class Router {
 
         Spark.post("/registrar_base",entidadBaseController ::guardar);
 
-        Spark.get("/cambiar_usuario/:id",usuarioController :: mostrar,Router.engine);
+        Spark.get("/cambiar_usuario",usuarioController :: mostrar,Router.engine);
 
-        Spark.post("/cambiar_usuario/:id",usuarioController :: modificar);
+        Spark.post("/cambiar_usuario",usuarioController :: modificar);
 
         Spark.get("/asociar_egreso_o_presepuesto_a_categoria",usuarioController :: asociar_egreso_o_presepuesto_a_categoria,Router.engine);
 

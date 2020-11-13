@@ -29,43 +29,71 @@
             <br>
             <h3>Visualice su Bandeja de Mensajes</h3>
 
-            <table id="scroll">
-                <tr>
-                    <th>Fecha</th>
-                    <th>Mensaje</th>
-                </tr>
-            </table>
-            <form class="" action="/cargar_egreso" method="post" style="">
-                <div id="div1">
-                    <table id="scroll">
-                        <tr>
-                            <td>Fecha 1</td>
-                            <td>Mensaje 1</td>
-                        </tr>
-                        <tr>
-                            <td>Fecha 2</td>
-                            <td>Mensaje 2</td>
-                        </tr>
-                        <tr>
-                            <td>Fecha 3</td>
-                            <td>Mensaje 3</td>
-                        </tr>
-                        <tr>
-                            <td>Fecha 4</td>
-                            <td>Mensaje 4</td>
-                        </tr>
-                        <tr>
-                            <td>Fecha 5</td>
-                            <td>Mensaje 5</td>
-                        </tr>
-                        <tr>
-                            <td>Fecha 6</td>
-                            <td>Mensaje 6</td>
-                        </tr>
-
-                    </table>
+                <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
+                <div class ="buscar">
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar por mensaje" title="Type in a name">
                 </div>
 
+                <form class="" action="/agregar_productos" method="post" style="">
+                    <div id="div1">
+
+                        <table class="scroll" id="tabla" style="overflow-y:auto;">
+
+                            <thead>
+                            <th>Fecha</th>
+                            <th>Mensaje</th>
+                            </thead>
+
+                            <tbody>
+                            {{#each mensajes}}
+                                <tr>
+                                    <td><i class="fas fa-user"></i> {{fechaDelMensaje}}</td>
+                                    <td>{{contenido}}</td>
+                                </tr>
+                            {{/each}}
+                            </tbody>
+
+
+                        </table>
+                    </div>
+
+                    <style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+</style>
+                    <script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("tabla");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
 
             </form>
 

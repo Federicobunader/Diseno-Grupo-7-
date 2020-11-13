@@ -2,8 +2,11 @@ package controllers;
 
 import Negocio.Usuario.Mensaje;
 import Negocio.Usuario.Usuario;
+//import Negocio.Usuario.Usuario_x_mensaje;
 import repositories.Repositorio;
+//import repositories.RepositorioMensajesPorUsuario;
 import repositories.factories.FactoryRepositorio;
+//import repositories.factories.FactoryRepositorioMensajesPorUsuario;
 import spark.ModelAndView;
 import spark.Request;
 import spark.Response;
@@ -22,11 +25,12 @@ public class MensajeController {
 
     public ModelAndView mostrarTodos(Request request, Response response) {
         Map<String, Object> parametros = new HashMap<>();
-        UsuarioController usuariooController = new UsuarioController();
-        Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
-        Usuario usuario = repoUsuario.buscar(Integer.valueOf(request.params("id")));
 
-        Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
+        LoginController.ensureUserIsLoggedIn(request, response);
+
+        Usuario usuario = LoginController.getCurrentUser(request);
+
+
 
         List<Mensaje> mensajes = this.repo.buscarTodos();
         parametros.put("mensajes", mensajes);

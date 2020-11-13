@@ -34,6 +34,10 @@ public class Repositorio<T> {
         return this.dao.buscarTodos();
     }
 
+    public List<T> buscarTodosPorQuery(String query){
+        return this.dao.buscarTodosPorQuery(query);
+    }
+
     public T buscar(int id){
         return this.dao.buscar(id);
     }

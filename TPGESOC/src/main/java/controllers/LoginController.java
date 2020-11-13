@@ -30,10 +30,12 @@ public class LoginController {
 
     public Response login(Request request, Response response){
         try{
+            Map<String, Object> parametros = new HashMap<>();
             RepositorioDeEntidades repositorioDeEntidades = FactoryRepositorioEntidad.get();
             RepositorioDeUsuarios repoUsuarios = FactoryRepositorioUsuarios.get();
             GestorDePasswords gestorDePasswords = GestorDePasswords.GetInstance();
             GestorDeUsuarios gestorDeUsuarios = GestorDeUsuarios.GetInstance();
+            UsuarioController usuarioController = new UsuarioController();
 
             String nombreDeUsuario = request.queryParams("usuario");
             String passwordHasheada = gestorDePasswords.hashearPassword(request.queryParams("password"));
@@ -45,7 +47,8 @@ public class LoginController {
 
                 request.session(true);
                 request.session().attribute("id", usuario.getId());
-                System.out.println("ID DEL LOGUEO :" + usuario.getId());
+                usuarioController.asignarUsuarioSiEstaLogueado(request,parametros);
+                System.out.println("ID DEL LOGUEO :" + request.session().attribute("id"));
 
                 response.redirect("/menu_logueado");
             }
@@ -61,6 +64,27 @@ public class LoginController {
             return response;
         }
 
+    }
+
+    public static void ensureUserIsLoggedIn(Request request, Response response){
+
+        if(request.session().attribute("id") == null){
+
+            request.session().attribute("afterLoginRedirect", request.pathInfo());
+
+            response.redirect("/menu_login");
+
+        }
+
+    }
+
+    public static Usuario getCurrentUser(Request request){
+
+        int user_id = request.session().attribute("id");
+
+        Usuario currentUser = FactoryRepositorioUsuarios.get().buscar(user_id);
+
+        return currentUser;
     }
 
     public Response logout(Request request, Response response){

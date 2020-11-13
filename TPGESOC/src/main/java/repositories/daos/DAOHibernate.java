@@ -29,6 +29,16 @@ public class DAOHibernate<T> implements DAO<T> {
         return EntityManagerHelper.getEntityManager().find(type, id);
     }
 
+    public List<T> buscarTodosPorQuery(String query) {
+        try {
+            return (List<T>) EntityManagerHelper.getEntityManager()
+                    .createQuery(query);
+        }
+        catch (NoResultException ex){
+            return null;
+        }
+    }
+
     @Override
     public T buscar(BusquedaCondicional condicional) {
         try {

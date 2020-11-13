@@ -41,8 +41,6 @@
 <!-- Team Section -->
 <section id="team" class="bg-light-gray">
     <div class="container">
-
-        {{#if usuario}}
             <div>
                 <div class="row">
                     <div class="col-lg-12 text-center">
@@ -51,7 +49,6 @@
                     </div>
                 </div>
             </div>
-        {{/if}}
 
         <div class="row">
             <div class="col-sm-4">
@@ -59,10 +56,8 @@
                     <img src="http://www.mycatspace.com/wp-content/uploads/2013/08/adopting-a-cat.jpg" class="img-responsive img-circle" alt=""><br>
                     <h4>Editar datos de usuario</h4><br>
                     <ul class="list-inline social-buttons">
-                    {{#if usuario}}
-                        <li><a href="/cambiar_usuario/{{usuario.id}}"><img src="https://i.ibb.co/QPBqdWB/asfasfasfasggg.png" class="img-responsive" alt="icon" ><i class="fa fa-twitter"></i></a></li>
-                    {{/if}}
-                        </ul>
+                        <li><a href="/cambiar_usuario"><img src="https://i.ibb.co/QPBqdWB/asfasfasfasggg.png" class="img-responsive" alt="icon" ><i class="fa fa-twitter"></i></a></li>
+                    </ul>
                 </div>
             </div>
 
@@ -102,7 +97,7 @@
                     <img src="http://www.mycatspace.com/wp-content/uploads/2013/08/adopting-a-cat.jpg" class="img-responsive img-circle" alt=""><br>
                     <h4>Visualizar ingresos y egresos por categoría</h4><br>
                     <ul class="list-inline social-buttons">
-                        <li><a href="./listado_por_categoria"><img src="https://i.ibb.co/JzDyF6V/ojo.png" class="img-responsive" alt="icon" ><i class="fa fa-twitter"></i></a>
+                        <li><a href="/listado_por_categoria"><img src="https://i.ibb.co/JzDyF6V/ojo.png" class="img-responsive" alt="icon" ><i class="fa fa-twitter"></i></a>
                         </li>
                     </ul><br><br>
                     <img src="http://www.mycatspace.com/wp-content/uploads/2013/08/adopting-a-cat.jpg" class="img-responsive img-circle" alt="">

@@ -1,8 +1,10 @@
 package repositories.daos;
 
 import BaseDeDatos.EntidadPersistente;
+import BaseDeDatos.EntityManagerHelper;
 import repositories.BusquedaCondicional;
 
+import javax.persistence.NoResultException;
 import java.util.List;
 
 public class DAOMemoria<T> implements DAO<T> {
@@ -15,6 +17,17 @@ public class DAOMemoria<T> implements DAO<T> {
     @Override
     public List<T> buscarTodos() {
         return (List<T>) this.entidades;
+    }
+
+    @Override
+    public List<T> buscarTodosPorQuery(String query) {
+        try {
+            return (List<T>) EntityManagerHelper.getEntityManager()
+                    .createQuery(query);
+        }
+        catch (NoResultException ex){
+            return null;
+        }
     }
 
     @Override
