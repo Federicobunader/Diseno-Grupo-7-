@@ -29,8 +29,14 @@ public class Usuario extends EntidadPersistente {
     @JoinColumn(name = "direccionPostal_id", referencedColumnName = "id")
     private DireccionPostal direccionPostal;
 
-    @ManyToMany
-    @JoinTable(name = "usuario_x_mensaje")
+    @ManyToMany(cascade =
+            {
+                    CascadeType.DETACH,
+                    CascadeType.MERGE,
+                    CascadeType.REFRESH,
+                    CascadeType.PERSIST
+            }, fetch = FetchType.LAZY)
+    @JoinTable(name = "usuario_x_mensaje",joinColumns = @JoinColumn(name = "mensaje_id"),inverseJoinColumns = @JoinColumn (name = "usuario_id"))
     private List<Mensaje> bandejaDeMensajes = new ArrayList<Mensaje>();
 
     @Transient

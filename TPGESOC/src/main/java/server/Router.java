@@ -36,6 +36,7 @@ public class Router {
         AuthMiddleware authMiddleware = new AuthMiddleware();
         ProductoController productoController = new ProductoController();
         PresupuestoController presupuestoController = new PresupuestoController();
+        MensajeController mensajeController = new MensajeController();
 
         Spark.get("/", loginController::inicio, Router.engine);
 
@@ -62,7 +63,11 @@ public class Router {
         //Spark.get("/cargar_egreso", egresoController :: cargarEgreso,  Router.engine);
         Spark.get("/cargar_egreso", egresoController:: cargarEgreso, Router.engine);
 
-        Spark.post("/cargar_egreso", egresoController :: cargarEgreso);
+        //Spark.post("/cargar_egreso", egresoController :: cargarEgreso);
+
+        Spark.get("/guardar_producto_Egreso", egresoController :: cargarEgreso,Router.engine);
+
+        Spark.post("/vincular", egresoController :: vincularEgreso);
 
         Spark.get("/asociar_egreso_a_ingreso", egresoController :: mostrarTodos, Router.engine);
 
@@ -74,6 +79,7 @@ public class Router {
 
         Spark.get("/presupuestos", presupuestoController::mostrarTodos,Router.engine); //CAMBIAR CONTROLLER NO SE COMO SE HACE
 
+        Spark.get("/bandeja_mensajes", mensajeController::mostrarTodos,Router.engine);
 
         //Spark.get("/GESOC_Menu",empresaController::guardar,Router.engine);
        // Spark.get("/saludo/:nombre/:apellido",((request, response) -> "HOLA " + request.params("nombre") + request.params("apellido") ));

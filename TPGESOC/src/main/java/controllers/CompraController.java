@@ -9,6 +9,7 @@ import repositories.Repositorio;
 import repositories.factories.FactoryRepositorio;
 import spark.Request;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CompraController {
@@ -25,12 +26,12 @@ public class CompraController {
 
     public void asignarAtributosA(Compra compra, Request request) {
 
-        if (request.queryParams("items") != null) {
+        if (request.queryParams("productos_id") != null) {
 
-          //  List <Item> itemsCompra = new List<>();
-          //  Item[] itemsCompra = Item.values();
-            //ItemController itemController = new ItemController();
-            //Item item = itemController.getRepo().buscar(Integer.valueOf(request.params("id")));
+//           List <Item> itemsCompra = new List<>();
+//           Item[] itemsCompra = Item.values();
+//           ItemController itemController = new ItemController();
+//           Item item = itemController.getRepo().buscar(Integer.valueOf(request.params("productos_id")));
 
             //compra.setItems([request.queryParams("items")]);
         }

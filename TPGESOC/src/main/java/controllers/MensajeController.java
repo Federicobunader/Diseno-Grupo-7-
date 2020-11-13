@@ -22,12 +22,15 @@ public class MensajeController {
 
     public ModelAndView mostrarTodos(Request request, Response response) {
         Map<String, Object> parametros = new HashMap<>();
+        UsuarioController usuariooController = new UsuarioController();
         Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
         Usuario usuario = repoUsuario.buscar(Integer.valueOf(request.params("id")));
+
+        Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
 
         List<Mensaje> mensajes = this.repo.buscarTodos();
         parametros.put("mensajes", mensajes);
 
-        return new ModelAndView(parametros, "GESOC_CargaEgresos.hbs");
+        return new ModelAndView(parametros, "GESOC_Bandeja_Mensajes.hbs");
     }
 }

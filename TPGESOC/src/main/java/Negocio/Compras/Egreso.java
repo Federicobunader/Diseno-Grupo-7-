@@ -16,6 +16,9 @@ public class Egreso  extends EntidadPersistente {
     @Column(columnDefinition = "DATE")
     private Date fechaDeOperacion;
 
+    @Column
+    private double valorTotal;
+
     @Transient
     GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();
 
@@ -25,6 +28,10 @@ public class Egreso  extends EntidadPersistente {
     }
 
     public Egreso() {
+    }
+
+    public double getValorTotal() {
+        return valorTotal;
     }
 
     public void setCompra(Compra compra) {

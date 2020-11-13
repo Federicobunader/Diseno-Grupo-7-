@@ -32,7 +32,7 @@
 
                 <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
                 <div class ="buscar">
-                    <input type="text" id="unEgreso" onkeyup="buscarEgreso()" placeholder="Buscar por nombre" title="Type in a name">
+                    <input type="text" id="unEgreso" onkeyup="buscarEgreso()" placeholder="Buscar por monto" title="Type in a name">
                 </div>
 
 
@@ -43,6 +43,7 @@
                             <thead>
                             <th><i class="fas fa-user"></i> Id </th>
                             <th><i class="fas fa-phone"></i> Fecha de Operacion</th>
+                            <th><i class="fas fa-phone"></i> Monto Total</th>
                             </thead>
 
                             <tbody>
@@ -50,7 +51,7 @@
                                 <tr>
                                     <td><i class="fas fa-user"></i> {{id}}</td>
                                     <td>{{fechaDeOperacion}}</td>
-
+                                    <td> {{valorTotal}}</td>
                                 </tr>
                             {{/each}}
                             </tbody>
@@ -61,7 +62,7 @@
                     <h3>Visualice los Ingresos</h3>
                     <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
                     <div class ="buscar">
-                        <input type="text" id="unIngreso" onkeyup="buscarIngreso()" placeholder="Buscar por nombre" title="Type in a name">
+                        <input type="text" id="unIngreso" onkeyup="buscarIngreso()" placeholder="Buscar por descripcion" title="Type in a name">
                     </div>
 
 
@@ -95,7 +96,7 @@
                     <h3> Seleccione el criterio de vinculación </h3>
                     <div class="field-wrap">
                         <div class="custom-select" style="width:200px;">
-                            <select name="tiposector" id="tiposector" onChange=changetextbox()>
+                            <select name="criterio" id="tiposector" onChange=changetextbox()>
                                 <option value="0">Seleccione el criterio:</option>
                                 <option value="1">1- Orden Valor Primer Egreso</option>
                                 <option value="2">2- Orden Valor Primer Ingreso</option>
@@ -107,7 +108,7 @@
 
                     <br>
                     <button type="submit" class="button button-back"
-                        onclick="window.location.href='./GESOC_CargarProductos.html'">Vincular</button>
+                        onclick="window.location.href='/vincular'">Vincular</button>
 
                 </form>
 

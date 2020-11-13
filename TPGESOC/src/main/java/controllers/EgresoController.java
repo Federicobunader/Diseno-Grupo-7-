@@ -4,6 +4,7 @@ import Negocio.Compras.Ingreso;
 import Negocio.Compras.Egreso;
 import Negocio.Compras.Presupuesto;
 import Negocio.Compras.Producto;
+import Negocio.Compras.Vinculacion.*;
 import Negocio.Usuario.Usuario;
 import repositories.Repositorio;
 import repositories.factories.FactoryRepositorio;
@@ -62,46 +63,72 @@ public class EgresoController {
         return new ModelAndView(parametros, "GESOC_AsociarIngresoAEgreso.hbs");
     }
 
+    public Response vincularEgreso (Request request, Response response){
+
+        if (request.queryParams("criterio") != null) {
+            String criterioRecibido = request.queryParams("criterio");
+
+            CriterioDeVinculacion criterioElegido = new OrdenValorPrimeroIngreso();
+            switch (criterioRecibido){
+                case "1":
+                    criterioElegido = new OrdenValorPrimeroEgreso();
+                    break;
+                case "2":
+                    criterioElegido = new OrdenValorPrimeroIngreso();
+                    break;
+                case "3":
+                    criterioElegido = new PorFecha();
+                    break;
+                case "4":
+                    criterioElegido = new Mix();
+                    break;
+                default:
+
+            }
+            criterioElegido.vincular();
 
 
-
-
-/*
-    private void asignarAtributosA(Empresa unaEmpresa, Request request) {
-        if (request.queryParams("RazonSocial") != null) {
-            unaEmpresa.setRazonSocial(request.queryParams("RazonSocial"));
         }
-
-        if (request.queryParams("NombreFicticio") != null) {
-            unaEmpresa.setNombreFicticio(request.queryParams("NombreFicticio"));
-        }
-
-        if (request.queryParams("CUIT") != null) {
-            long cuit = Long.valueOf(request.queryParams("CUIT"));
-            unaEmpresa.setCUIT(cuit);
-        }
-
-        if (request.queryParams("CodigoDeInscripcion") != null) {
-            long codigoIGJ = Long.valueOf(request.queryParams("CodigoDeInscripcion"));
-            unaEmpresa.setCodigoDeInscripcion(codigoIGJ);
-        }
-
-        if (request.queryParams("seleccionTipoDeSector") != null) { //SECTOR
-            unaEmpresa.setSeleccionTipoDeSector(request.queryParams("seleccionTipoDeSector"));
-        }
-
-        if (request.queryParams("cantidadDePersonal") != null) {
-            int cantidad = Integer.valueOf(request.queryParams("cantidadDePersonal"));
-            unaEmpresa.setCantidadDePersonal(cantidad);
-        }
-
-        if (request.queryParams("promedioDeVentasAnuales") != null) {
-            double cantidad = new Double (request.queryParams("promedioDeVentasAnuales"));
-            unaEmpresa.setPromedioDeVentasAnuales(cantidad);
-        }
+        System.out.println(("Criterio" + request.queryParams("criterio") ));
+        response.redirect("/menu_logueado");
+        return response;
     }
 
+    private void asignarAtributosA(Egreso unEgreso, Request request) {
+//        if (request.queryParams("RazonSocial") != null) {
+//            unEgreso.setRazonSocial(request.queryParams("RazonSocial"));
+//        }
+//
+//        if (request.queryParams("NombreFicticio") != null) {
+//            unaEmpresa.setNombreFicticio(request.queryParams("NombreFicticio"));
+//        }
+//
+//        if (request.queryParams("CUIT") != null) {
+//            long cuit = Long.valueOf(request.queryParams("CUIT"));
+//            unaEmpresa.setCUIT(cuit);
+//        }
+//
+//        if (request.queryParams("CodigoDeInscripcion") != null) {
+//            long codigoIGJ = Long.valueOf(request.queryParams("CodigoDeInscripcion"));
+//            unaEmpresa.setCodigoDeInscripcion(codigoIGJ);
+//        }
+//
+//        if (request.queryParams("seleccionTipoDeSector") != null) { //SECTOR
+//            unaEmpresa.setSeleccionTipoDeSector(request.queryParams("seleccionTipoDeSector"));
+//        }
+//
+//        if (request.queryParams("cantidadDePersonal") != null) {
+//            int cantidad = Integer.valueOf(request.queryParams("cantidadDePersonal"));
+//            unaEmpresa.setCantidadDePersonal(cantidad);
+//        }
+//
+//        if (request.queryParams("promedioDeVentasAnuales") != null) {
+//            double cantidad = new Double (request.queryParams("promedioDeVentasAnuales"));
+//            unaEmpresa.setPromedioDeVentasAnuales(cantidad);
+//        }
+    }
 
+/*
     public Response guardar(Request request, Response response){
 
         UsuarioController usuarioController = new UsuarioController();
