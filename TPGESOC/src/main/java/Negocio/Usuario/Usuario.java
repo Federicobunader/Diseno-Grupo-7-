@@ -36,7 +36,7 @@ public class Usuario extends EntidadPersistente {
                     CascadeType.REFRESH,
                     CascadeType.PERSIST
             }, fetch = FetchType.LAZY)
-    @JoinTable(name = "usuario_x_mensaje",joinColumns = @JoinColumn(name = "mensaje_id"),inverseJoinColumns = @JoinColumn (name = "usuario_id"))
+    @JoinTable(name = "usuario_x_mensaje",joinColumns = @JoinColumn(name = "usuario_id"),inverseJoinColumns = @JoinColumn (name = "mensaje_id"))
     private List<Mensaje> bandejaDeMensajes = new ArrayList<Mensaje>();
 
     @Transient
