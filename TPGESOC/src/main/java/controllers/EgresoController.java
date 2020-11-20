@@ -1,9 +1,6 @@
 package controllers;
 
-import Negocio.Compras.Ingreso;
-import Negocio.Compras.Egreso;
-import Negocio.Compras.Presupuesto;
-import Negocio.Compras.Producto;
+import Negocio.Compras.*;
 import Negocio.Compras.Vinculacion.*;
 import Negocio.Usuario.Usuario;
 import repositories.Repositorio;

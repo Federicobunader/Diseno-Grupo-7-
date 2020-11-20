@@ -37,6 +37,7 @@ public class Router {
         ProductoController productoController = new ProductoController();
         PresupuestoController presupuestoController = new PresupuestoController();
         MensajeController mensajeController = new MensajeController();
+        CategoriaController categoriaController = new CategoriaController();
 
         Spark.get("/", loginController::inicio, Router.engine);
 
@@ -56,7 +57,9 @@ public class Router {
 
         Spark.get("/asociar_egreso_o_presepuesto_a_categoria",usuarioController :: asociar_egreso_o_presepuesto_a_categoria,Router.engine);
 
-        Spark.get("/listado_por_categoria",usuarioController :: listado_por_categoria,Router.engine);
+        Spark.get("/listado_por_categoria",categoriaController :: mostrarTodos,Router.engine);
+
+        //Spark.get("/listado_por_categoria/:id",categoriaController :: mostrarTodosLosEgresosDeUnaCategoria,Router.engine);
 
         Spark.post("/loguearse", loginController::login);
 
