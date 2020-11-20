@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Carga de productos del egreso</title>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <!--<link rel="stylesheet" href="/css/GESOC_AsociarItemACategoria.css">-->
+    <link rel="stylesheet" href="/css/GESOC_AsociarItemACategoria.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <a class="navbar-brand page-scroll" href="/menu_logueado">GESOC</a>
+        </div>
+    </nav>
+
+    <!-- partial:index.partial.html -->
+    <div class="form">
+
+        <button type="submit" class="button button-back" onclick="window.location.href='/menu_logueado'">Volver al menú
+            principal</button>
+
+        <br>
+        <h2>Asociar Producto a Categoria</h2>
+
+        <div class="tab-content">
+            <div id="compra">
+
+                <h3>Visualice las categorías existentes</h3>
+
+                <h3>Visualice las categorías existentes e ingrese el id de la elegida</h3>
+
+                <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
+                <div class ="buscar">
+                    <input type="text" id="unaCategoria" onkeyup="buscarCategoria()" placeholder="Buscar por nombre" title="Type in a name">
+                </div>
+
+                <form class="" action="/listado_por_categoria" method="post" style="">
+
+                    <div id="div1">
+
+                        <table class="scroll" id="tablaCategoria" style="overflow-y:auto;">
+
+                            <thead>
+                            <th>Id Categoría</th>
+                            <th>Nombre de Categoría</th>
+                            <th>Criterio</th>
+                            </thead>
+
+                            <tbody>
+                            {{#each categorias}}
+                                <tr>
+                                    <td><i class="fas fa-user"></i> {{id}}</td>
+                                    <td>{{nombreCategoria}}</td>
+                                    <td>{{criterioDeItem}}</td>
+
+                                </tr>
+                            {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                    <style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+</style>
+                    <script>
+function buscarCategoria() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("unaCategoria");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("tablaCategoria");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+
+                    <h3>Visualice los Productos existentes</h3>
+
+                
+                <form class="" action="/cargar_egreso" method="post" style="">
+                    <div id="div1">
+                        <table id="scroll">
+                            <tr>
+                                <th>Producto Id</th>
+                                <th>Descripción</th>
+                                <th>Precio</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Descripcion 1</td>
+                                <td>Precio 1</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Descripcion 2</td>
+                                <td>Precio 2</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Descripcion 3</td>
+                                <td>Precio 3</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Descripcion 4</td>
+                                <td>Precio 4</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Descripcion 5</td>
+                                <td>Precio 5</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Descripcion 7</td>
+                                <td>Precio 7</td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    
+                    <h3>Ingrese el ID del Producto que desea asociar y el ID de la categoría a cual desea asociarlo</h3>
+
+                    <div class="top-row">
+                        <div class="field-wrap">
+                            <label>
+                                Id Categoría<span class="req">*</span>
+                            </label>
+                            <input type="text" required autocomplete="off" id="entidadjuridica" />
+                        </div>
+                                       
+                        <div class="field-wrap">
+                            <label>
+                                Id Item<span class="req">*</span>
+                            </label>
+                            <input type="text" required autocomplete="off" id="entidadjuridica" />
+                        </div>
+                    </div>            
+
+                    <button type="submit" class="button button-back" onclick="window.location.href='./'">Asociar</button>
+
+
+            </div>
+
+            <!--<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'>
+            </script><script  src="/js/GESOC_AsociarItemACategoria.js"></script>-->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+            <script src="/js/GESOC_AsociarItemACategoria.js"></script>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

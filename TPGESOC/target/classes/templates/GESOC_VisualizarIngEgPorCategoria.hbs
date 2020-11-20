@@ -15,12 +15,15 @@
     <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
-            <a class="navbar-brand page-scroll" href="./GESOC_Menu_Logueado.html">GESOC</a>
+            <a class="navbar-brand page-scroll" href="/menu_logueado">GESOC</a>
         </div>
     </nav>
 
     <!-- partial:index.partial.html -->
     <div class="form">
+
+        <button type="submit" class="button button-back" onclick="window.location.href='/menu_logueado'">Volver al menú
+            principal</button>
 
         <h2>Visualizar Egresos e Ingresos por categoría</h2>
 
@@ -96,14 +99,7 @@ function buscarCategoria() {
 }
 </script>
 
-                    <div class="field-wrap">
-                        <label>
-                            Ingrese la ID de una categoria<span class="req">*</span>
-                        </label>
-                        <input type="text"required autocomplete="off" id="Password" name="categoria" class="input-datos"/>
-                    </div>
 
-                    <button type="submit" class="button button-back" onclick="window.location.href='/menu_logueado'">Buscar</button>
 
                     <br>
 
@@ -111,7 +107,7 @@ function buscarCategoria() {
 
                     <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
                     <div class ="buscar">
-                        <input type="text" id="unEgreso" onkeyup="buscarEgreso()" placeholder="Buscar por categoria" title="Type in a name">
+                        <input type="text" id="unEgreso" onkeyup="buscarEgreso()" placeholder="Ingrese la ID de una categoria" title="Type in a name">
                     </div>
 
                     <form class="" action="/listado_por_categoria" method="post" style="">
@@ -136,6 +132,37 @@ function buscarCategoria() {
                                         <td>{{categoria_id}}</td>
 
                                     </tr>
+
+                                    <h3>Visualice los ingresos de dicha categoría</h3>
+
+                                    <div id="div1">
+
+                                        <table class="scroll" id="tablaEgresos" style="overflow-y:auto;">
+
+                                            <thead>
+                                            <th>Id Egreso</th>
+                                            <th>Fecha de operacion</th>
+                                            <th>Monto Total</th>
+                                            <th>Categoria asociada</th>
+                                            </thead>
+
+                                            <tbody>
+                                            {{#each egresosTotales}}
+                                                <tr>
+                                                    <td><i class="fas fa-user"></i> {{id}}</td>
+                                                    <td>{{fechaDeOperacion}}</td>
+                                                    <td>{{valorTotal}}</td>
+                                                    <td>{{categoria_id}}</td>
+
+                                                </tr>
+
+                                                <h3>Visualice los ingresos de dicha categoría</h3>
+
+                                            {{/each}}
+                                            </tbody>
+                                        </table>
+                                    </div>
+
                                 {{/each}}
                                 </tbody>
                             </table>

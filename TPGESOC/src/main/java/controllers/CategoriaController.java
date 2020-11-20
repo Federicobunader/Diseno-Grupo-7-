@@ -30,11 +30,17 @@ public class CategoriaController {
         return new ModelAndView(parametros,"GESOC_VisualizarIngEgPorCategoria.hbs");
     }
 
-    public ModelAndView mostrarTodos(Request request, Response response) {
+    private Map<String, Object> mostrarCategoriasparametros(Request request, Response response){
         Map<String, Object> parametros = new HashMap<>();
         List<CategoriaItem> categorias = this.repo.buscarTodos();
         parametros.put("categorias", categorias);
 
+        return parametros;
+    }
+
+    public ModelAndView mostrarTodosParaVisualizar(Request request, Response response) {
+        Map<String, Object> parametros = this.mostrarCategoriasparametros(request,response);
+        /*
         List<Egreso> egresosTotales = new ArrayList<>();
 
         for(int i=0; i< categorias.size();i++){
@@ -42,8 +48,13 @@ public class CategoriaController {
         }
 
         parametros.put("egresosTotales",egresosTotales);
-
+*/
         return new ModelAndView(parametros, "GESOC_VisualizarIngEgPorCategoria.hbs");
+    }
+
+    public ModelAndView mostrarTodosParaAsociar(Request request, Response response) {
+        Map<String, Object> parametros = this.mostrarCategoriasparametros(request,response);
+        return new ModelAndView(parametros, "GESOC_AsociarItemACategoria.hbs");
     }
 
     public ModelAndView mostrarTodosLosEgresosDeUnaCategoria(Request request, Response response) {
