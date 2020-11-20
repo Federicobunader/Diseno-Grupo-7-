@@ -27,6 +27,10 @@ public class Ingreso extends EntidadPersistente {
     public Ingreso() {
     }
 
+    public List<Egreso> getEgresosVinculados() {
+        return egresosVinculados;
+    }
+
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }

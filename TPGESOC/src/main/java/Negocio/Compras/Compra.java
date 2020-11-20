@@ -55,6 +55,10 @@ public class Compra extends EntidadPersistente {
 	@Transient
 	private Criterio criterioEleccionPresupuesto;
 
+	@Transient
+	private boolean perteneceAProyecto = false;
+
+
 	public Compra(ArrayList<Item> items, ArrayList<Presupuesto> presupuestos, MedioDePago medioDePago, List<Documento> documentosComerciales, Entidad entidad, Proveedor proveedor, boolean requierePresupuesto, Criterio criterioEleccionPresupuesto, int IDCompra) {
 		this.items = items;
 		this.presupuestos = presupuestos;
@@ -62,7 +66,6 @@ public class Compra extends EntidadPersistente {
 		this.documentosComerciales = documentosComerciales;
 		this.entidad = entidad;
 		this.proveedor = proveedor;
-		this.requierePresupuesto = requierePresupuesto;
 		this.criterioEleccionPresupuesto = criterioEleccionPresupuesto;
 	}
 
@@ -101,6 +104,10 @@ public class Compra extends EntidadPersistente {
 		this.proveedor = proveedor;
 	}
 
+	public boolean isPerteneceAProyecto() {
+		return perteneceAProyecto;
+	}
+
 	public void setRequierePresupuesto(boolean requiere) {
 		this.requierePresupuesto = requiere;
 	}
@@ -109,11 +116,15 @@ public class Compra extends EntidadPersistente {
 		this.criterioEleccionPresupuesto = criterioEleccionPresupuesto;
 	}
 
-	public void validar(){
+	public void setPerteneceAProyecto(boolean perteneceAProyecto) {
+		this.perteneceAProyecto = perteneceAProyecto;
+	}
+
+	public void validar(double montoDefinido, int cantidadPresupuestosExigibles){
 		Validador validador = Validador.GetInstance();
-		this.setRequierePresupuesto(validador.requierePresupuesto(this.getMonto()));
+		requierePresupuesto = validador.requierePresupuesto(this.getMonto(), montoDefinido);
 		if(requierePresupuesto) {
-			if(validador.tieneSuficientesPresupuestos(this.cantidadPresupuestos())){
+			if(validador.tieneSuficientesPresupuestos(this.cantidadPresupuestos(), cantidadPresupuestosExigibles)){
 				notificarUsuarios("La compra " + getId() + " tiene la cantidad de presupuestos requeridos.");
 			} else {
 				notificarUsuarios("La compra " + getId() + " no tiene la cantidad de presupuestos requeridos");
