@@ -2,6 +2,7 @@ package controllers;
 
 import Negocio.Compras.*;
 import Negocio.Compras.Vinculacion.*;
+import Negocio.Usuario.GestorDePasswords;
 import Negocio.Usuario.Usuario;
 import repositories.Repositorio;
 import repositories.factories.FactoryRepositorio;
@@ -17,6 +18,8 @@ public class EgresoController {
 
     private Repositorio<Egreso> repo;
 
+    GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();
+
     public Repositorio<Egreso> getRepo() {
         return repo;
     }
@@ -25,7 +28,80 @@ public class EgresoController {
         this.repo = FactoryRepositorio.get(Egreso.class);
     }
 
-    public ModelAndView cargarEgreso(Request request, Response response){
+    public Response reiniciarEgreso(Request request, Response response){
+        gestorDeEgresos.reiniciarDatosEgreso();
+        response.redirect("/menu_logueado");
+
+        return null;
+    }
+
+    public Response guardarItem(Request request, Response response){
+
+        Item item = new Item();
+        Producto producto = new Producto();
+
+        if (request.queryParams("productos_id") != null) {
+            int idProducto = Integer.valueOf(request.queryParams("productos_id"));
+            Repositorio<Producto> repoProducto = FactoryRepositorio.get(Producto.class);
+            producto = repoProducto.buscar(idProducto);
+        }
+
+        if(producto != null){
+            if (request.queryParams("productos_cantidad") != null) {
+                int cantidad = Integer.valueOf(request.queryParams("productos_cantidad"));
+                item.setProducto(producto);
+                item.setCantidad(cantidad);
+
+                gestorDeEgresos.agregarItemAListaDeItemDeEgreso(item);
+            }
+        }
+
+        response.redirect("/cargar_egreso");
+
+        return null;
+    }
+
+    public Response guardarUsuarioRevisor(Request request, Response response){
+
+        Usuario usuario = new Usuario();
+
+        if (request.queryParams("usuario_id") != null) {
+            int idUsuario = Integer.valueOf(request.queryParams("usuario_id"));
+            Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
+            usuario = repoUsuario.buscar(idUsuario);
+
+            if(usuario != null){
+                gestorDeEgresos.agregarUsuarioRevisorAListaDeUsuarioRevisoresDeEgreso(usuario);
+            }
+        }
+
+
+        response.redirect("/cargar_egreso");
+
+        return null;
+    }
+
+    public Response guardarPresupuesto(Request request, Response response){
+
+        Presupuesto presupuesto = new Presupuesto();
+
+        if (request.queryParams("presupuesto_id") != null) {
+            int idPresupuesto = Integer.valueOf(request.queryParams("presupuesto_id"));
+            Repositorio<Presupuesto> repoPresupuestos = FactoryRepositorio.get(Presupuesto.class);
+            presupuesto = repoPresupuestos.buscar(idPresupuesto);
+
+            if(presupuesto != null){
+                gestorDeEgresos.agregarPresupuestoALaListaDePresupuestosDelEgreso(presupuesto);
+            }
+        }
+
+
+        response.redirect("/cargar_egreso");
+
+        return null;
+    }
+
+    private Map<String, Object> parametrosEgresos(Request request, Response response){
         Map<String, Object> parametros = new HashMap<>();
 
         ProductoController productoController = new ProductoController();
@@ -44,9 +120,55 @@ public class EgresoController {
         List<Presupuesto> presupuestos = repoPresupuesto.buscarTodos();
         parametros.put("presupuestos", presupuestos);
 
-        return new ModelAndView(parametros,"GESOC_CargaEgresos.hbs");
+        return parametros;
     }
 
+    public ModelAndView cargarEgreso(Request request, Response response){
+
+        Map<String, Object> parametros = this.parametrosEgresos(request,response);
+
+        return new ModelAndView(parametros,"GESOC_CargaEgresos.hbs");
+    }
+/*
+    public Response guardar(Request request, Response response){
+
+        UsuarioController usuarioController = new UsuarioController();
+        Usuario unUsuario = new Usuario();
+        Map<String, Object> parametros = new HashMap<>();
+
+        if(usuarioController.elUsuarioSePuedeRegistrarCorrectamente(unUsuario,request)){
+            EntidadBase entidadBase = new EntidadBase();
+            DireccionPostal direccionPostal = new DireccionPostal();
+
+            DireccionPostalController direccionPostalController = new DireccionPostalController();
+            direccionPostalController.asignarAtributosA(direccionPostal,request);
+
+            Repositorio<DireccionPostal> repoDireccion = FactoryRepositorio.get(DireccionPostal.class);
+            repoDireccion.agregar(direccionPostal);
+
+
+            usuarioController.asignarAtributosA(unUsuario,request);
+
+            Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
+            repoUsuario.agregar(unUsuario);
+
+            unUsuario.setDireccionPostal(direccionPostal);
+            entidadBase.setUsuario(unUsuario);
+
+            asignarAtributosA(entidadBase,request);
+            this.repo.agregar(entidadBase);
+            response.redirect("/menu_logueado");
+
+        }
+        else {
+            parametros.put("falloAlRegistrarse",true);
+            // return new ModelAndView (parametros,"GESOC_Login.hbs");
+
+        }
+        return response;
+
+    }
+*/
     public ModelAndView mostrarTodos(Request request, Response response){
         Map<String, Object> parametros = new HashMap<>();
         List<Egreso> egresos = this.repo.buscarTodos();

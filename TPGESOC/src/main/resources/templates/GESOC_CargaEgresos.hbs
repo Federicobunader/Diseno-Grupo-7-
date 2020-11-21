@@ -22,7 +22,7 @@
 <!-- partial:index.partial.html -->
 <div class="form">
       
-  <button type="submit" class="button button-back" onclick="window.location.href='/menu_logueado'">Volver atrás</button>
+  <button type="submit" class="button button-back" onclick="window.location.href='/reiniciar_egreso'">Volver atrás</button>
 
     </head>
 
@@ -101,7 +101,7 @@
                         <h3>¿Desea cargar otro producto?</h3>
 
                         <button type="submit" class="button button-back"
-                                onclick="window.location.href='/guardar_producto_Egreso'">Sí</button>
+                                onclick="window.location.href='/guardar_item_egreso'">Sí</button>
                         <button type="submit" class="button button-back"
                                 onclick="window.location.href='/cargar_egreso#usuarios'">Seguir con los datos del
                             egreso</button>
@@ -178,7 +178,7 @@ tr:nth-child(even) {background-color: #8d5151;}
                         <h3>¿Desea cargar otro usuario?</h3>
 
                         <button type="submit" class="button button-back"
-                                onclick="window.location.href='/agregar_productos'">Sí</button>
+                                onclick="window.location.href='/guardar_usuario_revisor_egreso'">Sí</button>
                         <button type="submit" class="button button-back"
                                 onclick="window.location.href='/presupuestos'">Finalizar</button>
 
@@ -239,12 +239,19 @@ tr:nth-child(even) {background-color: #8d5151;}
             </tbody>
         </table>
             <br><br>
-        <div class="field-wrap">
-            <label>
-                ID PRESUPUESTO<span class="req">*</span>
-            </label>
-            <input type="text" required autocomplete="off" id="Código IGJ" name="presupuestos"  class="input-datos" {{#if empresa}}value="{{empresa.CodigoDeInscripcion}}" {{/if}}>
-        </div>
+
+            <div class="field-wrap">
+                <label>
+                    Id de Presupuesto<span class="req">*</span>
+                </label>
+                <input type="text" required autocomplete="off" id="cantidad" name="presupuesto_id"
+                       class="input-datos" />
+            </div>
+
+            <h3>¿Desea cargar otro presupuesto?</h3>
+
+            <button type="submit" class="button button-back"
+                    onclick="window.location.href='/guardar_presupuesto_egreso'">Sí</button>
 
         <div class="field-wrap">
             <label>

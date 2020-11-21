@@ -1,6 +1,7 @@
 package Negocio.Compras;
 
 import Negocio.Usuario.Mensaje;
+import Negocio.Usuario.Usuario;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -19,6 +20,10 @@ public class GestorDeEgresos {
 
     private List<Egreso> egresos = new ArrayList<Egreso>();
     private ArrayList<Egreso> egresosVinculados = new ArrayList<Egreso>();
+
+    private List<Item> itemsAAgregarAUnEgreso = new ArrayList<>();
+    private List<Usuario> usuariosRevisoresDeUnEgreso = new ArrayList<>();
+    private List<Presupuesto> presupuestosDelEgreso = new ArrayList<>();
 
     private Date fechaAcceptableDesde;
     private Date fechaAcceptableHasta;
@@ -91,6 +96,40 @@ public class GestorDeEgresos {
 
     public ArrayList<Compra> getComprasNoValidadas() {
         return comprasNoValidadas;
+    }
+
+    public static GestorDeEgresos getInstance() {
+        return instance;
+    }
+
+    public void reiniciarDatosEgreso(){
+        itemsAAgregarAUnEgreso.clear();
+        usuariosRevisoresDeUnEgreso.clear();
+        presupuestosDelEgreso.clear();
+    }
+
+    public void agregarItemAListaDeItemDeEgreso(Item item){
+        itemsAAgregarAUnEgreso.add(item);
+    }
+
+    public void agregarUsuarioRevisorAListaDeUsuarioRevisoresDeEgreso(Usuario usuario){
+        usuariosRevisoresDeUnEgreso.add(usuario);
+    }
+
+    public void agregarPresupuestoALaListaDePresupuestosDelEgreso (Presupuesto presupuesto){
+        presupuestosDelEgreso.add(presupuesto);
+    }
+
+    public List<Item> getItemsAAgregarAUnEgreso() {
+        return itemsAAgregarAUnEgreso;
+    }
+
+    public List<Usuario> getUsuariosRevisoresDeUnEgreso() {
+        return usuariosRevisoresDeUnEgreso;
+    }
+
+    public List<Presupuesto> getPresupuestosDelEgreso() {
+        return presupuestosDelEgreso;
     }
 
     public void registrarUnPresupuesto(Presupuesto unPresupuesto){
