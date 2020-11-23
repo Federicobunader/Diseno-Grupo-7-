@@ -62,4 +62,6 @@ public class EntidadJuridica extends Entidad {
 	public long getCodigoDeInscripcion() {
 		return CodigoDeInscripcion;
 	}
+
+
 }//end EntidadJuridica

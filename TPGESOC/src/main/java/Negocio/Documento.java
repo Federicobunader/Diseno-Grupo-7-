@@ -9,23 +9,31 @@ import javax.persistence.*;
 public class Documento extends EntidadPersistente {
 
 	@Column
-	private int Numero;
+	private int numero;
 	@Column
-	private char Tipo;
+	private String tipo;
 
-	public Documento(int numero, char tipo) {
-		Numero = numero;
-		Tipo = tipo;
+	public Documento(int unNumero, String unTipo) {
+		numero = unNumero;
+		tipo = unTipo;
 	}
 
 	public Documento() {
 	}
 
-	public void setNumero(int numero) {
-		Numero = numero;
+	public void setNumero(int unNumero) {
+		numero = unNumero;
 	}
 
-	public void setTipo(char tipo) {
-		Tipo = tipo;
+	public void setTipo(String unTipo) {
+		tipo = unTipo;
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public String getTipo() {
+		return tipo;
 	}
 }//end Documento

@@ -23,5 +23,9 @@ public class MedioDePago  extends EntidadPersistente {
 	public void setTipoDePago(String tipoDePago) {
 		this.tipoDePago = tipoDePago;
 	}
+
+	public String getTipoDePago() {
+		return tipoDePago;
+	}
 }//end MedioDePago
 

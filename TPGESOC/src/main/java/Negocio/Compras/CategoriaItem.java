@@ -20,7 +20,7 @@ public class CategoriaItem extends EntidadPersistente {
     private List<Egreso> egresos = new ArrayList<>();
 
     @OneToMany
-    @JoinColumn(name="presupuesto_id", referencedColumnName = "id")
+    @JoinColumn(name="categoria_id", referencedColumnName = "id")
     private List<Presupuesto> presupuestos = new ArrayList<>();
 
     public CategoriaItem(String criterioDeItem, String nombreCategoria) {

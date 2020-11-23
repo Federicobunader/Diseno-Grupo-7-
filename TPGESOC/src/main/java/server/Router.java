@@ -76,6 +76,8 @@ public class Router {
 
         Spark.post("/guardar_presupuesto_egreso", egresoController :: guardarPresupuesto);
 
+        Spark.post("/guardar_documento_egreso", egresoController :: guardarDocumento);
+
         Spark.post("/vincular", egresoController :: vincularEgreso);
 
         Spark.get("/asociar_egreso_a_ingreso", egresoController :: mostrarTodos, Router.engine);

@@ -66,7 +66,7 @@ public class CompraTest {
         item7 = new Item(producto1,500, categorias);
         item8 = new Item(producto2,200, categorias);
 
-        documento = new Documento(1,'a');
+        documento = new Documento(1,"a");
 
         documentosComerciales = new ArrayList<Documento>();
         documentosComerciales.add(documento);

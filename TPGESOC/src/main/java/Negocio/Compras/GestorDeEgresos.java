@@ -1,5 +1,6 @@
 package Negocio.Compras;
 
+import Negocio.Documento;
 import Negocio.Usuario.Mensaje;
 import Negocio.Usuario.Usuario;
 
@@ -24,6 +25,7 @@ public class GestorDeEgresos {
     private List<Item> itemsAAgregarAUnEgreso = new ArrayList<>();
     private List<Usuario> usuariosRevisoresDeUnEgreso = new ArrayList<>();
     private List<Presupuesto> presupuestosDelEgreso = new ArrayList<>();
+    private List<Documento> documentosDelEgreso = new ArrayList<>();
 
     private Date fechaAcceptableDesde;
     private Date fechaAcceptableHasta;
@@ -106,6 +108,7 @@ public class GestorDeEgresos {
         itemsAAgregarAUnEgreso.clear();
         usuariosRevisoresDeUnEgreso.clear();
         presupuestosDelEgreso.clear();
+        documentosDelEgreso.clear();
     }
 
     public void agregarItemAListaDeItemDeEgreso(Item item){
@@ -120,6 +123,10 @@ public class GestorDeEgresos {
         presupuestosDelEgreso.add(presupuesto);
     }
 
+    public void agregarDocumentoALaListaDeDocumentosDelEgreso (Documento documento){
+        documentosDelEgreso.add(documento);
+    }
+
     public List<Item> getItemsAAgregarAUnEgreso() {
         return itemsAAgregarAUnEgreso;
     }
@@ -130,6 +137,18 @@ public class GestorDeEgresos {
 
     public List<Presupuesto> getPresupuestosDelEgreso() {
         return presupuestosDelEgreso;
+    }
+
+    public ArrayList<Presupuesto> getPresupuestos() {
+        return presupuestos;
+    }
+
+    public ArrayList<Egreso> getEgresosVinculados() {
+        return egresosVinculados;
+    }
+
+    public List<Documento> getDocumentosDelEgreso() {
+        return documentosDelEgreso;
     }
 
     public void registrarUnPresupuesto(Presupuesto unPresupuesto){

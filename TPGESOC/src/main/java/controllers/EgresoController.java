@@ -2,6 +2,11 @@ package controllers;
 
 import Negocio.Compras.*;
 import Negocio.Compras.Vinculacion.*;
+import Negocio.Documento;
+import Negocio.Entidad.Empresa.Empresa;
+import Negocio.Entidad.EntidadBase;
+import Negocio.Entidad.EntidadJuridica;
+import Negocio.Proveedor;
 import Negocio.Usuario.GestorDePasswords;
 import Negocio.Usuario.Usuario;
 import repositories.Repositorio;
@@ -101,6 +106,26 @@ public class EgresoController {
         return null;
     }
 
+    public Response guardarDocumento(Request request, Response response){
+
+        Documento documento = new Documento();
+
+        if (request.queryParams("documento_id") != null) {
+            int idDocumento = Integer.valueOf(request.queryParams("documento_id"));
+            Repositorio<Documento> repoDocumentos = FactoryRepositorio.get(Documento.class);
+            documento = repoDocumentos.buscar(idDocumento);
+
+            if(documento != null){
+                gestorDeEgresos.agregarDocumentoALaListaDeDocumentosDelEgreso(documento);
+            }
+        }
+
+
+        response.redirect("/cargar_egreso");
+
+        return null;
+    }
+
     private Map<String, Object> parametrosEgresos(Request request, Response response){
         Map<String, Object> parametros = new HashMap<>();
 
@@ -120,6 +145,21 @@ public class EgresoController {
         List<Presupuesto> presupuestos = repoPresupuesto.buscarTodos();
         parametros.put("presupuestos", presupuestos);
 
+        Repositorio<Documento> repoDocumentos = FactoryRepositorio.get(Documento.class);
+        List<Documento> documentos = repoDocumentos.buscarTodos();
+        parametros.put("documentos", documentos);
+
+        Repositorio<Empresa> repoEmpresas = FactoryRepositorio.get(Empresa.class);
+        List<Empresa> empresas = repoEmpresas.buscarTodos();
+        parametros.put("empresas", empresas);
+
+        Repositorio<EntidadBase> repoEntidadBase = FactoryRepositorio.get(EntidadBase.class);
+        List<EntidadBase> entidadBases = repoEntidadBase.buscarTodos();
+        parametros.put("entidadBases", entidadBases);
+
+        Repositorio<Proveedor> repoProveedor = FactoryRepositorio.get(Proveedor.class);
+        List<Proveedor> proveedores = repoProveedor.buscarTodos();
+        parametros.put("proveedores", proveedores);
         return parametros;
     }
 
@@ -129,13 +169,31 @@ public class EgresoController {
 
         return new ModelAndView(parametros,"GESOC_CargaEgresos.hbs");
     }
-/*
+
     public Response guardar(Request request, Response response){
+
+        Egreso egreso = new Egreso();
+        Compra compra = new Compra();
+
+        compra.setItems(gestorDeEgresos.getItemsAAgregarAUnEgreso());
+        compra.setUsuariosRevisores(gestorDeEgresos.getUsuariosRevisoresDeUnEgreso());
+        compra.setPresupuestos(gestorDeEgresos.getPresupuestosDelEgreso());
+
+        if (request.queryParams("presupuestoElegido") != null) {
+            Presupuesto presupuestoElegido = new Presupuesto();
+            int idPresupuestoElegido = Integer.valueOf(request.queryParams("presupuestoElegido"));
+            Repositorio<Presupuesto> repoPresupuestos = FactoryRepositorio.get(Presupuesto.class);
+            presupuestoElegido = repoPresupuestos.buscar(idPresupuestoElegido);
+
+            if(presupuestoElegido != null){
+                compra.setPresupuestoElegido(presupuestoElegido);
+            }
+        }
 
         UsuarioController usuarioController = new UsuarioController();
         Usuario unUsuario = new Usuario();
         Map<String, Object> parametros = new HashMap<>();
-
+/*
         if(usuarioController.elUsuarioSePuedeRegistrarCorrectamente(unUsuario,request)){
             EntidadBase entidadBase = new EntidadBase();
             DireccionPostal direccionPostal = new DireccionPostal();
@@ -164,11 +222,11 @@ public class EgresoController {
             parametros.put("falloAlRegistrarse",true);
             // return new ModelAndView (parametros,"GESOC_Login.hbs");
 
-        }
+        */
         return response;
 
     }
-*/
+
     public ModelAndView mostrarTodos(Request request, Response response){
         Map<String, Object> parametros = new HashMap<>();
         List<Egreso> egresos = this.repo.buscarTodos();

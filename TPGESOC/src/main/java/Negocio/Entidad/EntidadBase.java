@@ -39,4 +39,8 @@ public class EntidadBase extends Entidad {
 	public void setEntidadJuridica(String entidadJuridica) {
 		EntidadJuridica = entidadJuridica;
 	}
+
+	public String getNombreFicticio() {
+		return NombreFicticio;
+	}
 }//end EntidadBase
