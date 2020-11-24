@@ -26,7 +26,7 @@ public class Compra extends EntidadPersistente {
 	private List<Presupuesto> presupuestos = new ArrayList<Presupuesto>();
 
 	@OneToMany
-	@JoinColumn(name="id", referencedColumnName = "id")
+	@JoinColumn(name="compra_id", referencedColumnName = "id")
 	private List<Usuario> usuariosRevisores = new ArrayList<Usuario>();
 
 	@OneToOne
@@ -94,6 +94,10 @@ public class Compra extends EntidadPersistente {
 
 	public void setDocumentosComerciales(List<Documento> documentosComerciales) {
 		this.documentosComerciales = documentosComerciales;
+	}
+
+	public boolean isRequierePresupuesto() {
+		return requierePresupuesto;
 	}
 
 	public void setEntidad(Entidad entidad) {

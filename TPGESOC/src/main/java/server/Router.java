@@ -68,6 +68,8 @@ public class Router {
 
         Spark.get("/reiniciar_egreso", egresoController:: reiniciarEgreso);
 
+        Spark.post("/confirmar_egreso", egresoController :: guardar);
+
         //Spark.post("/cargar_egreso", egresoController :: cargarEgreso);
 
         Spark.post("/guardar_item_egreso", egresoController :: guardarItem);
@@ -77,7 +79,15 @@ public class Router {
         Spark.post("/guardar_presupuesto_egreso", egresoController :: guardarPresupuesto);
 
         Spark.post("/guardar_documento_egreso", egresoController :: guardarDocumento);
+/*
+        Spark.get("/guardar_item_egreso", egresoController :: cargarEgreso, Router.engine);
 
+        Spark.get("/guardar_usuario_revisor_egreso", egresoController :: cargarEgreso, Router.engine);
+
+        Spark.get("/guardar_presupuesto_egreso", egresoController :: cargarEgreso, Router.engine);
+
+        Spark.get("/guardar_documento_egreso", egresoController :: cargarEgreso, Router.engine);
+*/
         Spark.post("/vincular", egresoController :: vincularEgreso);
 
         Spark.get("/asociar_egreso_a_ingreso", egresoController :: mostrarTodos, Router.engine);

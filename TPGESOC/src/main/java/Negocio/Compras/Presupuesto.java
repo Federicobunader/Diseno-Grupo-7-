@@ -19,10 +19,22 @@ public class Presupuesto  extends EntidadPersistente {
     @JoinColumn(name = "presupuesto_id", referencedColumnName = "id")
     private List<Documento> documentosComerciales = new ArrayList<Documento>();
 
+    @Column
+    public double valorTotal;
+
 
     public Presupuesto( List<Item> items, List<Documento> documentosComerciales) {
         this.items = items;
         this.documentosComerciales = documentosComerciales;
+        valorTotal = this.valorTotal();
+    }
+
+    public double getValorTotal() {
+        return valorTotal;
+    }
+
+    public void setValorTotal(double valorTotal) {
+        this.valorTotal = valorTotal;
     }
 
     public Presupuesto() {

@@ -4,6 +4,8 @@ import BaseDeDatos.EntidadPersistente;
 import Negocio.Proveedor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="producto")
@@ -18,6 +20,10 @@ public class Producto  extends EntidadPersistente {
 	private Proveedor proveedor;
 	@Column
 	private String descripcion;
+
+	@ManyToMany
+	@JoinTable(name = "item_x_categoriaItem")
+	private List<CategoriaItem> categorias = new ArrayList<CategoriaItem>();
 
 	public int getPrecio() {
 		return precio;
@@ -59,5 +65,13 @@ public class Producto  extends EntidadPersistente {
 
 	public String getNombre() {
 		return nombre;
+	}
+
+	public List<CategoriaItem> getCategorias() {
+		return categorias;
+	}
+
+	public void setCategorias(List<CategoriaItem> categorias) {
+		this.categorias = categorias;
 	}
 }//end Producto

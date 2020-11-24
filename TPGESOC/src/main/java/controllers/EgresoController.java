@@ -6,6 +6,7 @@ import Negocio.Documento;
 import Negocio.Entidad.Empresa.Empresa;
 import Negocio.Entidad.EntidadBase;
 import Negocio.Entidad.EntidadJuridica;
+import Negocio.MedioDePago;
 import Negocio.Proveedor;
 import Negocio.Usuario.GestorDePasswords;
 import Negocio.Usuario.Usuario;
@@ -15,6 +16,7 @@ import spark.ModelAndView;
 import spark.Request;
 import spark.Response;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -60,9 +62,7 @@ public class EgresoController {
                 gestorDeEgresos.agregarItemAListaDeItemDeEgreso(item);
             }
         }
-
         response.redirect("/cargar_egreso");
-
         return null;
     }
 
@@ -79,10 +79,7 @@ public class EgresoController {
                 gestorDeEgresos.agregarUsuarioRevisorAListaDeUsuarioRevisoresDeEgreso(usuario);
             }
         }
-
-
         response.redirect("/cargar_egreso");
-
         return null;
     }
 
@@ -100,9 +97,7 @@ public class EgresoController {
             }
         }
 
-
         response.redirect("/cargar_egreso");
-
         return null;
     }
 
@@ -120,9 +115,7 @@ public class EgresoController {
             }
         }
 
-
         response.redirect("/cargar_egreso");
-
         return null;
     }
 
@@ -157,6 +150,8 @@ public class EgresoController {
         List<EntidadBase> entidadBases = repoEntidadBase.buscarTodos();
         parametros.put("entidadBases", entidadBases);
 
+        gestorDeEgresos.guardarEntidadesProvisoriamente(empresas,entidadBases);
+
         Repositorio<Proveedor> repoProveedor = FactoryRepositorio.get(Proveedor.class);
         List<Proveedor> proveedores = repoProveedor.buscarTodos();
         parametros.put("proveedores", proveedores);
@@ -178,6 +173,8 @@ public class EgresoController {
         compra.setItems(gestorDeEgresos.getItemsAAgregarAUnEgreso());
         compra.setUsuariosRevisores(gestorDeEgresos.getUsuariosRevisoresDeUnEgreso());
         compra.setPresupuestos(gestorDeEgresos.getPresupuestosDelEgreso());
+        compra.setDocumentosComerciales(gestorDeEgresos.getDocumentosDelEgreso());
+
 
         if (request.queryParams("presupuestoElegido") != null) {
             Presupuesto presupuestoElegido = new Presupuesto();
@@ -190,39 +187,60 @@ public class EgresoController {
             }
         }
 
-        UsuarioController usuarioController = new UsuarioController();
-        Usuario unUsuario = new Usuario();
-        Map<String, Object> parametros = new HashMap<>();
-/*
-        if(usuarioController.elUsuarioSePuedeRegistrarCorrectamente(unUsuario,request)){
-            EntidadBase entidadBase = new EntidadBase();
-            DireccionPostal direccionPostal = new DireccionPostal();
+        if (request.queryParams("tipoDePago") != null) {
+            MedioDePago medioDePago = new MedioDePago();
+            medioDePago.setTipoDePago(request.queryParams("tipoDePago"));
 
-            DireccionPostalController direccionPostalController = new DireccionPostalController();
-            direccionPostalController.asignarAtributosA(direccionPostal,request);
+           compra.setMedioDePago(medioDePago);
+        }
 
-            Repositorio<DireccionPostal> repoDireccion = FactoryRepositorio.get(DireccionPostal.class);
-            repoDireccion.agregar(direccionPostal);
+        if (request.queryParams("entidad_id") != null) {
+            Presupuesto presupuestoElegido = new Presupuesto();
+            int idEntidad = Integer.valueOf(request.queryParams("entidad_id"));
 
-
-            usuarioController.asignarAtributosA(unUsuario,request);
-
-            Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
-            repoUsuario.agregar(unUsuario);
-
-            unUsuario.setDireccionPostal(direccionPostal);
-            entidadBase.setUsuario(unUsuario);
-
-            asignarAtributosA(entidadBase,request);
-            this.repo.agregar(entidadBase);
-            response.redirect("/menu_logueado");
+            for(int i = 0; i < gestorDeEgresos.getEmpresasDelEgreso().size();i++){
+                if(gestorDeEgresos.getEmpresasDelEgreso().get(i).getId() == idEntidad){
+                    Empresa empresa = new Empresa();
+                    empresa = gestorDeEgresos.getEmpresasDelEgreso().get(i);
+                    compra.setEntidad(empresa);
+                }
+            }
+            for(int i = 0; i < gestorDeEgresos.getEntidadBasesDelEgreso().size();i++){
+                if(gestorDeEgresos.getEntidadBasesDelEgreso().get(i).getId() == idEntidad){
+                    EntidadBase entidadBase = new EntidadBase();
+                    entidadBase = gestorDeEgresos.getEntidadBasesDelEgreso().get(i);
+                    compra.setEntidad(entidadBase);
+                }
+            }
 
         }
-        else {
-            parametros.put("falloAlRegistrarse",true);
-            // return new ModelAndView (parametros,"GESOC_Login.hbs");
 
-        */
+        if (request.queryParams("proveedor_id") != null) {
+            Proveedor proveedor = new Proveedor();
+            int idProveedor = Integer.valueOf(request.queryParams("proveedor_id"));
+            Repositorio<Proveedor> repoProveedor = FactoryRepositorio.get(Proveedor.class);
+            proveedor = repoProveedor.buscar(idProveedor);
+
+            if(proveedor != null){
+                compra.setProveedor(proveedor);
+            }
+        }
+
+        if (request.queryParams("requierePresupuesto") != null) {
+            int valorBool = Integer.valueOf(request.queryParams("requierePresupuesto"));
+            if(valorBool == 1){
+                compra.setRequierePresupuesto(true);
+            }
+            else if(valorBool == 2){
+                compra .setRequierePresupuesto(false);
+            }
+
+        }
+
+        egreso.setCompra(compra);
+        egreso.setFechaDeOperacion(new Date());
+        egreso.setValorTotal(compra.valorTotal());
+
         return response;
 
     }
