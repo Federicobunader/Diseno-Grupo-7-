@@ -17,11 +17,17 @@ public class CategoriaItem extends EntidadPersistente {
 
     @OneToMany
     @JoinColumn(name="categoria_id", referencedColumnName = "id")
-    private List<Egreso> egresos = new ArrayList<>();
-
-    @OneToMany
-    @JoinColumn(name="categoria_id", referencedColumnName = "id")
     private List<Presupuesto> presupuestos = new ArrayList<>();
+
+    @ManyToMany(cascade =
+            {
+                    CascadeType.DETACH,
+                    CascadeType.MERGE,
+                    CascadeType.REFRESH,
+                    CascadeType.PERSIST
+            }, fetch = FetchType.LAZY)
+    @JoinTable(name = "producto_x_categoria",joinColumns = @JoinColumn(name = "categoria_id"),inverseJoinColumns = @JoinColumn (name = "producto_id"))
+    private List<Producto> productos = new ArrayList<Producto>();
 
     public CategoriaItem(String criterioDeItem, String nombreCategoria) {
         this.criterioDeItem = criterioDeItem;
@@ -47,11 +53,19 @@ public class CategoriaItem extends EntidadPersistente {
         return nombreCategoria;
     }
 
-    public List<Egreso> getEgresos() {
-        return egresos;
-    }
-
     public List<Presupuesto> getPresupuestos() {
         return presupuestos;
+    }
+
+    public List<Producto> getProductos() {
+        return productos;
+    }
+
+    public void asociarProductoACategoria(Producto producto){
+        productos.add(producto);
+    }
+
+    public void asociarPresupuestoACategoria(Presupuesto presupuesto){
+        presupuestos.add(presupuesto);
     }
 }

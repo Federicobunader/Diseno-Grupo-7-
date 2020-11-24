@@ -241,6 +241,9 @@ public class EgresoController {
         egreso.setFechaDeOperacion(new Date());
         egreso.setValorTotal(compra.valorTotal());
 
+        this.repo.agregar(egreso);
+
+        response.redirect("/menu_logueado");
         return response;
 
     }

@@ -55,6 +55,8 @@ public class Router {
 
         Spark.post("/cambiar_usuario",usuarioController :: modificar);
 
+        Spark.post("/confirmar_asociacion_prod_cate",categoriaController :: asociarProductoACategoria);
+
         Spark.get("/asociar_egreso_o_presepuesto_a_categoria",categoriaController :: mostrarTodosParaAsociar,Router.engine);
 
         Spark.get("/listado_por_categoria",categoriaController :: mostrarTodosParaVisualizar,Router.engine);

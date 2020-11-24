@@ -21,10 +21,6 @@ public class Producto  extends EntidadPersistente {
 	@Column
 	private String descripcion;
 
-	@ManyToMany
-	@JoinTable(name = "item_x_categoriaItem")
-	private List<CategoriaItem> categorias = new ArrayList<CategoriaItem>();
-
 	public int getPrecio() {
 		return precio;
 	}
@@ -67,11 +63,6 @@ public class Producto  extends EntidadPersistente {
 		return nombre;
 	}
 
-	public List<CategoriaItem> getCategorias() {
-		return categorias;
-	}
 
-	public void setCategorias(List<CategoriaItem> categorias) {
-		this.categorias = categorias;
-	}
-}//end Producto
+
+	}//end Producto
