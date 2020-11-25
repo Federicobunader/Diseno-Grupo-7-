@@ -25,7 +25,7 @@ public class RepositorioDeUsuarios extends Repositorio<Usuario> {
     private BusquedaCondicional condicionUsuarioYContrasenia(String nombreDeUsuario, String contrasenia){
         CriteriaBuilder criteriaBuilder = criteriaBuilder();
         CriteriaQuery<Usuario> usuarioQuery = criteriaBuilder.createQuery(Usuario.class);
-
+        
         Root<Usuario> condicionRaiz = usuarioQuery.from(Usuario.class);
 
         Predicate condicionNombreDeUsuario = criteriaBuilder.equal(condicionRaiz.get("usuario"), nombreDeUsuario);

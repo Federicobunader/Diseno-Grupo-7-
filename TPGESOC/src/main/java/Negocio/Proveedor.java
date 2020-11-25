@@ -32,4 +32,8 @@ public class Proveedor extends EntidadPersistente {
 	public String getNombre() {
 		return nombre;
 	}
+
+	public int getNumeroID() {
+		return numeroID;
+	}
 }//end Proveedor

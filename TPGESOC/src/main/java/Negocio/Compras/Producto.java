@@ -4,6 +4,8 @@ import BaseDeDatos.EntidadPersistente;
 import Negocio.Proveedor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="producto")
@@ -60,4 +62,7 @@ public class Producto  extends EntidadPersistente {
 	public String getNombre() {
 		return nombre;
 	}
-}//end Producto
+
+
+
+	}//end Producto

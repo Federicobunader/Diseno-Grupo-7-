@@ -32,7 +32,8 @@
         <button class="tablinks" onclick="openCity(event, 'usuarios revisores')">Usuarios Revisores</button>
         <button class="tablinks" onclick="openCity(event, 'presupuesto')">Presupuesto</button>
         <button class="tablinks" onclick="openCity(event, 'documento')">Documentos</button>
-        <button class="tablinks" onclick="openCity(event, 'informacion_adicional')">Informacion Adicional</button>
+        <button class="tablinks" onclick="openCity(event, 'entidades_y_proveedores')">Entidades y proveedores</button>
+        <button class="tablinks" onclick="openCity(event, 'medio_de_pago')">Medio de Pago</button>
     </div>
 
     <div id="agregar producto" class="tabcontent">
@@ -48,7 +49,7 @@
                     <input type="text" id="unProducto" onkeyup="buscarProducto()" placeholder="Busca por nombre" title="Type in a name">
                     </div>
 
-                    <form class="" action="/cargar_egreso" method="post" style="">
+                    <form class="" action="/guardar_item_egreso" method="post" style="">
                         <div id="div1">
 
                             <table class="scroll" id="tablaProductos" style="overflow-y:auto;">
@@ -144,10 +145,10 @@ tr:nth-child(even) {background-color: #8d5151;}
 
                     <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
                     <div class ="buscar">
-                    <input type="text" id="unPresupuesto" onkeyup="buscarPresupuesto()" placeholder="Busca por nombre" title="Type in a name">
+                    <input type="text" id="unUsuario" onkeyup="buscarUsuario()" placeholder="Busca por nombre" title="Type in a name">
                     </div>
 
-                    <form class="" action="/cargar_egreso" method="post" style="">
+                    <form class="" action="/guardar_usuario_revisor_egreso" method="post" style="">
                         <div id="div1">
                             <table class="scroll" id="tablaUsuario" style="overflow-y:auto;">
 
@@ -181,8 +182,6 @@ tr:nth-child(even) {background-color: #8d5151;}
 
                         <button type="submit" class="button button-back"
                                 onclick="window.location.href='/guardar_usuario_revisor_egreso'">Sí</button>
-                        <button type="submit" class="button button-back"
-                                onclick="window.location.href='/presupuestos'">Finalizar</button>
 
 
                     </form>
@@ -205,7 +204,7 @@ tr:nth-child(even) {background-color: #8d5151;}
 
         <div class="field-wrap">
             <div class="custom-select" style="width:200px;">
-                <select name="fechaDeOperacion" id="tiposector" onChange=changetextbox()>
+                <select name="requierePresupuesto" id="tiposector" onChange=changetextbox()>
                     <option value="0">¿Su compra requiere presupuesto?</option>
                     <option value="1">Si</option>
                     <option value="2">No</option>
@@ -218,14 +217,13 @@ tr:nth-child(even) {background-color: #8d5151;}
         <div class ="buscar_presu">
             <input type="text" id="unPresupuesto" onkeyup="buscarPresupuesto()" placeholder="Busca por nombre" title="Type in a name"></div>
 
-        <form class="" action="/cargar_egreso" method="post" style="">
+        <form class="" action="/guardar_presupuesto_egreso" method="post" style="">
 
         <table class="scroll" id="tabla" style="overflow-y:auto;">
 
             <thead>
             <th><i class="fas fa-user"></i> Id Presupuesto</th>
-            <th><i class="fas fa-phone"></i>Documentos Comerciales</th>
-            <th><i class="fas fa-phone"></i> Items</th>
+            <th><i class="fas fa-phone"></i>Valor Total</th>
 
             </thead>
 
@@ -233,8 +231,7 @@ tr:nth-child(even) {background-color: #8d5151;}
             {{#each presupuestos}}
                 <tr>
                     <td><i class="fas fa-user"></i> {{id}}</td>
-                    <td>{{documentosComerciales}}</td>
-                    <td>{{items}}</td>
+                    <td>{{valorTotal}}</td>
 
                 </tr>
             {{/each}}
@@ -304,8 +301,7 @@ function buscarPresupuesto() {
   }
 }
 </script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="/js/GESOC_CargarEgresos.js"></script>
-      </div>
+
 </div>
 
         <div id="documento" class="tabcontent">
@@ -317,7 +313,7 @@ function buscarPresupuesto() {
                 <div class ="buscar_presu">
                     <input type="text" id="unDocumento" onkeyup="buscarDocumento()" placeholder="Busca por numero" title="Type in a name"></div>
 
-                <form class="" action="/cargar_egreso" method="post" style="">
+                <form class="" action="/guardar_documento_egreso" method="post" style="">
 
                     <table class="scroll" id="tablaDocumentos" style="overflow-y:auto;">
 
@@ -355,15 +351,6 @@ function buscarPresupuesto() {
                     <button type="submit" class="button button-back"
                             onclick="window.location.href='/guardar_documento_egreso'">Sí</button>
 
-                    <div class="field-wrap">
-                        <label>
-                            Id del Presupuesto elegido<span class="req">*</span>
-                        </label>
-                        <input type="text"required autocomplete="off" id="CUIT" name="presupuestoElegido" class="input-datos"/>
-                    </div>
-
-
-                    <button type="submit" class="button button-back" onclick="window.location.href='/usuarios_revisores'">Seguir con usuarios revisores</button>
 
                 </form>
             </div>
@@ -408,7 +395,7 @@ function buscarDocumento() {
 
         </div>
 
-        <div id="informacion_adicional" class="tabcontent">
+        <div id="entidades_y_proveedores" class="tabcontent">
             <div class="form">
                 <br><h3>Ingrese la informacion restante</h3></br>
 
@@ -417,9 +404,7 @@ function buscarDocumento() {
 
                 <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
                 <div class ="buscar_presu">
-                    <input type="text" id="unaEntidad" onkeyup="buscarEntidad()" placeholder="Busca por numero" title="Type in a name"></div>
-
-                <form class="" action="/cargar_egreso" method="post" style="">
+                    <input type="text" id="unaEntidad" onkeyup="buscarEntidad()" placeholder="Busca por nombre" title="Type in a name"></div>
 
                     <table class="scroll" id="tablaEntidad" style="overflow-y:auto;">
 
@@ -460,7 +445,7 @@ function buscarDocumento() {
                     <div class ="buscar_presu">
                         <input type="text" id="unProveedor" onkeyup="buscarProveedor()" placeholder="Busca por nombre" title="Type in a name"></div>
 
-                    <form class="" action="/cargar_egreso" method="post" style="">
+                    <form class="" action="/confirmar_egreso" method="post" style="">
 
                         <table class="scroll" id="tablaProveedores" style="overflow-y:auto;">
 
@@ -489,22 +474,6 @@ function buscarDocumento() {
                             </label>
                             <input type="text" required autocomplete="off" id="cantidad" name="proveedor_id"
                                    class="input-datos" />
-                        </div>
-
-                        <br><br><h3>Ingrese el Medio de Pago</h3></br><br>
-
-                        <div class="field-wrap">
-                            <div class="custom-select" style="width:200px;">
-                                <select name="tipoDePago" id="tipoDePago" onChange=changetextbox()>
-                                    <option value="0">Seleccione el medio de pago:</option>
-                                    <option value="1">Tarjeta de credito</option>
-                                    <option value="2">Tarjeta de debito</option>
-                                    <option value="3">Ticket</option>
-                                    <option value="4">ATM</option>
-                                    <option value="5">Efectivo</option>
-                                </select>
-
-                            </div>
                         </div>
 
                 </form>
@@ -567,6 +536,34 @@ function buscarProveedor() {
 }
 </script>
         </div>
+
+        <div id="medio_de_pago" class="tabcontent">
+            <div class="form">
+
+                        <br><br><h3>Ingrese el Medio de Pago</h3></br><br>
+
+                        <div class="field-wrap">
+                            <div class="custom-select" style="width:200px;">
+                                <select name="tipoDePago" id="tipoDePago" onChange=changetextbox()>
+                                    <option value="0">Seleccione el medio de pago:</option>
+                                    <option value="1">Tarjeta de credito</option>
+                                    <option value="2">Tarjeta de debito</option>
+                                    <option value="3">Ticket</option>
+                                    <option value="4">ATM</option>
+                                    <option value="5">Efectivo</option>
+                                </select>
+
+                            </div>
+                        </div>
+
+                    </form>
+            </div>
+        </div>
+
+        <br><br><h3>Asegurese de haber completado todo los datos pedidos del egreso</h3></br><br>
+
+        <button type="submit" class="button button-back"
+                onclick="window.location.href='/confirmar_egreso'">CONFIRMAR EGRESO</button>
 
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="/js/GESOC_CargarEgresos.js"></script>
 

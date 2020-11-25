@@ -31,8 +31,6 @@
         <div class="tab-content">
             <div id="compra">
 
-                <h3>Visualice las categorías existentes</h3>
-
                 <h3>Visualice las categorías existentes e ingrese el id de la elegida</h3>
 
                 <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
@@ -40,7 +38,7 @@
                     <input type="text" id="unaCategoria" onkeyup="buscarCategoria()" placeholder="Buscar por nombre" title="Type in a name">
                 </div>
 
-                <form class="" action="/listado_por_categoria" method="post" style="">
+                <form class="" action="/confirmar_asociacion_prod_cate" method="post" style="">
 
                     <div id="div1">
 
@@ -104,49 +102,75 @@ function buscarCategoria() {
 
                     <h3>Visualice los Productos existentes</h3>
 
-                
-                <form class="" action="/cargar_egreso" method="post" style="">
-                    <div id="div1">
-                        <table id="scroll">
-                            <tr>
-                                <th>Producto Id</th>
-                                <th>Descripción</th>
-                                <th>Precio</th>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Descripcion 1</td>
-                                <td>Precio 1</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Descripcion 2</td>
-                                <td>Precio 2</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Descripcion 3</td>
-                                <td>Precio 3</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Descripcion 4</td>
-                                <td>Precio 4</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Descripcion 5</td>
-                                <td>Precio 5</td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>Descripcion 7</td>
-                                <td>Precio 7</td>
-                            </tr>
 
-                        </table>
+                    <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
+                    <div class ="buscar">
+                        <input type="text" id="unProducto" onkeyup="buscarProducto()" placeholder="Buscar por nombre" title="Type in a name">
                     </div>
 
+                    <form class="" action="/confirmar_asociacion_prod_cate" method="post" style="">
+
+                        <div id="div1">
+
+                            <table class="scroll" id="tablaProductos" style="overflow-y:auto;">
+
+                                <thead>
+                                <th>Id Producto</th>
+                                <th>Nombre del Producto</th>
+                                <th>Descripcion</th>
+                                <th>Precio</th>
+                                </thead>
+
+                                <tbody>
+                                {{#each productos}}
+                                    <tr>
+                                        <td><i class="fas fa-user"></i> {{id}}</td>
+                                        <td>{{nombre}}</td>
+                                        <td>{{descripcion}}</td>
+                                        <td>{{precio}}</td>
+
+                                    </tr>
+                                {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                        <style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+</style>
+                        <script>
+function buscarProducto() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("unProducto");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("tablaProductos");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[2];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
                     
                     <h3>Ingrese el ID del Producto que desea asociar y el ID de la categoría a cual desea asociarlo</h3>
 
@@ -155,18 +179,18 @@ function buscarCategoria() {
                             <label>
                                 Id Categoría<span class="req">*</span>
                             </label>
-                            <input type="text" required autocomplete="off" id="entidadjuridica" />
+                            <input type="text"required autocomplete="off" id="CUIT" name="categoria_id" class="input-datos"/>
                         </div>
                                        
                         <div class="field-wrap">
                             <label>
-                                Id Item<span class="req">*</span>
+                                Id Producto<span class="req">*</span>
                             </label>
-                            <input type="text" required autocomplete="off" id="entidadjuridica" />
+                            <input type="text"required autocomplete="off" id="CUIT" name="producto_id" class="input-datos"/>
                         </div>
                     </div>            
 
-                    <button type="submit" class="button button-back" onclick="window.location.href='./'">Asociar</button>
+                    <button type="submit" class="button button-back" onclick="window.location.href='/confirmar_asociacion_prod_cate'">Asociar</button>
 
 
             </div>

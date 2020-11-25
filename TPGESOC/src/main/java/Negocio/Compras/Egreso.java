@@ -19,11 +19,6 @@ public class Egreso  extends EntidadPersistente {
     @Column
     private double valorTotal;
 
-    @Column
-    private int categoria_id;
-
-
-
     @Transient
     GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();
 
@@ -67,7 +62,7 @@ public class Egreso  extends EntidadPersistente {
         return fechaDeOperacion.after(gestorDeEgresos.getFechaAcceptableDesde()) && fechaDeOperacion.before(gestorDeEgresos.getFechaAcceptableHasta());
     }
 
-    public int getCategoria_id() {
-        return categoria_id;
+    public void setValorTotal(double valorTotal) {
+        this.valorTotal = valorTotal;
     }
 }

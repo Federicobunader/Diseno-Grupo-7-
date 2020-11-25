@@ -19,17 +19,12 @@ public class Item  extends EntidadPersistente {
 	@Column
 	private int cantidad;
 
-	@ManyToMany
-	@JoinTable(name = "item_x_categoriaItem")
-	private List<CategoriaItem> categorias = new ArrayList<CategoriaItem>();
-
 	@Transient
 	private GestorDeCriterios gestorDeCriterios = GestorDeCriterios.GetInstance();
 
 	public Item(Producto producto, int cantidad, ArrayList<CategoriaItem> categorias) {
 		this.producto = producto;
 		this.cantidad = cantidad;
-		this.categorias = categorias;
 	}
 
 	public Item() {
@@ -43,9 +38,6 @@ public class Item  extends EntidadPersistente {
 		this.cantidad = cantidad;
 	}
 
-	public void setCategorias(List<CategoriaItem> categorias) {
-		this.categorias = categorias;
-	}
 
 	public void setGestorDeCriterios(GestorDeCriterios gestorDeCriterios) {
 		this.gestorDeCriterios = gestorDeCriterios;
@@ -64,7 +56,6 @@ public class Item  extends EntidadPersistente {
 
 	private void asociarCategoria(CategoriaItem unaCategoria){
 		if(!(this.estaAsociado(unaCategoria))) {
-			categorias.add(unaCategoria);
 			interfaz.mostrarInformacion("Se agregó correctamente.");
 		}
 		else{
