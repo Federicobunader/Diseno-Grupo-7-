@@ -167,8 +167,65 @@ public class EgresoController {
 
     public Response guardar(Request request, Response response){
 
+        System.out.println("ENTRE AL GUARDAR EGRESO");
+
         Egreso egreso = new Egreso();
         Compra compra = new Compra();
+
+        Item item = new Item();
+        Producto producto = new Producto();
+
+        if (request.queryParams("productos_id") != null) {
+            int idProducto = Integer.valueOf(request.queryParams("productos_id"));
+            Repositorio<Producto> repoProducto = FactoryRepositorio.get(Producto.class);
+            producto = repoProducto.buscar(idProducto);
+        }
+
+        if(producto != null){
+            if (request.queryParams("productos_cantidad") != null) {
+                int cantidad = Integer.valueOf(request.queryParams("productos_cantidad"));
+                item.setProducto(producto);
+                item.setCantidad(cantidad);
+
+                gestorDeEgresos.agregarItemAListaDeItemDeEgreso(item);
+            }
+        }
+
+        Usuario usuario = new Usuario();
+
+        if (request.queryParams("usuario_id") != null) {
+            int idUsuario = Integer.valueOf(request.queryParams("usuario_id"));
+            Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
+            usuario = repoUsuario.buscar(idUsuario);
+
+            if(usuario != null){
+                gestorDeEgresos.agregarUsuarioRevisorAListaDeUsuarioRevisoresDeEgreso(usuario);
+            }
+        }
+
+        Presupuesto presupuesto = new Presupuesto();
+
+        if (request.queryParams("presupuesto_id") != null) {
+            int idPresupuesto = Integer.valueOf(request.queryParams("presupuesto_id"));
+            Repositorio<Presupuesto> repoPresupuestos = FactoryRepositorio.get(Presupuesto.class);
+            presupuesto = repoPresupuestos.buscar(idPresupuesto);
+
+            if(presupuesto != null){
+                gestorDeEgresos.agregarPresupuestoALaListaDePresupuestosDelEgreso(presupuesto);
+            }
+        }
+
+        Documento documento = new Documento();
+
+        if (request.queryParams("documento_id") != null) {
+            int idDocumento = Integer.valueOf(request.queryParams("documento_id"));
+            Repositorio<Documento> repoDocumentos = FactoryRepositorio.get(Documento.class);
+            documento = repoDocumentos.buscar(idDocumento);
+
+            if(documento != null){
+                gestorDeEgresos.agregarDocumentoALaListaDeDocumentosDelEgreso(documento);
+            }
+        }
 
         compra.setItems(gestorDeEgresos.getItemsAAgregarAUnEgreso());
         compra.setUsuariosRevisores(gestorDeEgresos.getUsuariosRevisoresDeUnEgreso());
@@ -242,6 +299,9 @@ public class EgresoController {
         egreso.setValorTotal(compra.valorTotal());
 
         this.repo.agregar(egreso);
+
+        gestorDeEgresos.reiniciarDatosEgreso();
+        System.out.println("SALI DEL GUARDAR EGRESO");
 
         response.redirect("/menu_logueado");
         return response;

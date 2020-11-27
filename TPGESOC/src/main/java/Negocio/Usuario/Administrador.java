@@ -10,9 +10,4 @@ public class Administrador extends Usuario {
 		super();
 	}
 
-	public void vincularIngresoAEgreso(Ingreso unIngreso, Egreso unEgreso){
-
-	}
-
-
 }//end Administrador

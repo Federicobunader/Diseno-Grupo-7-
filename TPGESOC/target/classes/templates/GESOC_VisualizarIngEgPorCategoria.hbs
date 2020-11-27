@@ -25,85 +25,27 @@
         <button type="submit" class="button button-back" onclick="window.location.href='/menu_logueado'">Volver al menú
             principal</button>
 
-        <h2>Visualizar Egresos e Ingresos por categoría</h2>
-
-        <div class="tab-content">
-            <div id="compra">
+        <h2>Visualizar Items por categoría</h2>
 
                 <h3>Visualice las categorías existentes e ingrese el id de la elegida</h3>
 
-                <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
-                <div class ="buscar">
-                    <input type="text" id="unaCategoria" onkeyup="buscarCategoria()" placeholder="Buscar por nombre" title="Type in a name">
-                </div>
+                    <div class="tab"> Seleccione una Categoria
 
-                <form class="" action="/listado_por_categoria" method="post" style="">
+                        <select id="unaCategoria"  name="unaCategoria" required>
+                            <option selected disabled value="">Seleccionar </option>
+                            {{#each	categorias}}
+                                <option value="{{id}}">{{nombreCategoria}}</option>
+                            {{/each}}
 
-                <div id="div1">
+                        </select>
+                    </div>
 
-                    <table class="scroll" id="tablaCategoria" style="overflow-y:auto;">
-
-                        <thead>
-                            <th>Id Categoría</th>
-                            <th>Nombre de Categoría</th>
-                            <th>Criterio</th>
-                        </thead>
-
-                        <tbody>
-                        {{#each categorias}}
-                            <tr>
-                                <td><i class="fas fa-user"></i> {{id}}</td>
-                                <td>{{nombreCategoria}}</td>
-                                <td>{{criterioDeItem}}</td>
-
-                            </tr>
-                        {{/each}}
-                        </tbody>
-                    </table>
-                </div>
- <style>
-* {
-  box-sizing: border-box;
-}
-
-#myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-</style>
-                <script>
-function buscarCategoria() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("unaCategoria");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("tablaCategoria");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[1];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
-}
-</script>
-
-
+                <button type="submit" class="button button-back" onclick="window.location.href='/buscar_productos_de_categoria'">
+                    Mostrar productos de esta Categoria</button>
 
                     <br>
 
-                    <h3>Visualice los egresos de dicha categoría</h3>
+                    <h3>Visualice los Productos de dicha categoría</h3>
 
                     <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
                     <div class ="buscar">
@@ -117,52 +59,25 @@ function buscarCategoria() {
                             <table class="scroll" id="tablaEgresos" style="overflow-y:auto;">
 
                                 <thead>
-                                <th>Id Egreso</th>
-                                <th>Fecha de operacion</th>
-                                <th>Monto Total</th>
-                                <th>Categoria asociada</th>
+                                <th>Id Producto</th>
+                                <th>Nombre</th>
+                                <th>Descripcion</th>
+                                <th>Precio</th>
+                                <th>Id Proveedor</th>
+                                <th>Nombre Proveedor</th>
                                 </thead>
 
                                 <tbody>
-                                {{#each egresosTotales}}
+                                {{#each productos}}
                                     <tr>
                                         <td><i class="fas fa-user"></i> {{id}}</td>
-                                        <td>{{fechaDeOperacion}}</td>
-                                        <td>{{valorTotal}}</td>
-                                        <td>{{categoria_id}}</td>
+                                        <td>{{nombre}}</td>
+                                        <td>{{descripcion}}</td>
+                                        <td>{{precio}}</td>
+                                        <td>{{proveedor.id}}</td>
+                                        <td>{{proveedor.nombre}}</td>
 
                                     </tr>
-
-                                    <h3>Visualice los ingresos de dicha categoría</h3>
-
-                                    <div id="div1">
-
-                                        <table class="scroll" id="tablaEgresos" style="overflow-y:auto;">
-
-                                            <thead>
-                                            <th>Id Egreso</th>
-                                            <th>Fecha de operacion</th>
-                                            <th>Monto Total</th>
-                                            <th>Categoria asociada</th>
-                                            </thead>
-
-                                            <tbody>
-                                            {{#each egresosTotales}}
-                                                <tr>
-                                                    <td><i class="fas fa-user"></i> {{id}}</td>
-                                                    <td>{{fechaDeOperacion}}</td>
-                                                    <td>{{valorTotal}}</td>
-                                                    <td>{{categoria_id}}</td>
-
-                                                </tr>
-
-                                                <h3>Visualice los ingresos de dicha categoría</h3>
-
-                                            {{/each}}
-                                            </tbody>
-                                        </table>
-                                    </div>
-
                                 {{/each}}
                                 </tbody>
                             </table>
@@ -204,50 +119,6 @@ function buscarEgreso() {
   }
 }
 </script>
-                    <h3>Visualice los ingresos de dicha categoría</h3>
-
-                <table id="scroll">
-                    <tr>
-                        <th>Ingreso Id</th>
-                        <th>Ingreso</th>
-                    </tr>
-                </table>
-                <form class="" action="/cargar_egreso" method="post" style="">
-                    <div id="div1">
-                        <table id="scroll">
-                            <tr>
-                                <td>1</td>
-                                <td>Ingreso 1</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Ingreso 2</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Ingreso 3</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Ingreso 4</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Ingreso 5</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>Ingreso 6</td>
-                            </tr>
-
-                        </table>
-                    </div>
-
-
-                </form>
-
-
-            </div>
 
             <!--<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="/js/GESOC_AsociarIngresoAEgreso.js"></script>-->
             <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

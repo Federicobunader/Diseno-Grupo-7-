@@ -3,6 +3,7 @@ package controllers;
 import Negocio.Compras.CategoriaItem;
 import Negocio.Compras.Egreso;
 import Negocio.Compras.Producto;
+import Negocio.Compras.producto_x_categoria;
 import repositories.Repositorio;
 import repositories.factories.FactoryRepositorio;
 import spark.ModelAndView;
@@ -75,6 +76,33 @@ public class CategoriaController {
         return new ModelAndView(parametros, "GESOC_VisualizarIngEgPorCategoria.hbs");
     }
 
+    public ModelAndView mostrarProductosDeUnaCategoria(Request request, Response response) {
+        Map<String, Object> parametros = new HashMap<>();
+
+        List<CategoriaItem> categorias = this.repo.buscarTodos();
+        parametros.put("categorias", categorias);
+
+        CategoriaItem categoria = this.repo.buscar(Integer.valueOf(request.queryParams("unaCategoria")));
+
+        parametros.put("productos", categoria.getProductos());
+
+        return new ModelAndView(parametros, "GESOC_VisualizarIngEgPorCategoria.hbs");
+    }
+/*
+    public ModelAndView mostrarProductosDeUnaCategoria(Request request, Response response) {
+        Map<String, Object> parametros = this.mostrarProductosYCategoriasParametros(request,response);
+
+        List<Egreso> egresosTotales = new ArrayList<>();
+
+        for(int i=0; i< categorias.size();i++){
+            egresosTotales.addAll(categorias.get(i).getEgresos());
+        }
+
+        parametros.put("egresosTotales",egresosTotales);
+
+        return new ModelAndView(parametros, "GESOC_VisualizarIngEgPorCategoria.hbs");
+    }
+*/
     public ModelAndView mostrarTodosParaAsociar(Request request, Response response) {
         Map<String, Object> parametros = this.mostrarProductosYCategoriasParametros(request,response);
         return new ModelAndView(parametros, "GESOC_AsociarItemACategoria.hbs");
@@ -108,8 +136,10 @@ public class CategoriaController {
             Producto producto = repoProducto.buscar(idProducto);
 
             categoriaABuscar.asociarProductoACategoria(producto);
-            this.repo.modificar(categoriaABuscar);
+
+            //this.repo.modificar(categoriaABuscar);
         }
+
         response.redirect("/menu_logueado");
         return null;
     }
