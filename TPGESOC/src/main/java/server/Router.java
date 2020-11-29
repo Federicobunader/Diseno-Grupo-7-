@@ -61,7 +61,7 @@ public class Router {
 
         Spark.get("/listado_por_categoria",categoriaController :: mostrarTodosParaVisualizar,Router.engine);
 
-        Spark.get("/buscar_productos_de_categoria",categoriaController :: mostrarTodosLosProductosDeUnaCategoria,Router.engine);
+        Spark.get("/buscar_productos_de_categoria",categoriaController :: mostrarProductosDeLasCategoria,Router.engine);
 
         //Spark.get("/listado_por_categoria/:id",categoriaController :: mostrarTodosLosEgresosDeUnaCategoria,Router.engine);
 

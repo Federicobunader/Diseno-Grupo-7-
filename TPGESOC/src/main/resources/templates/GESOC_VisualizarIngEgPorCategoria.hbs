@@ -20,7 +20,7 @@
     </nav>
 
     <!-- partial:index.partial.html -->
-    <div class="form">
+    <form class="" action="/buscar_productos_de_categoria" method="get" style="">
 
         <button type="submit" class="button button-back" onclick="window.location.href='/menu_logueado'">Volver al menú
             principal</button>
@@ -31,17 +31,16 @@
 
                     <div class="tab"> Seleccione una Categoria
 
-                        <select id="unaCategoria"  name="unaCategoria" required>
+                        <select id="categoria_id"  name="categoria_id" required>
                             <option selected disabled value="">Seleccionar </option>
                             {{#each	categorias}}
-                                <option value="{{id}}">{{nombreCategoria}}</option>
+                                <option value="{{this.id}}">{{nombreCategoria}}</option>
                             {{/each}}
 
                         </select>
                     </div>
 
-                <button type="submit" class="button button-back" onclick="window.location.href='/buscar_productos_de_categoria'">
-                    Mostrar productos de esta Categoria</button>
+        <button type="submit" class="button button-back" onclick="window.location.href='./buscar_productos_de_categoria'">Mostrar Productos de la Categoria</button>
 
                     <br>
 
@@ -49,7 +48,7 @@
 
                     <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
                     <div class ="buscar">
-                        <input type="text" id="unEgreso" onkeyup="buscarEgreso()" placeholder="Ingrese la ID de una categoria" title="Type in a name">
+                        <input type="text" id="unEgreso" onkeyup="buscarEgreso()" placeholder="Ingrese el Nombre de un Producto" title="Type in a name">
                     </div>
 
                     <form class="" action="/listado_por_categoria" method="post" style="">
@@ -107,7 +106,7 @@ function buscarEgreso() {
   table = document.getElementById("tablaEgresos");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[3];
+    td = tr[i].getElementsByTagName("td")[1];
     if (td) {
       txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
