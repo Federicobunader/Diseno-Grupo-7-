@@ -20,7 +20,7 @@ public class GuardadorDeLog {
         Date date = new Date();
         date.getTime();
 
-       Operacion operacion = new Operacion(tipoDeOperacion,unObjeto.getClass().getSimpleName(),formatter.format(date));
+       Operacion operacion = new Operacion(tipoDeOperacion,unObjeto.getClass().getSimpleName(),formatter.format(date).toString());
        bitacora.add(operacion);
 
     }

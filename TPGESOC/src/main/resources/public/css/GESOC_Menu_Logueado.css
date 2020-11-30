@@ -56,6 +56,7 @@ h6 {
 
 .bg-light-gray {
     background-color:rgb(230, 195, 195) ;
+    background-image: url(https://eskipaper.com/images/colorful-stripe-wallpaper-1.jpg);
 }
 
 .bg-darkest-gray {
@@ -108,13 +109,13 @@ fieldset[disabled] .btn-primary.active {
 
 .btn-primary .badge {
     color: #1ee2e7;
-    background-color: #da8617;
+    background-color: #000000;
 }
 
 
 .btn-xl {
     padding: 20% 40%;
-    border-color: #da8617;
+    border-color: #000000;
     border-radius: 3px;
     text-transform: uppercase;
     font-family: 'Titillium Web', sans-serif;
@@ -123,7 +124,7 @@ fieldset[disabled] .btn-primary.active {
     width: 200px;
     height: 80px;
     color: #fff;
-   background-color: #da8617;   
+   background-color: #000000;
 
 }
 
@@ -132,10 +133,10 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl:active,
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
-    border-color: #da8617;
+    border-color: #000000;
     border-width: thick;
     color: #000;
-    background-color: #fff;
+    background-color: #000000;
 }
 
 .btn-xl:active,
@@ -167,7 +168,7 @@ fieldset[disabled] .btn-xl.active {
 a.page-scroll:hover {color:#fff !important}
 
 .btn-xl .badge {
-    color: #fed136;
+    color: #000000;
     background-color: #fff;
 }
 
@@ -185,7 +186,7 @@ a.page-scroll:hover {color:#fff !important}
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
-    color: #fec503;
+    color: #000000;
 }
 
 .navbar-default .navbar-collapse {
@@ -373,7 +374,7 @@ section h3.section-subheading {
 
 .team-member img {
     margin: 0 auto;
-    border: 2px solid #da8617;
+    border: 2px solid #000000;
     border-radius: 100%;
 }
 
@@ -429,7 +430,7 @@ ul.social-buttons li a {
     line-height: 40px;
     outline: 0;
     color: #fff;
-    background-color: #da8617;
+    background-color: #000000;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     transition: all .3s;

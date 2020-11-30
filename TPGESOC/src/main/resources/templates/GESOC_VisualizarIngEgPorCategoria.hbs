@@ -19,6 +19,7 @@
         </div>
     </nav>
 
+    <div class="form">
     <!-- partial:index.partial.html -->
     <form class="" action="/buscar_productos_de_categoria" method="get" style="">
 
@@ -27,9 +28,9 @@
 
         <h2>Visualizar Items por categoría</h2>
 
-                <h3>Visualice las categorías existentes e ingrese el id de la elegida</h3>
+                <h3>Seleccione una Categoria</h3>
 
-                    <div class="tab"> Seleccione una Categoria
+                    <div class="tab">
 
                         <select id="categoria_id"  name="categoria_id" required>
                             <option selected disabled value="">Seleccionar </option>
@@ -39,18 +40,18 @@
 
                         </select>
                     </div>
-
+        <br>
         <button type="submit" class="button button-back" onclick="window.location.href='./buscar_productos_de_categoria'">Mostrar Productos de la Categoria</button>
 
                     <br>
 
                     <h3>Visualice los Productos de dicha categoría</h3>
 
-                    <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
-                    <div class ="buscar">
+                    <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"> <!--</div>
+                   <div class ="buscar">-->
                         <input type="text" id="unEgreso" onkeyup="buscarEgreso()" placeholder="Ingrese el Nombre de un Producto" title="Type in a name">
                     </div>
-
+<br>
                     <form class="" action="/listado_por_categoria" method="post" style="">
 
                         <div id="div1">
@@ -122,9 +123,6 @@ function buscarEgreso() {
             <!--<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="/js/GESOC_AsociarIngresoAEgreso.js"></script>-->
             <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
             <script src="/js/GESOC_VisualizarIngEgPorCategoria.js"></script>
-
-
-        </div>
     </div>
 </body>
 

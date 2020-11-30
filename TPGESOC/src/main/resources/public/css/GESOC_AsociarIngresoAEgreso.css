@@ -150,13 +150,13 @@ label.highlight {
 
 input, textarea {
   font-size: 22px;
-  display: block;
-  width: 100%;
+  display: inline;
+  width: 90%;
   height: 100%;
   padding: 5px 10px;
   background: none;
   background-image: none;
-  border: 1px solid #a0b3b0;
+  border: 2px solid #000000;
   color: #ffffff;
   border-radius: 0;
   -webkit-transition: border-color .25s ease, box-shadow .25s ease;
@@ -164,7 +164,7 @@ input, textarea {
 }
 input:focus, textarea:focus {
   outline: 0;
-  border-color: #85c3e5;
+  border-color: #000000;
 }
 
 textarea {

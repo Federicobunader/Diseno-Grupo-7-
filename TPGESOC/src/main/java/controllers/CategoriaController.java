@@ -4,12 +4,14 @@ import Negocio.Compras.CategoriaItem;
 import Negocio.Compras.Egreso;
 import Negocio.Compras.Producto;
 import Negocio.Compras.producto_x_categoria;
+import com.mchange.v2.sql.filter.SynchronizedFilterDataSource;
 import repositories.Repositorio;
 import repositories.factories.FactoryRepositorio;
 import spark.ModelAndView;
 import spark.Request;
 import spark.Response;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -79,6 +81,9 @@ public class CategoriaController {
 
     public ModelAndView mostrarProductosDeLasCategoria(Request request, Response response) {
         Map<String, Object> parametros = new HashMap<>();
+
+        List<CategoriaItem> categorias = this.repo.buscarTodos();
+        parametros.put("categorias", categorias);
 
         CategoriaItem categoria = this.repo.buscar(Integer.valueOf(request.queryParams("categoria_id")));
 

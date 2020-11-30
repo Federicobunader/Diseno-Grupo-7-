@@ -1,12 +1,13 @@
 package Bitacora;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Bitacora {
 
     private static Bitacora instance = null;
-    private List<Operacion> operaciones;
+    private List<Operacion> operaciones = new ArrayList<>();
 
     public static Bitacora GetInstance() {
         if (instance == null)

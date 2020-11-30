@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Carga de productos del egreso</title>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="/css/GESOC_VincularIngresoAProyecto.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <a class="navbar-brand page-scroll" href="./GESOC_Menu_Logueado.html">GESOC</a>
+        </div>
+    </nav>
+
+    <!-- partial:index.partial.html -->
+    <div class="form">
+
+        <button type="submit" class="button button-back" onclick="window.location.href='./'">Volver al menú
+            principal</button>
+
+        <br>
+        <h2>Vincular Proyecto con Ingreso</h2>
+
+        <div class="tab-content">
+            <div id="compra">
+
+                <h3>Visualice los proyectos existentes</h3>
+
+                <form class="" action="/cargar_egreso" method="post" style="">
+                    <div id="div1">
+                        <table class="scroll" id="tablaProyecto" style="overflow-y:auto;">
+                            <thead>
+                                <tr>
+                                    <th>Proyecto Id</th>
+                                    <th>Usuario Responsable</th>
+                                    <th>Monto Definido</th>
+                                    <th>Presupuestos Exigibles</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each proyectos}}
+                                <tr>
+                                    <td><i class="fas fa-user"></i> {{id}}</td>
+                                    <td>{{usuarioId}}</td>
+                                    <td>{{montoDefinido}}</td>
+                                    <td>{{presupuestosExigibles</td>
+                            </tr>
+                            {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                    <br>
+
+                    <h3>Visualice los Ingresos existentes</h3>
+
+
+                    <form class="" action="/cargar_egreso" method="post" style="">
+                        <div id="div1">
+                            <table class="scroll" id="tablaIngreso" style="overflow-y:auto;">
+                                <thead>
+                                    <tr>
+                                        <th>Ingreso Id</th>
+                                        <th>Descripción</th>
+                                        <th>Monto</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><i class="fas fa-user"></i> {{id}}</td>
+                                        <td>{{descripcion}}</td>
+                                        <td>{{monto}}</td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+
+
+                        <h3>Ingrese el ID del proyecto que desea vincular y el ID del ingreso a cual desea vincularlo
+                        </h3>
+
+                        <div class="top-row">
+                            <div class="field-wrap">
+                                <label>
+                                    Id Proyecto<span class="req">*</span>
+                                </label>
+                                <input type="text" required autocomplete="off" id="entidadjuridica" />
+                            </div>
+
+                            <div class="field-wrap">
+                                <label>
+                                    Id Ingreso<span class="req">*</span>
+                                </label>
+                                <input type="text" required autocomplete="off" id="entidadjuridica" />
+                            </div>
+                        </div>
+
+                        <button type="submit" class="button button-back"
+                            onclick="window.location.href='./'">Vincular</button>
+
+
+            </div>
+
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'>
+            </script>
+            <script src="/js/GESOC_VincularIngresoAProyecto.js"></script>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -8,7 +8,7 @@ html {
 
 body {
   background: #618385;
-  background-image: url("https://brandsmakers.advertroindia.co.in/uploads-advertro-03-08-2019/brandsmakers/updates/516/google-promotion.jpg");
+  background-image: url("https://image.freepik.com/vector-gratis/presentacion-proyecto-empresarial-oficina-personaje-dibujos-animados-gerente-grupo-ilustracion-personas_169479-298.jpg");
   /*background-repeat: no-repeat;*/
   font-family: 'Titillium Web', sans-serif;
 }
@@ -24,7 +24,7 @@ a:hover {
 }
 
 .form {
-  background: #F4B74D;
+  background: #FF6A32;
   padding: 50px;
   padding-top: 30px;
   max-width: 600px;
@@ -86,6 +86,10 @@ h2 {
   margin: 0 0 25px;
 }
 
+h3{
+  text-align: justify;
+}
+
 table {
     width: 100%;
 }
@@ -93,7 +97,7 @@ table {
 th {
     height: 30px;
     width: 50px;
-    background-color: #B1A752;
+    background-color:#A2A1CB;
     text-align: center;
 }
 
@@ -103,7 +107,7 @@ td {
     background-color: #ffffff;
     font-weight: bold;
     text-align: center;
-  background-color:#FEEF9A;
+  background-color:#FDB897;
 }
 
 table, th, td {
@@ -112,7 +116,7 @@ table, th, td {
     font-size: 13px;
     border-collapse: collapse;
     border-width: 3px;
-    border-color:#F45D40;
+    border-color:#46468C;
   }
 
 label {
@@ -129,7 +133,7 @@ label {
 }
 label .req {
   margin: 2px;
-  color: #85c3e5;
+  color: #A2A1CB;
 }
 
 label.active {
@@ -148,8 +152,8 @@ label.highlight {
 
 input, textarea {
   font-size: 22px;
-  display: inline;
-  width: 90%;
+  display: block;
+  width: 100%;
   height: 100%;
   padding: 5px 10px;
   background: none;
@@ -162,7 +166,7 @@ input, textarea {
 }
 input:focus, textarea:focus {
   outline: 0;
-  border-color: #F45D40;
+  border-color: #46468C;
 }
 
 textarea {
@@ -201,14 +205,14 @@ textarea {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .1em;
-  background:#CF4F44;
+  background:#46468C;
   color: #ffffff;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-appearance: none;
 }
 .button:hover, .button:focus {
-  background: #85c3e5;
+  background: #A2A1CB;
 }
 
 .button-block {
@@ -245,7 +249,7 @@ textarea {
     border-color: #85c3e5;
     border-width: thick;
     color: #ffffff;
-    background-color:#F45D40;
+    background-color:#A2A1CB;
     cursor: pointer;
 }
 

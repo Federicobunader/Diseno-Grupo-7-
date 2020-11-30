@@ -33,11 +33,11 @@
 
                 <h3>Visualice las categorías existentes e ingrese el id de la elegida</h3>
 
-                <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
-                <div class ="buscar">
+                <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"><!--</div>
+                <div class ="buscar">-->
                     <input type="text" id="unaCategoria" onkeyup="buscarCategoria()" placeholder="Buscar por nombre" title="Type in a name">
                 </div>
-
+<br>
                 <form class="" action="/confirmar_asociacion_prod_cate" method="post" style="">
 
                     <div id="div1">
@@ -103,10 +103,11 @@ function buscarCategoria() {
                     <h3>Visualice los Productos existentes</h3>
 
 
-                    <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
-                    <div class ="buscar">
+                    <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"><!--</div>
+                    <div class ="buscar">-->
                         <input type="text" id="unProducto" onkeyup="buscarProducto()" placeholder="Buscar por nombre" title="Type in a name">
                     </div>
+                    <br>
 
                     <form class="" action="/confirmar_asociacion_prod_cate" method="post" style="">
 
@@ -188,9 +189,9 @@ function buscarProducto() {
                             </label>
                             <input type="text"required autocomplete="off" id="CUIT" name="producto_id" class="input-datos"/>
                         </div>
-                    </div>            
+                    </div>
 
-                    <button type="submit" class="button button-back" onclick="window.location.href='/confirmar_asociacion_prod_cate'">Asociar</button>
+                        <button type="submit" class="button button-back" onclick="window.location.href='/confirmar_asociacion_prod_cate'">Asociar </button>
 
 
             </div>
