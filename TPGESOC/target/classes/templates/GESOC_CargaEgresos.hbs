@@ -209,11 +209,11 @@ tr:nth-child(even) {background-color: #8d5151;}
         </div>
 
         <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
-        <div class ="buscar_presu">
+        <div class ="buscar">
             <input type="text" id="unPresupuesto" onkeyup="buscarPresupuesto()" placeholder="Busca por nombre" title="Type in a name"></div>
 
         <form class="" action="/guardar_presupuesto_egreso" method="post" style="">
-
+            <div id="div1">
         <table class="scroll" id="tabla" style="overflow-y:auto;">
 
             <thead>
@@ -232,6 +232,7 @@ tr:nth-child(even) {background-color: #8d5151;}
             {{/each}}
             </tbody>
         </table>
+            </div>
             <br><br>
 
             <div class="field-wrap">
@@ -303,13 +304,12 @@ function buscarPresupuesto() {
             <div class="form">
                 <br><h3>Ingrese los documentos</h3></br>
 
-
                 <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
-                <div class ="buscar_presu">
+                <div class ="buscar_">
                     <input type="text" id="unDocumento" onkeyup="buscarDocumento()" placeholder="Busca por numero" title="Type in a name"></div>
 
                 <form class="" action="/guardar_documento_egreso" method="post" style="">
-
+                    <div id="div1">
                     <table class="scroll" id="tablaDocumentos" style="overflow-y:auto;">
 
                         <thead>
@@ -331,6 +331,7 @@ function buscarPresupuesto() {
                         {{/each}}
                         </tbody>
                     </table>
+                    </div>
                     <br><br>
 
                     <div class="field-wrap">
@@ -398,9 +399,9 @@ function buscarDocumento() {
 
 
                 <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
-                <div class ="buscar_presu">
+                <div class ="buscar">
                     <input type="text" id="unaEntidad" onkeyup="buscarEntidad()" placeholder="Busca por nombre" title="Type in a name"></div>
-
+                <div id="div1">
                     <table class="scroll" id="tablaEntidad" style="overflow-y:auto;">
 
                         <thead>
@@ -424,6 +425,7 @@ function buscarDocumento() {
                         {{/each}}
                         </tbody>
                     </table>
+                </div>
                     <br><br>
 
                     <div class="field-wrap">
@@ -437,11 +439,11 @@ function buscarDocumento() {
                     <br><br><h3>Ingrese al Proveedor</h3></br><br>
 
                     <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
-                    <div class ="buscar_presu">
+                    <div class ="buscar">
                         <input type="text" id="unProveedor" onkeyup="buscarProveedor()" placeholder="Busca por nombre" title="Type in a name"></div>
 
                     <form class="" action="/confirmar_egreso" method="post" style="">
-
+                        <div id="div1">
                         <table class="scroll" id="tablaProveedores" style="overflow-y:auto;">
 
                             <thead>
@@ -461,6 +463,7 @@ function buscarDocumento() {
                             {{/each}}
                             </tbody>
                         </table>
+                        </div>
                         <br><br>
 
                         <div class="field-wrap">
@@ -471,7 +474,7 @@ function buscarDocumento() {
                                    class="input-datos" />
                         </div>
 
-
+                    </form>
             </div>
 
             <style>
@@ -551,7 +554,6 @@ function buscarProveedor() {
                             </div>
                         </div>
 
-                    </form>
             </div>
         </div>
 

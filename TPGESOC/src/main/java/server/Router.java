@@ -43,6 +43,8 @@ public class Router {
 
         Spark.before("/", authMiddleware::verificarSesion);
 
+        Spark.get("/menu_inicio", loginController::inicio, Router.engine);
+
         Spark.get("/menu_login", loginController::menu_login, Router.engine);
 
         Spark.get("/menu_logueado", usuarioController::menu_logueado, Router.engine);
