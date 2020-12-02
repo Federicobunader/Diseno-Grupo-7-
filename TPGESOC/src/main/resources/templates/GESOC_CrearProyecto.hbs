@@ -14,54 +14,34 @@
     <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
-            <a class="navbar-brand page-scroll" href="./GESOC_Menu_Logueado.html">GESOC</a>
+            <a class="navbar-brand page-scroll" href="/menu_logueado">GESOC</a>
         </div>
     </nav>
 
     <!-- partial:index.partial.html -->
     <div class="form">
 
-        <button type="submit" class="button button-back" onclick="window.location.href='./'">Volver al menú
+        <button type="submit" class="button button-back" onclick="window.location.href='/menu_logueado'">Volver al menú
             principal</button>
 
         <br>
         <h2>Ingrese los datos de su Proyecto</h2>
-
-        <div>
-            <div class="field-wrap">
-                <label>
-                    Monto<span class="req">*</span>
-                </label>
-                <input type="text" required autocomplete="off" id="NombreFicticio" name="NombreFicticio">
-            </div>
-        </div>
-
-        <div>
-            <div class="field-wrap">
-                <label>
-                    Monto Definido<span class="req">*</span>
-                </label>
-                <input type="text" required autocomplete="off" id="RazonSocial" name="RazonSocial">
-            </div>
-        </div>
-
+        <form class="" action="/crear_proyecto" method="post" style="">
         <div>
             <div class="field-wrap">
                 <label>
                     Cantidad de Presupuestos Exigibles<span class="req">*</span>
                 </label>
-                <input type="text" required autocomplete="off" id="RazonSocial" name="RazonSocial">
+                <input type="text" required autocomplete="off" id="RazonSocial" name="cantidad_presupuestos">
             </div>
         </div>
 
-        <h3>Busque al usuario revisor en la tabla e ingrese su ID</h2>
+        <h3>Busque al usuario revisor en la tabla e ingrese su ID</h3>
 
             <div class="lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
             <div class="buscar_presu">
                 <input type="text" id="unUsuario" onkeyup="buscarUsuario()" placeholder="Buscar por nombre de usuario"
                     title="Type in a name"></div>
-
-            <form class="" action="/guardar_usuario" method="post" style="">
 
                 <br>
 
@@ -90,16 +70,14 @@
                         <label>
                             Id Usuario<span class="req">*</span>
                         </label>
-                        <input type="text" required autocomplete="off" id="RazonSocial" name="RazonSocial">
+                        <input type="text" required autocomplete="off" id="RazonSocial" name="id_usuario">
                     </div>
                 </div>
 
-
-
-                <button type="submit" class="button button-back" onclick="window.location.href='./'">Crear
+                <button type="submit" class="button button-back" onclick="window.location.href='/menu_logueado'">Crear
                     proyecto</button>
 
-
+        </form>
     </div>
 
     <script>

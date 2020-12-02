@@ -38,6 +38,7 @@ public class Router {
         PresupuestoController presupuestoController = new PresupuestoController();
         MensajeController mensajeController = new MensajeController();
         CategoriaController categoriaController = new CategoriaController();
+        ProyectoController proyectoController = new ProyectoController();
 
         Spark.get("/", loginController::inicio, Router.engine);
 
@@ -65,18 +66,13 @@ public class Router {
 
         Spark.get("/buscar_productos_de_categoria",categoriaController :: mostrarProductosDeLasCategoria,Router.engine);
 
-        //Spark.get("/listado_por_categoria/:id",categoriaController :: mostrarTodosLosEgresosDeUnaCategoria,Router.engine);
-
         Spark.post("/loguearse", loginController::login);
 
-        //Spark.get("/cargar_egreso", egresoController :: cargarEgreso,  Router.engine);
         Spark.get("/cargar_egreso", egresoController:: cargarEgreso, Router.engine);
 
         Spark.get("/reiniciar_egreso", egresoController:: reiniciarEgreso);
 
         Spark.post("/confirmar_egreso", egresoController :: guardar);
-
-        //Spark.post("/cargar_egreso", egresoController :: cargarEgreso);
 
         Spark.post("/guardar_item_egreso", egresoController :: guardarItem);
 
@@ -85,28 +81,20 @@ public class Router {
         Spark.post("/guardar_presupuesto_egreso", egresoController :: guardarPresupuesto);
 
         Spark.post("/guardar_documento_egreso", egresoController :: guardarDocumento);
-/*
-        Spark.get("/guardar_item_egreso", egresoController :: cargarEgreso, Router.engine);
 
-        Spark.get("/guardar_usuario_revisor_egreso", egresoController :: cargarEgreso, Router.engine);
-
-        Spark.get("/guardar_presupuesto_egreso", egresoController :: cargarEgreso, Router.engine);
-
-        Spark.get("/guardar_documento_egreso", egresoController :: cargarEgreso, Router.engine);
-*/
         Spark.post("/vincular", egresoController :: vincularEgreso);
 
         Spark.get("/asociar_egreso_a_ingreso", egresoController :: mostrarTodos, Router.engine);
 
         Spark.get("/asociar_egreso_a_ingreso", ingresoController :: mostrarTodos, Router.engine);
 
-       // Spark.post("/cargar_egreso", productoController:: mostrarTodos);
-
-        //Spark.get("/cargar_egreso", usuarioController::mostrarTodos,Router.engine); //CAMBIAR CONTROLLER NO SE COMO SE HACE
-
         Spark.get("/presupuestos", presupuestoController::mostrarTodos,Router.engine); //CAMBIAR CONTROLLER NO SE COMO SE HACE
 
         Spark.get("/bandeja_mensajes", mensajeController::mostrarTodos,Router.engine);
+
+        Spark.get("/cargar_proyecto", proyectoController::cargarProyectoVista,Router.engine);
+
+        Spark.post("/crear_proyecto", proyectoController :: guardar);
 
         //Spark.get("/GESOC_Menu",empresaController::guardar,Router.engine);
        // Spark.get("/saludo/:nombre/:apellido",((request, response) -> "HOLA " + request.params("nombre") + request.params("apellido") ));

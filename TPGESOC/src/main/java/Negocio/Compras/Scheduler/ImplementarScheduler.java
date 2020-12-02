@@ -2,8 +2,8 @@ package Negocio.Compras.Scheduler;
 
 import Negocio.Compras.Compra;
 import Negocio.Compras.GestorDeEgresos;
-import Negocio.GestorDeProyectos;
-import Negocio.Proyecto;
+import Negocio.Proyecto.GestorDeProyectos;
+import Negocio.Proyecto.Proyecto;
 import org.quartz.Job;
 import org.quartz.JobDetail;
 import org.quartz.JobExecutionContext;

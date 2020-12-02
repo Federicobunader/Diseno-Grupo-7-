@@ -1,20 +1,21 @@
-package Negocio;
+package Negocio.Proyecto;
 
 import Negocio.Compras.GestorDeCriterios;
 import Negocio.Proyecto.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GestorDeProyectos {
 
     private static GestorDeProyectos instance = null;
-    private List<Negocio.Proyecto> proyectos;
+    private List<Proyecto> proyectos = new ArrayList<>();
 
-    public void setProyectos(List<Negocio.Proyecto> proyectos) {
+    public void setProyectos(List<Proyecto> proyectos) {
         this.proyectos = proyectos;
     }
 
-    public List<Negocio.Proyecto> getProyectos() {
+    public List<Proyecto> getProyectos() {
         return proyectos;
     }
 
@@ -23,6 +24,10 @@ public class GestorDeProyectos {
             instance = new GestorDeProyectos();
         return instance;
     }
+
+
+
+
 
 
 }

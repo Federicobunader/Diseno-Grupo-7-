@@ -24,6 +24,7 @@
 
     </head>
 
+    <form class="" action="/confirmar_egreso" method="post" style="">
 
     <div class="tab">
         <button class="tablinks" onclick="openCity(event, 'agregar producto')">Agregar Productos</button>
@@ -391,7 +392,6 @@ function buscarDocumento() {
 
         <div id="entidades_y_proveedores" class="tabcontent">
             <div class="form">
-                <br><h3>Ingrese la informacion restante</h3></br>
 
                 <br><h3>Ingrese la entidad</h3></br>
 
@@ -440,8 +440,7 @@ function buscarDocumento() {
                     <div class ="buscar">
                         <input type="text" id="unProveedor" onkeyup="buscarProveedor()" placeholder="Busca por nombre" title="Type in a name"></div>
 
-                    <form class="" action="/confirmar_egreso" method="post" style="">
-                        <div id="div1">
+                <div id="div1">
                         <table class="scroll" id="tablaProveedores" style="overflow-y:auto;">
 
                             <thead>
@@ -472,101 +471,101 @@ function buscarDocumento() {
                                    class="input-datos" />
                         </div>
 
-                    </form>
             </div>
 
-            <style>
+        <style>
 * {
-  box-sizing: border-box;
+box-sizing: border-box;
 }
 
 #myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
+background-image: url('/css/searchicon.png');
+background-position: 10px 10px;
+background-repeat: no-repeat;
+width: 100%;
+font-size: 16px;
+padding: 12px 20px 12px 40px;
+border: 1px solid #ddd;
+margin-bottom: 12px;
 }
 
 </style>
-            <script>
+        <script>
 function buscarEntidad() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("unaEntidad");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("tablaEntidad");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[1];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
+var input, filter, table, tr, td, i, txtValue;
+input = document.getElementById("unaEntidad");
+filter = input.value.toUpperCase();
+table = document.getElementById("tablaEntidad");
+tr = table.getElementsByTagName("tr");
+for (i = 0; i < tr.length; i++) {
+td = tr[i].getElementsByTagName("td")[1];
+if (td) {
+  txtValue = td.textContent || td.innerText;
+  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+    tr[i].style.display = "";
+  } else {
+    tr[i].style.display = "none";
   }
+}
+}
 }
 
 function buscarProveedor() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("unProveedor");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("tablaProveedores");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[1];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
+var input, filter, table, tr, td, i, txtValue;
+input = document.getElementById("unProveedor");
+filter = input.value.toUpperCase();
+table = document.getElementById("tablaProveedores");
+tr = table.getElementsByTagName("tr");
+for (i = 0; i < tr.length; i++) {
+td = tr[i].getElementsByTagName("td")[1];
+if (td) {
+  txtValue = td.textContent || td.innerText;
+  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+    tr[i].style.display = "";
+  } else {
+    tr[i].style.display = "none";
   }
 }
+}
+}
 </script>
-        </div>
-
-        <div id="medio_de_pago" class="tabcontent">
-            <div class="form">
-
-                        <br><br><h3>Ingrese el Medio de Pago</h3></br><br>
-
-                        <div class="field-wrap">
-                            <div class="custom-select" style="width:200px;">
-                                <select name="tipoDePago" id="tipoDePago" onChange=changetextbox()>
-                                    <option value="0">Seleccione el medio de pago:</option>
-                                    <option value="1">Tarjeta de credito</option>
-                                    <option value="2">Tarjeta de debito</option>
-                                    <option value="3">Ticket</option>
-                                    <option value="4">ATM</option>
-                                    <option value="5">Efectivo</option>
-                                </select>
-
-                            </div>
-                        </div>
-
-            </div>
-        </div>
-
-        <br><br><h3>Asegurese de haber completado todo los datos pedidos del egreso</h3></br><br>
-
-        <button type="submit" class="button button-back" onclick="window.location.href='/confirmar_egreso'">CONFIRMAR EGRESO </button>
-
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="/js/GESOC_CargarEgresos.js"></script>
-
     </div>
-    </body>
 
-    <script>openCity(event, 'agregar producto')
-      if (window.location.hash === '#usuarios') {openCity(event, 'usuarios revisores')}
-      if (window.location.hash === '#presupuestos') {openCity(event, 'presupuestos')}</script>
-    <!--TODO ↑↑↑: que cuando abra la pag con los # te abra directamente el tab correspondiente (el tab de producto se abre por default)-->
+    <div id="medio_de_pago" class="tabcontent">
+        <div class="form">
+
+                    <br><br><h3>Ingrese el Medio de Pago</h3></br><br>
+
+                    <div class="field-wrap">
+                        <div class="custom-select" style="width:200px;">
+                            <select name="tipoDePago" id="tipoDePago" onChange=changetextbox()>
+                                <option value="0">Seleccione el medio de pago:</option>
+                                <option value="1">Tarjeta de credito</option>
+                                <option value="2">Tarjeta de debito</option>
+                                <option value="3">Ticket</option>
+                                <option value="4">ATM</option>
+                                <option value="5">Efectivo</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+        </div>
+    </div>
+
+    <br><br><h3>Asegurese de haber completado todo los datos pedidos del egreso</h3></br><br>
+
+    <button type="submit" class="button button-back" onclick="window.location.href='/confirmar_egreso'">CONFIRMAR EGRESO </button>
+
+    </form>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="/js/GESOC_CargarEgresos.js"></script>
+
+</div>
+</body>
+
+<script>openCity(event, 'agregar producto')
+  if (window.location.hash === '#usuarios') {openCity(event, 'usuarios revisores')}
+  if (window.location.hash === '#presupuestos') {openCity(event, 'presupuestos')}</script>
+<!--TODO ↑↑↑: que cuando abra la pag con los # te abra directamente el tab correspondiente (el tab de producto se abre por default)-->
 </html>
 
