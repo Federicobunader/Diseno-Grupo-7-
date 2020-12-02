@@ -52,22 +52,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c56b04db-f42a-40a7-8d18-c78ae2368dc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ProyectoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Scheduler/ImplementarScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Scheduler/ImplementarScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Proyecto/GestorDeProyectos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Proyecto/GestorDeProyectos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Proyecto/Proyecto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Proyecto/Proyecto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Router.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_CargaEgresos.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_CargaEgresos.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_CrearProyecto.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_CrearProyecto.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu_Logueado.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu_Logueado.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Scheduler/ImplementarScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Scheduler/ImplementarScheduler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/GestorDeProyectos.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Proyecto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server/Router.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/Router.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_CargaEgresos.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_CargaEgresos.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_CrearProyecto.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_CrearProyecto.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_Menu_Logueado.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_Menu_Logueado.hbs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -91,7 +76,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/server/Router.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
+            <state relative-caret-position="136">
               <caret line="74" column="37" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -103,17 +88,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_CargaEgresos.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1700">
-              <caret line="133" column="9" lean-forward="true" selection-start-line="133" selection-start-column="9" selection-end-line="133" selection-end-column="9" />
+            <state relative-caret-position="170">
+              <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Login.hbs">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_CrearProyecto.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2705">
-              <caret line="376" column="12" selection-start-line="376" selection-start-column="12" selection-end-line="376" selection-end-column="70" />
+            <state relative-caret-position="85">
+              <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -552,7 +537,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49406177" visible="true" weight="0.28322148" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49406177" visible="true" weight="0.28322148" />
       <window_info id="Structure" order="1" sideWeight="0.50593823" side_tool="true" weight="0.28322148" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -561,7 +546,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.5056657" side_tool="true" weight="0.28322148" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4036827" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4036827" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -580,20 +565,20 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4957806" visible="true" weight="0.2751678" />
-      <window_info id="Structure" order="1" sideWeight="0.5042194" side_tool="true" weight="0.25637585" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49406177" visible="true" weight="0.28322148" />
+      <window_info id="Structure" order="1" sideWeight="0.50593823" side_tool="true" weight="0.28322148" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Favorites" order="6" sideWeight="0.5056657" side_tool="true" weight="0.28322148" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4036827" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
@@ -1125,9 +1110,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Login.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2705">
+          <caret line="376" column="12" selection-start-line="376" selection-start-column="12" selection-end-line="376" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/server/Router.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
+        <state relative-caret-position="136">
           <caret line="74" column="37" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1142,17 +1134,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Login.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2705">
-          <caret line="376" column="12" selection-start-line="376" selection-start-column="12" selection-end-line="376" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_CargaEgresos.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="133" column="9" lean-forward="true" selection-start-line="133" selection-start-column="9" selection-end-line="133" selection-end-column="9" />
+        <state relative-caret-position="170">
+          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
         </state>
       </provider>
     </entry>
