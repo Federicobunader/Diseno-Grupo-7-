@@ -88,8 +88,6 @@ public class Router {
 
         Spark.get("/asociar_egreso_a_ingreso", egresoController :: mostrarTodos, Router.engine);
 
-        Spark.get("/asociar_egreso_a_ingreso", ingresoController :: mostrarTodos, Router.engine);
-
         Spark.get("/presupuestos", presupuestoController::mostrarTodos,Router.engine); //CAMBIAR CONTROLLER NO SE COMO SE HACE
 
         Spark.get("/bandeja_mensajes", mensajeController::mostrarTodos,Router.engine);

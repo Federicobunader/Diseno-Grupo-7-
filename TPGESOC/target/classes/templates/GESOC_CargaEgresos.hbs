@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>REGISTRARSE/INICIAR SESIÓN</title>
+  <title>Cargar Egreso</title>
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="/css/GESOC_CargarEgresos.css">
@@ -31,6 +31,8 @@
         <button class="tablinks" onclick="openCity(event, 'entidades_y_proveedores')">Entidades y proveedores</button>
         <button class="tablinks" onclick="openCity(event, 'medio_de_pago')">Medio de Pago</button>
     </div>
+
+    <div class="tab-content">
 
     <form class="" action="/confirmar_egreso" method="post" style="">
 
@@ -554,11 +556,13 @@ if (td) {
 
     <br><br><h3>Asegurese de haber completado todo los datos pedidos del egreso</h3></br><br>
 
-    <button type="submit" class="button button-back" onclick="window.location.href='/confirmar_egreso'">CONFIRMAR EGRESO </button>
+    <button type="submit" class="button button-back" onclick="window.location.href='/menu_logueado'">CONFIRMAR EGRESO </button>
 
-    </form>
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="/js/GESOC_CargarEgresos.js"></script>
+    </form>
 
+    </div>
 </div>
 </body>
 
