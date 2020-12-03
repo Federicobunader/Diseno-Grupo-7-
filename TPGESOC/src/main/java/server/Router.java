@@ -1,5 +1,6 @@
 package server;
 
+import Bitacora.Bitacora;
 import controllers.*;
 import middleware.AuthMiddleware;
 import spark.ResponseTransformer;
@@ -39,6 +40,7 @@ public class Router {
         MensajeController mensajeController = new MensajeController();
         CategoriaController categoriaController = new CategoriaController();
         ProyectoController proyectoController = new ProyectoController();
+        BitacoraController bitacoraController = new BitacoraController();
 
         Spark.get("/", loginController::inicio, Router.engine);
 
@@ -99,6 +101,8 @@ public class Router {
         Spark.get("/vincular_proyecto", proyectoController::vincularProyectosEIngreso,Router.engine);
 
         Spark.post("/vincular", proyectoController :: vincularProyecto);
+
+        Spark.get("/bitacora_operaciones", bitacoraController:: bitacora,Router.engine);
 
         //Spark.get("/GESOC_Menu",empresaController::guardar,Router.engine);
        // Spark.get("/saludo/:nombre/:apellido",((request, response) -> "HOLA " + request.params("nombre") + request.params("apellido") ));
