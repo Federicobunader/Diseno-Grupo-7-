@@ -57,21 +57,24 @@ public class ProyectoController {
         Proyecto proyecto = new Proyecto();
         Ingreso ingreso = new Ingreso();
 
+        Repositorio<Proyecto> repoProyecto = FactoryRepositorio.get(Proyecto.class);
+        Repositorio<Ingreso> repoIngreso = FactoryRepositorio.get(Ingreso.class);
+
         if (request.queryParams("proyecto_id") != null) {
             int idProyecto = Integer.valueOf(request.queryParams("proyecto_id"));
-            Repositorio<Proyecto> repoProyecto = FactoryRepositorio.get(Proyecto.class);
             proyecto = repoProyecto.buscar(idProyecto);
-
-            if (request.queryParams("ingreso_id") != null) {
-                int idIngreso = Integer.valueOf(request.queryParams("ingreso_id"));
-                Repositorio<Ingreso> repoIngreso = FactoryRepositorio.get(Ingreso.class);
-                ingreso = repoIngreso.buscar(idIngreso);
-
-                proyecto.agregarIngresoAProyecto(ingreso);
-                repoProyecto.modificar(proyecto);
-            }
-
         }
+
+        if (request.queryParams("ingreso_id") != null) {
+            int idIngreso = Integer.valueOf(request.queryParams("ingreso_id"));
+            ingreso = repoIngreso.buscar(idIngreso);
+        }
+
+        List <Ingreso> ingresosProyectos = proyecto.getIngresos();
+        ingresosProyectos.add(ingreso);
+        proyecto.setIngresos(ingresosProyectos);
+
+        repoProyecto.modificar(proyecto);
         response.redirect("/menu_logueado");
         return response;
     }

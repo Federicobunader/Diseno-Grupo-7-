@@ -20,10 +20,13 @@
 <!-- partial:index.partial.html -->
 <div class="form">
 
-  <button type="submit" class="button button-back" onclick="window.location.href='/reiniciar_egreso'">Volver atrás</button>
+    <button type="submit" class="button button-back" onclick="window.location.href='/reiniciar_egreso'">Volver atrás</button>
+
 
 
     <div class="tab">
+
+
         <button class="tablinks" onclick="openCity(event, 'agregar producto')">Agregar Productos</button>
         <button class="tablinks" onclick="openCity(event, 'usuarios revisores')">Usuarios Revisores</button>
         <button class="tablinks" onclick="openCity(event, 'presupuesto')">Presupuesto</button>
@@ -31,8 +34,6 @@
         <button class="tablinks" onclick="openCity(event, 'entidades_y_proveedores')">Entidades y proveedores</button>
         <button class="tablinks" onclick="openCity(event, 'medio_de_pago')">Medio de Pago</button>
     </div>
-
-    <div class="tab-content">
 
     <form class="" action="/confirmar_egreso" method="post" style="">
 
@@ -261,7 +262,6 @@ tr:nth-child(even) {background-color: #8d5151;}
         <button type="submit" class="button button-back" onclick="window.location.href='/usuarios_revisores'">Seguir con usuarios revisores</button>
 
         </form>
-    </div>
     <style>
 * {
   box-sizing: border-box;
@@ -299,6 +299,7 @@ function buscarPresupuesto() {
   }
 }
 </script>
+    </div>
 
         <div id="documento" class="tabcontent">
             <div class="form">
@@ -388,7 +389,6 @@ function buscarDocumento() {
   }
 }
 </script>
-
         </div>
 
         <div id="entidades_y_proveedores" class="tabcontent">
@@ -563,7 +563,7 @@ if (td) {
     </form>
 
     </div>
-</div>
+
 </body>
 
 <script>openCity(event, 'agregar producto')

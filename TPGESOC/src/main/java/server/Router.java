@@ -98,7 +98,7 @@ public class Router {
 
         Spark.get("/vincular_proyecto", proyectoController::vincularProyectosEIngreso,Router.engine);
 
-        Spark.post("/vincular", proyectoController :: vincularProyecto);
+        Spark.post("/vincular_proy", proyectoController :: vincularProyecto);
 
         Spark.get("/bitacora_operaciones", bitacoraController:: bitacora,Router.engine);
 

@@ -54,6 +54,8 @@ public class Proyecto extends EntidadPersistente {
         monto = montoTotal;
     }
 
+
+
     public void setDirectorResponsable(Usuario directorResponsable) {
         this.directorResponsable = directorResponsable;
     }
