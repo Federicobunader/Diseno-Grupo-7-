@@ -96,6 +96,10 @@ public class Router {
 
         Spark.post("/crear_proyecto", proyectoController :: guardar);
 
+        Spark.get("/vincular_proyecto", proyectoController::vincularProyectosEIngreso,Router.engine);
+
+        Spark.post("/vincular", proyectoController :: vincularProyecto);
+
         //Spark.get("/GESOC_Menu",empresaController::guardar,Router.engine);
        // Spark.get("/saludo/:nombre/:apellido",((request, response) -> "HOLA " + request.params("nombre") + request.params("apellido") ));
 

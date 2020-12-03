@@ -1,49 +1,60 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>REGISTRARSE/INICIAR SESIÓN</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="/css/GESOC_Login.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="/css/GESOC_Login.css">
 
 </head>
+
 <body>
 
   <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
     <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <a class="navbar-brand page-scroll" href="/menu_inicio">GESOC</a>
-        </div>
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+        <a class="navbar-brand page-scroll" href="/menu_inicio">GESOC</a>
+      </div>
     </div>
-</nav>
+  </nav>
 
-  
 
-<!-- partial:index.partial.html -->
-<div class="form">
-      
-  <button type="submit" class="button button-back" onclick="window.location.href='/menu_inicio'">Volver al menú principal</button>
-  
-  <ul class="tab-group">
-        
-        <li class="tab"><a href="#signupEJ">Registrar Entidad Jurídica</a></li>
-        <li class="tab"><a href="#signupEB">Registrar Entidad Base</a></li>
-        <li class="tab"><a href="#login">Iniciar <br> Sesión</a></li>
-      </ul>
-      
-      <div class="tab-content">
-        <div id="signupEJ">   
-          <h1>¡Registrate gratis!</h1>
 
-          <form class="" action="/registrar_empresa" method="post" style="">
-          
+  <!-- partial:index.partial.html -->
+  <div class="form">
+
+    <button type="submit" class="button button-back" onclick="window.location.href='/menu_inicio'">Volver al menú
+      principal</button>
+
+    <ul class="tab-group">
+
+      <li class="tab"><a href="#signupEJ">Registrar Entidad Jurídica</a></li>
+      <li class="tab"><a href="#signupEB">Registrar Entidad Base</a></li>
+      <li class="tab"><a href="#login">Iniciar <br> Sesión</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div id="signupEJ">
+        <h1>¡Registrate gratis!</h1>
+
+        <form class="" action="/registrar_empresa" method="post" style="">
+
           <h2>Datos de la entidad</h2>
-            
+
           <div class="top-row">
             <div class="field-wrap">
               <label>
@@ -56,61 +67,47 @@
               <label>
                 Razón social<span class="req">*</span>
               </label>
-                <input type="text" required autocomplete="off" id="RazonSocial" name="RazonSocial">
+              <input type="text" required autocomplete="off" id="RazonSocial" name="RazonSocial">
             </div>
           </div>
-          
+
           <!-- Entidad base -->
-          
+
           <div class="top-row">
             <div class="field-wrap">
               <label>
                 Código IGJ<span class="req">*</span>
               </label>
-                <input type="text" required autocomplete="off" id="Código IGJ" name="CodigoDeInscripcion"  class="input-datos" {{#if empresa}}value="{{empresa.CodigoDeInscripcion}}" {{/if}}>
+              <input type="text" required autocomplete="off" id="Código IGJ" name="CodigoDeInscripcion"
+                class="input-datos" {{#if empresa}}value="{{empresa.CodigoDeInscripcion}}" {{/if}}>
             </div>
-            
+
             <div class="field-wrap">
               <label>
                 CUIT<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off" id="CUIT" name="CUIT" class="input-datos"/>
+              <input type="text" required autocomplete="off" id="CUIT" name="CUIT" class="input-datos" />
             </div>
           </div>
-           
+
           <div class="top-row">
             <div class="field-wrap">
               <label>
                 Cantidad de personal<span class="req">*</span>
               </label>
-                <input type="text"required autocomplete="off" id="CUIT" name="cantidadDePersonal" class="input-datos"/>
+              <input type="text" required autocomplete="off" id="CUIT" name="cantidadDePersonal" class="input-datos" />
             </div>
 
-              <!-- <div class="field-wrap">
-                <label>
-                  Cant. ventas anuales<span class="req">*</span>
-                </label>
-                <input type="text" required autocomplete="off" id="cantventas"/>
-              </div>
+            <div class="field-wrap">
+              <label>
+                Prom. ventas anuales<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" id="CUIT" name="promedioDeVentasAnuales"
+                class="input-datos" />
             </div>
+          </div>
 
-              <div class="field-wrap">
-                <label>
-                  Ingreso de ventas anuales<span class="req">*</span>
-                </label>
-                <input type="text"required autocomplete="off" id="ingventas"/>
-              </div>
-              -->
-
-              <div class="field-wrap">
-                <label>
-                  Prom. ventas anuales<span class="req">*</span>
-                </label>
-                  <input type="text"required autocomplete="off" id="CUIT" name="promedioDeVentasAnuales" class="input-datos"/>
-              </div>
-            </div>
-
-            <!-- TODO: poner al lado del tipo de entidad -->
+          <!-- TODO: poner al lado del tipo de entidad -->
 
           <div class="field-wrap">
             <div class="custom-select" style="width:200px;">
@@ -123,7 +120,7 @@
                 <option value="5">Servicios</option>
               </select>
 
-               </div>
+            </div>
           </div>
 
           <h2>Dirección</h2>
@@ -133,55 +130,58 @@
               <label>
                 Calle<span class="req">*</span>
               </label>
-                <input type="text"required autocomplete="off" id="calle" name="calle" class="input-datos"/>
+              <input type="text" required autocomplete="off" id="calle" name="calle" class="input-datos" />
             </div>
-        
+
             <div class="field-wrap">
               <label>
                 Altura<span class="req">*</span>
               </label>
-                <input type="text"required autocomplete="off" id="Altura" name="altura" class="input-datos"/>
+              <input type="text" required autocomplete="off" id="Altura" name="altura" class="input-datos" />
             </div>
           </div>
 
           <div class="top-row">
             <div class="field-wrap">
               <label>
-                Piso<!--<span class="req">*</span>-->
+                Piso
+                <!--<span class="req">*</span>-->
               </label>
-                <input type="text"required autocomplete="off" id="Piso" name="piso" class="input-datos"/>
+              <input type="text" required autocomplete="off" id="Piso" name="piso" class="input-datos" />
             </div>
 
             <div class="field-wrap">
               <label>
-                Departamento<!--<span class="req">*</span>-->
-               </label>
-                <input type="text"required autocomplete="off" id="Departamento" name="departamento" class="input-datos"/>
-              </div>
+                Departamento
+                <!--<span class="req">*</span>-->
+              </label>
+              <input type="text" required autocomplete="off" id="Departamento" name="departamento"
+                class="input-datos" />
             </div>
+          </div>
 
-            <div class="top-row">
-              <div class="field-wrap">
-                <label>
-                  País<span class="req">*</span>
-                </label>
-                  <input type="text"required autocomplete="off" id="Pais" name="pais" class="input-datos"/>
-              </div>
-          
-              <div class="field-wrap">
-                <label>
-                  Provincia<span class="req">*</span>
-                </label>
-                  <input type="text"required autocomplete="off" id="Provincia" name="provincia" class="input-datos"/>
-              </div>
-            </div>
-        
+          <div class="top-row">
             <div class="field-wrap">
               <label>
-                Ciudad<span class="req">*</span>
+                País<span class="req">*</span>
               </label>
-                <input type="text"required autocomplete="off" id="Ciudad" name="ciudad" class="input-datos"/>
+              <input type="text" required autocomplete="off" id="Pais" name="pais" class="input-datos" />
             </div>
+
+            <div class="field-wrap">
+              <label>
+                Provincia<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" id="Provincia" name="provincia" class="input-datos" />
+            </div>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Ciudad<span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off" id="Ciudad" name="ciudad" class="input-datos" />
+          </div>
 
           <h2>Datos de usuario</h2>
 
@@ -189,218 +189,239 @@
             <label>
               Email<span class="req">*</span>
             </label>
-              <input type="email"required autocomplete="off" id="Email" name="mail" class="input-datos"/>
+            <input type="email" required autocomplete="off" id="Email" name="mail" class="input-datos" />
           </div>
-          
+
           <div class="field-wrap">
             <label>
               Nombre de usuario<span class="req">*</span>
             </label>
-              <input type="text"required autocomplete="off" id="NombreUsuario" name="usuario" class="input-datos"/>
+            <input type="text" required autocomplete="off" id="NombreUsuario" name="usuario" class="input-datos" />
           </div>
 
           <div class="field-wrap">
             <label>
               Ingrese una contraseña<span class="req">*</span>
             </label>
-              <input type="password"required autocomplete="off" id="Password" name="password" class="input-datos"/>
+            <input type="password" required autocomplete="off" id="Password" name="password" class="input-datos" />
           </div>
 
-          <button type="submit" class="button button-back" onclick="window.location.href='/menu_logueado'">Inicia tu experiencia en GESOC</button>
+          <button type="submit" id="myBtn" class="button button-back">Inicia tu
+            experiencia en GESOC</button>
 
           <!--Enable textbox according to previus select in combobox and enable button once textboxs filled-->
 
           <script type="text/javascript">
-            
-            function verify(){
-              if (document.getElementById("nombreFicticio").value===""){
-                  document.getElementById('startbutton').disabled = true; 
-                  alert("Llene todos los campos obligatorios");
-                }
-                else{
-                  document.getElementById('startbutton').disabled = false; 
-                }
+
+            function verify() {
+              if (document.getElementById("nombreFicticio").value === "") {
+                document.getElementById('startbutton').disabled = true;
+                alert("Llene todos los campos obligatorios");
+              }
+              else {
+                document.getElementById('startbutton').disabled = false;
+              }
             }
           </script>
 
-          </form>
+        </form>
 
-        </div>
-        </div>
+      </div>
+    </div>    
 
-        <div class="tab-content">
-          <div id="signupEB">   
-            <h1>¡Registrate gratis!</h1>
+    <div class="tab-content">
+      <div id="signupEB">
+        <h1>¡Registrate gratis!</h1>
 
-              <form class="" action="/registrar_base" method="post" style="">
-            
-            <h2>Datos de la entidad</h2>
+        <form class="" action="/registrar_base" method="post" style="">
 
-              
-            <div class="top-row">
-              <div class="field-wrap">
-                <label>
-                  Nombre Ficticio<span class="req">*</span>
-                </label>
-                  <input type="text"required autocomplete="off" id="NombreFicticio" name="NombreFicticio" class="input-datos"/>
-              </div>
-                <div class="field-wrap">
-                    <label>
-                        Entidad Juridica<span class="req">*</span>
-                    </label>
-                    <input type="text"required autocomplete="off" id="Entidad Juridica" name="EntidadJuridica" class="input-datos"/>
-                </div>
+          <h2>Datos de la entidad</h2>
+
+
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                Nombre Ficticio<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" id="NombreFicticio" name="NombreFicticio"
+                class="input-datos" />
+            </div>
+            <div class="field-wrap">
+              <label>
+                Entidad Juridica<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" id="Entidad Juridica" name="EntidadJuridica"
+                class="input-datos" />
+            </div>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Descripcion<span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off" id="Descripcion" name="Descripcion" class="input-datos" />
+          </div>
+
+          <h2>Dirección</h2>
+
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                Calle<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" id="calle" name="calle" class="input-datos" />
             </div>
 
-                          <div class="field-wrap">
-                            <label>
-                              Descripcion<span class="req">*</span>
-                            </label>
-                              <input type="text"required autocomplete="off" id="Descripcion" name="Descripcion" class="input-datos"/>
-                          </div>
-
-                              <h2>Dirección</h2>
-
-                              <div class="top-row">
-                                  <div class="field-wrap">
-                                      <label>
-                                          Calle<span class="req">*</span>
-                                      </label>
-                                      <input type="text"required autocomplete="off" id="calle" name="calle" class="input-datos"/>
-                                  </div>
-
-                                  <div class="field-wrap">
-                                      <label>
-                                          Altura<span class="req">*</span>
-                                      </label>
-                                      <input type="text"required autocomplete="off" id="Altura" name="altura" class="input-datos"/>
-                                  </div>
-                              </div>
-
-                              <div class="top-row">
-                                  <div class="field-wrap">
-                                      <label>
-                                          Piso<!--<span class="req">*</span>-->
-                          </label>
-                          <input type="text"required autocomplete="off" id="Piso" name="piso" class="input-datos"/>
-                      </div>
-
-                      <div class="field-wrap">
-                          <label>
-                              Departamento<!--<span class="req">*</span>-->
-                          </label>
-                          <input type="text"required autocomplete="off" id="Departamento" name="departamento" class="input-datos"/>
-                      </div>
-                  </div>
-
-                  <div class="top-row">
-                      <div class="field-wrap">
-                          <label>
-                              País<span class="req">*</span>
-                          </label>
-                          <input type="text"required autocomplete="off" id="Pais" name="pais" class="input-datos"/>
-                      </div>
-
-                      <div class="field-wrap">
-                          <label>
-                              Provincia<span class="req">*</span>
-                          </label>
-                          <input type="text"required autocomplete="off" id="Provincia" name="provincia" class="input-datos"/>
-                      </div>
-                  </div>
-
-                  <div class="field-wrap">
-                      <label>
-                          Ciudad<span class="req">*</span>
-                      </label>
-                      <input type="text"required autocomplete="off" id="Ciudad" name="ciudad" class="input-datos"/>
-                  </div>
-
-                  <h2>Datos de usuario</h2>
-
-                  <div class="field-wrap">
-                      <label>
-                          Email<span class="req">*</span>
-                      </label>
-                      <input type="email"required autocomplete="off" id="Email" name="mail" class="input-datos"/>
-                  </div>
-
-                  <div class="field-wrap">
-                      <label>
-                          Nombre de usuario<span class="req">*</span>
-                      </label>
-                      <input type="text"required autocomplete="off" id="NombreUsuario" name="usuario" class="input-datos"/>
-                  </div>
-
-
-                  {{#if falloAlRegistrarse}}
-                      <div class="alert alert-danger" role="alert">
-                          La contraseña no cumple con los requisitos
-                      </div>
-                  {{/if}}
-
-                  <div class="field-wrap">
-                      <label>
-                          Ingrese una contraseña<span class="req">*</span>
-                      </label>
-                      <input type="password"required autocomplete="off" id="Password" name="password" class="input-datos"/>
-                  </div>
-
-                  <p>Su contraseña debe tener entre 8 y 64 caracteres, y al menos una mayúsucla, una minúscula, un número y un caracter.
-                  Ademas, el nombre de usuario no puede coincidir con la contraseña</p>
-            <button type="submit" class="button button-back" onclick="window.location.href='./menu_logueado'">Inicia tu experiencia en GESOC</button>
-
-
-
-            <!--Enable textbox according to previus select in combobox and enable button once textboxs filled-->
-  
-            <script type="text/javascript">
-              
-              function verify(){
-                if (document.getElementById("nombreFicticio").value===""){
-                    document.getElementById('startbutton').disabled = true; 
-                    alert("Llene todos los campos obligatorios");
-                  }
-                  else{
-                    document.getElementById('startbutton').disabled = false; 
-                  }
-              }
-            </script>
-  
-            </form>
-           </div>
+            <div class="field-wrap">
+              <label>
+                Altura<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" id="Altura" name="altura" class="input-datos" />
+            </div>
           </div>
-        <div class="tab-content">
-        <div id="login">   
-          <h1>¡Te echamos de menos!</h1>
 
-            <form class="" action="/loguearse" method="post" style="">
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                Piso
+                <!--<span class="req">*</span>-->
+              </label>
+              <input type="text" required autocomplete="off" id="Piso" name="piso" class="input-datos" />
+            </div>
 
             <div class="field-wrap">
+              <label>
+                Departamento
+                <!--<span class="req">*</span>-->
+              </label>
+              <input type="text" required autocomplete="off" id="Departamento" name="departamento"
+                class="input-datos" />
+            </div>
+          </div>
+
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                País<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" id="Pais" name="pais" class="input-datos" />
+            </div>
+
+            <div class="field-wrap">
+              <label>
+                Provincia<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" id="Provincia" name="provincia" class="input-datos" />
+            </div>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Ciudad<span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off" id="Ciudad" name="ciudad" class="input-datos" />
+          </div>
+
+          <h2>Datos de usuario</h2>
+
+          <div class="field-wrap">
+            <label>
+              Email<span class="req">*</span>
+            </label>
+            <input type="email" required autocomplete="off" id="Email" name="mail" class="input-datos" />
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Nombre de usuario<span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off" id="NombreUsuario" name="usuario" class="input-datos" />
+          </div>
+
+
+          {{#if falloAlRegistrarse}}
+          <div class="alert alert-danger" role="alert">
+            La contraseña no cumple con los requisitos
+          </div>
+          {{/if}}
+
+          <div class="field-wrap">
+            <label>
+              Ingrese una contraseña<span class="req">*</span>
+            </label>
+            <input type="password" required autocomplete="off" id="Password" name="password" class="input-datos" />
+          </div>
+
+          <p>Su contraseña debe tener entre 8 y 64 caracteres, y al menos una mayúsucla, una minúscula, un número y un
+            caracter.
+            Ademas, el nombre de usuario no puede coincidir con la contraseña</p>
+          <button type="submit" class="button button-back" onclick="window.location.href='./menu_logueado'">Inicia tu
+            experiencia en GESOC</button>
+
+
+
+          <!--Enable textbox according to previus select in combobox and enable button once textboxs filled-->
+
+          <script type="text/javascript">
+
+            function verify() {
+              if (document.getElementById("nombreFicticio").value === "") {
+                document.getElementById('startbutton').disabled = true;
+                alert("Llene todos los campos obligatorios");
+              }
+              else {
+                document.getElementById('startbutton').disabled = false;
+              }
+            }
+          </script>
+
+        </form>
+      </div>
+    </div>
+    <div class="tab-content">
+      <div id="login">
+        <h1>¡Te echamos de menos!</h1>
+
+        <form class="" action="/loguearse" method="post" style="">
+
+          <div class="field-wrap">
             <label>
               Nombre de Usuario <span class="req">*</span>
             </label>
-                <input type="text"required autocomplete="off" id="NombreUsuario" name="usuario" class="input-datos"/>
+            <input type="text" required autocomplete="off" id="NombreUsuario" name="usuario" class="input-datos" />
           </div>
-          
+
           <div class="field-wrap">
             <label>
               Contraseña<span class="req">*</span>
             </label>
-              <input type="password"required autocomplete="off" id="Password" name="password" class="input-datos"/>
+            <input type="password" required autocomplete="off" id="Password" name="password" class="input-datos" />
           </div>
 
-          <button type="submit" class="button button-back" onclick="window.location.href='./menu_logueado'">Iniciar Sesión</button>
-          
-          </form>
+          <button type="submit" class="button button-back" onclick="window.location.href='./menu_logueado'">Iniciar
+            Sesión</button>
 
-        </div>
-        
-      </div><!-- tab-content -->
-      
-</div> <!-- /form -->
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./js/GESOC_Login.js"></script>
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div id="myModal" class="modal-reg">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Se ha registrado con éxito</p>
+      <button type="mybtn" class="button button-modal"
+        onclick="window.location.href='/menu_logueado'">OK</button>
+    </div>
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="/js/GESOC_Login.js"></script>
 
 </body>
+
 </html>

@@ -32,85 +32,98 @@
                 <br>
                 <h3>Visualice los Egresos</h3>
 
-                <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
-                <div class ="buscar">
-                    <input type="text" id="unEgreso" onkeyup="buscarEgreso()" placeholder="Buscar por monto" title="Type in a name">
+                <div class="lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
+                <div class="buscar">
+                    <input type="text" id="unEgreso" onkeyup="buscarEgreso()" placeholder="Buscar por monto"
+                        title="Type in a name">
                 </div>
 
 
-                    <div id="div1">
+                <div id="div1">
 
-                        <table class="scroll" id="tablaEgreso" style="overflow-y:auto;">
+                    <table class="scroll" id="tablaEgreso" style="overflow-y:auto;">
 
-                            <thead>
+                        <thead>
                             <th><i class="fas fa-user"></i> Id </th>
                             <th><i class="fas fa-phone"></i> Fecha de Operacion</th>
                             <th><i class="fas fa-phone"></i> Monto Total</th>
-                            </thead>
+                        </thead>
 
-                            <tbody>
+                        <tbody>
                             {{#each egresos}}
-                                <tr>
-                                    <td><i class="fas fa-user"></i> {{id}}</td>
-                                    <td>{{fechaDeOperacion}}</td>
-                                    <td> {{valorTotal}}</td>
-                                </tr>
+                            <tr>
+                                <td><i class="fas fa-user"></i> {{id}}</td>
+                                <td>{{fechaDeOperacion}}</td>
+                                <td> {{valorTotal}}</td>
+                            </tr>
                             {{/each}}
-                            </tbody>
+                        </tbody>
 
-                        </table>
+                    </table>
+                </div>
+                <br>
+                <h3>Visualice los Ingresos</h3>
+                <div class="lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
+                <div class="buscar">
+                    <input type="text" id="unIngreso" onkeyup="buscarIngreso()" placeholder="Buscar por descripcion"
+                        title="Type in a name">
+                </div>
+
+
+                <div id="div1">
+
+                    <table class="scroll" id="tablaIngreso" style="overflow-y:auto;">
+
+                        <thead>
+                            <th><i class="fas fa-user"></i> Id</th>
+                            <th><i class="fas fa-phone"></i> Descripcion</th>
+                            <th><i class="fas fa-id-card-alt"></i> Monto Total</th>
+
+                        </thead>
+
+                        <tbody>
+                            {{#each ingresos}}
+                            <tr>
+                                <td><i class="fas fa-user"></i> {{id}}</td>
+                                <td>{{descripcion}}</td>
+                                <td>{{montoTotal}}</td>
+
+
+                            </tr>
+                            {{/each}}
+                        </tbody>
+
+
+                    </table>
+                </div>
+                <br>
+                <h3> Seleccione el criterio de vinculación </h3>
+                <div class="field-wrap">
+                    <div class="custom-select" style="width:200px;">
+                        <select name="criterio" id="tiposector" onChange=changetextbox()>
+                            <option value="0">Seleccione el criterio:</option>
+                            <option value="1">1- Orden Valor Primer Egreso</option>
+                            <option value="2">2- Orden Valor Primer Ingreso</option>
+                            <option value="3">3- Por Fecha</option>
+                        </select>
+
                     </div>
-                    <br>
-                    <h3>Visualice los Ingresos</h3>
-                    <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
-                    <div class ="buscar">
-                        <input type="text" id="unIngreso" onkeyup="buscarIngreso()" placeholder="Buscar por descripcion" title="Type in a name">
+                </div>
+
+                <br>
+                <button type="submit" id="myBtn" class="button button-back"
+                    onclick="window.location.href=">Vincular</button>
+
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Su proyecto se ha creado con éxito</p>
+                        <button type="mybtn" class="button button-modal"
+                            onclick="window.location.href='/vincular'">OK</button>
                     </div>
-
-
-                        <div id="div1">
-
-                            <table class="scroll" id="tablaIngreso" style="overflow-y:auto;">
-
-                                <thead>
-                                <th><i class="fas fa-user"></i> Id</th>
-                                <th><i class="fas fa-phone"></i> Descripcion</th>
-                                <th><i class="fas fa-id-card-alt"></i> Monto Total</th>
-
-                                </thead>
-
-                                <tbody>
-                                {{#each ingresos}}
-                                    <tr>
-                                        <td><i class="fas fa-user"></i> {{id}}</td>
-                                        <td>{{descripcion}}</td>
-                                        <td>{{montoTotal}}</td>
-
-
-                                    </tr>
-                                {{/each}}
-                                </tbody>
-
-
-                            </table>
-                        </div>
-                    <br>
-                    <h3> Seleccione el criterio de vinculación </h3>
-                    <div class="field-wrap">
-                        <div class="custom-select" style="width:200px;">
-                            <select name="criterio" id="tiposector" onChange=changetextbox()>
-                                <option value="0">Seleccione el criterio:</option>
-                                <option value="1">1- Orden Valor Primer Egreso</option>
-                                <option value="2">2- Orden Valor Primer Ingreso</option>
-                                <option value="3">3- Por Fecha</option>
-                            </select>
-
-                        </div>
-                    </div>
-
-                    <br>
-                    <button type="submit" class="button button-back"
-                        onclick="window.location.href='/vincular'">Vincular</button>
+                </div>
 
                 </form>
 
@@ -125,5 +138,31 @@
         </div>
     </div>
 </body>
+<script>
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+        window.location.href = '/vincular'
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+        }
+    }
+</script>
 
 </html>

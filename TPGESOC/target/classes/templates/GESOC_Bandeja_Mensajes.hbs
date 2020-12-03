@@ -2,110 +2,110 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Carga de productos del egreso</title>
-    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="/css/GESOC_Bandeja_Mensajes.css">
+  <meta charset="UTF-8">
+  <title>Carga de productos del egreso</title>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="/css/GESOC_Bandeja_Mensajes.css">
 </head>
 
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+  <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header page-scroll">
-        <a class="navbar-brand page-scroll" href="/menu_logueado">GESOC</a>
+      <a class="navbar-brand page-scroll" href="/menu_logueado">GESOC</a>
     </div>
-</nav>
+  </nav>
 
-<!-- partial:index.partial.html -->
-<div class="form">
+  <!-- partial:index.partial.html -->
+  <div class="form">
 
     <button type="submit" class="button button-back" onclick="window.location.href='/menu_logueado'">Volver al menú
-        principal</button>
+      principal</button>
 
     <div class="tab-content">
-        <div id="compra">
-            <br>
-            <h3>Visualice su Bandeja de Mensajes</h3>
+      <div id="compra">
+        <br>
+        <h3>Visualice su Bandeja de Mensajes</h3>
 
-                <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"><!--</div>
-                <div class ="buscar">-->
-                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar por mensaje" title="Type in a name">
-                </div>
-<br>
-                <form class="" action="/agregar_productos" method="post" style="">
-                    <div id="div1">
-
-                        <table class="scroll" id="tabla" style="overflow-y:auto;">
-
-                            <thead>
-                            <th>Fecha</th>
-                            <th>Mensaje</th>
-                            </thead>
-
-                            <tbody>
-                            {{#each mensajes}}
-                                <tr>
-                                    <td><i class="fas fa-user"></i> {{fechaDelMensaje}}</td>
-                                    <td>{{contenido}}</td>
-                                </tr>
-                            {{/each}}
-                            </tbody>
-
-
-                        </table>
-                    </div>
-
-                    <style>
-* {
-  box-sizing: border-box;
-}
-
-#myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-</style>
-                    <script>
-function myFunction() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("tabla");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[1];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
-}
-</script>
-
-            </form>
-
-
+        <div class="lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
+        <div class="buscar">
+          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar por mensaje"
+            title="Type in a name">
         </div>
+        <br>
+        <form class="" action="/agregar_productos" method="post" style="">
+          <div id="div1">
 
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script  src="/js/GESOC_Bandeja_Mensajes.js"></script>
+            <table class="scroll" id="tabla" style="overflow-y:auto;">
+
+              <thead>
+                <th>Fecha</th>
+                <th>Mensaje</th>
+              </thead>
+
+              <tbody>
+                {{#each mensajes}}
+                <tr>
+                  <td><i class="fas fa-user"></i> {{fechaDelMensaje}}</td>
+                  <td>{{contenido}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+
+
+            </table>
+          </div>
+
+          <style>
+            * {
+              box-sizing: border-box;
+            }
+
+            #myInput {
+              background-image: url('/css/searchicon.png');
+              background-position: 10px 10px;
+              background-repeat: no-repeat;
+              width: 100%;
+              font-size: 16px;
+              padding: 12px 20px 12px 40px;
+              border: 1px solid #ddd;
+              margin-bottom: 12px;
+            }
+          </style>
+          <script>
+            function myFunction() {
+              var input, filter, table, tr, td, i, txtValue;
+              input = document.getElementById("myInput");
+              filter = input.value.toUpperCase();
+              table = document.getElementById("tabla");
+              tr = table.getElementsByTagName("tr");
+              for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                  txtValue = td.textContent || td.innerText;
+                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                  } else {
+                    tr[i].style.display = "none";
+                  }
+                }
+              }
+            }
+          </script>
+
+        </form>
+
+
+      </div>
+
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script src="/js/GESOC_Bandeja_Mensajes.js"></script>
 
 
     </div>
-</div>
+  </div>
 </body>
 
 </html>

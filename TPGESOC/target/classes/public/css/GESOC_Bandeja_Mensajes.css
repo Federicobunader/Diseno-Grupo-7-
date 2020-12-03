@@ -422,3 +422,14 @@ textarea {
       margin-left: 94px;
   }
 }
+.lupa {
+  float: left;
+  width: 1%;
+  position: relative;
+  left: 2px;
+}
+.buscar{
+  float:right;
+  width: 92%;
+  margin-bottom: 20px;
+}

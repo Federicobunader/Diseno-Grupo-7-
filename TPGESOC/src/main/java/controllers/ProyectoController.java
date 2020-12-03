@@ -1,5 +1,6 @@
 package controllers;
 
+import Negocio.Compras.Ingreso;
 import Negocio.Proyecto.Proyecto;
 import Negocio.Usuario.Usuario;
 import repositories.Repositorio;
@@ -34,6 +35,45 @@ public class ProyectoController {
         parametros.put("usuarios", usuarios);
 
         return new ModelAndView(parametros,"GESOC_CrearProyecto.hbs");
+    }
+
+    public ModelAndView vincularProyectosEIngreso(Request request, Response response){
+
+        Map<String, Object> parametros = new HashMap<>();
+
+        Repositorio<Proyecto> repoProyecto = FactoryRepositorio.get(Proyecto.class);
+        List<Proyecto> proyectos = repoProyecto.buscarTodos();
+        parametros.put("proyectos", proyectos);
+
+        Repositorio<Ingreso> repoIngreso = FactoryRepositorio.get(Ingreso.class);
+        List<Ingreso> ingresos = repoIngreso.buscarTodos();
+        parametros.put("ingresos", ingresos);
+
+        return new ModelAndView(parametros,"GESOC_VincularIngresoAProyecto.hbs");
+    }
+
+    public Response vincularProyecto(Request request, Response response){
+
+        Proyecto proyecto = new Proyecto();
+        Ingreso ingreso = new Ingreso();
+
+        if (request.queryParams("proyecto_id") != null) {
+            int idProyecto = Integer.valueOf(request.queryParams("proyecto_id"));
+            Repositorio<Proyecto> repoProyecto = FactoryRepositorio.get(Proyecto.class);
+            proyecto = repoProyecto.buscar(idProyecto);
+
+            if (request.queryParams("ingreso_id") != null) {
+                int idIngreso = Integer.valueOf(request.queryParams("ingreso_id"));
+                Repositorio<Ingreso> repoIngreso = FactoryRepositorio.get(Ingreso.class);
+                ingreso = repoIngreso.buscar(idIngreso);
+
+                proyecto.agregarIngresoAProyecto(ingreso);
+                repoProyecto.modificar(proyecto);
+            }
+
+        }
+        response.redirect("/menu_logueado");
+        return response;
     }
 
     private void asignarAtributosA(Proyecto proyecto, Request request) {

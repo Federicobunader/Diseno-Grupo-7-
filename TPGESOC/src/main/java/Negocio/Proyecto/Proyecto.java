@@ -40,6 +40,10 @@ public class Proyecto extends EntidadPersistente {
     public Proyecto() {
     }
 
+    public void agregarIngresoAProyecto(Ingreso ingreso){
+        ingresos.add(ingreso);
+    }
+
     public void setMonto() {
 
         double montoTotal = 0;

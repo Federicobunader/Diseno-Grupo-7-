@@ -14,14 +14,14 @@
     <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
-            <a class="navbar-brand page-scroll" href="./GESOC_Menu_Logueado.html">GESOC</a>
+            <a class="navbar-brand page-scroll" href="/menu_logueado">GESOC</a>
         </div>
     </nav>
 
     <!-- partial:index.partial.html -->
     <div class="form">
 
-        <button type="submit" class="button button-back" onclick="window.location.href='./'">Volver al menú
+        <button type="submit" class="button button-back" onclick="window.location.href='/menu_logueado'">Volver al menú
             principal</button>
 
         <br>
@@ -47,10 +47,10 @@
                                 {{#each proyectos}}
                                 <tr>
                                     <td><i class="fas fa-user"></i> {{id}}</td>
-                                    <td>{{usuarioId}}</td>
+                                    <td>{{directorResponsable.usuario}}</td>
                                     <td>{{montoDefinido}}</td>
-                                    <td>{{presupuestosExigibles</td>
-                            </tr>
+                                    <td>{{cantidadPresupuestosExigibles}}</td>
+                                </tr>
                             {{/each}}
                             </tbody>
                         </table>
@@ -71,11 +71,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                {{#each ingresos}}
                                     <tr>
                                         <td><i class="fas fa-user"></i> {{id}}</td>
                                         <td>{{descripcion}}</td>
-                                        <td>{{monto}}</td>
+                                        <td>{{montoTotal}}</td>
                                     </tr>
+                                {{/each}}
                                 </tbody>
 
                             </table>
@@ -90,19 +92,19 @@
                                 <label>
                                     Id Proyecto<span class="req">*</span>
                                 </label>
-                                <input type="text" required autocomplete="off" id="entidadjuridica" />
+                                <input type="text" required autocomplete="off" id="RazonSocial" name="proyecto_id">
                             </div>
 
                             <div class="field-wrap">
                                 <label>
                                     Id Ingreso<span class="req">*</span>
                                 </label>
-                                <input type="text" required autocomplete="off" id="entidadjuridica" />
+                                <input type="text" required autocomplete="off" id="RazonSocial" name="ingreso_id">
                             </div>
                         </div>
 
                         <button type="submit" id="myBtn" class="button button-back"
-                            onclick="window.location.href=">Vincular</button>
+                            onclick="window.location.href='/menu_logueado'">Vincular</button>
 
                         <div id="myModal" class="modal">
 
