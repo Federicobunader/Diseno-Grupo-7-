@@ -24,7 +24,7 @@ a:hover {
 }
 
 .form {
-  background: #01487E;
+  background: #36A6CE;
   padding: 50px;
   padding-top: 30px;
   max-width: 600px;
@@ -81,13 +81,13 @@ h1 {
 
 h2 {
   text-align: left;
-  color: #ffff;
+  color: #000000;
   font-weight: 500;
   margin: 0 0 25px;
 }
 
 h3{
-color:#FED559;
+color:#000000;
 }
 
 table {
@@ -97,7 +97,7 @@ table {
 th {
     height: 30px;
     width: 10px;
-    background-color: #36A6CE;
+    background-color: #0A68A8;
     text-align: center;
 }
 
@@ -116,7 +116,7 @@ table, th, td {
     font-size: 13px;
     border-collapse: collapse;
     border-width: 3px;
-    border-color:#A8DFFE;
+    border-color:#E5496E;
   }
 
 label {
@@ -159,7 +159,7 @@ input, textarea {
   background: none;
   background-image: none;
   border: 1px solid #a0b3b0;
-  color: #ffffff;
+  color: #000000;
   border-radius: 0;
   -webkit-transition: border-color .25s ease, box-shadow .25s ease;
   transition: border-color .25s ease, box-shadow .25s ease;
@@ -205,7 +205,7 @@ textarea {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .1em;
-  background:#EFBD40;
+  background:#E5496E;
   color: #ffffff;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -249,7 +249,7 @@ textarea {
     border-color: #85c3e5;
     border-width: thick;
     color: #ffffff;
-    background-color:#FED559;
+    background-color:#f37d98;
     cursor: pointer;
 }
 
@@ -425,4 +425,16 @@ textarea {
       font-size: 34px;
       margin-left: 94px;
   }
+}
+.lupa {
+  float: left;
+  width: 1%;
+  position: relative;
+  left: 2px;
+}
+
+.buscar{
+  float:right;
+  width: 92%;
+  margin-bottom: 20px;
 }

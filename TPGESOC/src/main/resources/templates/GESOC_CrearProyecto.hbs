@@ -2,112 +2,158 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Carga de productos del egreso</title>
-    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="/css/GESOC_CrearProyecto.css">
+  <meta charset="UTF-8">
+  <title>Carga de productos del egreso</title>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="/css/GESOC_CrearProyecto.css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <a class="navbar-brand page-scroll" href="/menu_logueado">GESOC</a>
-        </div>
-    </nav>
+  <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <a class="navbar-brand page-scroll" href="/menu_logueado">GESOC</a>
+    </div>
+  </nav>
 
-    <!-- partial:index.partial.html -->
-    <div class="form">
+  <!-- partial:index.partial.html -->
+  <div class="form">
 
-        <button type="submit" class="button button-back" onclick="window.location.href='/menu_logueado'">Volver al menú
-            principal</button>
+    <button type="submit" class="button button-back" onclick="window.location.href='/menu_logueado'">Volver al menú
+      principal</button>
 
-        <br>
-        <h2>Ingrese los datos de su Proyecto</h2>
+    <br>
+    <h2>Ingrese los datos de su proyecto</h2>
+
+    <div class="tab-content">
+      <div id="compra">
+
         <form class="" action="/crear_proyecto" method="post" style="">
-        <div>
-            <div class="field-wrap">
-                <label>
-                    Cantidad de Presupuestos Exigibles<span class="req">*</span>
-                </label>
-                <input type="text" required autocomplete="off" id="RazonSocial" name="cantidad_presupuestos">
-            </div>
+
+          <div class="field-wrap">
+            <label>
+              Cantidad de Presupuestos Exigibles<span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off" id="RazonSocial" name="cantidad_presupuestos">
+          </div>
+          <div class="field-wrap">
+            <label>
+              Monto definido<span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off" id="RazonSocial" name="cantidad_presupuestos">
+          </div>
+
+          <h3>Busque al usuario revisor en la tabla e ingrese su ID</h3>
+
+          <div class="lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
+          <div class="buscar">
+            <input type="text" id="unUsuario" onkeyup="buscarUsuario()" placeholder="Buscar por nombre de usuario"
+              title="Type in a name">
+          </div>
+
+          <br>
+
+          <div id="div1">
+
+            <table class="scroll" id="tablaUsuario" style="overflow-y:auto;">
+
+              <thead>
+                <th>Id Usuario</th>
+                <th>Nombre</th>
+              </thead>
+
+              <tbody>
+                {{#each usuarios}}
+                <tr>
+                  <td><i class="fas fa-user"></i> {{id}}</td>
+                  <td>{{usuario}}</td>
+
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+
+          <br><br>
+          <div class="field-wrap">
+            <label>
+              Id Usuario<span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off" id="CUIT" name="producto_id" class="input-datos" />
+          </div>
+
+          <button type="mybtn" id="myBtn" class="button button-back" onclick="window.location.href=">Crear
+            proyecto</button>
+
+
+      </div>
+
+      <!--<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'>
+            </script><script  src="/js/GESOC_AsociarItemACategoria.js"></script>-->
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script src="/js/GESOC_AsociarItemACategoria.js"></script>
+
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Su proyecto se ha creado con éxito</p>
+          <button type="mybtn" class="button button-modal"
+            onclick="window.location.href='/confirmar_asociacion_prod_cate'">OK</button>
         </div>
-
-        <h3>Busque al usuario revisor en la tabla e ingrese su ID</h3>
-
-            <div class="lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
-            <div class="buscar_presu">
-                <input type="text" id="unUsuario" onkeyup="buscarUsuario()" placeholder="Buscar por nombre de usuario"
-                    title="Type in a name"></div>
-
-                <br>
-
-                <table class="scroll" id="tablaUsuario" style="overflow-y:auto;">
-
-                    <thead>
-                        <th><i class="fas fa-user"></i> Id Usuario</th>
-                        <th><i class="fas fa-phone"></i> Nombre</th>
-
-                    </thead>
-
-                    <tbody>
-                        {{#each usuarios}}
-                        <tr>
-                            <td><i class="fas fa-user"></i> {{id}}</td>
-                            <td>{{usuario}}</td>
-
-                        </tr>
-                        {{/each}}
-                    </tbody>
-                </table>
-
-                <br>
-                <div>
-                    <div class="field-wrap">
-                        <label>
-                            Id Usuario<span class="req">*</span>
-                        </label>
-                        <input type="text" required autocomplete="off" id="RazonSocial" name="id_usuario">
-                    </div>
-                </div>
-
-                <button type="submit" class="button button-back" onclick="window.location.href='/menu_logueado'">Crear
-                    proyecto</button>
-
-        </form>
-    </div>
-
-    <script>
-        function buscarUsuario() {
-          var input, filter, table, tr, td, i, txtValue;
-          input = document.getElementById("unUsuario");
-          filter = input.value.toUpperCase();
-          table = document.getElementById("tablaUsuario");
-          tr = table.getElementsByTagName("tr");
-          for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[1];
-            if (td) {
-              txtValue = td.textContent || td.innerText;
-              if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
-              } else {
-                tr[i].style.display = "none";
-              }
-            }
-          }
-        }
-        </script>
-
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'>
-    </script>
-    <script src="/js/GESOC_CrearProyecto.js"></script>
-
+      </div>
 
     </div>
-    </div>
+  </div>
 </body>
+
+<script>
+  function buscarUsuario() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("unUsuario");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("tablaUsuario");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[1];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal 
+  btn.onclick = function () {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    modal.style.display = "none";
+    window.location.href = '/confirmar_asociacion_prod_cate'
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+    }
+  }
+</script>
 
 </html>

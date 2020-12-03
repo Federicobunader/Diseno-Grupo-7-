@@ -2,128 +2,128 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Carga de productos del egreso</title>
-    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <!--<link rel="stylesheet" href="/css/GESOC_AsociarIngresoAEgreso.css">-->
-    <link rel="stylesheet" href="/css/GESOC_VisualizarIngEgPorCategoria.css">
+  <meta charset="UTF-8">
+  <title>Carga de productos del egreso</title>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <!--<link rel="stylesheet" href="/css/GESOC_AsociarIngresoAEgreso.css">-->
+  <link rel="stylesheet" href="/css/GESOC_VisualizarIngEgPorCategoria.css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <a class="navbar-brand page-scroll" href="/menu_logueado">GESOC</a>
-        </div>
-    </nav>
+  <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <a class="navbar-brand page-scroll" href="/menu_logueado">GESOC</a>
+    </div>
+  </nav>
 
-    <div class="form">
+  <div class="form">
     <!-- partial:index.partial.html -->
     <form class="" action="/buscar_productos_de_categoria" method="get" style="">
 
-        <button type="submit" class="button button-back" onclick="window.location.href='/menu_logueado'">Volver al menú
-            principal</button>
+      <button type="submit" class="button button-back" onclick="window.location.href='/menu_logueado'">Volver al menú
+        principal</button>
 
-        <h2>Visualizar Items por categoría</h2>
+      <h2>Visualizar Items por categoría</h2>
 
-                <h3>Seleccione una Categoria</h3>
+      <h3>Seleccione una Categoria</h3>
 
-                    <div class="tab">
+      <div class="tab">
 
-                        <select id="categoria_id"  name="categoria_id" required>
-                            <option selected disabled value="">Seleccionar </option>
-                            {{#each	categorias}}
-                                <option value="{{this.id}}">{{nombreCategoria}}</option>
-                            {{/each}}
+        <select id="categoria_id" name="categoria_id" required>
+          <option selected disabled value="">Seleccionar </option>
+          {{#each	categorias}}
+          <option value="{{this.id}}">{{nombreCategoria}}</option>
+          {{/each}}
 
-                        </select>
-                    </div>
-        <br>
-        <button type="submit" class="button button-back" onclick="window.location.href='./buscar_productos_de_categoria'">Mostrar Productos de la Categoria</button>
+        </select>
+      </div>
+      <br>
+      <button type="submit" class="button button-back"
+        onclick="window.location.href='./buscar_productos_de_categoria'">Mostrar Productos de la Categoria</button>
 
-                    <br>
+      <br>
 
-                    <h3>Visualice los Productos de dicha categoría</h3>
+      <h3>Visualice los Productos de dicha categoría</h3>
 
-                    <div class= "lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"> <!--</div>
-                   <div class ="buscar">-->
-                        <input type="text" id="unEgreso" onkeyup="buscarEgreso()" placeholder="Ingrese el Nombre de un Producto" title="Type in a name">
-                    </div>
-<br>
-                    <form class="" action="/listado_por_categoria" method="post" style="">
+      <div class="lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
+      <div class="buscar"><input type="text" id="unEgreso" onkeyup="buscarEgreso()"
+          placeholder="Ingrese el Nombre de un Producto" title="Type in a name">
+      </div>
+      <br>
+      <form class="" action="/listado_por_categoria" method="post" style="">
 
-                        <div id="div1">
+        <div id="div1">
 
-                            <table class="scroll" id="tablaEgresos" style="overflow-y:auto;">
+          <table class="scroll" id="tablaEgresos" style="overflow-y:auto;">
 
-                                <thead>
-                                <th>Id Producto</th>
-                                <th>Nombre</th>
-                                <th>Descripcion</th>
-                                <th>Precio</th>
-                                <th>Id Proveedor</th>
-                                <th>Nombre Proveedor</th>
-                                </thead>
+            <thead>
+              <th>Id Producto</th>
+              <th>Nombre</th>
+              <th>Descripcion</th>
+              <th>Precio</th>
+              <th>Id Proveedor</th>
+              <th>Nombre Proveedor</th>
+            </thead>
 
-                                <tbody>
-                                {{#each productos}}
-                                    <tr>
-                                        <td><i class="fas fa-user"></i> {{id}}</td>
-                                        <td>{{nombre}}</td>
-                                        <td>{{descripcion}}</td>
-                                        <td>{{precio}}</td>
-                                        <td>{{proveedor.id}}</td>
-                                        <td>{{proveedor.nombre}}</td>
+            <tbody>
+              {{#each productos}}
+              <tr>
+                <td><i class="fas fa-user"></i> {{id}}</td>
+                <td>{{nombre}}</td>
+                <td>{{descripcion}}</td>
+                <td>{{precio}}</td>
+                <td>{{proveedor.id}}</td>
+                <td>{{proveedor.nombre}}</td>
 
-                                    </tr>
-                                {{/each}}
-                                </tbody>
-                            </table>
-                        </div>
-                        <style>
-* {
-  box-sizing: border-box;
-}
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+        <style>
+          * {
+            box-sizing: border-box;
+          }
 
-#myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
+          #myInput {
+            background-image: url('/css/searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+          }
+        </style>
+        <script>
+          function buscarEgreso() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("unEgreso");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("tablaEgresos");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+              td = tr[i].getElementsByTagName("td")[1];
+              if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  tr[i].style.display = "";
+                } else {
+                  tr[i].style.display = "none";
+                }
+              }
+            }
+          }
+        </script>
 
-</style>
-                        <script>
-function buscarEgreso() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("unEgreso");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("tablaEgresos");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[1];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
-}
-</script>
-
-            <!--<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="/js/GESOC_AsociarIngresoAEgreso.js"></script>-->
-            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-            <script src="/js/GESOC_VisualizarIngEgPorCategoria.js"></script>
-    </div>
+        <!--<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="/js/GESOC_AsociarIngresoAEgreso.js"></script>-->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src="/js/GESOC_VisualizarIngEgPorCategoria.js"></script>
+  </div>
 </body>
 
 </html>
