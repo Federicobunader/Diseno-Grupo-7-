@@ -83,8 +83,8 @@ public class ProyectoController {
 
         Usuario usuario = new Usuario();
 
-        if (request.queryParams("id_usuario") != null) {
-            int idUsuario = Integer.valueOf(request.queryParams("id_usuario"));
+        if (request.queryParams("usuario_id") != null) {
+            int idUsuario = Integer.valueOf(request.queryParams("usuario_id"));
             Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
             usuario = repoUsuario.buscar(idUsuario);
             proyecto.setDirectorResponsable(usuario);
@@ -93,6 +93,11 @@ public class ProyectoController {
         if (request.queryParams("cantidad_presupuestos") != null) {
             int cantidadPresupuestos = Integer.valueOf(request.queryParams("cantidad_presupuestos"));
             proyecto.setCantidadPresupuestosExigibles(cantidadPresupuestos);
+        }
+
+        if (request.queryParams("monto_definido") != null) {
+            int monto = Integer.valueOf(request.queryParams("monto_definido"));
+            proyecto.setMontoDefinido(monto);
         }
 
     }

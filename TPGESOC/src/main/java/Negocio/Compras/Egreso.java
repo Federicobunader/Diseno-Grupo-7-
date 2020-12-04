@@ -22,9 +22,10 @@ public class Egreso  extends EntidadPersistente {
     @Transient
     GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();
 
-    public Egreso(Compra unaCompra, Date unaFechaDeOperacion) {
+    public Egreso(Compra unaCompra, Date unaFechaDeOperacion, double unValorTotal) {
         this.compra = unaCompra;
         this.fechaDeOperacion = unaFechaDeOperacion;
+        this.valorTotal = unValorTotal;
     }
 
     public Egreso() {

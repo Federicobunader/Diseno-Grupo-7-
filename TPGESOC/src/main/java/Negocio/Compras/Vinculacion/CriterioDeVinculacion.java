@@ -9,7 +9,7 @@ import java.util.List;
 
 public abstract class CriterioDeVinculacion {
 
-    public abstract void vincular();
+    public abstract void vincular(Ingreso ingreso);
 
     protected GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();
     protected GestorDeIngresos gestorDeIngresos = GestorDeIngresos.GetInstance();

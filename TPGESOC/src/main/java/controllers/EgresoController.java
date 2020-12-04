@@ -180,6 +180,7 @@ public class EgresoController {
             Repositorio<Producto> repoProducto = FactoryRepositorio.get(Producto.class);
             producto = repoProducto.buscar(idProducto);
         }
+        System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 1");
 
         if(producto != null){
             if (request.queryParams("productos_cantidad") != null) {
@@ -192,6 +193,7 @@ public class EgresoController {
         }
 
         Usuario usuario = new Usuario();
+        System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 2");
 
         if (request.queryParams("usuario_id") != null) {
             int idUsuario = Integer.valueOf(request.queryParams("usuario_id"));
@@ -204,6 +206,7 @@ public class EgresoController {
         }
 
         Presupuesto presupuesto = new Presupuesto();
+        System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 3");
 
         if (request.queryParams("presupuesto_id") != null) {
             int idPresupuesto = Integer.valueOf(request.queryParams("presupuesto_id"));
@@ -216,6 +219,7 @@ public class EgresoController {
         }
 
         Documento documento = new Documento();
+        System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 4");
 
         if (request.queryParams("documento_id") != null) {
             int idDocumento = Integer.valueOf(request.queryParams("documento_id"));
@@ -226,16 +230,28 @@ public class EgresoController {
                 gestorDeEgresos.agregarDocumentoALaListaDeDocumentosDelEgreso(documento);
             }
         }
+        System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 5");
 
         compra.setItems(gestorDeEgresos.getItemsAAgregarAUnEgreso());
         compra.setUsuariosRevisores(gestorDeEgresos.getUsuariosRevisoresDeUnEgreso());
         compra.setPresupuestos(gestorDeEgresos.getPresupuestosDelEgreso());
         compra.setDocumentosComerciales(gestorDeEgresos.getDocumentosDelEgreso());
 
+        if (request.queryParams("requierePresupuesto") != null) {
+            int valorBool = Integer.valueOf(request.queryParams("requierePresupuesto"));
+            if(valorBool == 1){
+                compra.setRequierePresupuesto(true);
+            }
+            else if(valorBool == 2){
+                compra .setRequierePresupuesto(false);
+            }
 
-        if (request.queryParams("presupuestoElegido") != null) {
-            Presupuesto presupuestoElegido = new Presupuesto();
-            int idPresupuestoElegido = Integer.valueOf(request.queryParams("presupuestoElegido"));
+        }
+
+        System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 6");
+        Presupuesto presupuestoElegido = new Presupuesto();
+        if (request.queryParams("presupuesto_elegido_id") != null) {
+            int idPresupuestoElegido = Integer.valueOf(request.queryParams("presupuesto_elegido_id"));
             Repositorio<Presupuesto> repoPresupuestos = FactoryRepositorio.get(Presupuesto.class);
             presupuestoElegido = repoPresupuestos.buscar(idPresupuestoElegido);
 
@@ -243,6 +259,7 @@ public class EgresoController {
                 compra.setPresupuestoElegido(presupuestoElegido);
             }
         }
+        System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 7");
 
         if (request.queryParams("tipoDePago") != null) {
             MedioDePago medioDePago = new MedioDePago();
@@ -251,8 +268,8 @@ public class EgresoController {
            compra.setMedioDePago(medioDePago);
         }
 
+        System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 8");
         if (request.queryParams("entidad_id") != null) {
-            Presupuesto presupuestoElegido = new Presupuesto();
             int idEntidad = Integer.valueOf(request.queryParams("entidad_id"));
 
             for(int i = 0; i < gestorDeEgresos.getEmpresasDelEgreso().size();i++){
@@ -272,6 +289,8 @@ public class EgresoController {
 
         }
 
+        System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 9");
+
         if (request.queryParams("proveedor_id") != null) {
             Proveedor proveedor = new Proveedor();
             int idProveedor = Integer.valueOf(request.queryParams("proveedor_id"));
@@ -283,21 +302,23 @@ public class EgresoController {
             }
         }
 
-        if (request.queryParams("requierePresupuesto") != null) {
-            int valorBool = Integer.valueOf(request.queryParams("requierePresupuesto"));
-            if(valorBool == 1){
-                compra.setRequierePresupuesto(true);
-            }
-            else if(valorBool == 2){
-                compra .setRequierePresupuesto(false);
-            }
+        System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 10");
 
-        }
 
+
+        System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 11");
+        System.out.println("USUARIO = " + usuario.getUsuario());
+        System.out.println("PRESUPUESTO =" + presupuesto.getId());
+        System.out.println("PRESUPUESTO ELEGIDO =" + presupuestoElegido.getId());
+        System.out.println("DOCUMENTO =" + documento.getId());
+/*
         egreso.setCompra(compra);
         egreso.setFechaDeOperacion(new Date());
         egreso.setValorTotal(compra.valorTotal());
 
+*/
+
+        egreso = compra.efectuarCompra();
         this.repo.agregar(egreso);
 
         gestorDeEgresos.reiniciarDatosEgreso();
@@ -343,7 +364,14 @@ public class EgresoController {
                 default:
 
             }
-            criterioElegido.vincular();
+
+            Repositorio<Ingreso> repoIngreso = FactoryRepositorio.get(Ingreso.class);
+            List<Ingreso> ingresos = repoIngreso.buscarTodos();
+
+            for(int i = 0; i < ingresos.size(); i++){
+                criterioElegido.vincular(ingresos.get(i));
+                repoIngreso.modificar(ingresos.get(i));
+            }
 
 
         }

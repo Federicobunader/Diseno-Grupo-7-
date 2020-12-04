@@ -91,7 +91,7 @@ public class GestorDeUsuarios {
                         if(criterio.equals("4")){
                             interfazUsuarios.mostrarInformacion("Coming soon");
                         }else {
-                            criterioElegido.vincular();
+                          //  criterioElegido.vincular();
                             interfazUsuarios.mostrarInformacion("Vinculación efectuada con éxito");
                         }
 

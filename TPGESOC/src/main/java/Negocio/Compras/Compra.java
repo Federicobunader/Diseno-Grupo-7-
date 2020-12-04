@@ -196,18 +196,20 @@ public class Compra extends EntidadPersistente {
 	}
 
 	public double valorTotal(){
-		return presupuestoElegido.valorTotal();
+
+		return presupuestoElegido.getValorTotal();
 	}
 
-	private void efectuarCompra(){
+	public Egreso efectuarCompra(){
 		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 		Date date = new Date();
-		Egreso nuevoEgreso = new Egreso(this,date);
+		Egreso nuevoEgreso = new Egreso(this,date,this.valorTotal());
 
 		GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();
 		gestorDeEgresos.getEgresos().add(nuevoEgreso);
 		nuevoEgreso.agregarCompraYPresupuesto();
 
+		return nuevoEgreso;
 	}
 
 	public double getMonto(){
