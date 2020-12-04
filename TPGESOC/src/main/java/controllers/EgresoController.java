@@ -165,7 +165,7 @@ public class EgresoController {
         return new ModelAndView(parametros,"GESOC_CargaEgresos.hbs");
     }
 
-    public Response guardar(Request request, Response response){
+    public Response guardarEgreso(Request request, Response response){
 
         System.out.println("ENTRE AL GUARDAR EGRESO");
 

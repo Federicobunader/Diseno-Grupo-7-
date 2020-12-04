@@ -74,7 +74,7 @@ public class Router {
 
         Spark.get("/reiniciar_egreso", egresoController:: reiniciarEgreso);
 
-        Spark.post("/confirmar_egreso", egresoController :: guardar);
+        Spark.post("/confirmar_egreso", egresoController :: guardarEgreso);
 
         Spark.post("/guardar_item_egreso", egresoController :: guardarItem);
 
