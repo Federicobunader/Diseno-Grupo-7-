@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 @Table(name="item")
 public class Item  extends EntidadPersistente {
 
-	@OneToOne(cascade = {CascadeType.ALL})
+	@OneToOne(cascade = {CascadeType.MERGE})
 	@JoinColumn(name = "producto_id", referencedColumnName = "id")
 	private Producto producto;
 

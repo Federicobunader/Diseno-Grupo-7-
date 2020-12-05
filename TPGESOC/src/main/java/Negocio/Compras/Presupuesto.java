@@ -12,7 +12,7 @@ import java.util.List;
 public class Presupuesto  extends EntidadPersistente {
 
     @OneToMany
-    @JoinColumn(name = "id", referencedColumnName = "id")
+    @JoinColumn(name = "presupuesto_id", referencedColumnName = "id")
     private List<Item> items = new ArrayList<Item>();
 
     @OneToMany
@@ -35,6 +35,10 @@ public class Presupuesto  extends EntidadPersistente {
 
     public void setValorTotal(double valorTotal) {
         this.valorTotal = valorTotal;
+    }
+
+    public List<Item> getItems() {
+        return items;
     }
 
     public Presupuesto() {

@@ -13,6 +13,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static java.lang.Thread.sleep;
+
 public class ProyectoController {
 
     private Repositorio<Proyecto> repo;
@@ -109,6 +111,11 @@ public class ProyectoController {
         Map<String, Object> parametros = new HashMap<>();
         this.asignarAtributosA(proyecto,request);
         this.repo.agregar(proyecto);
+        try {
+            sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         response.redirect("/menu_logueado");
 
         return response;
