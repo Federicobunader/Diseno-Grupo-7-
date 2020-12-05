@@ -53,46 +53,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c56b04db-f42a-40a7-8d18-c78ae2368dc3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Compra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Egreso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Egreso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/CriterioDeVinculacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/CriterioDeVinculacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/Mix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/Mix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/OrdenValorPrimeroEgreso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/OrdenValorPrimeroEgreso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/OrdenValorPrimeroIngreso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/OrdenValorPrimeroIngreso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/PorFecha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/PorFecha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/GestorDeUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Usuario/GestorDeUsuarios.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/EgresoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/EgresoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ProyectoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ProyectoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarIngresoAEgreso.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarIngresoAEgreso.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarItemACategoria.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarItemACategoria.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Bandeja_Mensajes.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Bandeja_Mensajes.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Bitacora.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Bitacora.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Cambiar_Usuario.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Cambiar_Usuario.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_CargarEgresos.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_CrearProyecto.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_CrearProyecto.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Login.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Login.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_VincularIngresoAProyecto.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_VincularIngresoAProyecto.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_VisualizarIngEgPorCategoria.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_VisualizarIngEgPorCategoria.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/CriterioDeVinculacion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/CriterioDeVinculacion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/Mix.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/Mix.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/OrdenValorPrimeroEgreso.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/OrdenValorPrimeroEgreso.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/OrdenValorPrimeroIngreso.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/OrdenValorPrimeroIngreso.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/PorFecha.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/PorFecha.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Usuario/GestorDeUsuarios.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Usuario/GestorDeUsuarios.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/EgresoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/EgresoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/css/GESOC_CargarEgresos.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/css/GESOC_CargarEgresos.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_AsociarIngresoAEgreso.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_AsociarIngresoAEgreso.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_AsociarItemACategoria.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_AsociarItemACategoria.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_Bandeja_Mensajes.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_Bandeja_Mensajes.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_Bitacora.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_Bitacora.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_Cambiar_Usuario.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_Cambiar_Usuario.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_CargaEgresos.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_CargaEgresos.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/ProyectoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/ProyectoController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_CargaEgresos.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_CargaEgresos.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_CrearProyecto.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_CrearProyecto.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_Login.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_Login.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_Menu.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_Menu.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_Menu_Logueado.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_Menu_Logueado.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_VincularIngresoAProyecto.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_VincularIngresoAProyecto.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_VisualizarIngEgPorCategoria.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_VisualizarIngEgPorCategoria.hbs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -114,14 +79,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_CrearProyecto.hbs">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_CargaEgresos.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="97" column="94" selection-start-line="97" selection-start-column="64" selection-end-line="97" selection-end-column="94" />
-              <folding>
-                <element signature="n#style#0;n#table#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#3478#3485#1#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="227">
+              <caret line="208" column="32" lean-forward="true" selection-start-line="208" selection-start-column="32" selection-end-line="208" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EgresoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="194" column="9" lean-forward="true" selection-start-line="194" selection-start-column="9" selection-end-line="194" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -129,20 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/server/Router.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
+            <state relative-caret-position="390">
               <caret line="96" column="64" selection-start-line="96" selection-start-column="64" selection-end-line="96" selection-end-column="64" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ProyectoController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="86" column="75" selection-start-line="86" selection-start-column="75" selection-end-line="86" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -204,7 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Entidad/EntidadJuridica.java" />
         <option value="$PROJECT_DIR$/src/main/java/repositories/RepositorioDeUsuarios.java" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Item.java" />
         <option value="$PROJECT_DIR$/src/main/resources/public/js/GESOC_CargarEgresos.js" />
@@ -251,10 +208,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/GESOC_Login.hbs" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/GESOC_VincularIngresoAProyecto.hbs" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/GESOC_VisualizarIngEgPorCategoria.hbs" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/GESOC_CargaEgresos.hbs" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/EgresoController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/ProyectoController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/GESOC_CrearProyecto.hbs" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/AUX_CargaEgresos" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/EgresoController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/GESOC_CargaEgresos.hbs" />
       </list>
     </option>
   </component>
@@ -273,7 +231,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -298,6 +256,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
@@ -347,7 +313,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -533,7 +499,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49168646" visible="true" weight="0.29932886" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49168646" visible="true" weight="0.3033557" />
       <window_info id="Structure" order="1" sideWeight="0.50831354" side_tool="true" weight="0.29127517" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -542,7 +508,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.5056657" side_tool="true" weight="0.28322148" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4036827" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4036827" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -754,13 +720,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/GESOC_AsociarItemACategoria.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="151" column="10" selection-start-line="151" selection-start-column="10" selection-end-line="151" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/GESOC_Bandeja_Mensajes.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -1109,30 +1068,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_CargaEgresos.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="167" column="105" selection-start-line="167" selection-start-column="95" selection-end-line="167" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EgresoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="204" column="13" lean-forward="true" selection-start-line="204" selection-start-column="13" selection-end-line="204" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/server/Router.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="96" column="64" selection-start-line="96" selection-start-column="64" selection-end-line="96" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ProyectoController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1145,12 +1080,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_CrearProyecto.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="97" column="94" selection-start-line="97" selection-start-column="64" selection-end-line="97" selection-end-column="94" />
+        <state relative-caret-position="1139">
+          <caret line="94" column="45" selection-start-line="94" selection-start-column="45" selection-end-line="94" selection-end-column="45" />
           <folding>
             <element signature="n#style#0;n#table#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#3478#3485#1#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/AUX_CargaEgresos" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/server/Router.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="96" column="64" selection-start-line="96" selection-start-column="64" selection-end-line="96" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EgresoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="194" column="9" lean-forward="true" selection-start-line="194" selection-start-column="9" selection-end-line="194" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_CargaEgresos.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="208" column="32" lean-forward="true" selection-start-line="208" selection-start-column="32" selection-end-line="208" selection-end-column="32" />
         </state>
       </provider>
     </entry>

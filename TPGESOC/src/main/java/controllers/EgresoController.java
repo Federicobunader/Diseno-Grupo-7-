@@ -168,12 +168,14 @@ public class EgresoController {
     public Response guardarEgreso(Request request, Response response){
 
         System.out.println("ENTRE AL GUARDAR EGRESO");
-
+        Usuario usuario = new Usuario();
         Egreso egreso = new Egreso();
         Compra compra = new Compra();
-
+        Presupuesto presupuesto = new Presupuesto();
+        Presupuesto presupuestoElegido = new Presupuesto();
         Item item = new Item();
         Producto producto = new Producto();
+
 
         if (request.queryParams("productos_id") != null) {
             int idProducto = Integer.valueOf(request.queryParams("productos_id"));
@@ -192,8 +194,9 @@ public class EgresoController {
             }
         }
 
-        Usuario usuario = new Usuario();
+
         System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 2");
+        System.out.println("USUARIO_ID =" + request.queryParams("usuario_id"));
 
         if (request.queryParams("usuario_id") != null) {
             int idUsuario = Integer.valueOf(request.queryParams("usuario_id"));
@@ -205,7 +208,7 @@ public class EgresoController {
             }
         }
 
-        Presupuesto presupuesto = new Presupuesto();
+
         System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 3");
 
         if (request.queryParams("presupuesto_id") != null) {
@@ -249,7 +252,7 @@ public class EgresoController {
         }
 
         System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 6");
-        Presupuesto presupuestoElegido = new Presupuesto();
+
         if (request.queryParams("presupuesto_elegido_id") != null) {
             int idPresupuestoElegido = Integer.valueOf(request.queryParams("presupuesto_elegido_id"));
             Repositorio<Presupuesto> repoPresupuestos = FactoryRepositorio.get(Presupuesto.class);
