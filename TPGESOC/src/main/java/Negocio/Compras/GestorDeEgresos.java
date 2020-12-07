@@ -22,7 +22,7 @@ public class GestorDeEgresos {
     private ArrayList<Presupuesto> presupuestos = new ArrayList<Presupuesto>();
 
     private List<Egreso> egresos = new ArrayList<Egreso>();
-    private ArrayList<Egreso> egresosVinculados = new ArrayList<Egreso>();
+    private List<Egreso> egresosVinculados = new ArrayList<Egreso>();
 
     private List<Item> itemsAAgregarAUnEgreso = new ArrayList<>();
     private List<Usuario> usuariosRevisoresDeUnEgreso = new ArrayList<>();
@@ -154,7 +154,7 @@ public class GestorDeEgresos {
         return presupuestos;
     }
 
-    public ArrayList<Egreso> getEgresosVinculados() {
+    public List<Egreso> getEgresosVinculados() {
         return egresosVinculados;
     }
 
@@ -205,5 +205,9 @@ public class GestorDeEgresos {
     public void egresoVinculado(Egreso egreso) {
         egresos.remove(egreso);
         egresosVinculados.add(egreso);
+    }
+
+    public void setEgresosVinculados(List<Egreso> egresosVinculados) {
+        this.egresosVinculados = egresosVinculados;
     }
 }

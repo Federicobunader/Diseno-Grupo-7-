@@ -33,7 +33,7 @@
 
         <h1>Edite los campos deseados</h1>
 
-        <form class="" {{#if usuario}} action="/cambiar_usuario/{{usuario.id}}" method="post" {{else}}
+        <form class="" {{#if usuario}} action="/cambiar_usuario" method="post" {{else}}
           action="/cambiar_usuario" method="post" {{/if}} style="">
           <!--
           <h2>Datos de la empresa</h2>
@@ -140,7 +140,7 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <p>Sus datos fueron actualizados con éxito</p>
-        <button type="mybtn" class="button button-modal" onclick="window.location.href='/menu_logueado'">OK</button>
+        <button type="mybtn" class="button button-modal" onclick="window.location.href='/cambiar_usuario'">OK</button>
       </div>
     </div>
 

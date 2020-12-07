@@ -61,7 +61,7 @@ public class EntidadBaseController {
 
                 asignarAtributosA(entidadBase,request);
                 this.repo.agregar(entidadBase);
-                response.redirect("/menu_logueado");
+
 
             }
             else {
@@ -69,6 +69,7 @@ public class EntidadBaseController {
                // return new ModelAndView (parametros,"GESOC_Login.hbs");
 
             }
+            response.redirect("/menu_login");
             return response;
 
         }

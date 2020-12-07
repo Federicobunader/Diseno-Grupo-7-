@@ -256,7 +256,7 @@ public class EgresoController {
                 compra.setRequierePresupuesto(true);
             }
             else if(valorBool == 2){
-                compra .setRequierePresupuesto(false);
+                compra.setRequierePresupuesto(false);
             }
 
         }
@@ -360,6 +360,17 @@ public class EgresoController {
         if (request.queryParams("criterio") != null) {
             String criterioRecibido = request.queryParams("criterio");
 
+            List<Egreso> egresos = this.repo.buscarTodos();
+
+            Repositorio<Ingreso> repoIngreso = FactoryRepositorio.get(Ingreso.class);
+            List<Ingreso> ingresos = repoIngreso.buscarTodos();
+
+            GestorDeIngresos gestorDeIngresos = GestorDeIngresos.GetInstance();
+
+            gestorDeEgresos.setEgresosVinculados(egresos);
+
+            gestorDeIngresos.setIngresos(ingresos);
+
             CriterioDeVinculacion criterioElegido = new OrdenValorPrimeroIngreso();
             switch (criterioRecibido){
                 case "1":
@@ -378,11 +389,10 @@ public class EgresoController {
 
             }
 
-            Repositorio<Ingreso> repoIngreso = FactoryRepositorio.get(Ingreso.class);
-            List<Ingreso> ingresos = repoIngreso.buscarTodos();
+
 
             for(int i = 0; i < ingresos.size(); i++){
-                criterioElegido.vincular(ingresos.get(i));
+                criterioElegido.vincular(ingresos.get(i),egresos);
                 repoIngreso.modificar(ingresos.get(i));
             }
 

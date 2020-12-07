@@ -10,9 +10,7 @@ import java.util.List;
 public class PorFecha extends CriterioDeVinculacion {
 
     @Override
-    public void vincular(Ingreso ingreso) {
-        egresos.addAll(gestorDeEgresos.ordenarPorFecha());
-        ingresos.addAll(gestorDeIngresos.getIngresos());
+    public void vincular(Ingreso ingreso,List<Egreso> egresos) {
 
             for(int j = 0; j < egresos.size(); j++) {
                 if (ingreso.montoVinculable() >= egresos.get(j).getCompra().getMonto() && egresos.get(j).estaEnElPeriodoAceptable()) {

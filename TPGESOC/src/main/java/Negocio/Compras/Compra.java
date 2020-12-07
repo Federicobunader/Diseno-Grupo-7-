@@ -196,7 +196,6 @@ public class Compra extends EntidadPersistente {
 	}
 
 	public double valorTotal(){
-
 		return presupuestoElegido.getValorTotal();
 	}
 

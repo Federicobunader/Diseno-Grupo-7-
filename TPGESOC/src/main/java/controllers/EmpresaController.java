@@ -84,13 +84,13 @@ public class EmpresaController {
 
             asignarAtributosA(unaEmpresa,request);
             this.repo.agregar(unaEmpresa);
-            response.redirect("/menu_logueado");
         }
         else{
             parametros.put("falloAlRegistrarse",true);
             return new ModelAndView (parametros,"GESOC_Login.hbs");
         }
 
+        response.redirect("/menu_login");
         return null;
     }
 

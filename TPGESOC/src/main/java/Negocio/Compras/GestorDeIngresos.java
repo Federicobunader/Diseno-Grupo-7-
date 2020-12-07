@@ -10,12 +10,16 @@ import java.util.List;
 
 public class GestorDeIngresos {
     private static GestorDeIngresos instance = null;
-    private ArrayList<Ingreso> ingresos = new ArrayList<Ingreso>();
-    private ArrayList<Ingreso> ingresosNoVinculados = new ArrayList<Ingreso>();
+    private List<Ingreso> ingresos = new ArrayList<Ingreso>();
+    private List<Ingreso> ingresosNoVinculados = new ArrayList<Ingreso>();
     InterfazUsuarios interfaz = InterfazUsuarios.GetInstance();
     GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();
 
-    public ArrayList<Ingreso> getIngresos() {
+    public void setIngresos(List<Ingreso> ingresos) {
+        this.ingresos = ingresos;
+    }
+
+    public List<Ingreso> getIngresos() {
         return ingresos;
     }
 
@@ -23,6 +27,10 @@ public class GestorDeIngresos {
         if (instance == null)
             instance = new GestorDeIngresos();
         return instance;
+    }
+
+    public List<Ingreso> getIngresosNoVinculados() {
+        return ingresosNoVinculados;
     }
 
     public List<Ingreso> ordenarPorValor(){
