@@ -13,7 +13,7 @@ public class PorFecha extends CriterioDeVinculacion {
     public void vincular(Ingreso ingreso,List<Egreso> egresos) {
 
             for(int j = 0; j < egresos.size(); j++) {
-                if (ingreso.calcularMontoVinculable() >= egresos.get(j).getCompra().getMonto() && egresos.get(j).estaEnElPeriodoAceptable()) {
+                if (ingreso.calcularMontoVinculable() >= egresos.get(j).getValorTotal() && egresos.get(j).estaEnElPeriodoAceptable()) {
                     ingreso.vincularEgreso(egresos.get(j));
                     gestorDeEgresos.egresoVinculado(egresos.get(j));
                 }

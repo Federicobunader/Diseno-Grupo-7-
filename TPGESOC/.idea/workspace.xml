@@ -55,17 +55,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c56b04db-f42a-40a7-8d18-c78ae2368dc3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Egreso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Egreso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Ingreso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Ingreso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/OrdenValorPrimeroEgreso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/OrdenValorPrimeroEgreso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/OrdenValorPrimeroIngreso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/OrdenValorPrimeroIngreso.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/PorFecha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/PorFecha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Egreso.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Egreso.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Ingreso.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Ingreso.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/OrdenValorPrimeroEgreso.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/OrdenValorPrimeroEgreso.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/OrdenValorPrimeroIngreso.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/OrdenValorPrimeroIngreso.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/PorFecha.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/PorFecha.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -104,29 +94,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/PorFecha.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="36" selection-start-column="36" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/OrdenValorPrimeroIngreso.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+            <state relative-caret-position="306">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarItemACategoria.hbs">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/OrdenValorPrimeroIngreso.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="111" column="89" lean-forward="true" selection-start-line="111" selection-start-column="10" selection-end-line="111" selection-end-column="89" />
+            <state relative-caret-position="170">
+              <caret line="18" column="57" lean-forward="true" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="87" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarIngresoAEgreso.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1054">
+              <caret line="44" column="31" lean-forward="true" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -292,8 +282,8 @@
         <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Egreso.java" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Ingreso.java" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/OrdenValorPrimeroEgreso.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/PorFecha.java" />
         <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/OrdenValorPrimeroIngreso.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/PorFecha.java" />
       </list>
     </option>
   </component>
@@ -1055,13 +1045,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarIngresoAEgreso.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1343">
-          <caret line="44" column="31" lean-forward="true" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Presupuesto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -1201,22 +1184,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarItemACategoria.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
+        <state relative-caret-position="-830">
           <caret line="111" column="89" lean-forward="true" selection-start-line="111" selection-start-column="10" selection-end-line="111" selection-end-column="89" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/PorFecha.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarIngresoAEgreso.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" selection-start-column="36" selection-end-column="36" />
+        <state relative-caret-position="-1054">
+          <caret line="44" column="31" lean-forward="true" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/OrdenValorPrimeroIngreso.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        <state relative-caret-position="170">
+          <caret line="18" column="57" lean-forward="true" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/PorFecha.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
