@@ -886,3 +886,36 @@
   }
   tr:hover {background-color: #ebb7b7;}
   tr:nth-child(even) {background-color: #8d5151;}
+
+  .button-add{
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    padding: 15px 0;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    background: #ebb609;
+    color: #ffffff;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-appearance: none;
+    margin-bottom: 10px;
+    display: block;
+    font-size: large;
+    width: 100%;
+    top: 20px;
+  }
+  
+  .button-add:hover,
+  .button-add:focus,
+  .button-add:active,
+  .button-add.active,
+  .open .dropdown-toggle.button-add {
+      border-color: #da8617;
+      border-width: thick;
+      color: #ffffff;
+      background-color: rgb(201, 119, 11);
+      cursor: pointer;
+  } 
