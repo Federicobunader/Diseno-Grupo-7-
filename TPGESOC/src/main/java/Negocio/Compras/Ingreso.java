@@ -55,11 +55,11 @@ public class Ingreso extends EntidadPersistente {
         egresosVinculados.add(unEgreso);
     }
 
-    public double montoVinculable() {
+    public double calcularMontoVinculable() {
         double monto = 0;
 
         for(int i=0; i<egresosVinculados.size(); i++){
-            monto += egresosVinculados.get(i).getCompra().getMonto();
+            monto += egresosVinculados.get(i).getValorTotal();
         }
         return montoTotal - monto;
     }

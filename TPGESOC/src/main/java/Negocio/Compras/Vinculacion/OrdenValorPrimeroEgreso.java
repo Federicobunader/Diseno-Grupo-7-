@@ -14,12 +14,12 @@ public class OrdenValorPrimeroEgreso extends CriterioDeVinculacion{
 
 
                 for (int j = 0; j < egresos.size(); j++) {
-                    if (ingreso.montoVinculable() >= egresos.get(j).getCompra().getMonto()/* && egresos.get(j).estaEnElPeriodoAceptable()*/) {
+                    if (ingreso.calcularMontoVinculable() >= egresos.get(j).getCompra().getMonto()/* && egresos.get(j).estaEnElPeriodoAceptable()*/) {
                         ingreso.vincularEgreso(egresos.get(j));
                         gestorDeEgresos.egresoVinculado(egresos.get(j));
                     }
                 }
-                if (ingreso.montoVinculable() == 0) {
+                if (ingreso.calcularMontoVinculable() == 0) {
                     gestorDeIngresos.ingresoVinculado(ingreso);
                 }
 

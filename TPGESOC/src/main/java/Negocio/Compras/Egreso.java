@@ -19,6 +19,8 @@ public class Egreso  extends EntidadPersistente {
     @Column
     private double valorTotal;
 
+
+
     @Transient
     GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();
 
