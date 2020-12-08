@@ -7,25 +7,27 @@
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="/css/GESOC_CargarEgresos.css">
+    <script type=text/javascript src="/js/jquery-3.5.1.min.js"></script>
 </head>
 
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header page-scroll">
-        <a class="navbar-brand page-scroll" href="/menu_logueado">GESOC</a>
-    </div>
-</nav>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <a class="navbar-brand page-scroll" href="/menu_logueado">GESOC</a>
+        </div>
+    </nav>
 
-<div class="form">
-   <form class="" action="/confirmar_egreso" method="post" style="">
-    <!-- partial:index.partial.html -->
+    <div class="form">
+        <form class="" action="/confirmar_egreso" method="post" style="">
+            <!-- partial:index.partial.html -->
 
 
-        <button type="submit" class="button button-back" onclick="window.location.href='/reiniciar_egreso'">VOLVER ATRAS</button>
+            <button type="submit" class="button button-back" onclick="window.location.href='/reiniciar_egreso'">VOLVER
+                ATRAS</button>
 
-        <!--<div class="form">
+            <!--<div class="form">
 
                 <h2>Agregue los productos de su egreso</h2>
 
@@ -98,100 +100,107 @@
 
         </div>-->
 
-        <div class="form">
+            <div class="form">
 
-                    <h2>Agregue los usuarios revisores de su egreso</h2>
+                <h2>Agregue los usuarios revisores de su egreso</h2>
 
-                    <h3>Visualice los usuarios de GESOC</h3>
+                <h3>Visualice los usuarios de GESOC</h3>
 
-                    <div class="lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
-                    <div class="buscar">
-                        <input type="text" id="unUsuario" onkeyup="buscarUsuario()" placeholder="Busca por nombre"
-                               title="Type in a name">
-                    </div>
-
-            <!-- <form class="" action="/guardar_usuario_revisor_egreso" method="post" style=""> -->
-                        <div id="div1">
-                            <table class="scroll" id="tablaUsuario" style="overflow-y:auto;">
-
-                                <thead>
-                                <th><i class="fas fa-user"></i> Id Usuario</th>
-                                <th><i class="fas fa-phone"></i> Nombre</th>
-
-                                </thead>
-
-                                <tbody>
-                                {{#each usuarios}}
-                                    <tr>
-                                        <td><i class="fas fa-user"></i> {{id}}</td>
-                                        <td>{{usuario}}</td>
-
-                                    </tr>
-                                {{/each}}
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <h3>Indique el Id del usuario revisor</h3>
-
-                        <div class="field-wrap">
-                            <label>
-                                Id del usuario revisor<span class="req">*</span>
-                            </label>
-                            <input type="text" required autocomplete="off" id="cantidad" name="usuario_id"
-                                   class="input-datos" />
-                        </div>
-                        <br>
-                        <!--<h3>¿Desea cargar otro usuario?</h3>
-
-                        <button type="submit" class="button button-back"
-                                onclick="window.location.href='/cargar_egreso'">Sí</button>-->
-
-
-
-        </div>
-
-        <div class="form">
-
-            <h2>Agregue los presupuestos de su egreso</h2>
-
-
-            <div class="field-wrap">
-                <div class="custom-select" style="width:200px;">
-                    <select name="requierePresupuesto" id="tiposector" onChange=changetextbox()>
-                        <option value="0">¿Su compra requiere presupuesto?</option>
-                        <option value="1">Si</option>
-                        <option value="2">No</option>
-                    </select>
-
+                <div class="lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
+                <div class="buscar">
+                    <input type="text" id="unUsuario" onkeyup="buscarUsuario()" placeholder="Busca por nombre"
+                        title="Type in a name">
                 </div>
-            </div>
 
-            <h3>Visualice los presupuestos de GESOC</h3>
-
-            <div class="lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
-            <div class="buscar">
-                <input type="text" id="unPresupuesto" onkeyup="buscarPresupuesto()" placeholder="Busca por nombre"
-                       title="Type in a name"></div>
-
-            <!--<form class="" action="/guardar_presupuesto_egreso" method="post" style=""> -->
+                <!-- <form class="" action="/guardar_usuario_revisor_egreso" method="post" style=""> -->
                 <div id="div1">
-                    <table class="scroll" id="tabla" style="overflow-y:auto;">
+                    <table class="scroll" id="tablaUsuario" style="overflow-y:auto;">
 
                         <thead>
-                        <th><i class="fas fa-user"></i> Id Presupuesto</th>
-                        <th><i class="fas fa-phone"></i>Valor Total</th>
+                            <th><i class="fas fa-user"></i> Id Usuario</th>
+                            <th><i class="fas fa-phone"></i> Nombre</th>
 
                         </thead>
 
                         <tbody>
-                        {{#each presupuestos}}
+                            {{#each usuarios}}
+                            <tr>
+                                <td><i class="fas fa-user"></i> {{id}}</td>
+                                <td>{{usuario}}</td>
+
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="wrapper-usuario">
+                    <div class="row-usuario">
+                        <h3>Indique el Id del usuario revisor</h3>
+                        <div class="field-wrap">
+                            <label>
+                                Id del usuario revisor
+                            </label>
+
+                            <input type="text" required autocomplete="off" id="cantidad" name="usuario_id"
+                                class="input-datos" />
+
+                            <br>
+                            <h3>¿Desea cargar otro usuario?</h3>
+
+                            <button type="button" class="button-add" onclick=''>Sí</button>
+                        </div>
+                    </div>
+                </div>
+                <script type=text/javascript>
+                    $(document).on("click", ".button-add",function(){
+                        var row = $(".row-usuario").eq(0).clone().show( )
+                        $(".wrapper-usuario").append(row);
+                    });
+                </script>
+            </div>
+
+            <div class="form">
+
+                <h2>Agregue los presupuestos de su egreso</h2>
+
+
+                <div class="field-wrap">
+                    <div class="custom-select" style="width:200px;">
+                        <select name="requierePresupuesto" id="tiposector" onChange=changetextbox()>
+                            <option value="0">¿Su compra requiere presupuesto?</option>
+                            <option value="1">Si</option>
+                            <option value="2">No</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <h3>Visualice los presupuestos de GESOC</h3>
+
+                <div class="lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
+                <div class="buscar">
+                    <input type="text" id="unPresupuesto" onkeyup="buscarPresupuesto()" placeholder="Busca por nombre"
+                        title="Type in a name"></div>
+
+                <!--<form class="" action="/guardar_presupuesto_egreso" method="post" style=""> -->
+                <div id="div1">
+                    <table class="scroll" id="tabla" style="overflow-y:auto;">
+
+                        <thead>
+                            <th><i class="fas fa-user"></i> Id Presupuesto</th>
+                            <th><i class="fas fa-phone"></i>Valor Total</th>
+
+                        </thead>
+
+                        <tbody>
+                            {{#each presupuestos}}
                             <tr>
                                 <td><i class="fas fa-user"></i> {{id}}</td>
                                 <td>{{valorTotal}}</td>
 
                             </tr>
-                        {{/each}}
+                            {{/each}}
                         </tbody>
                     </table>
                 </div>
@@ -202,10 +211,10 @@
                         Id de Presupuesto<span class="req">*</span>
                     </label>
                     <input type="text" required autocomplete="off" id="cantidad" name="presupuesto_id"
-                           class="input-datos" />
+                        class="input-datos" />
                 </div>
                 <br>
-               <!-- <h3>¿Desea cargar otro presupuesto?</h3>
+                <!-- <h3>¿Desea cargar otro presupuesto?</h3>
 
                 <button type="submit" class="button button-back"
                         onclick="window.location.href='/cargar_egreso'">Sí</button>-->
@@ -217,70 +226,50 @@
                         Id del Presupuesto elegido<span class="req">*</span>
                     </label>
                     <input type="text" required autocomplete="off" id="CUIT" name="presupuesto_elegido_id"
-                           class="input-datos" />
+                        class="input-datos" />
                 </div>
 
-        </div>
+            </div>
             <style>
-                    * {
-                        box-sizing: border-box;
-                    }
+                * {
+                    box-sizing: border-box;
+                }
 
-                    #myInput {
-                        background-image: url('/css/searchicon.png');
-                        background-position: 10px 10px;
-                        background-repeat: no-repeat;
-                        width: 100%;
-                        font-size: 16px;
-                        padding: 12px 20px 12px 40px;
-                        border: 1px solid #ddd;
-                        margin-bottom: 12px;
-                    }
-                </style>
-            <script>
-                    function buscarPresupuesto() {
-                        var input, filter, table, tr, td, i, txtValue;
-                        input = document.getElementById("unPresupuesto");
-                        filter = input.value.toUpperCase();
-                        table = document.getElementById("tabla");
-                        tr = table.getElementsByTagName("tr");
-                        for (i = 0; i < tr.length; i++) {
-                            td = tr[i].getElementsByTagName("td")[1];
-                            if (td) {
-                                txtValue = td.textContent || td.innerText;
-                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                    tr[i].style.display = "";
-                                } else {
-                                    tr[i].style.display = "none";
-                                }
-                            }
-                        }
-                    }
-                </script>
+                #myInput {
+                    background-image: url('/css/searchicon.png');
+                    background-position: 10px 10px;
+                    background-repeat: no-repeat;
+                    width: 100%;
+                    font-size: 16px;
+                    padding: 12px 20px 12px 40px;
+                    border: 1px solid #ddd;
+                    margin-bottom: 12px;
+                }
+            </style>
 
-        <div class="form">
+            <div class="form">
 
-            <h2>Agregue los documentos de su egreso</h2>
-            <h3>Visualice los documentos de GESOC</h3>
+                <h2>Agregue los documentos de su egreso</h2>
+                <h3>Visualice los documentos de GESOC</h3>
 
-            <div class="lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
-            <div class="buscar_">
-                <input type="text" id="unDocumento" onkeyup="buscarDocumento()" placeholder="Busca por numero"
-                       title="Type in a name"></div>
+                <div class="lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
+                <div class="buscar">
+                    <input type="text" id="unDocumento" onkeyup="buscarDocumento()" placeholder="Busca por numero"
+                        title="Type in a name"></div>
 
-            <!-- <form class="" action="/guardar_documento_egreso" method="post" style=""> -->
+                <!-- <form class="" action="/guardar_documento_egreso" method="post" style=""> -->
                 <div id="div1">
                     <table class="scroll" id="tablaDocumentos" style="overflow-y:auto;">
 
                         <thead>
-                        <th><i class="fas fa-user"></i> Id Documento</th>
-                        <th><i class="fas fa-phone"></i>Numero</th>
-                        <th><i class="fas fa-phone"></i> Tipo</th>
+                            <th><i class="fas fa-user"></i> Id Documento</th>
+                            <th><i class="fas fa-phone"></i>Numero</th>
+                            <th><i class="fas fa-phone"></i> Tipo</th>
 
                         </thead>
 
                         <tbody>
-                        {{#each documentos}}
+                            {{#each documentos}}
                             <tr>
                                 <td><i class="fas fa-user"></i> {{id}}</td>
                                 <td>{{numero}}</td>
@@ -288,7 +277,7 @@
 
 
                             </tr>
-                        {{/each}}
+                            {{/each}}
                         </tbody>
                     </table>
                 </div>
@@ -299,7 +288,7 @@
                         Id del Documento<span class="req">*</span>
                     </label>
                     <input type="text" required autocomplete="off" id="cantidad" name="documento_id"
-                           class="input-datos" />
+                        class="input-datos" />
                 </div>
                 <br>
                 <!--<h3>¿Desea cargar otro Documento?</h3>
@@ -308,9 +297,9 @@
                         onclick="window.location.href='/cargar_egreso'">Sí</button>-->
 
 
-        </div>
+            </div>
 
-        <style>
+            <style>
                 * {
                     box-sizing: border-box;
                 }
@@ -326,202 +315,143 @@
                     margin-bottom: 12px;
                 }
             </style>
-        <script>
-                function buscarDocumento() {
-                    var input, filter, table, tr, td, i, txtValue;
-                    input = document.getElementById("unDocumento");
-                    filter = input.value.toUpperCase();
-                    table = document.getElementById("tablaDocumentos");
-                    tr = table.getElementsByTagName("tr");
-                    for (i = 0; i < tr.length; i++) {
-                        td = tr[i].getElementsByTagName("td")[1];
-                        if (td) {
-                            txtValue = td.textContent || td.innerText;
-                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                tr[i].style.display = "";
-                            } else {
-                                tr[i].style.display = "none";
-                            }
-                        }
-                    }
-                }
-            </script>
 
-        <div class="form">
+            <div class="form">
 
-            <h2>Agregue la entidad de su egreso</h2>
-            <h3>Visualice las entidades de GESOC</h3>
+                <h2>Agregue la entidad de su egreso</h2>
+                <h3>Visualice las entidades de GESOC</h3>
 
-            <div class="lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
-            <div class="buscar">
-                <input type="text" id="unaEntidad" onkeyup="buscarEntidad()" placeholder="Busca por nombre"
-                       title="Type in a name"></div>
-            <div id="div1">
-                <table class="scroll" id="tablaEntidad" style="overflow-y:auto;">
+                <div class="lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
+                <div class="buscar">
+                    <input type="text" id="unaEntidad" onkeyup="buscarEntidad()" placeholder="Busca por nombre"
+                        title="Type in a name"></div>
+                <div id="div1">
+                    <table class="scroll" id="tablaEntidad" style="overflow-y:auto;">
 
-                    <thead>
-                    <th><i class="fas fa-user"></i> Id Entidad</th>
-                    <th><i class="fas fa-phone"></i>Nombre Ficticio</th>
+                        <thead>
+                            <th><i class="fas fa-user"></i> Id Entidad</th>
+                            <th><i class="fas fa-phone"></i>Nombre Ficticio</th>
 
-                    </thead>
+                        </thead>
 
-                    <tbody>
-                    {{#each empresas}}
-                        <tr>
-                            <td><i class="fas fa-user"></i> {{id}}</td>
-                            <td>{{nombreFicticio}}</td>
-                        </tr>
-                    {{/each}}
-                    {{#each entidadBases}}
-                        <tr>
-                            <td><i class="fas fa-user"></i> {{id}}</td>
-                            <td>{{nombreFicticio}}</td>
-                        </tr>
-                    {{/each}}
-                    </tbody>
-                </table>
-            </div>
-            <h3>Indique el Id de la entidad</h3>
-
-            <div class="field-wrap">
-                <label>
-                    Id de la Entidad<span class="req">*</span>
-                </label>
-                <input type="text" required autocomplete="off" id="cantidad" name="entidad_id"
-                       class="input-datos" />
-            </div>
-            <br>
-            <h2>Agregue el proveedor de su egreso</h2>
-            <h3>Visualice los proveedores de GESOC</h3>
-
-            <div class="lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
-            <div class="buscar">
-                <input type="text" id="unProveedor" onkeyup="buscarProveedor()" placeholder="Busca por nombre"
-                       title="Type in a name"></div>
-
-            <div id="div1">
-                <table class="scroll" id="tablaProveedores" style="overflow-y:auto;">
-
-                    <thead>
-                    <th><i class="fas fa-user"></i> Id Proveedor</th>
-                    <th><i class="fas fa-phone"></i>Nombre</th>
-                    <th><i class="fas fa-phone"></i> Numero</th>
-
-                    </thead>
-
-                    <tbody>
-                    {{#each proveedores}}
-                        <tr>
-                            <td><i class="fas fa-user"></i> {{id}}</td>
-                            <td>{{nombre}}</td>
-                            <td>{{numeroID}}</td>
-                        </tr>
-                    {{/each}}
-                    </tbody>
-                </table>
-            </div>
-            <h3>Indique el Id del proveedor</h3>
-
-            <div class="field-wrap">
-                <label>
-                    Id del Proveedor<span class="req">*</span>
-                </label>
-                <input type="text" required autocomplete="off" id="cantidad" name="proveedor_id"
-                       class="input-datos" />
-            </div>
-
-        </div>
-
-        <style>
-                * {
-                    box-sizing: border-box;
-                }
-
-                #myInput {
-                    background-image: url('/css/searchicon.png');
-                    background-position: 10px 10px;
-                    background-repeat: no-repeat;
-                    width: 100%;
-                    font-size: 16px;
-                    padding: 12px 20px 12px 40px;
-                    border: 1px solid #ddd;
-                    margin-bottom: 12px;
-                }
-            </style>
-        <script>
-                function buscarEntidad() {
-                    var input, filter, table, tr, td, i, txtValue;
-                    input = document.getElementById("unaEntidad");
-                    filter = input.value.toUpperCase();
-                    table = document.getElementById("tablaEntidad");
-                    tr = table.getElementsByTagName("tr");
-                    for (i = 0; i < tr.length; i++) {
-                        td = tr[i].getElementsByTagName("td")[1];
-                        if (td) {
-                            txtValue = td.textContent || td.innerText;
-                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                tr[i].style.display = "";
-                            } else {
-                                tr[i].style.display = "none";
-                            }
-                        }
-                    }
-                }
-
-                function buscarProveedor() {
-                    var input, filter, table, tr, td, i, txtValue;
-                    input = document.getElementById("unProveedor");
-                    filter = input.value.toUpperCase();
-                    table = document.getElementById("tablaProveedores");
-                    tr = table.getElementsByTagName("tr");
-                    for (i = 0; i < tr.length; i++) {
-                        td = tr[i].getElementsByTagName("td")[1];
-                        if (td) {
-                            txtValue = td.textContent || td.innerText;
-                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                tr[i].style.display = "";
-                            } else {
-                                tr[i].style.display = "none";
-                            }
-                        }
-                    }
-                }
-            </script>
-
-        <div class="form">
-
-
-            <div id="compra">
-                <h2>Agregue el medio de pago de su egreso</h2>
-
-                <div class="custom-select" style="width:200px;">
-                    <select name="tipoDePago" id="tipoDePago" onChange=changetextbox()>
-                        <option value="0">Seleccione el medio de pago:</option>
-                        <option value="1">Tarjeta de credito</option>
-                        <option value="2">Tarjeta de debito</option>
-                        <option value="3">Ticket</option>
-                        <option value="4">ATM</option>
-                        <option value="5">Efectivo</option>
-                    </select>
+                        <tbody>
+                            {{#each empresas}}
+                            <tr>
+                                <td><i class="fas fa-user"></i> {{id}}</td>
+                                <td>{{nombreFicticio}}</td>
+                            </tr>
+                            {{/each}}
+                            {{#each entidadBases}}
+                            <tr>
+                                <td><i class="fas fa-user"></i> {{id}}</td>
+                                <td>{{nombreFicticio}}</td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
                 </div>
+                <h3>Indique el Id de la entidad</h3>
+
+                <div class="field-wrap">
+                    <label>
+                        Id de la Entidad<span class="req">*</span>
+                    </label>
+                    <input type="text" required autocomplete="off" id="cantidad" name="entidad_id"
+                        class="input-datos" />
+                </div>
+                <br>
+                <h2>Agregue el proveedor de su egreso</h2>
+                <h3>Visualice los proveedores de GESOC</h3>
+
+                <div class="lupa"> <img src="https://i.ibb.co/6Zc8sfp/lupa.png" alt="alternatetext"></div>
+                <div class="buscar">
+                    <input type="text" id="unProveedor" onkeyup="buscarProveedor()" placeholder="Busca por nombre"
+                        title="Type in a name"></div>
+
+                <div id="div1">
+                    <table class="scroll" id="tablaProveedores" style="overflow-y:auto;">
+
+                        <thead>
+                            <th><i class="fas fa-user"></i> Id Proveedor</th>
+                            <th><i class="fas fa-phone"></i>Nombre</th>
+                            <th><i class="fas fa-phone"></i> Numero</th>
+
+                        </thead>
+
+                        <tbody>
+                            {{#each proveedores}}
+                            <tr>
+                                <td><i class="fas fa-user"></i> {{id}}</td>
+                                <td>{{nombre}}</td>
+                                <td>{{numeroID}}</td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+                <h3>Indique el Id del proveedor</h3>
+
+                <div class="field-wrap">
+                    <label>
+                        Id del Proveedor<span class="req">*</span>
+                    </label>
+                    <input type="text" required autocomplete="off" id="cantidad" name="proveedor_id"
+                        class="input-datos" />
+                </div>
+
             </div>
 
+            <style>
+                * {
+                    box-sizing: border-box;
+                }
 
-        </div>
+                #myInput {
+                    background-image: url('/css/searchicon.png');
+                    background-position: 10px 10px;
+                    background-repeat: no-repeat;
+                    width: 100%;
+                    font-size: 16px;
+                    padding: 12px 20px 12px 40px;
+                    border: 1px solid #ddd;
+                    margin-bottom: 12px;
+                }
+            </style>
 
-        <br><br>
-        <h3>Asegurese de haber completado todo los datos pedidos del egreso</h3></br><br>
-
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script src="/js/GESOC_CargarEgresos.js"></script>
+            <div class="form">
 
 
+                <div id="compra">
+                    <h2>Agregue el medio de pago de su egreso</h2>
 
-        <button type="mybtn" class="button button-modal" onclick="window.location.href='/menu_logueado'">Confirmar
-            Egreso</button>
+                    <div class="custom-select" style="width:200px;">
+                        <select name="tipoDePago" id="tipoDePago" onChange=changetextbox()>
+                            <option value="0">Seleccione el medio de pago:</option>
+                            <option value="1">Tarjeta de credito</option>
+                            <option value="2">Tarjeta de debito</option>
+                            <option value="3">Ticket</option>
+                            <option value="4">ATM</option>
+                            <option value="5">Efectivo</option>
+                        </select>
+                    </div>
+                </div>
 
-</form>
-</div>
+
+            </div>
+
+            <br><br>
+            <h3>Asegurese de haber completado todo los datos pedidos del egreso</h3></br><br>
+
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+            <script src="/css/GESOC_CargarEgresos.js"></script>
+
+
+
+            <button type="mybtn" class="button button-modal" onclick="window.location.href='/menu_logueado'">Confirmar
+                Egreso</button>
+
+        </form>
+    </div>
 </body>
 
 </html>
