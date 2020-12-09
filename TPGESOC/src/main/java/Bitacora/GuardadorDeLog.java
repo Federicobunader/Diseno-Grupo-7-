@@ -21,7 +21,9 @@ public class GuardadorDeLog {
         date.getTime();
 
        Operacion operacion = new Operacion(tipoDeOperacion,unObjeto.getClass().getSimpleName(),formatter.format(date).toString());
+       operacion.setTipoDeOperacion(tipoDeOperacion);
+       operacion.setEntidad(unObjeto.getClass().getSimpleName());
+       operacion.setFechaDeOperacion(formatter.format(date).toString());
        bitacora.add(operacion);
-
     }
 }

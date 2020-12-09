@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Mix extends CriterioDeVinculacion{
     @Override
-    public void vincular(Ingreso ingreso, List<Egreso> egresos) {
+    public void vincular(List<Ingreso> ingresos, List<Egreso> egresos) {
 
     }
 }

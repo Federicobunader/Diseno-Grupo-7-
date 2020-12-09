@@ -68,7 +68,7 @@ public class EgresoController {
 
     public Response guardarUsuarioRevisor(Request request, Response response){
 
-        Usuario usuario = new Usuario();
+        Usuario usuario;
 
         if (request.queryParams("usuario_id") != null) {
             int idUsuario = Integer.valueOf(request.queryParams("usuario_id"));
@@ -166,6 +166,8 @@ public class EgresoController {
     }
 
     public Response guardarEgreso(Request request, Response response){
+
+        OperacionController operacionController = new OperacionController();
 
         System.out.println("ENTRE AL GUARDAR EGRESO");
         Usuario usuario = new Usuario();
@@ -312,8 +314,6 @@ public class EgresoController {
 
         System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 10");
 
-
-
         System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 11");
         System.out.println("USUARIO = " + usuario.getUsuario());
         System.out.println("PRESUPUESTO =" + presupuesto.getId());
@@ -323,16 +323,16 @@ public class EgresoController {
         egreso.setCompra(compra);
         egreso.setFechaDeOperacion(new Date());
         egreso.setValorTotal(compra.valorTotal());
-
 */
-
         egreso = compra.efectuarCompra();
         egreso.setCompra(compra);
 
         Repositorio<Compra> repoCompra = FactoryRepositorio.get(Compra.class);
         repoCompra.agregar(compra);
+        operacionController.GuardarEnBitacora(compra,"ALTA");
 
         this.repo.agregar(egreso);
+        operacionController.GuardarEnBitacora(egreso,"ALTA");
 
         gestorDeEgresos.reiniciarDatosEgreso();
         System.out.println("SALI DEL GUARDAR EGRESO");
@@ -389,14 +389,10 @@ public class EgresoController {
 
             }
 
-
-
-            for(int i = 0; i < ingresos.size(); i++){
-                criterioElegido.vincular(ingresos.get(i),egresos);
+            criterioElegido.vincular(ingresos,egresos);
+            for(int i = 0; i<ingresos.size();i++) {
                 repoIngreso.modificar(ingresos.get(i));
             }
-
-
         }
         System.out.println(("Criterio" + request.queryParams("criterio") ));
         response.redirect("/menu_logueado");

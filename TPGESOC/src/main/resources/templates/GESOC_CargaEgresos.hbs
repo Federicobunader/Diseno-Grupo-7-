@@ -139,24 +139,25 @@
                         <h3>Indique el Id del usuario revisor</h3>
                         <div class="field-wrap">
                             <label>
-                                Id del usuario revisor
+                                Id del Usuario<span class="req">*</span>
                             </label>
-
                             <input type="text" required autocomplete="off" id="cantidad" name="usuario_id"
-                                class="input-datos" />
-
+                                class="input-datos"/>
                             <br>
-                            <h3>¿Desea cargar otro usuario?</h3>
+<!--                            <h3>¿Desea cargar otro usuario?</h3>-->
 
-                            <button type="button" class="button-add" onclick=''>Sí</button>
+<!--                            <button type="button" class="button-add" onclick=''>Sí</button>-->
                         </div>
                     </div>
                 </div>
                 <script type=text/javascript>
                     $(document).on("click", ".button-add",function(){
                         var row = $(".row-usuario").eq(0).clone().show( )
-                        $(".wrapper-usuario").append(row);
+                        $(".wrapper-usuario").append(row)
                     });
+<!--                    var option = document.getElementById("idOption");-->
+<!--                    var name = option.getAttribute("name");-->
+<!--                    option.setAttribute("value", name);-->
                 </script>
             </div>
 
@@ -443,11 +444,11 @@
             <h3>Asegurese de haber completado todo los datos pedidos del egreso</h3></br><br>
 
             <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-            <script src="/css/GESOC_CargarEgresos.js"></script>
+            <script src="/js/GESOC_CargarEgresos.js"></script>
 
 
 
-            <button type="mybtn" class="button button-modal" onclick="window.location.href='/menu_logueado'">Confirmar
+            <button type="submit" class="button button-back" onclick="window.location.href='/menu_logueado'">Confirmar
                 Egreso</button>
 
         </form>

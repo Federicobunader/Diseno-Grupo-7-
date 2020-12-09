@@ -3,7 +3,6 @@ package server;
 import Bitacora.Bitacora;
 import controllers.*;
 import middleware.AuthMiddleware;
-import spark.ResponseTransformer;
 import spark.Spark;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 import spark.utils.BooleanHelper;
@@ -40,7 +39,8 @@ public class Router {
         MensajeController mensajeController = new MensajeController();
         CategoriaController categoriaController = new CategoriaController();
         ProyectoController proyectoController = new ProyectoController();
-        BitacoraController bitacoraController = new BitacoraController();
+        OperacionController bitacoraController = new OperacionController();
+        Bitacora bitacora = new Bitacora();
 
         Spark.get("/", loginController::inicio, Router.engine);
 

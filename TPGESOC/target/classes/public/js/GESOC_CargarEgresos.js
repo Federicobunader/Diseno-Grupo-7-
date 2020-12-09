@@ -112,4 +112,76 @@ $('.form').find('input, textarea').on('keyup blur focus', function (e) {
     }
   }
 
+  function buscarPresupuesto() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("unPresupuesto");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("tabla");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[1];
+        if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+}
+function buscarDocumento() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("unDocumento");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("tablaDocumentos");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[1];
+      if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+          } else {
+              tr[i].style.display = "none";
+          }
+      }
+  }
+}
+function buscarEntidad() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("unaEntidad");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("tablaEntidad");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[1];
+      if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+          } else {
+              tr[i].style.display = "none";
+          }
+      }
+  }
+}
 
+function buscarProveedor() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("unProveedor");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("tablaProveedores");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[1];
+      if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+          } else {
+              tr[i].style.display = "none";
+          }
+      }
+  }
+}

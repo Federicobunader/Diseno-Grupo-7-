@@ -16,10 +16,13 @@ public class DireccionPostalController {
 
     public Response modificar(Request request, Response response,int idDireccion){
 
+        OperacionController operacionController = new OperacionController();
+
         Repositorio<DireccionPostal> repoDireccion = FactoryRepositorio.get(DireccionPostal.class);
         DireccionPostal direccionPostal = repoDireccion.buscar(idDireccion);
         this.asignarAtributosA(direccionPostal,request);
         repoDireccion.modificar(direccionPostal);
+        operacionController.GuardarEnBitacora(direccionPostal,"MODIFICACION");
 
         return response;
     }

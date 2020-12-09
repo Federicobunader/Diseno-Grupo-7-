@@ -63,6 +63,9 @@ public class EmpresaController {
         UsuarioController usuarioController = new UsuarioController();
         Usuario unUsuario = new Usuario();
 
+        OperacionController operacionController = new OperacionController();
+
+
         if(usuarioController.elUsuarioSePuedeRegistrarCorrectamente(unUsuario,request)){
             Empresa unaEmpresa = new Empresa();
             DireccionPostal direccionPostal = new DireccionPostal();
@@ -72,18 +75,21 @@ public class EmpresaController {
 
             Repositorio<DireccionPostal> repoDireccion = FactoryRepositorio.get(DireccionPostal.class);
             repoDireccion.agregar(direccionPostal);
+            operacionController.GuardarEnBitacora(direccionPostal,"ALTA");
 
 
             usuarioController.asignarAtributosA(unUsuario,request);
 
             Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
             repoUsuario.agregar(unUsuario);
+            operacionController.GuardarEnBitacora(unUsuario,"ALTA");
 
             unUsuario.setDireccionPostal(direccionPostal);
             unaEmpresa.setUsuario(unUsuario);
 
             asignarAtributosA(unaEmpresa,request);
             this.repo.agregar(unaEmpresa);
+            operacionController.GuardarEnBitacora(unaEmpresa,"ALTA");
         }
         else{
             parametros.put("falloAlRegistrarse",true);

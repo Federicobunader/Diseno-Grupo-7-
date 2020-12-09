@@ -1,17 +1,19 @@
 package Bitacora;
 
+import BaseDeDatos.EntidadPersistente;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-//@Entity
-//@Table(name="operacion")
-public class Operacion {
-    //@Column
+@Entity
+@Table(name="operacion")
+public class Operacion extends EntidadPersistente {
+    @Column
     private String tipoDeOperacion;
-    //@Column
+    @Column
     private String entidad;
-    //@Column
+    @Column
     private String fechaDeOperacion;
 
 

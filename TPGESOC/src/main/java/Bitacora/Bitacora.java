@@ -7,14 +7,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-//@Entity
-//@Table(name="bitacora")
+@Entity
+@Table(name="bitacora")
 public class Bitacora extends EntidadPersistente {
 
-   // @Transient
+   @Transient
     private static Bitacora instance = null;
-    //@OneToMany
-   // @JoinColumn(name = "bitacora_id", referencedColumnName = "id")
+    @OneToMany(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "bitacora_id", referencedColumnName = "id")
     private List<Operacion> operaciones = new ArrayList<>();
 
     public static Bitacora GetInstance() {
@@ -29,6 +29,10 @@ public class Bitacora extends EntidadPersistente {
 
     public List<Operacion> getOperaciones() {
         return operaciones;
+    }
+
+    public void agregarOperacion (Operacion operacion){
+        operaciones.add(operacion);
     }
 
     public void setOperaciones(List<Operacion> operaciones) {

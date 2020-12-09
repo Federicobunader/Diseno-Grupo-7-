@@ -10,19 +10,21 @@ import java.util.List;
 public class OrdenValorPrimeroEgreso extends CriterioDeVinculacion{
 
     @Override
-    public void vincular(Ingreso ingreso,List<Egreso> egresos) {
+    public void vincular(List<Ingreso> ingresos,List<Egreso> egresos) {
+        ingresos = ordenarIngresosPorValor(ingresos);
+        egresos = ordenarEgresosPorValor(egresos);
 
-
-                for (int j = 0; j < egresos.size(); j++) {
-                    if (ingreso.calcularMontoVinculable() >= egresos.get(j).getCompra().getMonto()/* && egresos.get(j).estaEnElPeriodoAceptable()*/) {
-                        ingreso.vincularEgreso(egresos.get(j));
-                        gestorDeEgresos.egresoVinculado(egresos.get(j));
+        for (int j = 0; j < egresos.size(); j++) {
+            for (int i = 0; i < ingresos.size(); i++) {
+                if (ingresos.get(i).calcularMontoVinculable() >= egresos.get(j).getValorTotal()/* && egresos.get(j).estaEnElPeriodoAceptable()*/) {
+                    ingresos.get(i).vincularEgreso(egresos.get(j));
+                    gestorDeEgresos.egresoVinculado(egresos.get(j));
+                    if (ingresos.get(i).calcularMontoVinculable() == 0) {
+                        gestorDeIngresos.ingresoVinculado(ingresos.get(i));
                     }
+                    break; //sacar si rompe xd
                 }
-                if (ingreso.calcularMontoVinculable() == 0) {
-                    gestorDeIngresos.ingresoVinculado(ingreso);
-                }
-
+            }
+        }
     }
-
 }

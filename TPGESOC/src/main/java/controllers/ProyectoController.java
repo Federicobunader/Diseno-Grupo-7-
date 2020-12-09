@@ -107,10 +107,12 @@ public class ProyectoController {
     public Response guardar(Request request, Response response){
 
         Proyecto proyecto = new Proyecto();
+        OperacionController operacionController = new OperacionController();
 
         Map<String, Object> parametros = new HashMap<>();
         this.asignarAtributosA(proyecto,request);
         this.repo.agregar(proyecto);
+        operacionController.GuardarEnBitacora(proyecto,"ALTA");
         try {
             sleep(2000);
         } catch (InterruptedException e) {

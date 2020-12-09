@@ -40,6 +40,8 @@ public class EntidadBaseController {
             Usuario unUsuario = new Usuario();
             Map<String, Object> parametros = new HashMap<>();
 
+            OperacionController operacionController = new OperacionController();
+
             if(usuarioController.elUsuarioSePuedeRegistrarCorrectamente(unUsuario,request)){
                 EntidadBase entidadBase = new EntidadBase();
                 DireccionPostal direccionPostal = new DireccionPostal();
@@ -49,18 +51,21 @@ public class EntidadBaseController {
 
                 Repositorio<DireccionPostal> repoDireccion = FactoryRepositorio.get(DireccionPostal.class);
                 repoDireccion.agregar(direccionPostal);
+                operacionController.GuardarEnBitacora(direccionPostal,"ALTA");
 
 
                 usuarioController.asignarAtributosA(unUsuario,request);
 
                 Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
                 repoUsuario.agregar(unUsuario);
+                operacionController.GuardarEnBitacora(unUsuario,"ALTA");
 
                 unUsuario.setDireccionPostal(direccionPostal);
                 entidadBase.setUsuario(unUsuario);
 
                 asignarAtributosA(entidadBase,request);
                 this.repo.agregar(entidadBase);
+                operacionController.GuardarEnBitacora(entidadBase,"ALTA");
 
 
             }

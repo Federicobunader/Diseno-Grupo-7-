@@ -48,6 +48,9 @@ public class UsuarioController {
     }
 
     public Response modificar(Request request, Response response){
+
+        OperacionController operacionController = new OperacionController();
+
         Usuario usuario = this.repo.buscar(request.session().attribute("id"));
         DireccionPostalController direccionPostalController = new DireccionPostalController();
 
@@ -55,6 +58,7 @@ public class UsuarioController {
 
         asignarAtributosA(usuario, request);
         this.repo.modificar(usuario);
+        operacionController.GuardarEnBitacora(usuario,"MODIFICACION");
         response.redirect("/menu_logueado");
         return response;
     }
