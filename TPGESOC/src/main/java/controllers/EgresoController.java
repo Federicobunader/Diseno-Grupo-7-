@@ -68,7 +68,7 @@ public class EgresoController {
 
     public Response guardarUsuarioRevisor(Request request, Response response){
 
-        Usuario usuario;
+        Usuario usuario = new Usuario();
 
         if (request.queryParams("usuario_id") != null) {
             int idUsuario = Integer.valueOf(request.queryParams("usuario_id"));
@@ -327,12 +327,21 @@ public class EgresoController {
         egreso = compra.efectuarCompra();
         egreso.setCompra(compra);
 
+        System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 11");
+
         Repositorio<Compra> repoCompra = FactoryRepositorio.get(Compra.class);
         repoCompra.agregar(compra);
         operacionController.GuardarEnBitacora(compra,"ALTA");
 
+        System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 12");
+
         this.repo.agregar(egreso);
+
+        System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 12.5");
+
         operacionController.GuardarEnBitacora(egreso,"ALTA");
+
+        System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 13");
 
         gestorDeEgresos.reiniciarDatosEgreso();
         System.out.println("SALI DEL GUARDAR EGRESO");
@@ -389,9 +398,22 @@ public class EgresoController {
 
             }
 
-            criterioElegido.vincular(ingresos,egresos);
-            for(int i = 0; i<ingresos.size();i++) {
-                repoIngreso.modificar(ingresos.get(i));
+            Date fechaInicial;
+            Date fechaFinal;
+
+            if (request.queryParams("fecha_inicial") != null) {
+                fechaInicial = java.sql.Date.valueOf(request.queryParams("fecha_inicial"));
+
+
+                if (request.queryParams("fecha_final") != null) {
+                    fechaFinal = java.sql.Date.valueOf(request.queryParams("fecha_final"));
+
+
+                    criterioElegido.vincular(ingresos, egresos, fechaInicial, fechaFinal);
+                    for (int i = 0; i < ingresos.size(); i++) {
+                        repoIngreso.modificar(ingresos.get(i));
+                    }
+                }
             }
         }
         System.out.println(("Criterio" + request.queryParams("criterio") ));

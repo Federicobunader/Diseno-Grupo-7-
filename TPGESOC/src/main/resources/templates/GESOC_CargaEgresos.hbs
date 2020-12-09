@@ -139,10 +139,10 @@
                         <h3>Indique el Id del usuario revisor</h3>
                         <div class="field-wrap">
                             <label>
-                                Id del Usuario<span class="req">*</span>
+                                Id del Usuario</span>
                             </label>
                             <input type="text" required autocomplete="off" id="cantidad" name="usuario_id"
-                                class="input-datos"/>
+                                class="input-datos" />
                             <br>
 <!--                            <h3>¿Desea cargar otro usuario?</h3>-->
 
@@ -153,11 +153,8 @@
                 <script type=text/javascript>
                     $(document).on("click", ".button-add",function(){
                         var row = $(".row-usuario").eq(0).clone().show( )
-                        $(".wrapper-usuario").append(row)
+                        $(".wrapper-usuario").append(row);
                     });
-<!--                    var option = document.getElementById("idOption");-->
-<!--                    var name = option.getAttribute("name");-->
-<!--                    option.setAttribute("value", name);-->
                 </script>
             </div>
 

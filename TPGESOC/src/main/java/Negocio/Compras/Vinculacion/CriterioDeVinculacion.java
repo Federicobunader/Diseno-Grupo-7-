@@ -5,14 +5,11 @@ import Negocio.Compras.GestorDeEgresos;
 import Negocio.Compras.GestorDeIngresos;
 import Negocio.Compras.Ingreso;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public abstract class CriterioDeVinculacion {
 
-    public abstract void vincular(List<Ingreso> ingresos,List<Egreso> egresos);
+    public abstract void vincular(List<Ingreso> ingresos, List<Egreso> egresos, Date fechaInicia, Date fechaFinal);
 
     protected GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();
     protected GestorDeIngresos gestorDeIngresos = GestorDeIngresos.GetInstance();

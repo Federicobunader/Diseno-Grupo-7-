@@ -3,6 +3,7 @@ package server;
 import Bitacora.Bitacora;
 import controllers.*;
 import middleware.AuthMiddleware;
+import spark.ResponseTransformer;
 import spark.Spark;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 import spark.utils.BooleanHelper;
@@ -39,7 +40,7 @@ public class Router {
         MensajeController mensajeController = new MensajeController();
         CategoriaController categoriaController = new CategoriaController();
         ProyectoController proyectoController = new ProyectoController();
-        OperacionController bitacoraController = new OperacionController();
+        OperacionController operacionController = new OperacionController();
         Bitacora bitacora = new Bitacora();
 
         Spark.get("/", loginController::inicio, Router.engine);
@@ -100,7 +101,7 @@ public class Router {
 
         Spark.post("/vincular_proy", proyectoController :: vincularProyecto);
 
-        Spark.get("/bitacora_operaciones", bitacoraController:: bitacora,Router.engine);
+        Spark.get("/bitacora_operaciones", operacionController:: bitacora,Router.engine);
 
         //Spark.get("/GESOC_Menu",empresaController::guardar,Router.engine);
        // Spark.get("/saludo/:nombre/:apellido",((request, response) -> "HOLA " + request.params("nombre") + request.params("apellido") ));
