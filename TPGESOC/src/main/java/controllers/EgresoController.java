@@ -16,10 +16,7 @@ import spark.ModelAndView;
 import spark.Request;
 import spark.Response;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class EgresoController {
 
@@ -178,7 +175,6 @@ public class EgresoController {
         Item item = new Item();
         Producto producto = new Producto();
         MedioDePago medioDePago = new MedioDePago();
-
 /*
         if (request.queryParams("productos_id") != null) {
             int idProducto = Integer.valueOf(request.queryParams("productos_id"));
@@ -186,54 +182,43 @@ public class EgresoController {
             producto = repoProducto.buscar(idProducto);
         }
         System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 1");
-
         if(producto != null){
             if (request.queryParams("productos_cantidad") != null) {
                 int cantidad = Integer.valueOf(request.queryParams("productos_cantidad"));
                 item.setProducto(producto);
                 item.setCantidad(cantidad);
-
                 Repositorio<Item> repoItem = FactoryRepositorio.get(Item.class);
                 repoItem.agregar(item);
-
                 gestorDeEgresos.agregarItemAListaDeItemDeEgreso(item);
             }
         }
 */
         System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 2");
         System.out.println("USUARIO_ID =" + request.queryParams("usuario_id"));
-
         if (request.queryParams("usuario_id") != null) {
             int idUsuario = Integer.valueOf(request.queryParams("usuario_id"));
             Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
             usuario = repoUsuario.buscar(idUsuario);
-
             if(usuario != null){
                 gestorDeEgresos.agregarUsuarioRevisorAListaDeUsuarioRevisoresDeEgreso(usuario);
             }
         }
-
         System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 3");
-
         Documento documento = new Documento();
         System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 4");
-
         if (request.queryParams("documento_id") != null) {
             int idDocumento = Integer.valueOf(request.queryParams("documento_id"));
             Repositorio<Documento> repoDocumentos = FactoryRepositorio.get(Documento.class);
             documento = repoDocumentos.buscar(idDocumento);
-
             if(documento != null){
                 gestorDeEgresos.agregarDocumentoALaListaDeDocumentosDelEgreso(documento);
             }
         }
         System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 5");
-
         compra.setItems(gestorDeEgresos.getItemsAAgregarAUnEgreso());
         compra.setUsuariosRevisores(gestorDeEgresos.getUsuariosRevisoresDeUnEgreso());
         compra.setPresupuestos(gestorDeEgresos.getPresupuestosDelEgreso());
         compra.setDocumentosComerciales(gestorDeEgresos.getDocumentosDelEgreso());
-
         if (request.queryParams("requierePresupuesto") != null) {
             int valorBool = Integer.valueOf(request.queryParams("requierePresupuesto"));
             if(valorBool == 1) {
@@ -250,8 +235,6 @@ public class EgresoController {
                 if (presupuestoElegido != null) {
                     compra.setPresupuestoElegido(presupuestoElegido);
                 }
-
-
                 if (presupuesto != null) {
                     gestorDeEgresos.agregarPresupuestoALaListaDePresupuestosDelEgreso(presupuesto);
                 }
@@ -260,30 +243,22 @@ public class EgresoController {
             else if(valorBool == 2){
                 compra.setRequierePresupuesto(false);
             }
-
         }
-
         System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 6");
-
-
         System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 7");
-
         if (request.queryParams("tipoDePago") != null) {
             int idMedioDePago = Integer.valueOf(request.queryParams("tipoDePago"));
             Repositorio<MedioDePago> repoMedioDePago = FactoryRepositorio.get(MedioDePago.class);
             medioDePago = repoMedioDePago.buscar(idMedioDePago);
-
             if(medioDePago != null){
                 compra.setMedioDePago(medioDePago);
             }
         }
-
         System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 8");
         if (request.queryParams("entidad_id") != null) {
             int idEntidad = Integer.valueOf(request.queryParams("entidad_id"));
             Empresa empresa = new Empresa();
             EntidadBase entidadBase = new EntidadBase();
-
             for(int i = 0; i < gestorDeEgresos.getEmpresasDelEgreso().size();i++){
                 if(gestorDeEgresos.getEmpresasDelEgreso().get(i).getId() == idEntidad){
                     empresa = gestorDeEgresos.getEmpresasDelEgreso().get(i);
@@ -296,23 +271,21 @@ public class EgresoController {
                     compra.setEntidad(entidadBase);
                 }
             }
-
         }
-
         System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 9");
-
         if (request.queryParams("proveedor_id") != null) {
             Proveedor proveedor = new Proveedor();
             int idProveedor = Integer.valueOf(request.queryParams("proveedor_id"));
             Repositorio<Proveedor> repoProveedor = FactoryRepositorio.get(Proveedor.class);
             proveedor = repoProveedor.buscar(idProveedor);
-
             if(proveedor != null){
                 compra.setProveedor(proveedor);
             }
         }
 
         System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 10");
+
+
 
         System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 11");
         System.out.println("USUARIO = " + usuario.getUsuario());
@@ -324,32 +297,23 @@ public class EgresoController {
         egreso.setFechaDeOperacion(new Date());
         egreso.setValorTotal(compra.valorTotal());
 */
+
         egreso = compra.efectuarCompra();
         egreso.setCompra(compra);
-
-        System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 11");
 
         Repositorio<Compra> repoCompra = FactoryRepositorio.get(Compra.class);
         repoCompra.agregar(compra);
         operacionController.GuardarEnBitacora(compra,"ALTA");
 
-        System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 12");
-
         this.repo.agregar(egreso);
-
-        System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 12.5");
-
         operacionController.GuardarEnBitacora(egreso,"ALTA");
-
-        System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 13");
 
         gestorDeEgresos.reiniciarDatosEgreso();
         System.out.println("SALI DEL GUARDAR EGRESO");
-
         response.redirect("/menu_logueado");
         return response;
-
     }
+
 
     public ModelAndView mostrarTodos(Request request, Response response){
         Map<String, Object> parametros = new HashMap<>();

@@ -204,6 +204,7 @@ public class Compra extends EntidadPersistente {
 		Date date = new Date();
 		Egreso nuevoEgreso = new Egreso(this,date,this.valorTotal());
 
+
 		GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();
 		gestorDeEgresos.getEgresos().add(nuevoEgreso);
 		nuevoEgreso.agregarCompraYPresupuesto();

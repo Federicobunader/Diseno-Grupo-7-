@@ -1,24 +1,31 @@
+
 package Negocio.Compras;
 
 import BaseDeDatos.EntidadPersistente;
-import Negocio.Compras.Compra;
-import Negocio.Compras.GestorDeEgresos;
-
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table(name="egreso")
 public class Egreso  extends EntidadPersistente {
+
     @OneToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "compra_id", referencedColumnName = "id")
     private Compra compra;
+
     @Column(columnDefinition = "DATE")
     private Date fechaDeOperacion;
+
     @Column
     private double valorTotal;
+
+    @ManyToOne
+    @JoinColumn(name = "ingreso_id", referencedColumnName = "id")
+    private Ingreso ingresoAVincular;
+
     @Transient
     GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();
+
     public Egreso(Compra unaCompra, Date unaFechaDeOperacion, double unValorTotal) {
         this.compra = unaCompra;
         this.fechaDeOperacion = unaFechaDeOperacion;
@@ -47,13 +54,19 @@ public class Egreso  extends EntidadPersistente {
     public void agregarCompraYPresupuesto(){
         gestorDeEgresos.registrarCompra(compra);
     }
-
     public boolean estaEnElPeriodoAceptable(Date fechaInicial,Date fechaFinal){
         return fechaDeOperacion.after(fechaInicial) && fechaDeOperacion.before(fechaFinal);
     }
-
     public void setValorTotal(double valorTotal) {
         this.valorTotal = valorTotal;
     }
 
-} 
+    public Ingreso getIngreso() {
+        return ingresoAVincular;
+    }
+
+    public void setIngreso(Ingreso ingreso) {
+        this.ingresoAVincular = ingreso;
+    }
+}
+
