@@ -1,6 +1,7 @@
 package server;
 
 import Bitacora.Bitacora;
+import Negocio.Proveedor;
 import controllers.*;
 import middleware.AuthMiddleware;
 import spark.ResponseTransformer;
@@ -41,6 +42,7 @@ public class Router {
         CategoriaController categoriaController = new CategoriaController();
         ProyectoController proyectoController = new ProyectoController();
         OperacionController operacionController = new OperacionController();
+        ProveedorController proveedorController = new ProveedorController();
         Bitacora bitacora = new Bitacora();
 
         Spark.get("/", loginController::inicio, Router.engine);
@@ -68,6 +70,8 @@ public class Router {
         Spark.get("/listado_por_categoria",categoriaController :: mostrarTodosParaVisualizar,Router.engine);
 
         Spark.get("/buscar_productos_de_categoria",categoriaController :: mostrarProductosDeLasCategoria,Router.engine);
+
+        Spark.get("/mostrar_productos_del_proveedor",proveedorController :: mostrarProductosDelProveedor,Router.engine);
 
         Spark.post("/loguearse", loginController::login);
 

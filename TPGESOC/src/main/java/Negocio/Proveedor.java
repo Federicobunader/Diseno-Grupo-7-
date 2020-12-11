@@ -1,8 +1,10 @@
 package Negocio;
 
 import BaseDeDatos.EntidadPersistente;
+import Negocio.Compras.Producto;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="proveedor")
@@ -12,6 +14,9 @@ public class Proveedor extends EntidadPersistente {
 	private String nombre;
 	@Column
 	private int numeroID;
+
+	@OneToMany(mappedBy = "proveedor",cascade = {CascadeType.ALL})
+	private List<Producto> productos;
 
 	public Proveedor(String nombre, int numeroID) {
 		this.nombre = nombre;
@@ -35,5 +40,13 @@ public class Proveedor extends EntidadPersistente {
 
 	public int getNumeroID() {
 		return numeroID;
+	}
+
+	public List<Producto> getProductos() {
+		return productos;
+	}
+
+	public void setProductos(List<Producto> productos) {
+		this.productos = productos;
 	}
 }//end Proveedor

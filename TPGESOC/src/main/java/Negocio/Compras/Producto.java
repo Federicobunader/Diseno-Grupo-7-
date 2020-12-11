@@ -15,7 +15,8 @@ public class Producto  extends EntidadPersistente {
 	private String nombre;
 	@Column
 	private int precio;
-	@OneToOne(cascade = {CascadeType.ALL})
+
+	@ManyToOne
 	@JoinColumn(name = "proveedor_id", referencedColumnName = "id")
 	private Proveedor proveedor;
 	@Column
