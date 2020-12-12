@@ -4,6 +4,7 @@ import BaseDeDatos.EntidadPersistente;
 import Negocio.Compras.Producto;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -16,7 +17,7 @@ public class Proveedor extends EntidadPersistente {
 	private int numeroID;
 
 	@OneToMany(mappedBy = "proveedor",cascade = {CascadeType.ALL})
-	private List<Producto> productos;
+	private List<Producto> productos = new ArrayList<>();
 
 	public Proveedor(String nombre, int numeroID) {
 		this.nombre = nombre;

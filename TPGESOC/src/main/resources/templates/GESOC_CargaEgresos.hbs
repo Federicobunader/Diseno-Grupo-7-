@@ -28,7 +28,7 @@
         <!-- partial:index.partial.html -->
 
         <div class="form">
-            <form class="" action="/mostrar_productos_del_proveedor" method="get" style="">
+            <!--<form class="" action="/mostrar_productos_del_proveedor" method="get" style="">-->
             <h2>Agregue el proveedor de su egreso</h2>
             <h3>Visualice los proveedores de GESOC</h3>
 
@@ -61,20 +61,18 @@
 
             <h3>Indique el Id del proveedor y presione el botón</h3>
 
-            <div class="field-wrap">
-                <label>
-                    Id del Proveedor<span class="req">*</span>
-                </label>
-                <input type="text" required autocomplete="off" id="cantidad" name="proveedor_id"
-                       class="input-datos" />
-            </div>
-
+                <div class="field-wrap">
+                    <label>
+                        Id del Proveedor<span class="req">*</span>
+                    </label>
+                    <input type="text" required autocomplete="off" id="Altura" name="proveedor_id" class="input-datos" />
+                </div>
 
             <br>
             <button type="submit" class="button button-back">Mostrar Productos del Proveedor</button>
 
             <br>
-            </form>
+            <!--</form>-->
         </div>
 
 
@@ -103,7 +101,7 @@
                         </thead>
 
                         <tbody>
-                        {{#each productosProveedor}}
+                        {{#each productos}}
                             <tr>
                                 <td><i class="fas fa-user"></i> {{id}}</td>
                                 <td>{{nombre}}</td>
@@ -369,7 +367,7 @@
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script src="/js/GESOC_CargarEgresos.js"></script>
 
-        <button type="submit" class="button button-back" onclick = 'this.form.submit();'>Confirmar Egreso</button>
+        <button type="submit" class="button button-back" onclick="window.location.href='/menu_logueado'">Confirmar Egreso</button>
 
     </form>
 </div>

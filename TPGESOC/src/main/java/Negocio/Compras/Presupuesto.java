@@ -11,12 +11,10 @@ import java.util.List;
 @Table(name="presupuesto")
 public class Presupuesto  extends EntidadPersistente {
 
-    @OneToMany
-    @JoinColumn(name = "presupuesto_id", referencedColumnName = "id")
+    @OneToMany(mappedBy = "presupuestoDelItem",cascade = {CascadeType.ALL})
     private List<Item> items = new ArrayList<Item>();
 
-    @OneToMany
-    @JoinColumn(name = "presupuesto_id", referencedColumnName = "id")
+    @OneToMany(mappedBy = "presupuestoDelDocumento",cascade = {CascadeType.ALL})
     private List<Documento> documentosComerciales = new ArrayList<Documento>();
 
     @Column

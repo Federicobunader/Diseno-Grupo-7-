@@ -19,6 +19,10 @@ public class Item  extends EntidadPersistente {
 	@Column
 	private int cantidad;
 
+	@ManyToOne
+	@JoinColumn(name = "presupuesto_id", referencedColumnName = "id")
+	private Presupuesto presupuestoDelItem;
+
 	@Transient
 	private GestorDeCriterios gestorDeCriterios = GestorDeCriterios.GetInstance();
 

@@ -42,22 +42,11 @@ public class ProveedorController {
 
         Map<String, Object> parametros = new HashMap<>();
 
-        //if(request.queryParams("proveedor_id") != null) {
+        Proveedor proveedor = this.repo.buscar(Integer.valueOf(request.queryParams("id")));
 
-            int IdProveedor = Integer.valueOf(request.queryParams("proveedor_id"));
-            Proveedor proveedor = this.repo.buscar(IdProveedor);
-            System.out.println("Proveedor elegido = "+ proveedor.getNombre());
-            System.out.println("PRODUCTOS PROVEEDOR elegido = "+ proveedor.getProductos().size());
-
-            List <Producto> productosProveedor = new ArrayList<>();
-            productosProveedor.addAll(proveedor.getProductos());
-
-            for(int i = 0; i < productosProveedor.size(); i++){
-                System.out.println("PRODUCTOS EN LA POSICION = "+ i + ")"+productosProveedor.get(i).getNombre());
-            }
-
-            parametros.put("productosProveedor",productosProveedor);
-//        }
+        System.out.println("NOMBRE PROVEEDOR =" + proveedor.getNombre());
+        System.out.println("CANTIDAD PRODUCTOS PROVEEDOR =" + proveedor.getProductos().size());
+        parametros.put("productosProveedor",proveedor.getProductos());
 
         UsuarioController usuarioController = new UsuarioController();
         Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);

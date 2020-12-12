@@ -1,6 +1,7 @@
 package controllers;
 
 import Negocio.Compras.*;
+import Negocio.Compras.Criterios.MenorValor;
 import Negocio.Compras.Vinculacion.*;
 import Negocio.Documento;
 import Negocio.Entidad.Empresa.Empresa;
@@ -121,32 +122,21 @@ public class EgresoController {
         Map<String, Object> parametros = new HashMap<>();
 
         //if(request.queryParams("proveedor_id") != null) {
-
+        Proveedor proveedor = new Proveedor();
         List <Producto> productosProveedor = new ArrayList<>();
+        List <Producto> productosAux = new ArrayList<>();
         Repositorio<Proveedor> repoProveedor = FactoryRepositorio.get(Proveedor.class);
 
-        Producto producto1 = new Producto();
-        producto1.setNombre("Prod 1");
-        producto1.setDescripcion("asd");
-        producto1.setPrecio(1000);
-
-        producto1.setProveedor(null);
-
-        System.out.println("CLAVE PROVEEDOR = ");
-        productosProveedor.add(producto1);
         try{
-            Proveedor proveedor = repoProveedor.buscar(Integer.valueOf(request.queryParams("proveedor_id")));
+            proveedor = repoProveedor.buscar(Integer.valueOf(request.queryParams("proveedor_id")));
 
-            System.out.println("Proveedor elegido = "+ proveedor.getNombre());
+            productosAux.addAll(proveedor.getProductos());
+
+
             System.out.println("PRODUCTOS PROVEEDOR elegido = "+ proveedor.getProductos().size());
 
-
-            //productosProveedor.addAll(proveedor.getProductos());
-
-
-
-            for(int i = 0; i < productosProveedor.size(); i++){
-                System.out.println("PRODUCTOS EN LA POSICION = "+ i + ")"+productosProveedor.get(i).getNombre());
+            for(int i = 0; i < productosAux.size(); i++){
+                productosProveedor.add(productosAux.get(i));
             }
 
 
@@ -156,6 +146,14 @@ public class EgresoController {
 
 
 //        }
+
+        System.out.println("PRODUCTOS PROVEEDOR elegido = "+ proveedor.getProductos().size());
+        for(int i = 0; i < proveedor.getProductos().size(); i++){
+            System.out.println("PRODUCTO = "+ proveedor.getProductos().get(i).getNombre());
+            productosProveedor.add(proveedor.getProductos().get(i));
+        }
+
+        System.out.println("Proveedor elegido = "+ proveedor.getNombre());
         parametros.put("productosProveedor",productosProveedor);
         UsuarioController usuarioController = new UsuarioController();
         Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
@@ -187,6 +185,10 @@ public class EgresoController {
 
     private Map<String, Object> parametrosEgresos(Request request, Response response){
         Map<String, Object> parametros = new HashMap<>();
+
+        Repositorio<Producto> repoProducto = FactoryRepositorio.get(Producto.class);
+        List<Producto> productos = repoProducto.buscarTodos();
+        parametros.put("productos", productos);
 
         UsuarioController usuarioController = new UsuarioController();
         Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
@@ -227,7 +229,7 @@ public class EgresoController {
 
     public Response guardarEgreso(Request request, Response response){
 
-        if (request.queryParams("tipoDePago") != null) {
+        //if (request.queryParams("tipoDePago") != null) {
 
             OperacionController operacionController = new OperacionController();
 
@@ -252,11 +254,6 @@ public class EgresoController {
                 }
             }
 
-
-
-
-            /*
-
             if (request.queryParams("productos_id") != null) {
                 int idProducto = Integer.valueOf(request.queryParams("productos_id"));
                 Repositorio<Producto> repoProducto = FactoryRepositorio.get(Producto.class);
@@ -273,7 +270,7 @@ public class EgresoController {
                     gestorDeEgresos.agregarItemAListaDeItemDeEgreso(item);
                 }
             }
-    */
+
             System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 2");
             System.out.println("USUARIO_ID =" + request.queryParams("usuario_id"));
             if (request.queryParams("usuario_id") != null) {
@@ -308,11 +305,11 @@ public class EgresoController {
                         Repositorio<Presupuesto> repoPresupuestos = FactoryRepositorio.get(Presupuesto.class);
                         presupuesto = repoPresupuestos.buscar(idPresupuesto);
                     }
-                    if (request.queryParams("presupuesto_elegido_id") != null) {
-                        int idPresupuestoElegido = Integer.valueOf(request.queryParams("presupuesto_elegido_id"));
-                        Repositorio<Presupuesto> repoPresupuestos = FactoryRepositorio.get(Presupuesto.class);
-                        presupuestoElegido = repoPresupuestos.buscar(idPresupuestoElegido);
-                    }
+
+                    MenorValor menorValor = new MenorValor();
+                    List <Presupuesto> presupuestos = new ArrayList<>();
+                    presupuestos.add(presupuesto);
+                    presupuestoElegido = menorValor.elegirPresupuesto(presupuestos);
                     if (presupuestoElegido != null) {
                         compra.setPresupuestoElegido(presupuestoElegido);
                     }
@@ -383,16 +380,10 @@ public class EgresoController {
             System.out.println("SALI DEL GUARDAR EGRESO");
             response.redirect("/menu_logueado");
 
-        }
-        else{
-            if(request.queryParams("proveedor_id") != null){
-                int idProveedor = Integer.valueOf(request.queryParams("proveedor_id"));
-                System.out.println("PROVEEDOR en EGRESO = "+ Integer.valueOf(request.queryParams("proveedor_id")));
-                ProveedorController proveedorController = new ProveedorController();
-                proveedorController.mostrarProductosDelProveedor(request,response);
-                response.redirect("/mostrar_productos_del_proveedor");
-            }
-        }
+       // }
+       // else{
+            //response.redirect("/cargar_egreso");
+        //}
 
         return response;
     }

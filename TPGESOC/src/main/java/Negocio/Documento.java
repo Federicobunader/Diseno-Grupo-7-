@@ -1,6 +1,7 @@
 package Negocio;
 
 import BaseDeDatos.EntidadPersistente;
+import Negocio.Compras.Presupuesto;
 
 import javax.persistence.*;
 
@@ -12,6 +13,10 @@ public class Documento extends EntidadPersistente {
 	private int numero;
 	@Column
 	private String tipo;
+
+	@ManyToOne
+	@JoinColumn(name = "presupuesto_id", referencedColumnName = "id")
+	private Presupuesto presupuestoDelDocumento;
 
 	public Documento(int unNumero, String unTipo) {
 		numero = unNumero;
