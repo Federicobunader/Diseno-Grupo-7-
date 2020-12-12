@@ -71,7 +71,7 @@ public class Router {
 
         Spark.get("/buscar_productos_de_categoria",categoriaController :: mostrarProductosDeLasCategoria,Router.engine);
 
-        Spark.get("/mostrar_productos_del_proveedor",proveedorController :: mostrarProductosDelProveedor,Router.engine);
+        Spark.get("/mostrar_productos_del_proveedor",egresoController :: mostrarProductosDelProveedor,Router.engine);
 
         Spark.post("/loguearse", loginController::login);
 

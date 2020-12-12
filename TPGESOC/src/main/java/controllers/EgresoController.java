@@ -116,6 +116,75 @@ public class EgresoController {
         return null;
     }
 
+    public ModelAndView mostrarProductosDelProveedor(Request request, Response response) {
+
+        Map<String, Object> parametros = new HashMap<>();
+
+        //if(request.queryParams("proveedor_id") != null) {
+
+        List <Producto> productosProveedor = new ArrayList<>();
+        Repositorio<Proveedor> repoProveedor = FactoryRepositorio.get(Proveedor.class);
+
+        Producto producto1 = new Producto();
+        producto1.setNombre("Prod 1");
+        producto1.setDescripcion("asd");
+        producto1.setPrecio(1000);
+
+        producto1.setProveedor(null);
+
+        System.out.println("CLAVE PROVEEDOR = ");
+        productosProveedor.add(producto1);
+        try{
+            Proveedor proveedor = repoProveedor.buscar(Integer.valueOf(request.queryParams("proveedor_id")));
+
+            System.out.println("Proveedor elegido = "+ proveedor.getNombre());
+            System.out.println("PRODUCTOS PROVEEDOR elegido = "+ proveedor.getProductos().size());
+
+
+            //productosProveedor.addAll(proveedor.getProductos());
+
+
+
+            for(int i = 0; i < productosProveedor.size(); i++){
+                System.out.println("PRODUCTOS EN LA POSICION = "+ i + ")"+productosProveedor.get(i).getNombre());
+            }
+
+
+        }catch (Exception e){
+            System.out.println("Error");
+        }
+
+
+//        }
+        parametros.put("productosProveedor",productosProveedor);
+        UsuarioController usuarioController = new UsuarioController();
+        Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
+        List<Usuario> usuarios = repoUsuario.buscarTodos();
+        parametros.put("usuarios", usuarios);
+
+        PresupuestoController presupuestoController = new PresupuestoController();
+        Repositorio<Presupuesto> repoPresupuesto = FactoryRepositorio.get(Presupuesto.class);
+        List<Presupuesto> presupuestos = repoPresupuesto.buscarTodos();
+        parametros.put("presupuestos", presupuestos);
+
+        Repositorio<Documento> repoDocumentos = FactoryRepositorio.get(Documento.class);
+        List<Documento> documentos = repoDocumentos.buscarTodos();
+        parametros.put("documentos", documentos);
+
+        Repositorio<Empresa> repoEmpresas = FactoryRepositorio.get(Empresa.class);
+        List<Empresa> empresas = repoEmpresas.buscarTodos();
+        parametros.put("empresas", empresas);
+
+        Repositorio<EntidadBase> repoEntidadBase = FactoryRepositorio.get(EntidadBase.class);
+        List<EntidadBase> entidadBases = repoEntidadBase.buscarTodos();
+        parametros.put("entidadBases", entidadBases);
+
+        List<Proveedor> proveedores = repoProveedor.buscarTodos();
+        parametros.put("proveedores", proveedores);
+
+        return new ModelAndView(parametros, "GESOC_CargaEgresos.hbs");
+    }
+
     private Map<String, Object> parametrosEgresos(Request request, Response response){
         Map<String, Object> parametros = new HashMap<>();
 
