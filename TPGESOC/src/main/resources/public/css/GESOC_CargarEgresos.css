@@ -500,6 +500,7 @@ textarea {
     }
     h3 {
         color: #a0b3b0;
+        text-align: justify;
     }
     table {
         width: 100%;
