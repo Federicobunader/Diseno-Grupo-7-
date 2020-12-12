@@ -68,7 +68,7 @@ $('.form').find('input, textarea').on('keyup blur focus', function (e) {
     table = document.getElementById("tablaProductos");
     tr = table.getElementsByTagName("tr");
     for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[1];
+      td = tr[i].getElementsByTagName("td")[4];
       if (td) {
         txtValue = td.textContent || td.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
