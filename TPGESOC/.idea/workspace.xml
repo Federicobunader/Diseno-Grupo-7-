@@ -52,8 +52,140 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c56b04db-f42a-40a7-8d18-c78ae2368dc3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Bitacora/GuardadorDeLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Bitacora/GuardadorDeLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/Repositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/Repositorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/GESOC_Bandeja_Mensajes.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/css/GESOC_Bandeja_Mensajes.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarIngresoAEgreso.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarIngresoAEgreso.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarItemACategoria.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarItemACategoria.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_CrearProyecto.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_CrearProyecto.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Login.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Login.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu_Logueado.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu_Logueado.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/API/APIGeografia/Ciudad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/APIGeografia/Ciudad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/API/APIGeografia/ListadoDeCiudades$Parametro.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/APIGeografia/ListadoDeCiudades$Parametro.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/API/APIGeografia/ListadoDeCiudades.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/APIGeografia/ListadoDeCiudades.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/API/APIGeografia/ListadoDePaises.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/APIGeografia/ListadoDePaises.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/API/APIGeografia/ListadoDeProvincias$Parametro.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/APIGeografia/ListadoDeProvincias$Parametro.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/API/APIGeografia/ListadoDeProvincias.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/APIGeografia/ListadoDeProvincias.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/API/APIGeografia/Pais.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/APIGeografia/Pais.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/API/APIGeografia/Provincia.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/APIGeografia/Provincia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/API/APIMoneda/Conversor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/APIMoneda/Conversor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/API/APIMoneda/ListadoDeConversiones.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/APIMoneda/ListadoDeConversiones.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/API/APIMoneda/ListadoDeMonedas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/APIMoneda/ListadoDeMonedas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/API/APIMoneda/Moneda.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/APIMoneda/Moneda.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/API/Servicios/CurrenciesServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/Servicios/CurrenciesServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/API/Servicios/GeorefService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/Servicios/GeorefService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/API/Servicios/ServicioGeoref.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/Servicios/ServicioGeoref.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/API/Servicios/ServicioMonedas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API/Servicios/ServicioMonedas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/BaseDeDatos/EntidadPersistente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/BaseDeDatos/EntidadPersistente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/BaseDeDatos/EntityManagerHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/BaseDeDatos/EntityManagerHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Bitacora/Bitacora.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Bitacora/Bitacora.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Bitacora/GuardadorDeLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Bitacora/GuardadorDeLog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Bitacora/MongoDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Bitacora/MongoDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Bitacora/Operacion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Bitacora/Operacion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/InterfazDeUsuario/InterfazPassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/InterfazDeUsuario/InterfazPassword.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/InterfazDeUsuario/InterfazUsuarios.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/InterfazDeUsuario/InterfazUsuarios.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/CategoriaItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/CategoriaItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Componente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Componente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Compra.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Compra.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/CriterioDeItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/CriterioDeItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Criterios/Criterio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Criterios/Criterio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Criterios/MenorValor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Criterios/MenorValor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Egreso.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Egreso.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/GestorDeCriterios.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/GestorDeCriterios.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/GestorDeEgresos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/GestorDeEgresos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/GestorDeIngresos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/GestorDeIngresos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Ingreso.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Ingreso.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Presupuesto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Presupuesto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Producto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Producto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Scheduler/ImplementarScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Scheduler/ImplementarScheduler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Scheduler/TriggerValidador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Scheduler/TriggerValidador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Validador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Validador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/CriterioDeVinculacion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/CriterioDeVinculacion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/Mix.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/Mix.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/OrdenValorPrimeroEgreso.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/OrdenValorPrimeroEgreso.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/OrdenValorPrimeroIngreso.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/OrdenValorPrimeroIngreso.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/PorFecha.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/PorFecha.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/Vinculador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/Vinculacion/Vinculador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Compras/producto_x_categoria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Compras/producto_x_categoria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Documento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Documento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/Categorizador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/Categorizador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/Empresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/Empresa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MedianaTramo1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MedianaTramo1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MedianaTramo2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MedianaTramo2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MicroEmpresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/MicroEmpresa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/PequeniaEmpresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/PequeniaEmpresa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/TipoDeEmpresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeEmpresas/TiposDeEmpresas/TipoDeEmpresa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Agropecuaria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Agropecuaria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Comercio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Comercio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Construccion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Construccion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/IndustriaYMinera.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/IndustriaYMinera.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Servicios.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/Servicios.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/TipoDeSector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Empresa/TipoDeSector/TipoDeSector/TipoDeSector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Entidad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/Entidad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/EntidadBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/EntidadBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/EntidadJuridica.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/EntidadJuridica.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Entidad/OSC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Entidad/OSC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/MedioDePago.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/MedioDePago.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Proveedor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Proveedor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Proyecto/GestorDeProyectos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Proyecto/GestorDeProyectos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Proyecto/Proyecto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Proyecto/Proyecto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Sistema.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Sistema.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Usuario/Administrador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Usuario/Administrador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Usuario/DireccionPostal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Usuario/DireccionPostal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Usuario/GestorDePasswords.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Usuario/GestorDePasswords.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Usuario/GestorDeUsuarios.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Usuario/GestorDeUsuarios.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Usuario/Mensaje.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Usuario/Mensaje.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Usuario/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Usuario/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Negocio/Usuario/Usuario_x_mensaje.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Negocio/Usuario/Usuario_x_mensaje.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/CategoriaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/CategoriaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/CompraController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/CompraController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/DireccionPostalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/DireccionPostalController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/EgresoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/EgresoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/EmpresaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/EmpresaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/EntidadBaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/EntidadBaseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/IngresoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/IngresoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/ItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/ItemController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/MensajeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/MensajeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/OperacionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/OperacionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/PresupuestoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/PresupuestoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/ProductoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/ProductoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/ProveedorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/ProveedorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/ProyectoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/ProyectoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/UsuarioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/converters/LocalDateAttributeConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/converters/LocalDateAttributeConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/middleware/AuthMiddleware.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/middleware/AuthMiddleware.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/BusquedaCondicional.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/BusquedaCondicional.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/Repositorio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/Repositorio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/RepositorioDeEntidades.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/RepositorioDeEntidades.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/RepositorioDeUsuarios.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/RepositorioDeUsuarios.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/RepositorioMensajesPorUsuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/RepositorioMensajesPorUsuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/daos/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/daos/DAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/daos/DAOHibernate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/daos/DAOHibernate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/daos/DAOMemoria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/daos/DAOMemoria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/daos/DAOMensaje.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/daos/DAOMensaje.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/factories/FactoryRepositorio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/factories/FactoryRepositorio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/factories/FactoryRepositorioEntidad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/factories/FactoryRepositorioEntidad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/factories/FactoryRepositorioMensajesPorUsuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/factories/FactoryRepositorioMensajesPorUsuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/factories/FactoryRepositorioUsuarios.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/factories/FactoryRepositorioUsuarios.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/testMemoData/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/testMemoData/Data.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/Router.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/Router.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spark/utils/BooleanHelper$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spark/utils/BooleanHelper$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spark/utils/BooleanHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spark/utils/BooleanHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spark/utils/DarkMagic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spark/utils/DarkMagic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spark/utils/HandlebarsTemplateEngineBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spark/utils/HandlebarsTemplateEngineBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/EmTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/EmTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Negocio/Compras/CompraTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Negocio/Compras/CompraTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Negocio/Entidad/Empresa/CategorizadorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Negocio/Entidad/Empresa/CategorizadorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Negocio/Entidad/Empresa/EmpresaTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Negocio/Entidad/Empresa/EmpresaTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -75,84 +207,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_CargaEgresos.hbs">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarIngresoAEgreso.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1479">
-              <caret line="87" column="4" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="4" />
+            <state relative-caret-position="98">
+              <caret line="125" column="67" lean-forward="true" selection-start-line="125" selection-start-column="67" selection-end-line="125" selection-end-column="67" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Bandeja_Mensajes.hbs">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MensajeController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/GESOC_Bandeja_Mensajes.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="36" column="80" selection-start-line="35" selection-start-column="8" selection-end-line="36" selection-end-column="80" />
+            <state relative-caret-position="221">
+              <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_VisualizarIngEgPorCategoria.hbs">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_CrearProyecto.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="124" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="124" />
+            <state relative-caret-position="251">
+              <caret line="103" column="26" lean-forward="true" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EgresoController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu_Logueado.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="255" column="93" lean-forward="true" selection-start-line="255" selection-start-column="93" selection-end-line="255" selection-end-column="93" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Usuario/Usuario.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Entidad/Entidad.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Item.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/server/Router.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="74" selection-start-line="74" selection-end-line="74" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -171,8 +256,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>producto</find>
-      <find>button-bac</find>
       <find>lupa</find>
       <find>back</find>
       <find>row.usuar</find>
@@ -201,6 +284,8 @@
       <find>PROVEEDOR EN</find>
       <find>proveedorcon</find>
       <find>h3</find>
+      <find>OK</find>
+      <find>proyecto</find>
     </findStrings>
     <replaceStrings>
       <replace>presupuesto</replace>
@@ -226,6 +311,14 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/GESOC_CargaEgresos.hbs" />
         <option value="$PROJECT_DIR$/src/main/resources/public/css/GESOC_CargarEgresos.css" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/EgresoController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Bitacora/GuardadorDeLog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Bitacora/MongoDB.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/GESOC_Login.hbs" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarItemACategoria.hbs" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarIngresoAEgreso.hbs" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/css/GESOC_Bandeja_Mensajes.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/GESOC_CrearProyecto.hbs" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu_Logueado.hbs" />
       </list>
     </option>
   </component>
@@ -235,18 +328,26 @@
     <option name="width" value="1490" />
     <option name="height" value="990" />
   </component>
+  <component name="ProjectId" id="1lc5d0ZP9VyzBkD2L1rEolEeBRy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
               <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
@@ -363,6 +464,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -390,8 +508,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -411,7 +527,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -581,8 +697,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.489842" visible="true" weight="0.20268457" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.489842" visible="true" weight="0.2080537" />
       <window_info id="Structure" order="1" sideWeight="0.510158" side_tool="true" weight="0.31208053" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -684,34 +801,35 @@
     </state>
     <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1360.768@0.0.1366.728" timestamp="1605896186337" />
     <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1607724941462" />
-    <state width="1322" height="178" key="GridCell.Tab.0.bottom" timestamp="1607730040569">
+    <state width="1322" height="216" key="GridCell.Tab.0.bottom" timestamp="1607887605901">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1322" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1360.768@0.0.1366.728" timestamp="1605896427700" />
-    <state width="1322" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607730040569" />
-    <state width="1322" height="178" key="GridCell.Tab.0.center" timestamp="1607730040569">
+    <state width="1322" height="216" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607887605901" />
+    <state width="1322" height="216" key="GridCell.Tab.0.center" timestamp="1607887605901">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1322" height="178" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1360.768@0.0.1366.728" timestamp="1605896427700" />
-    <state width="1322" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607730040569" />
-    <state width="1322" height="178" key="GridCell.Tab.0.left" timestamp="1607730040569">
+    <state width="1322" height="216" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607887605901" />
+    <state width="1322" height="216" key="GridCell.Tab.0.left" timestamp="1607887605901">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1322" height="178" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1360.768@0.0.1366.728" timestamp="1605896427699" />
-    <state width="1322" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607730040569" />
-    <state width="1322" height="178" key="GridCell.Tab.0.right" timestamp="1607730040569">
+    <state width="1322" height="216" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607887605901" />
+    <state width="1322" height="216" key="GridCell.Tab.0.right" timestamp="1607887605901">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1322" height="178" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1360.768@0.0.1366.728" timestamp="1605896427700" />
-    <state width="1322" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607730040569" />
+    <state width="1322" height="216" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607887605901" />
     <state x="213" y="18" key="Maven.ArtifactSearchDialog" timestamp="1607725815894">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="213" y="18" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1607725815894" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1605896308167">
+    <state x="163" y="0" key="SettingsEditor" timestamp="1607883744470">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.728/1366.0.1360.768@0.0.1366.728" timestamp="1605896308167" />
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607883744470" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -810,69 +928,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/CompraController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="78" column="41" lean-forward="true" selection-start-line="78" selection-start-column="41" selection-end-line="78" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_VincularIngresoAProyecto.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-64">
-          <caret line="97" column="39" lean-forward="true" selection-start-line="97" selection-start-column="39" selection-end-line="97" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/IngresoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BaseDeDatos/EntidadPersistente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" column="42" lean-forward="true" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Compras/Vinculacion/Vinculador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/daos/DAOHibernate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#845#846#0" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Bitacora/Bitacora.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Cambiar_Usuario.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="140" column="13" selection-start-line="140" selection-start-column="13" selection-end-line="140" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/repositories/Repositorio.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
@@ -1021,13 +1076,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Login.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="139" column="18" lean-forward="true" selection-start-line="134" selection-start-column="12" selection-end-line="139" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Negocio/Proveedor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1093,29 +1141,12 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/GESOC_AsociarIngresoAEgreso.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarIngresoAEgreso.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="110" column="33" lean-forward="true" selection-start-line="105" selection-start-column="24" selection-end-line="110" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Bitacora/MongoDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/GESOC_CargarEgresos.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1751">
           <caret line="109" column="9" lean-forward="true" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/GESOC_Bandeja_Mensajes.css">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1163,10 +1194,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/jarRepositories.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_VisualizarIngEgPorCategoria.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="124" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EgresoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3961">
+          <caret line="255" column="93" selection-start-line="255" selection-start-column="93" selection-end-line="255" selection-end-column="93" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Bitacora/GuardadorDeLog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1201,13 +1255,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EgresoController.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="255" column="93" lean-forward="true" selection-start-line="255" selection-start-column="93" selection-end-line="255" selection-end-column="93" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-2142" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Bitacora/MongoDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="21" column="59" lean-forward="true" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Login.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="351" column="16" lean-forward="true" selection-start-line="351" selection-start-column="16" selection-end-line="351" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarItemACategoria.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="207" column="93" selection-start-line="207" selection-start-column="93" selection-end-line="207" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarIngresoAEgreso.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="125" column="67" lean-forward="true" selection-start-line="125" selection-start-column="67" selection-end-line="125" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/GESOC_Bandeja_Mensajes.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_CrearProyecto.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="103" column="26" lean-forward="true" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu_Logueado.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1250,6 +1355,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

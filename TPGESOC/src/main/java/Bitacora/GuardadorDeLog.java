@@ -11,6 +11,7 @@ public class GuardadorDeLog {
     Bitacora bitacora = Bitacora.GetInstance();
     MongoDB mongoDB = MongoDB.GetInstance();
 
+
     public static GuardadorDeLog GetInstance() {
         if (instance == null)
             instance = new GuardadorDeLog();
@@ -23,12 +24,12 @@ public class GuardadorDeLog {
         date.getTime();
 
 
-       Operacion operacion = new Operacion(tipoDeOperacion,unObjeto.getClass().getSimpleName(),formatter.format(date).toString());
+       Operacion operacion = new Operacion(tipoDeOperacion,unObjeto.getClass().getSimpleName(),formatter.format(date));
        operacion.setTipoDeOperacion(tipoDeOperacion);
        operacion.setEntidad(unObjeto.getClass().getSimpleName());
-       operacion.setFechaDeOperacion(formatter.format(date).toString());
+       operacion.setFechaDeOperacion(formatter.format(date));
        bitacora.add(operacion);
 
-       mongoDB.addDocument(tipoDeOperacion,unObjeto.getClass().getSimpleName(),formatter.format(date).toString());
+       mongoDB.addDocument(tipoDeOperacion,unObjeto.getClass().getSimpleName(),formatter.format(date));
     }
 }
