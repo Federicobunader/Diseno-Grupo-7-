@@ -5,6 +5,7 @@ import Negocio.Compras.Criterios.MenorValor;
 import Negocio.Compras.Vinculacion.*;
 import Negocio.Documento;
 import Negocio.Entidad.Empresa.Empresa;
+import Negocio.Entidad.Entidad;
 import Negocio.Entidad.EntidadBase;
 import Negocio.Entidad.EntidadJuridica;
 import Negocio.MedioDePago;
@@ -234,6 +235,12 @@ public class EgresoController {
             OperacionController operacionController = new OperacionController();
 
             System.out.println("ENTRE AL GUARDAR EGRESO");
+
+            LoginController.ensureUserIsLoggedIn(request, response);
+
+            Usuario usuarioLogueadoActualmente = LoginController.getCurrentUser(request);
+        System.out.println("USUARIO LOGUEADO = " + usuarioLogueadoActualmente.getId());
+
             Usuario usuario = new Usuario();
             Egreso egreso = new Egreso();
             Compra compra = new Compra();
@@ -242,6 +249,26 @@ public class EgresoController {
             Item item = new Item();
             Producto producto = new Producto();
             MedioDePago medioDePago = new MedioDePago();
+
+        Repositorio<Empresa> repoEmpresas = FactoryRepositorio.get(Empresa.class);
+        List<Empresa> empresas = repoEmpresas.buscarTodos();
+
+        Repositorio<EntidadBase> repoEntidadBase = FactoryRepositorio.get(EntidadBase.class);
+        List<EntidadBase> entidadBases = repoEntidadBase.buscarTodos();
+
+        for(int j = 0; j < empresas.size() ; j++) {
+            if (empresas.get(j).getUsuario().getId() == usuarioLogueadoActualmente.getId()) {
+                Empresa empresa = empresas.get(j);
+                compra.setEntidad(empresa);
+            }
+        }
+
+        for(int j = 0; j < entidadBases.size() ; j++) {
+            if (entidadBases.get(j).getUsuario().getId() == usuarioLogueadoActualmente.getId()) {
+                EntidadBase entidadBase = entidadBases.get(j);
+                compra.setEntidad(entidadBase);
+            }
+        }
 
             if (request.queryParams("proveedor_id") != null) {
                 Proveedor proveedor = new Proveedor();
@@ -293,10 +320,10 @@ public class EgresoController {
                 }
             }
             System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 5");
-            compra.setItems(gestorDeEgresos.getItemsAAgregarAUnEgreso());
+            /*compra.setItems(gestorDeEgresos.getItemsAAgregarAUnEgreso());
             compra.setUsuariosRevisores(gestorDeEgresos.getUsuariosRevisoresDeUnEgreso());
             compra.setPresupuestos(gestorDeEgresos.getPresupuestosDelEgreso());
-            compra.setDocumentosComerciales(gestorDeEgresos.getDocumentosDelEgreso());
+            compra.setDocumentosComerciales(gestorDeEgresos.getDocumentosDelEgreso());*/
             if (request.queryParams("requierePresupuesto") != null) {
                 int valorBool = Integer.valueOf(request.queryParams("requierePresupuesto"));
                 if (valorBool == 1) {
@@ -332,23 +359,7 @@ public class EgresoController {
             }
 
             System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 8");
-            if (request.queryParams("entidad_id") != null) {
-                int idEntidad = Integer.valueOf(request.queryParams("entidad_id"));
-                Empresa empresa = new Empresa();
-                EntidadBase entidadBase = new EntidadBase();
-                for (int i = 0; i < gestorDeEgresos.getEmpresasDelEgreso().size(); i++) {
-                    if (gestorDeEgresos.getEmpresasDelEgreso().get(i).getId() == idEntidad) {
-                        empresa = gestorDeEgresos.getEmpresasDelEgreso().get(i);
-                        compra.setEntidad(empresa);
-                    }
-                }
-                for (int i = 0; i < gestorDeEgresos.getEntidadBasesDelEgreso().size(); i++) {
-                    if (gestorDeEgresos.getEntidadBasesDelEgreso().get(i).getId() == idEntidad) {
-                        entidadBase = gestorDeEgresos.getEntidadBasesDelEgreso().get(i);
-                        compra.setEntidad(entidadBase);
-                    }
-                }
-            }
+
             System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 9");
 
 
