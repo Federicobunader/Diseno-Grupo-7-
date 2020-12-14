@@ -1,1 +1,1 @@
-web: java -jar D:\COLEGIO\UTN\Diseno\Trabajos\Proyectos de IntelliJ\Diseno-Grupo-7-\TPGESOC\out\artifacts\TP_GESOC_jar\TP-GESOC.jar
+web: gunicorn TPGESOC\src\main\java\server\Server.java:main
