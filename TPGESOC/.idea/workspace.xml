@@ -52,10 +52,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c56b04db-f42a-40a7-8d18-c78ae2368dc3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/../Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procfile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Bitacora/GuardadorDeLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Bitacora/GuardadorDeLog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repositories/Repositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/Repositorio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/GESOC_Bandeja_Mensajes.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/css/GESOC_Bandeja_Mensajes.css" afterDir="false" />
@@ -162,6 +165,7 @@
       <change beforePath="$PROJECT_DIR$/target/classes/controllers/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/UsuarioController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/converters/LocalDateAttributeConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/converters/LocalDateAttributeConverter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/middleware/AuthMiddleware.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/middleware/AuthMiddleware.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/css/GESOC_Bandeja_Mensajes.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/css/GESOC_Bandeja_Mensajes.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/repositories/BusquedaCondicional.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/BusquedaCondicional.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/repositories/Repositorio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/Repositorio.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/repositories/RepositorioDeEntidades.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/RepositorioDeEntidades.class" afterDir="false" />
@@ -182,6 +186,11 @@
       <change beforePath="$PROJECT_DIR$/target/classes/spark/utils/BooleanHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spark/utils/BooleanHelper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/spark/utils/DarkMagic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spark/utils/DarkMagic.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/spark/utils/HandlebarsTemplateEngineBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spark/utils/HandlebarsTemplateEngineBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_AsociarIngresoAEgreso.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_AsociarIngresoAEgreso.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_AsociarItemACategoria.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_AsociarItemACategoria.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_CrearProyecto.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_CrearProyecto.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_Login.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_Login.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/GESOC_Menu_Logueado.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/GESOC_Menu_Logueado.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/EmTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/EmTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Negocio/Compras/CompraTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Negocio/Compras/CompraTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Negocio/Entidad/Empresa/CategorizadorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Negocio/Entidad/Empresa/CategorizadorTest.class" afterDir="false" />
@@ -206,38 +215,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarIngresoAEgreso.hbs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="125" column="67" lean-forward="true" selection-start-line="125" selection-start-column="67" selection-end-line="125" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/GESOC_Bandeja_Mensajes.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_CrearProyecto.hbs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="103" column="26" lean-forward="true" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu_Logueado.hbs">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+            <state relative-caret-position="556">
+              <caret line="42" column="12" lean-forward="true" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -319,10 +301,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/public/css/GESOC_Bandeja_Mensajes.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/GESOC_CrearProyecto.hbs" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu_Logueado.hbs" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="320" />
     <option name="y" value="145" />
     <option name="width" value="1490" />
@@ -335,8 +318,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -344,170 +325,12 @@
               <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
               <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="BaseDeDatos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Bitacora" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Negocio" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Negocio" type="462c0819:PsiDirectoryNode" />
-              <item name="Entidad" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Negocio" type="462c0819:PsiDirectoryNode" />
-              <item name="Usuario" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="repositories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="repositories" type="462c0819:PsiDirectoryNode" />
-              <item name="daos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="repositories" type="462c0819:PsiDirectoryNode" />
-              <item name="factories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPGESOC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPGESOC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Negocio" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -699,7 +522,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.489842" visible="true" weight="0.2080537" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.489842" visible="true" weight="0.21073826" />
       <window_info id="Structure" order="1" sideWeight="0.510158" side_tool="true" weight="0.31208053" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -1260,13 +1083,6 @@
         <state relative-caret-position="-2142" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Bitacora/MongoDB.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1290,29 +1106,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_AsociarIngresoAEgreso.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="125" column="67" lean-forward="true" selection-start-line="125" selection-start-column="67" selection-end-line="125" selection-end-column="67" />
+        <state relative-caret-position="2125">
+          <caret line="125" column="67" selection-start-line="125" selection-start-column="67" selection-end-line="125" selection-end-column="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/GESOC_Bandeja_Mensajes.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        <state relative-caret-position="272">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_CrearProyecto.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="103" column="26" lean-forward="true" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
+        <state relative-caret-position="1751">
+          <caret line="103" column="26" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/GESOC_Menu_Logueado.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+        <state relative-caret-position="442">
+          <caret line="89" column="33" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="42" column="12" lean-forward="true" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
         </state>
       </provider>
     </entry>
