@@ -59,6 +59,8 @@ public class ProyectoController {
         Proyecto proyecto = new Proyecto();
         Ingreso ingreso = new Ingreso();
 
+        System.out.println("ENTRE AL VINCULAR PROYECTO");
+
         Repositorio<Proyecto> repoProyecto = FactoryRepositorio.get(Proyecto.class);
         Repositorio<Ingreso> repoIngreso = FactoryRepositorio.get(Ingreso.class);
 
@@ -72,9 +74,7 @@ public class ProyectoController {
             ingreso = repoIngreso.buscar(idIngreso);
         }
 
-        List <Ingreso> ingresosProyectos = proyecto.getIngresos();
-        ingresosProyectos.add(ingreso);
-        proyecto.setIngresos(ingresosProyectos);
+        proyecto.getIngresos().add(ingreso);
 
         repoProyecto.modificar(proyecto);
         response.redirect("/menu_logueado");
