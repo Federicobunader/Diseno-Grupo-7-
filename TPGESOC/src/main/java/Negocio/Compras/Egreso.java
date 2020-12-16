@@ -23,6 +23,9 @@ public class Egreso  extends EntidadPersistente {
     @JoinColumn(name = "ingreso_id", referencedColumnName = "id")
     private Ingreso ingresoAVincular;
 
+    @Column
+    private boolean estaVinculado;
+
     @Transient
     GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();
 
@@ -51,6 +54,15 @@ public class Egreso  extends EntidadPersistente {
     public Date getFechaDeOperacion() {
         return fechaDeOperacion;
     }
+
+    public boolean isEstaVinculado() {
+        return estaVinculado;
+    }
+
+    public void setEstaVinculado(boolean estaVinculado) {
+        this.estaVinculado = estaVinculado;
+    }
+
     public void agregarCompraYPresupuesto(){
         gestorDeEgresos.registrarCompra(compra);
     }

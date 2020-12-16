@@ -21,14 +21,13 @@ public class OrdenValorPrimeroEgreso extends CriterioDeVinculacion{
 
         ingresos = ordenarIngresosPorValor(ingresos);
         egresos = ordenarEgresosPorValor(egresos);
-        ArrayList<Egreso> egresosVinculados = new ArrayList<Egreso>();
 
         for (int i = 0; i < ingresos.size(); i++) {
             for (int j = 0; j < egresos.size(); j++) {
-                if (ingresos.get(i).calcularMontoVinculable() >= egresos.get(j).getValorTotal() && egresos.get(j).estaEnElPeriodoAceptable(fechaInicia,fechaFinal) && !egresosVinculados.contains(egresos.get(j))) {
+                if (!egresos.get(j).isEstaVinculado() && ingresos.get(i).calcularMontoVinculable() >= egresos.get(j).getValorTotal() && egresos.get(j).estaEnElPeriodoAceptable(fechaInicia,fechaFinal)) {
                     ingresos.get(i).vincularEgreso(egresos.get(j));
                     gestorDeEgresos.egresoVinculado(egresos.get(j));
-                    egresosVinculados.add(egresos.get(j));
+                    egresos.get(j).setEstaVinculado(true);
                     if (ingresos.get(i).calcularMontoVinculable() == 0) {
                         gestorDeIngresos.ingresoVinculado(ingresos.get(i));
                         break; //sacar si rompe xd

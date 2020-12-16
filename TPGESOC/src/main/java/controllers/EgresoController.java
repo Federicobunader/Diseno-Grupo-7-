@@ -406,6 +406,7 @@ public class EgresoController {
             }
 
             egreso.setCompra(compra);
+            egreso.setEstaVinculado(false);
 
             Repositorio<Compra> repoCompra = FactoryRepositorio.get(Compra.class);
             repoCompra.agregar(compra);
@@ -503,6 +504,10 @@ public class EgresoController {
             }
             for (int i = 0; i < ingresos.size(); i++) {
                 repoIngreso.modificar(ingresos.get(i));
+            }
+
+            for (int i = 0; i < egresos.size(); i++) {
+                this.repo.modificar(egresos.get(i));
             }
         }
         System.out.println(("Criterio" + request.queryParams("criterio") ));

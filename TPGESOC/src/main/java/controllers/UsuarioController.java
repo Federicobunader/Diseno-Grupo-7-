@@ -94,18 +94,14 @@ public class UsuarioController {
     public void asignarAtributosA(Usuario unUsuario, Request request) {
         String passwordFinal = "";
         GestorDePasswords gestorDePasswords = GestorDePasswords.GetInstance();
-        if(this.elUsuarioSePuedeRegistrarCorrectamente(unUsuario,request)) {
+        //if(this.elUsuarioSePuedeRegistrarCorrectamente(unUsuario,request)) {
             String passwordIngresada = request.queryParams("password");
             passwordFinal = gestorDePasswords.chequearEspaciosSeguidos(passwordIngresada);
 
             unUsuario.setUsuario(request.queryParams("usuario"));
             unUsuario.setPassword(gestorDePasswords.hashearPassword(passwordFinal));
             unUsuario.setMail(request.queryParams("mail"));
-        }
-        else{
-
-        }
-
+       // }
     }
 
     public boolean elUsuarioSePuedeRegistrarCorrectamente (Usuario unUsuario, Request request) {
