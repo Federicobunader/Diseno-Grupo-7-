@@ -1,1 +1,1 @@
-web: gunicorn TPGESOC\src\main\java\server\Server.java:main
+web: java -jar target/TPGESOC\out\artifacts\TP_GESOC_jar.jar

@@ -115,7 +115,7 @@ public class CompraTest {
 
         entidadbase1 = new EntidadBase("EntidadBase" ,"descripcion");
 
-        compra1 = new Compra();
+      //  compra1 = new Compra(ArrayLis items, ArrayList<Presupuesto> presupuestos, MedioDePago medioDePago, List<Documento> documentosComerciales, Entidad entidad, Proveedor proveedor, boolean requierePresupuesto, Criterio criterioEleccionPresupuesto, int IDCompra);
 
     }
     @Test
@@ -138,7 +138,7 @@ public class CompraTest {
     public void verificarValidacion() {
         compra1.suscribirUsuario(usuario1);
         compra1.seleccionarPresupuesto();
-        compra1.validar(2000,2);
+        compra1.validar(2000,2,0);
 
         Assert.assertEquals(3,usuario1.getBandejaDeMensajes().size());
     }
@@ -146,7 +146,7 @@ public class CompraTest {
     public void verificarEnUsuarioSuscriptoQueSeEligioElPresupuesto() {
         compra1.suscribirUsuario(usuario1);
         compra1.seleccionarPresupuesto();
-        compra1.validar(2000,3);
+        compra1.validar(2000,3,0);
 
         Assert.assertEquals("Para la compra 1000 se eligio el presupuesto a partir del criterio",usuario1.getBandejaDeMensajes().get(2));
     }

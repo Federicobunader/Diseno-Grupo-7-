@@ -23,8 +23,8 @@ public class Sistema {
     }
 
     public void arrancar(){
-        TriggerValidador ejecutarScheduler = new TriggerValidador();
-        ejecutarScheduler.ejecutarScheduler();
+       // TriggerValidador ejecutarScheduler = new TriggerValidador();
+       // ejecutarScheduler.ejecutarScheduler();
         gestorDeUsuarios.consolaUsuario();
     }
 

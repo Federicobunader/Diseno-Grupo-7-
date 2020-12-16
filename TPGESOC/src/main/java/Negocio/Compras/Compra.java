@@ -3,6 +3,7 @@ package Negocio.Compras;
 import BaseDeDatos.EntidadPersistente;
 import Negocio.*;
 import Negocio.Compras.Criterios.Criterio;
+import Negocio.Compras.Criterios.MenorValor;
 import Negocio.Entidad.Entidad;
 import Negocio.Usuario.Usuario;
 
@@ -124,27 +125,37 @@ public class Compra extends EntidadPersistente {
 		this.perteneceAProyecto = perteneceAProyecto;
 	}
 
-	public void validar(double montoDefinido, int cantidadPresupuestosExigibles){
+	public void validar(double montoDefinido, int cantidadPresupuestosExigibles,int idCompra){
+		//boolean estaOK = true;
 		Validador validador = Validador.GetInstance();
-		requierePresupuesto = validador.requierePresupuesto(this.getMonto(), montoDefinido);
+		GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();
+		MenorValor menorValor = new MenorValor();
+		//presupuestoElegido = menorValor.elegirPresupuesto(gestorDeEgresos.getPresupuestos());
+
+		this.setCriterioEleccionPresupuesto(menorValor);
+		//presupuestoElegido = presupuestos.get(0);		ESTÁ ROMPIENDO ACA PORQUE NO ENCUENTRA LA LISTA DE PRESUPUESTOS CUANDO CARGAMOS EGRESO
+		requierePresupuesto = validador.requierePresupuesto(this.valorTotal(), montoDefinido);
 		if(requierePresupuesto) {
 			if(validador.tieneSuficientesPresupuestos(this.cantidadPresupuestos(), cantidadPresupuestosExigibles)){
-				notificarUsuarios("La compra " + getId() + " tiene la cantidad de presupuestos requeridos.");
+				notificarUsuarios("La compra " + idCompra + " tiene la cantidad de presupuestos requeridos.");
 			} else {
-				notificarUsuarios("La compra " + getId() + " no tiene la cantidad de presupuestos requeridos");
+				notificarUsuarios("La compra " + idCompra + " no tiene la cantidad de presupuestos requeridos");
+				//estaOK = false;
 			}
 
 			if(validador.seUtilizoPresupuesto(this)){
-				notificarUsuarios("En la compra " + getId() + " se utilizo un presupuesto de los asignados.");
+				notificarUsuarios("En la compra " + idCompra + " se utilizo un presupuesto de los asignados.");
 			}else{
-				notificarUsuarios("En la compra " + getId() + " no se utilizo ningun presupuesto de los asignados.");
+				notificarUsuarios("En la compra " + idCompra + " no se utilizo ningun presupuesto de los asignados.");
+				//estaOK = false;
 			}
 		}
 
-		if(validador.eleccionCorrecta(this)) {
-			notificarUsuarios("Para la compra " + getId() + " no se eligio el presupuesto a partir del criterio");
+		if(!validador.eleccionCorrecta(this)) {
+			notificarUsuarios("Para la compra " + idCompra + " no se eligio el presupuesto a partir del criterio");
 		} else {
-			notificarUsuarios("Para la compra " + getId() + " se eligio el presupuesto a partir del criterio");
+			notificarUsuarios("Para la compra " + idCompra + " se eligio el presupuesto a partir del criterio");
+			//estaOK = false;
 		}
 	}
 
@@ -157,7 +168,10 @@ public class Compra extends EntidadPersistente {
 	}
 
 	private void notificarUsuarios(String mensaje){
-		usuariosRevisores.forEach(usuario -> usuario.serNotificado(mensaje));
+		//usuariosRevisores.forEach(usuario -> usuario.serNotificado(mensaje));
+		for (int i = 0; i < usuariosRevisores.size() ; i++) {
+			usuariosRevisores.get(i).serNotificado(mensaje);
+		}
 	}
 	public int getIDCompra() {
 		return getId();
@@ -208,11 +222,22 @@ public class Compra extends EntidadPersistente {
 		GestorDeEgresos gestorDeEgresos = GestorDeEgresos.GetInstance();
 		gestorDeEgresos.getEgresos().add(nuevoEgreso);
 		nuevoEgreso.agregarCompraYPresupuesto();
+		//this.validar(0,0);
 
 		return nuevoEgreso;
 	}
 
 	public double getMonto(){
 		return presupuestoElegido.valorTotal();
+	}
+
+	public double valorTotalSinPresupuesto(){
+		double valorTotal = 0;
+
+		for (int i = 0; i < items.size(); i++){
+			valorTotal += items.get(i).valorTotal();
+		}
+
+		return valorTotal;
 	}
 }

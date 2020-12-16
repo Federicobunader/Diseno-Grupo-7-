@@ -5,6 +5,7 @@ import BaseDeDatos.EntidadPersistente;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -14,7 +15,7 @@ public class Mensaje extends EntidadPersistente{
     String contenido;
 
     @Column(name = "fechaDelMensaje", columnDefinition = "DATE")
-    private LocalDate fechaDelMensaje;
+    private Date fechaDelMensaje;
 
     public Mensaje() {
     }
@@ -27,11 +28,11 @@ public class Mensaje extends EntidadPersistente{
         return contenido;
     }
 
-    public LocalDate getFechaDelMensaje() {
+    public Date getFechaDelMensaje() {
         return fechaDelMensaje;
     }
 
-    public void setFechaDelMensaje(LocalDate fechaDelMensaje) {
+    public void setFechaDelMensaje(Date fechaDelMensaje) {
         this.fechaDelMensaje = fechaDelMensaje;
     }
 }

@@ -21,13 +21,18 @@ public class Repositorio<T> {
     }
 
     public void agregar(Object unObjeto){
-        this.dao.agregar(unObjeto);
-        this.guardadorDeLog.GuardarEnBitacora(unObjeto, "ALTA");
+        if(!unObjeto.getClass().getSimpleName().equalsIgnoreCase("bitacora") ) {
+            this.dao.agregar(unObjeto);
+            this.guardadorDeLog.GuardarEnBitacora(unObjeto, "ALTA");
+        }
     }
 
     public void modificar(Object unObjeto){
+        if(!unObjeto.getClass().getSimpleName().equalsIgnoreCase("bitacora") ) {
+            System.out.println("ENTRE A LA MODIFICACION ");
             this.dao.modificar(unObjeto);
             this.guardadorDeLog.GuardarEnBitacora(unObjeto, "MODIFICACION");
+        }
     }
 
     public void eliminar(Object unObjeto){

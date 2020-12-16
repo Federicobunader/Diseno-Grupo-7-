@@ -15,7 +15,9 @@ public class Ingreso extends EntidadPersistente {
     @Column
     public double montoTotal;
 
-    @OneToMany(mappedBy = "ingresoAVincular",cascade = {CascadeType.ALL})
+    //@OneToMany(mappedBy = "ingresoAVincular",cascade = {CascadeType.ALL}, fetch = FetchType.LAZY)
+    @OneToMany
+    @JoinColumn(name = "ingreso_id", referencedColumnName = "id")
     private List<Egreso> egresosVinculados;
 
     public Ingreso(String descripcion, double montoTotal) {
@@ -51,6 +53,7 @@ public class Ingreso extends EntidadPersistente {
     }
 
     public void vincularEgreso(Egreso unEgreso){
+        System.out.println("ENTRE A VINCULAR EGRESO");
         egresosVinculados.add(unEgreso);
     }
 

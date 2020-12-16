@@ -10,6 +10,7 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -119,7 +120,7 @@ public class Usuario extends EntidadPersistente {
         Mensaje nuevoMensaje = new Mensaje();
 
         nuevoMensaje.setContenido(mensaje);
-        nuevoMensaje.setFechaDelMensaje(LocalDate.now());
+        nuevoMensaje.setFechaDelMensaje(new Date());
         bandejaDeMensajes.add(nuevoMensaje);
         interfazUsuarios.mostrarInformacion(mensaje);
     }

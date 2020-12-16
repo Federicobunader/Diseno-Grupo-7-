@@ -33,7 +33,7 @@ public class ImplementarScheduler implements Job{
         for(int i=0; i<tamanioEgresos; i++) {
             Compra compraAValidar = gestorDeEgresos.getComprasNoValidadas().get(i);
             if(!compraAValidar.isPerteneceAProyecto()){
-                compraAValidar.validar(montoDefinido, cantidadPresupuestosExigibles);
+                compraAValidar.validar(montoDefinido, cantidadPresupuestosExigibles,i);
                 gestorDeEgresos.agregarCompraValidada(compraAValidar);
             }
         }

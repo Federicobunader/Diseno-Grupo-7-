@@ -5,21 +5,24 @@ import Negocio.Compras.GestorDeEgresos;
 import Negocio.Compras.GestorDeIngresos;
 import Negocio.Compras.Ingreso;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class PorFecha extends CriterioDeVinculacion {
+public class  PorFecha extends CriterioDeVinculacion {
 
     @Override
     public void vincular(List<Ingreso> ingresos, List<Egreso> egresos, Date fechaInicia, Date fechaFinal) {
         ingresos = ordenarIngresosPorValor(ingresos);
         egresos = ordenarEgresosPorFecha(egresos);
+        ArrayList<Egreso> egresosVinculados = new ArrayList<Egreso>();
 
         for (int j = 0; j < egresos.size(); j++) {
             for (int i = 0; i < ingresos.size(); i++) {
-                if (ingresos.get(i).calcularMontoVinculable() >= egresos.get(j).getValorTotal() && egresos.get(j).estaEnElPeriodoAceptable(fechaInicia,fechaFinal)) {
+                if (ingresos.get(i).calcularMontoVinculable() >= egresos.get(j).getValorTotal() && egresos.get(j).estaEnElPeriodoAceptable(fechaInicia,fechaFinal)&& !egresosVinculados.contains(egresos.get(j))) {
                     ingresos.get(i).vincularEgreso(egresos.get(j));
                     gestorDeEgresos.egresoVinculado(egresos.get(j));
+                    egresosVinculados.add(egresos.get(j));
                     if (ingresos.get(i).calcularMontoVinculable() == 0) {
                         gestorDeIngresos.ingresoVinculado(ingresos.get(i));
                     }

@@ -1,11 +1,16 @@
 package Negocio.Usuario;
 
 import InterfazDeUsuario.InterfazUsuarios;
-import Negocio.Compras.GestorDeCriterios;
-import Negocio.Compras.GestorDeEgresos;
-import Negocio.Compras.GestorDeIngresos;
+import Negocio.Compras.*;
+import Negocio.Compras.Criterios.Criterio;
+import Negocio.Compras.Criterios.MenorValor;
 import Negocio.Compras.Vinculacion.*;
+import Negocio.Documento;
+import Negocio.Entidad.Entidad;
+import Negocio.Entidad.EntidadBase;
 import Negocio.Main;
+import Negocio.MedioDePago;
+import Negocio.Proveedor;
 import repositories.RepositorioDeUsuarios;
 
 import java.util.ArrayList;
@@ -37,7 +42,7 @@ public class GestorDeUsuarios {
         int opcion = Main.pedirPorPantallaInt();
         GestorDeCriterios gestorDeCriterios = GestorDeCriterios.GetInstance();
 
-        while (opcion != 10) {
+        while (opcion != 11) {
             switch (opcion) {
                 case 1:
                    // this.registrarUsuario();
@@ -47,7 +52,7 @@ public class GestorDeUsuarios {
                     break;
                 case 3:
                     Usuario unUsuario = this.elegirUsuario();
-                    ;
+
                 case 4:
                     this.mostrarUsuarios();
                     break;
@@ -97,6 +102,108 @@ public class GestorDeUsuarios {
 
                     }else{
                         interfazUsuarios.mostrarError("Error: Contraseña incorrecta.");
+                    }
+                    break;
+                case 10:
+
+                    Proveedor proveedor1 = new Proveedor("Harry Styles",1);
+                    Proveedor proveedor2 = new Proveedor("Gonzalo Miele",2);
+                    Proveedor proveedor3 = new Proveedor("Justin Bieber",3);
+                    Proveedor proveedor4 = new Proveedor("C.R.O.",4);
+
+                    Producto producto1 = new Producto(5,proveedor1,"Silla");
+                    Producto producto2 = new Producto(10,proveedor1,"Mesa");
+                    Producto producto3 = new Producto(15,proveedor1,"Sillon");
+
+                    ArrayList<CategoriaItem> categorias = new ArrayList<CategoriaItem>();
+
+                    CategoriaItem categoria1 = new CategoriaItem("Roble","Muebles");
+                    CategoriaItem categoria2 = new CategoriaItem("Pino","Muebles");
+
+                    categorias.add(categoria1);
+                    categorias.add(categoria2);
+
+                    CriterioDeItem criterioDeItem = new CriterioDeItem("Muebles");
+
+                    Item item1 = new Item(producto1,5, categorias);
+                    Item item2 = new Item(producto2,15, categorias);
+                    Item item3 = new Item(producto3,25, categorias);
+                    Item item4 = new Item(producto1,150, categorias);
+                    Item item5 = new Item(producto2,50, categorias);
+                    Item item6 = new Item(producto3,100, categorias);
+                    Item item7 = new Item(producto1,500, categorias);
+                    Item item8 = new Item(producto2,200, categorias);
+
+                    Documento documento = new Documento(1,"a");
+
+                    ArrayList<Documento> documentosComerciales = new ArrayList<Documento>();
+                    documentosComerciales.add(documento);
+
+                    ArrayList<Item> items1 = new ArrayList<Item>();
+                    items1.add(item1);
+                    items1.add(item2);
+                    items1.add(item3);
+
+                    ArrayList<Item> items2 = new ArrayList<Item>();
+                    items2.add(item4);
+                    items2.add(item5);
+                    items2.add(item6);
+
+                    ArrayList<Item> items3 = new ArrayList<Item>();
+                    items3.add(item7);
+                    items3.add(item2);
+                    items3.add(item8);
+
+                    Presupuesto presupuesto1 = new Presupuesto(items1,documentosComerciales);
+                    Presupuesto presupuesto2 = new Presupuesto(items2,documentosComerciales);
+                    Presupuesto presupuesto3 = new Presupuesto(items3,documentosComerciales);
+
+                    ArrayList<Presupuesto> presupuestos1 = new ArrayList<Presupuesto>();
+                    presupuestos1.add(presupuesto1);
+                    presupuestos1.add(presupuesto2);
+                    presupuestos1.add(presupuesto3);
+
+                    Usuario usuario1 = new Usuario();
+                    usuario1.setUsuario("Federico di Napoli");
+                    usuario1.setPassword("AguanteRiver01");
+
+                    Usuario usuario2 = new Usuario();
+                    usuario2.setUsuario("Alejandro Hassan");
+                    usuario2.setPassword("Pablo Mendez02");
+                    Usuario usuario3 = new Usuario();
+                    usuario3.setUsuario("Juan Francisco Nadal");
+                    usuario3.setPassword("AwanteLaUBA123");
+
+                    ArrayList<Usuario> losUsuarios = new ArrayList<Usuario>();
+                    losUsuarios.add(usuario1);
+                    losUsuarios.add(usuario2);
+                    losUsuarios.add(usuario3);
+
+                    usuarios.add(usuario1);
+                    usuarios.add(usuario2);
+                    usuarios.add(usuario3);
+                    //MedioDePago medioDePago = new MedioDePago(MedioDePago.tipoDePago.creditCard,1); //no se que onda esto
+
+                    EntidadBase entidadbase1 = new EntidadBase("EntidadBase" ,"descripcion");
+                    MenorValor menorValor = new MenorValor();
+
+                    Compra compra1 = new Compra(items1, presupuestos1, null, documentosComerciales,  entidadbase1,  proveedor1,  true,menorValor ,  100);
+                    compra1.seleccionarPresupuesto();
+                    compra1.setUsuariosRevisores(losUsuarios);
+                    compra1.efectuarCompra();
+
+                    System.out.println(gestorDeEgresos.getComprasNoValidadas().size());
+                    for (int i = 0; i < gestorDeEgresos.getComprasNoValidadas().size() ; i++) {
+                        Compra compra = gestorDeEgresos.getComprasNoValidadas().get(i);
+                        compra.validar(0,0,i);
+                    }
+
+                    for(int i = 0; i < usuarios.size(); i++){
+                        System.out.println("Usuario " + usuarios.get(i).getUsuario() + ": ");
+                        for(int j = 0; j < usuarios.get(i).getBandejaDeMensajes().size(); j++) {
+                            System.out.println("Mensaje nro " + (j+1) + ": ");
+                            System.out.println(usuarios.get(i).getBandejaDeMensajes().get(j).getContenido());
+                        }
                     }
                     break;
                 default:

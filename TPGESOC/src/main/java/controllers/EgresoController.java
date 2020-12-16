@@ -11,6 +11,7 @@ import Negocio.Entidad.EntidadJuridica;
 import Negocio.MedioDePago;
 import Negocio.Proveedor;
 import Negocio.Usuario.GestorDePasswords;
+import Negocio.Usuario.Mensaje;
 import Negocio.Usuario.Usuario;
 import repositories.Repositorio;
 import repositories.factories.FactoryRepositorio;
@@ -18,6 +19,9 @@ import spark.ModelAndView;
 import spark.Request;
 import spark.Response;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.*;
 
 public class EgresoController {
@@ -230,7 +234,7 @@ public class EgresoController {
 
     public Response guardarEgreso(Request request, Response response){
 
-        //if (request.queryParams("tipoDePago") != null) {
+        if (request.queryParams("tipoDePago") != null) {
 
             OperacionController operacionController = new OperacionController();
 
@@ -319,6 +323,7 @@ public class EgresoController {
                     gestorDeEgresos.agregarDocumentoALaListaDeDocumentosDelEgreso(documento);
                 }
             }
+            compra.getUsuariosRevisores().add(usuario);
             System.out.println("ENTRE AL GUARDAR EGRESO - PARTE 5");
             /*compra.setItems(gestorDeEgresos.getItemsAAgregarAUnEgreso());
             compra.setUsuariosRevisores(gestorDeEgresos.getUsuariosRevisoresDeUnEgreso());
@@ -331,12 +336,21 @@ public class EgresoController {
                         int idPresupuesto = Integer.valueOf(request.queryParams("presupuesto_id"));
                         Repositorio<Presupuesto> repoPresupuestos = FactoryRepositorio.get(Presupuesto.class);
                         presupuesto = repoPresupuestos.buscar(idPresupuesto);
+                        compra.getPresupuestos().add(presupuesto);
+                        gestorDeEgresos.getPresupuestos().add(presupuesto);
                     }
 
                     MenorValor menorValor = new MenorValor();
                     List <Presupuesto> presupuestos = new ArrayList<>();
                     presupuestos.add(presupuesto);
+
+                   /* Mensaje mensaje = new Mensaje();
+                    mensaje.setContenido("Se eligio como presupuesto elegido al siguiente presupuesto =" + presupuestoElegido.getId());
+                    mensaje.setFechaDelMensaje(new Date());
+                    usuario.getBandejaDeMensajes().add(mensaje);*/
+                    compra.getPresupuestos().add(presupuesto);
                     presupuestoElegido = menorValor.elegirPresupuesto(presupuestos);
+
                     if (presupuestoElegido != null) {
                         compra.setPresupuestoElegido(presupuestoElegido);
                     }
@@ -376,12 +390,33 @@ public class EgresoController {
             egreso.setFechaDeOperacion(new Date());
             egreso.setValorTotal(compra.valorTotal());
     */
+            if(presupuesto != null) {
+                int valorBool = Integer.valueOf(request.queryParams("requierePresupuesto"));
+                if (valorBool == 1) {
+                    egreso = compra.efectuarCompra();
+                } else {
+                    int idPresupuesto = Integer.valueOf(request.queryParams("presupuesto_id"));
+                    if (idPresupuesto == 0) {
+                        Date date = new Date();
+                        egreso.setFechaDeOperacion(date);
 
-            egreso = compra.efectuarCompra();
+                        egreso.setValorTotal(item.valorTotal());
+                    }
+                }
+            }
+
             egreso.setCompra(compra);
 
             Repositorio<Compra> repoCompra = FactoryRepositorio.get(Compra.class);
             repoCompra.agregar(compra);
+
+            int valorBool = Integer.valueOf(request.queryParams("requierePresupuesto"));
+
+            if (presupuestoElegido != null && valorBool == 1) {
+                compra.validar(0,0,compra.getId());
+                Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
+                repoUsuario.modificar(usuario);
+            }
             operacionController.GuardarEnBitacora(compra, "ALTA");
 
             this.repo.agregar(egreso);
@@ -391,10 +426,10 @@ public class EgresoController {
             System.out.println("SALI DEL GUARDAR EGRESO");
             response.redirect("/menu_logueado");
 
-       // }
-       // else{
+       }
+       else{
             //response.redirect("/cargar_egreso");
-        //}
+        }
 
         return response;
     }
@@ -453,16 +488,21 @@ public class EgresoController {
             if (request.queryParams("fecha_inicial") != null) {
                 fechaInicial = java.sql.Date.valueOf(request.queryParams("fecha_inicial"));
 
+                System.out.println("VINCULAR EGRESO 1");
 
                 if (request.queryParams("fecha_final") != null) {
                     fechaFinal = java.sql.Date.valueOf(request.queryParams("fecha_final"));
 
-
+                    System.out.println("VINCULAR EGRESO 2");
+                    System.out.println("LISTA DE EGRESOS DEL INGRESO ANTES = " + ingresos.size());
                     criterioElegido.vincular(ingresos, egresos, fechaInicial, fechaFinal);
-                    for (int i = 0; i < ingresos.size(); i++) {
-                        repoIngreso.modificar(ingresos.get(i));
-                    }
+                    System.out.println("LISTA DE EGRESOS DEL INGRESO DESPUES = " + ingresos.size());
+                    System.out.println("VINCULAR EGRESO 3");
+
                 }
+            }
+            for (int i = 0; i < ingresos.size(); i++) {
+                repoIngreso.modificar(ingresos.get(i));
             }
         }
         System.out.println(("Criterio" + request.queryParams("criterio") ));

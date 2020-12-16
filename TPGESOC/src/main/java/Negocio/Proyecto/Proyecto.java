@@ -110,7 +110,7 @@ public class Proyecto extends EntidadPersistente {
                 int cantEgresos = ingresos.get(i).getEgresosVinculados().size();
                 for (int j = 0; j < cantEgresos; j++) {
                     Compra compra = ingresos.get(i).getEgresosVinculados().get(j).getCompra();
-                    compra.validar(montoDefinido, cantidadPresupuestosExigibles);
+                    compra.validar(montoDefinido, cantidadPresupuestosExigibles,j);
                     compra.setPerteneceAProyecto(true);
                 }
             }
