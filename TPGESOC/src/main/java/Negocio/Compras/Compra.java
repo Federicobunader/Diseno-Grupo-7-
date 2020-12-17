@@ -149,14 +149,18 @@ public class Compra extends EntidadPersistente {
 				notificarUsuarios("En la compra " + idCompra + " no se utilizo ningun presupuesto de los asignados.");
 				//estaOK = false;
 			}
+
+			if(!validador.eleccionCorrecta(this)) {
+				notificarUsuarios("Para la compra " + idCompra + " no se eligio el presupuesto a partir del criterio");
+			} else {
+				notificarUsuarios("Para la compra " + idCompra + " se eligio el presupuesto a partir del criterio");
+				//estaOK = false;
+			}
+		}else{
+			notificarUsuarios("La compra " + idCompra + " no requiere presupuesto.");
 		}
 
-		if(!validador.eleccionCorrecta(this)) {
-			notificarUsuarios("Para la compra " + idCompra + " no se eligio el presupuesto a partir del criterio");
-		} else {
-			notificarUsuarios("Para la compra " + idCompra + " se eligio el presupuesto a partir del criterio");
-			//estaOK = false;
-		}
+
 	}
 
 	public List<Usuario> getUsuariosRevisores() {
@@ -210,7 +214,12 @@ public class Compra extends EntidadPersistente {
 	}
 
 	public double valorTotal(){
-		return presupuestoElegido.getValorTotal();
+		if(requierePresupuesto){
+			return presupuestoElegido.getValorTotal();
+		}else{
+			return this.valorTotalSinPresupuesto();
+		}
+
 	}
 
 	public Egreso efectuarCompra(){

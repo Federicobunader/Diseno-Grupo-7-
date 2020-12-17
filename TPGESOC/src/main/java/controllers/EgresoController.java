@@ -413,7 +413,7 @@ public class EgresoController {
 
             int valorBool = Integer.valueOf(request.queryParams("requierePresupuesto"));
 
-            if (presupuestoElegido != null && valorBool == 1) {
+            if (presupuestoElegido != null) {
                 compra.validar(0,0,compra.getId());
                 Repositorio<Usuario> repoUsuario = FactoryRepositorio.get(Usuario.class);
                 repoUsuario.modificar(usuario);
